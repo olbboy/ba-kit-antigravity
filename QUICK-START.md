@@ -199,7 +199,7 @@ Load: SKILL-03 + SKILL-08
 - Follow the quality checklists
 
 ### ❌ DON'T:
-- Load all 12 skills at once (cognitive overload)
+- Load all 20 skills at once (cognitive overload)
 - Skip Core Skills
 - Use templates without understanding context
 - Ignore the quality standards in SKILL-03
