@@ -4,6 +4,12 @@
   <img src="assets/logo.png" alt="BA-Kit Logo" width="150">
 </p>
 
+<div align="center">
+
+[**🇬🇧 English**](USAGE-GUIDE.md) | [**🇻🇳 Tiếng Việt**](USAGE-GUIDE.vi.md)
+
+</div>
+
 ## 🧠 Philosophy & Deep Understanding
 
 ### The Core Principle: Layered Competency

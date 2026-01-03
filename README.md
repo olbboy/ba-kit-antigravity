@@ -2,6 +2,12 @@
   <img src="assets/logo.png" alt="BA-Kit Logo" width="200">
 </p>
 
+<div align="center">
+
+[**🇬🇧 English**](README.md) | [**🇻🇳 Tiếng Việt**](README.vi.md)
+
+</div>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Skills-12-blue?style=for-the-badge" alt="12 Skills">
   <img src="https://img.shields.io/badge/Workflows-9-green?style=for-the-badge" alt="9 Workflows">
@@ -16,6 +22,16 @@
   <strong>Transform any AI into a Legendary Business Analyst</strong><br>
   12 interconnected skills • 9 executable workflows • 4 professional templates
 </p>
+
+<br>
+
+## 🎥 Video Tutorial
+
+<a href="#video-tutorial">
+  <img src="assets/video_thumbnail.png" alt="BA-Kit Video Tutorial" width="100%">
+</a>
+
+> *Watch how to transform your AI into an expert Business Analyst using BA-Kit + Antigravity.*
 
 ---
 
