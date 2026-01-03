@@ -76,6 +76,9 @@ Hệ thống này chia kiến thức Requirements Engineering thành **12 Skills
 | **SKILL-06** | Conflict Resolution | `specialized/SKILL-06-conflict-resolution.md` | Khi có mâu thuẫn giữa stakeholders |
 | **SKILL-07** | Traceability & Change Mgmt | `specialized/SKILL-07-traceability-change.md` | Khi quản lý RTM, CR, versioning |
 | **SKILL-08** | Validation & Verification | `specialized/SKILL-08-validation-verification.md` | Khi review, inspect, validate requirements |
+| **SKILL-13** | Data & Information Modeling | `specialized/SKILL-13-data-modeling.md` | Khi cần ERD, DFD, Data Dictionary |
+| **SKILL-14** | UX Research & Customer Journey | `specialized/SKILL-14-ux-research.md` | Khi cần Persona, Journey Map, JTBD |
+| **SKILL-15** | Workshop Facilitation | `specialized/SKILL-15-workshop-facilitation.md` | Khi điều phối workshop nhóm |
 
 ### 🟢 TEMPLATE SKILLS (Khi tạo tài liệu)
 

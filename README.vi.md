@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-12-blue?style=for-the-badge" alt="12 Skills">
+  <img src="https://img.shields.io/badge/Skills-15-blue?style=for-the-badge" alt="15 Skills">
   <img src="https://img.shields.io/badge/Workflows-9-green?style=for-the-badge" alt="9 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
   <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010%20%7C%20BABOK-purple?style=for-the-badge" alt="Standards">
@@ -20,7 +20,7 @@
 
 <p align="center">
   <strong>Chinh Phục Nghệ Thuật Kỹ Nghệ Yêu Cầu</strong><br>
-  12 năng lực cốt lõi • 9 quy trình chiến lược • Tiêu chuẩn tài liệu đẳng cấp thế giới
+  15 năng lực cốt lõi • 9 quy trình chiến lược • Tiêu chuẩn tài liệu đẳng cấp thế giới
 </p>
 
 ---
@@ -60,6 +60,12 @@ Dù được sử dụng bởi **Chuyên gia Con người** hay **AI Agent**, BA
 │  │ Phi chức│ │Ưu tiên  │ │Xung đột │ │Truy vết │ │Thẩm định│               │
 │  │  năng   │ │         │ │         │ │         │ │         │               │
 │  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘               │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐                                       │
+│  │SKILL-13 │ │SKILL-14 │ │SKILL-15 │  ← NĂNG LỰC NÂNG CAO MỚI              │
+│  │  Data   │ │   UX    │ │Workshop │                                       │
+│  │Modeling │ │Research │ │ Điều    │                                       │
+│  │Dữ liệu  │ │Tr.nghiệm│ │ phối    │                                       │
+│  └─────────┘ └─────────┘ └─────────┘                                       │
 │                              │                                              │
 │  🔵 FOUNDATION LAYER (Nền tảng tư duy) ─ LUÔN KÍCH HOẠT                     │
 │  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │

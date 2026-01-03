@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-12-blue?style=for-the-badge" alt="12 Skills">
+  <img src="https://img.shields.io/badge/Skills-15-blue?style=for-the-badge" alt="15 Skills">
   <img src="https://img.shields.io/badge/Workflows-9-green?style=for-the-badge" alt="9 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
   <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010%20%7C%20BABOK-purple?style=for-the-badge" alt="Standards">
@@ -20,7 +20,7 @@
 
 <p align="center">
   <strong>Master the Art of Requirements Engineering</strong><br>
-  12 connected competencies • 9 strategic workflows • World-class documentation standards
+  15 connected competencies • 9 strategic workflows • World-class documentation standards
 </p>
 
 ---
@@ -58,6 +58,11 @@ This is the toolkit for those who refuse to compromise on clarity.
 │  │SKILL-04 │ │SKILL-05 │ │SKILL-06 │ │SKILL-07 │ │SKILL-08 │               │
 │  │   NFR   │ │Priority │ │Conflict │ │ Trace   │ │Validate │               │
 │  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘               │
+│  ┌─────────┐ ┌─────────┐ ┌─────────┐                                       │
+│  │SKILL-13 │ │SKILL-14 │ │SKILL-15 │  ← NEW ADVANCED SKILLS                │
+│  │  Data   │ │   UX    │ │Workshop │                                       │
+│  │Modeling │ │Research │ │ Facil.  │                                       │
+│  └─────────┘ └─────────┘ └─────────┘                                       │
 │                              │                                              │
 │  🔵 CORE (Foundation Layer) ─ ALWAYS ACTIVE                                 │
 │  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
