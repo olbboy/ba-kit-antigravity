@@ -339,6 +339,47 @@ Skill này cung cấp các **kỹ thuật ưu tiên hóa requirements dựa trê
 | Feature C | 1,000 | 3 | 50% | 3 | **500** | 4 |
 | Feature D | 3,000 | 2 | 80% | 1.5 | **3,200** | 3 |
 
+### RICE Calculation Example (Worked)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    RICE CALCULATION EXAMPLE                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────┬─────────┬────────┬──────────┬────────┬───────────────┐│
+│  │ Feature         │ Reach   │ Impact │Confidence│ Effort │ RICE Score    ││
+│  │                 │ (users) │ (0-3)  │ (%)      │(p-mos) │               ││
+│  ├─────────────────┼─────────┼────────┼──────────┼────────┼───────────────┤│
+│  │ One-click buy   │ 50,000  │   2    │   80%    │   3    │   26,667      ││
+│  │ Wish list       │ 30,000  │   1    │   80%    │   1    │   24,000      ││
+│  │ Social sharing  │ 10,000  │   0.5  │   50%    │   0.5  │    5,000      ││
+│  │ AI recommend    │ 50,000  │   2    │   50%    │   8    │    6,250      ││
+│  │ Dark mode       │ 20,000  │   0.5  │  100%    │   1    │   10,000      ││
+│  └─────────────────┴─────────┴────────┴──────────┴────────┴───────────────┘│
+│                                                                             │
+│  CALCULATION FORMULA: RICE = (R × I × C) / E                                │
+│                                                                             │
+│  Step-by-step:                                                              │
+│  • One-click buy: (50,000 × 2 × 0.80) / 3 = 26,667                          │
+│  • Wish list:     (30,000 × 1 × 0.80) / 1 = 24,000                          │
+│  • Dark mode:     (20,000 × 0.5 × 1.00) / 1 = 10,000                        │
+│  • AI recommend:  (50,000 × 2 × 0.50) / 8 =  6,250                          │
+│  • Social share:  (10,000 × 0.5 × 0.50) / 0.5 = 5,000                       │
+│                                                                             │
+│  PRIORITY ORDER:                                                            │
+│  1. One-click buy (26,667) ← Highest impact per effort                      │
+│  2. Wish list (24,000)                                                      │
+│  3. Dark mode (10,000)                                                      │
+│  4. AI recommendations (6,250) ← High value but low confidence, big effort  │
+│  5. Social sharing (5,000)                                                  │
+│                                                                             │
+│  KEY INSIGHT: Notice how "AI recommendations" has high REACH and IMPACT     │
+│  but drops due to 50% confidence and 8 person-months effort.                │
+│  The RICE framework exposes this objectively.                               │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
 ---
 
 ## 5️⃣ COST OF DELAY

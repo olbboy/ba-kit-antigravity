@@ -1,5 +1,5 @@
 # 🟡 SKILL-07: TRACEABILITY & CHANGE MANAGEMENT
-## Specialized Skill - Requirements Lifecycle Management
+## Specialized Skill - Requirements Lifecycle Mastery
 
 ---
 
@@ -9,384 +9,674 @@
 |-----------|-------|
 | **Skill ID** | SKILL-07 |
 | **Category** | 🟡 Specialized |
-| **Load When** | Managing RTM, handling changes, versioning |
+| **Load When** | Managing RTM, handling changes, versioning, impact analysis |
 | **Dependencies** | SKILL-01, SKILL-03 |
-| **Output** | RTM, CR records, baseline documents |
+| **Version** | 2.0 (World-Class Edition) |
+| **Standards** | BABOK v3, IEEE 830, CMMI |
+| **Output** | RTM, CR records, baseline documents, impact analysis |
 
 ---
 
 ## 🎯 MỤC ĐÍCH
 
-Skill này cung cấp framework để **theo dõi requirements** xuyên suốt lifecycle và **quản lý thay đổi** hiệu quả.
+Skill này cung cấp **comprehensive framework** để theo dõi requirements xuyên suốt lifecycle, thực hiện impact analysis, quản lý thay đổi hiệu quả, và maintain requirements baselines.
 
 ---
 
-## 🔗 REQUIREMENTS TRACEABILITY
+## 🔗 REQUIREMENTS TRACEABILITY (Deep Dive)
 
-### Traceability Concept
+### The Traceability Imperative
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                       REQUIREMENTS TRACEABILITY                             │
+│                    WHY TRACEABILITY MATTERS                                 │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│   BUSINESS         STAKEHOLDER        SOLUTION           TEST              │
-│   REQUIREMENTS     REQUIREMENTS       REQUIREMENTS       CASES             │
+│  WITHOUT TRACEABILITY:                                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ "Should we implement this feature?"                                  │   │
+│  │ → "We don't know if it's in scope"                                  │   │
+│  │                                                                       │  │
+│  │ "What's affected if we change this requirement?"                     │   │
+│  │ → "We'd have to check everywhere manually"                          │   │
+│  │                                                                       │  │
+│  │ "Did we test all the requirements?"                                  │   │
+│  │ → "We're not 100% sure"                                             │   │
+│  │                                                                       │  │
+│  │ "Why does this code exist?"                                          │   │
+│  │ → "No one remembers"                                                 │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
 │                                                                             │
-│   ┌─────────┐      ┌─────────┐       ┌─────────┐       ┌─────────┐        │
-│   │  BR-001 │◄────►│  SR-001 │◄─────►│  FR-001 │◄─────►│  TC-001 │        │
-│   │         │      │  SR-002 │◄──┐   │  FR-002 │◄──┐   │  TC-002 │        │
-│   └─────────┘      └─────────┘   │   └─────────┘   │   └─────────┘        │
-│                                  │                 │                       │
-│   ┌─────────┐      ┌─────────┐   │   ┌─────────┐   │   ┌─────────┐        │
-│   │  BR-002 │◄────►│  SR-003 │◄──┴──►│  FR-003 │◄──┴──►│  TC-003 │        │
-│   └─────────┘      └─────────┘       └─────────┘       └─────────┘        │
-│                                                                             │
-│   ◄─────────────────────────────────────────────────────────────────────►  │
-│   Backward Traceability              │           Forward Traceability      │
-│   (Why does this exist?)             │           (Where is this used?)     │
+│  WITH TRACEABILITY:                                                         │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ ✓ Impact → Know exactly what's affected by any change              │   │
+│  │ ✓ Coverage → Prove all requirements are implemented/tested         │   │
+│  │ ✓ Scope → Easily verify if something is in/out of scope            │   │
+│  │ ✓ Audit → Show provenance of every feature                         │   │
+│  │ ✓ Quality → Find gaps, orphans, gold-plating                       │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Traceability Types
+### Complete Traceability Chain
 
-| Type | Direction | Purpose |
-|------|-----------|---------|
-| **Backward** | ← to source | Why does this requirement exist? |
-| **Forward** | → to implementation | Where is this implemented/tested? |
-| **Vertical** | ↕ between levels | Business → Stakeholder → Solution |
-| **Horizontal** | ↔ same level | FR ↔ Use Case ↔ UI Screen |
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    END-TO-END TRACEABILITY CHAIN                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌──────────────────────────────────────────────────────────────────────┐  │
+│  │                                                                        │ │
+│  │  BUSINESS      STAKEHOLDER     FUNCTIONAL      DESIGN      CODE      │ │
+│  │  GOALS         NEEDS           REQUIREMENTS    SPECS       MODULES   │ │
+│  │                                                                        │ │
+│  │  ┌────────┐    ┌────────┐      ┌────────┐    ┌────────┐  ┌────────┐  │ │
+│  │  │Goal 1  │───►│Need 1  │─────►│FR-001  │───►│DES-001 │─►│auth.js │  │ │
+│  │  │        │    │        │      │FR-002  │───►│DES-002 │─►│login.js│  │ │
+│  │  └────────┘    └────────┘      └────────┘    └────────┘  └────────┘  │ │
+│  │       │             │               │             │           │       │ │
+│  │       │             │               │             │           │       │ │
+│  │       ▼             ▼               ▼             ▼           ▼       │ │
+│  │  ┌────────┐    ┌────────┐      ┌────────┐    ┌────────┐  ┌────────┐  │ │
+│  │  │KPI-001 │    │UC-001  │      │TC-001  │    │API-001 │  │Unit    │  │ │
+│  │  │Revenue │    │Login   │      │TC-002  │    │/login  │  │Tests   │  │ │
+│  │  └────────┘    └────────┘      └────────┘    └────────┘  └────────┘  │ │
+│  │                                                                        │ │
+│  │  METRICS       USE CASES       TEST CASES    API SPECS   TEST CODE   │ │
+│  │                                                                        │ │
+│  └──────────────────────────────────────────────────────────────────────┘  │
+│                                                                             │
+│  TRACE DIRECTIONS:                                                          │
+│  ◄──── BACKWARD (Why does this exist? What's the business justification?) │
+│  ────► FORWARD (Where is this implemented? How is it tested?)             │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
-### Benefits of Traceability
+### Traceability Types Matrix
 
-| Benefit | Description |
-|---------|-------------|
-| **Impact Analysis** | Know what's affected when something changes |
-| **Coverage Verification** | Ensure all requirements are implemented/tested |
-| **Gold Plating Detection** | Find features without requirements |
-| **Orphan Detection** | Find requirements without source |
-| **Compliance** | Satisfy audit requirements |
-| **Progress Tracking** | Monitor implementation status |
+| Type | Direction | Question Answered | Example |
+|------|-----------|-------------------|---------|
+| **Backward to Source** | ← | Why does this exist? | FR-001 ← SR-001 ← BR-001 |
+| **Forward to Implementation** | → | Where is this built? | FR-001 → DES-001 → auth.js |
+| **Forward to Test** | → | How is this tested? | FR-001 → TC-001, TC-002 |
+| **Vertical (Levels)** | ↕ | How do levels connect? | Business → Stakeholder → Solution |
+| **Horizontal (Artifacts)** | ↔ | How do peers relate? | FR-001 ↔ UC-001 ↔ UI-Screen-001 |
 
 ---
 
-## 📊 REQUIREMENTS TRACEABILITY MATRIX (RTM)
+## 📊 REQUIREMENTS TRACEABILITY MATRIX (Enhanced)
 
-### RTM Template
+### Comprehensive RTM Template
 
 ```
-┌─────────────────────────────────────────────────────────────────────────────────────────┐
-│                          REQUIREMENTS TRACEABILITY MATRIX                               │
-├───────┬──────────────────┬───────────┬───────────┬──────────┬──────────┬───────────────┤
-│ REQ   │ Requirement      │ Source    │ Design    │ Code     │ Test     │ Status        │
-│ ID    │ Description      │ (BR/SR)   │ Ref       │ Module   │ Case     │               │
-├───────┼──────────────────┼───────────┼───────────┼──────────┼──────────┼───────────────┤
-│FR-001 │ User login       │ SR-001    │ DES-001   │ auth.js  │ TC-001   │ ✅ Verified   │
-│       │                  │ BR-001    │ DES-002   │ login.js │ TC-002   │               │
-├───────┼──────────────────┼───────────┼───────────┼──────────┼──────────┼───────────────┤
-│FR-002 │ Password reset   │ SR-001    │ DES-003   │ reset.js │ TC-003   │ 🔄 In Progress│
-│       │                  │           │           │          │ TC-004   │               │
-├───────┼──────────────────┼───────────┼───────────┼──────────┼──────────┼───────────────┤
-│FR-003 │ Session timeout  │ NFR-SEC-01│ DES-004   │ session.j│ TC-005   │ ⏳ Not Started│
-│       │                  │           │           │          │          │               │
-├───────┼──────────────────┼───────────┼───────────┼──────────┼──────────┼───────────────┤
-│FR-004 │ MFA              │ SR-002    │ DES-005   │ mfa.js   │ TC-006   │ ✅ Verified   │
-│       │                  │ NFR-SEC-02│ DES-006   │ otp.js   │ TC-007   │               │
-├───────┴──────────────────┴───────────┴───────────┴──────────┴──────────┴───────────────┤
-│ COVERAGE SUMMARY:                                                                      │
-│ • Total Requirements: 4                                                                 │
-│ • Designed: 4/4 (100%)                                                                  │
-│ • Implemented: 3/4 (75%)                                                                │
-│ • Tested: 3/4 (75%)                                                                     │
-│ • Verified: 2/4 (50%)                                                                   │
-└─────────────────────────────────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│                                REQUIREMENTS TRACEABILITY MATRIX v2.0                                    │
+├───────┬──────────────────┬────────┬─────────┬─────────┬──────────┬─────────┬─────────┬────────┬────────┤
+│ REQ   │ Requirement      │Priority│ Source  │ Design  │ Code     │ Test    │ Status  │ Owner  │ Release│
+│ ID    │ Description      │(MoSCoW)│ (BR/SR) │ Ref     │ Module   │ Cases   │         │        │        │
+├───────┼──────────────────┼────────┼─────────┼─────────┼──────────┼─────────┼─────────┼────────┼────────┤
+│FR-001 │ User login with  │ Must   │ SR-001  │ DES-001 │ auth.js  │ TC-001  │ ✅      │ J.Smith│ R1.0   │
+│       │ email/password   │        │ BR-001  │ DES-002 │ login.js │ TC-002  │ Verified│        │        │
+│       │                  │        │         │         │          │ TC-003  │         │        │        │
+├───────┼──────────────────┼────────┼─────────┼─────────┼──────────┼─────────┼─────────┼────────┼────────┤
+│FR-002 │ Password reset   │ Should │ SR-001  │ DES-003 │ reset.js │ TC-004  │ 🔄      │ M.Lee  │ R1.0   │
+│       │ via email        │        │         │ DES-004 │ email.js │ TC-005  │ In Prog │        │        │
+├───────┼──────────────────┼────────┼─────────┼─────────┼──────────┼─────────┼─────────┼────────┼────────┤
+│FR-003 │ Session timeout  │ Must   │ NFR-001 │ DES-005 │ session.j│ TC-006  │ ⏳      │ K.Pham │ R1.0   │
+│       │ after 30 min     │        │         │         │          │         │ Pending │        │        │
+├───────┼──────────────────┼────────┼─────────┼─────────┼──────────┼─────────┼─────────┼────────┼────────┤
+│FR-004 │ Multi-factor     │ Could  │ SR-002  │ DES-006 │ mfa.js   │ TC-007  │ ⏸️      │ J.Smith│ R2.0   │
+│       │ authentication   │        │ NFR-002 │         │ otp.js   │ TC-008  │ Deferred│        │        │
+├───────┴──────────────────┴────────┴─────────┴─────────┴──────────┴─────────┴─────────┴────────┴────────┤
+│                                                                                                         │
+│ COVERAGE DASHBOARD:                                                                                     │
+│ ┌─────────────────────┬──────────────────────┬──────────────────────┬──────────────────────┐           │
+│ │ Backward Trace      │ Design Coverage      │ Implementation       │ Test Coverage        │           │
+│ │ (Source Linked)     │                      │ Coverage             │                      │           │
+│ ├─────────────────────┼──────────────────────┼──────────────────────┼──────────────────────┤           │
+│ │ 4/4 = 100% ✅       │ 4/4 = 100% ✅        │ 3/4 = 75% ⚠️         │ 3/4 = 75% ⚠️         │           │
+│ └─────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘           │
+│                                                                                                         │
+│ VERIFICATION STATUS:                                                                                    │
+│ ✅ Verified: 1 │ 🔄 In Progress: 1 │ ⏳ Pending: 1 │ ⏸️ Deferred: 1 │ ❌ Rejected: 0                   │
+│                                                                                                         │
+└─────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ### Status Definitions
 
-| Status | Symbol | Meaning |
-|--------|--------|---------|
-| Draft | 📝 | Requirement written, not approved |
-| Approved | ✓ | Stakeholder approved |
-| Designed | 📐 | Design specification complete |
-| Implemented | 💻 | Code complete |
-| Tested | 🧪 | Test executed |
-| Verified | ✅ | Test passed, meets requirement |
-| Rejected | ❌ | Requirement rejected/removed |
-| Deferred | ⏸️ | Postponed to future release |
+| Status | Symbol | Definition | Next Action |
+|--------|--------|------------|-------------|
+| **Draft** | 📝 | Requirement written, not reviewed | Submit for review |
+| **Under Review** | 🔍 | Being reviewed | Complete review |
+| **Approved** | ✓ | Stakeholder approved | Begin design |
+| **Designed** | 📐 | Design complete | Begin implementation |
+| **In Progress** | 🔄 | Implementation ongoing | Complete development |
+| **Implemented** | 💻 | Code complete | Submit for testing |
+| **Under Test** | 🧪 | Testing in progress | Complete testing |
+| **Verified** | ✅ | Test passed, meets requirement | Deploy |
+| **Rejected** | ❌ | Rejected/removed | Archive |
+| **Deferred** | ⏸️ | Postponed to future | Document in backlog |
+| **Pending** | ⏳ | Waiting on prerequisite | Unblock |
 
 ---
 
-## 🔍 TRACEABILITY HEALTH CHECKS
+## 🔍 IMPACT ANALYSIS
 
-### Coverage Analysis
+### Impact Analysis Process
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│              TRACEABILITY HEALTH CHECK                      │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  1. ORPHAN REQUIREMENTS (No source)                         │
-│     Query: Requirements with no trace to BR/SR              │
-│     Action: Validate necessity, add source or remove        │
-│                                                             │
-│  2. UNTESTED REQUIREMENTS                                   │
-│     Query: Requirements with no test cases                  │
-│     Action: Create test cases or mark as non-testable       │
-│                                                             │
-│  3. GOLD PLATING (Implementation without requirement)       │
-│     Query: Code/features not traced to any requirement      │
-│     Action: Create requirement or remove feature            │
-│                                                             │
-│  4. BROKEN LINKS                                            │
-│     Query: References to deleted/changed items              │
-│     Action: Update or remove broken links                   │
-│                                                             │
-│  5. INCOMPLETE CHAINS                                       │
-│     Query: Requirements missing design/code/test links      │
-│     Action: Complete the traceability chain                 │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    IMPACT ANALYSIS WORKFLOW                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  TRIGGER: Change request received or requirement modification proposed     │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ STEP 1: IDENTIFY AFFECTED REQUIREMENT(S)                            │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Identify the requirement(s) being changed                         │   │
+│  │ □ Document what specifically is changing                            │   │
+│  │ □ Categorize change type (Add/Modify/Delete)                        │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ STEP 2: TRACE BACKWARD (Upstream Impact)                            │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ What business requirement(s) does this trace to?                  │   │
+│  │ □ What stakeholder need(s) does this address?                       │   │
+│  │ □ Does the change still align with the original intent?             │   │
+│  │ □ Do we need to update business requirements?                       │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ STEP 3: TRACE FORWARD (Downstream Impact)                           │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ What design elements are affected?                                │   │
+│  │ □ What code modules need changes?                                   │   │
+│  │ □ What test cases need updates?                                     │   │
+│  │ □ What documentation needs revision?                                │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ STEP 4: TRACE HORIZONTAL (Peer Impact)                              │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ What other requirements at same level are affected?               │   │
+│  │ □ Are there dependencies between requirements?                      │   │
+│  │ □ What interfaces/integrations are affected?                        │   │
+│  │ □ What use cases share this functionality?                          │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ STEP 5: ESTIMATE EFFORT & RISK                                      │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Estimate development effort for each affected item                │   │
+│  │ □ Estimate testing effort                                            │   │
+│  │ □ Identify risks of making/not making the change                    │   │
+│  │ □ Identify regression risk                                           │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ STEP 6: DOCUMENT & PRESENT                                          │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Complete Impact Analysis Report                                   │   │
+│  │ □ Present to Change Control Board / Decision Maker                  │   │
+│  │ □ Get approval before proceeding                                    │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### RTM Health Metrics
+### Impact Analysis Report Template
 
-| Metric | Formula | Target |
-|--------|---------|--------|
-| **Forward Traceability** | Reqs with Test Cases / Total Reqs | 100% |
-| **Backward Traceability** | Reqs with Source / Total Reqs | 100% |
-| **Implementation Coverage** | Implemented / Approved Reqs | 100% |
-| **Test Coverage** | Tested Reqs / Implemented Reqs | 100% |
-| **Verification Rate** | Verified / Tested Reqs | > 95% |
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    IMPACT ANALYSIS REPORT                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ CR NUMBER: CR-2024-001          DATE: 2024-01-15                           │
+│ ANALYST: [Name]                 STATUS: Pending Review                     │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 1. CHANGE DESCRIPTION                                                       │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ Requirement: FR-AUTH-003                                                    │
+│ Current State: Session timeout after 30 minutes of inactivity              │
+│ Proposed Change: Reduce timeout to 15 minutes for security compliance      │
+│ Reason: Security audit finding SEC-2024-05                                 │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 2. AFFECTED ITEMS                                                           │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│                                                                             │
+│ BACKWARD TRACE (Source Impact):                                             │
+│ ┌────────────────┬──────────────────────────────────────────────────────┐  │
+│ │ Item           │ Impact Description                                   │  │
+│ ├────────────────┼──────────────────────────────────────────────────────┤  │
+│ │ NFR-SEC-001    │ Satisfied (improves compliance)                     │  │
+│ │ BR-SECURITY-01 │ Aligned (supports security goal)                    │  │
+│ └────────────────┴──────────────────────────────────────────────────────┘  │
+│                                                                             │
+│ FORWARD TRACE (Implementation Impact):                                      │
+│ ┌────────────────┬─────────────────────────────────────────┬────────────┐  │
+│ │ Item           │ Impact Description                      │ Effort     │  │
+│ ├────────────────┼─────────────────────────────────────────┼────────────┤  │
+│ │ DES-SESSION-01 │ Update timeout constant                 │ 0.5 hrs    │  │
+│ │ session-mgr.js │ Change timeout value                    │ 0.5 hrs    │  │
+│ │ config.json    │ Update default setting                  │ 0.25 hrs   │  │
+│ │ TC-AUTH-015    │ Update expected timeout value           │ 1 hr       │  │
+│ │ TC-AUTH-016    │ Add boundary test for 15 min            │ 2 hrs      │  │
+│ │ User Guide     │ Update session info section             │ 1 hr       │  │
+│ └────────────────┴─────────────────────────────────────────┴────────────┘  │
+│                                                                             │
+│ HORIZONTAL TRACE (Peer Impact):                                             │
+│ ┌────────────────┬──────────────────────────────────────────────────────┐  │
+│ │ Item           │ Impact Description                                   │  │
+│ ├────────────────┼──────────────────────────────────────────────────────┤  │
+│ │ FR-AUTH-004    │ "Remember Me" feature needs adjustment for new timeout│ │
+│ │ FR-MOBILE-001  │ Mobile session sync needs review                     │  │
+│ │ API-SESSION    │ API documentation requires update                    │  │
+│ └────────────────┴──────────────────────────────────────────────────────┘  │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 3. EFFORT SUMMARY                                                           │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│                                                                             │
+│ ┌──────────────────────┬────────────────┐                                  │
+│ │ Category             │ Estimated Hours│                                  │
+│ ├──────────────────────┼────────────────┤                                  │
+│ │ Requirements Update  │ 1 hr           │                                  │
+│ │ Design Update        │ 0.5 hrs        │                                  │
+│ │ Development          │ 0.75 hrs       │                                  │
+│ │ Testing              │ 3 hrs          │                                  │
+│ │ Documentation        │ 1 hr           │                                  │
+│ ├──────────────────────┼────────────────┤                                  │
+│ │ TOTAL                │ 6.25 hrs       │                                  │
+│ └──────────────────────┴────────────────┘                                  │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 4. RISK ASSESSMENT                                                          │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│                                                                             │
+│ ┌──────────────────────┬──────────┬────────┬───────────────────────────┐   │
+│ │ Risk                 │ Likelihood│Impact │ Mitigation                 │   │
+│ ├──────────────────────┼──────────┼────────┼───────────────────────────┤   │
+│ │ User frustration     │ Medium   │ Low    │ Add warning before timeout │  │
+│ │ from shorter timeout │          │        │                           │   │
+│ │                      │          │        │                           │   │
+│ │ Regression in        │ Low      │ High   │ Full regression testing   │   │
+│ │ session management   │          │        │                           │   │
+│ └──────────────────────┴──────────┴────────┴───────────────────────────┘   │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 5. RECOMMENDATION                                                           │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│                                                                             │
+│ ☑ APPROVE - Low effort, addresses security compliance requirement          │
+│ ☐ REJECT                                                                    │
+│ ☐ DEFER                                                                     │
+│                                                                             │
+│ APPROVALS:                                                                  │
+│ ┌────────────────┬──────────────┬────────────┬──────────────┐              │
+│ │ Role           │ Name         │ Decision   │ Date         │              │
+│ ├────────────────┼──────────────┼────────────┼──────────────┤              │
+│ │ BA Lead        │              │            │              │              │
+│ │ Tech Lead      │              │            │              │              │
+│ │ Product Owner  │              │            │              │              │
+│ └────────────────┴──────────────┴────────────┴──────────────┘              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 📝 CHANGE MANAGEMENT
 
-### Change Control Process
+### Complete Change Control Process
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                    CHANGE MANAGEMENT PROCESS                                │
+│                    CHANGE CONTROL WORKFLOW                                  │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│                         ┌─────────────┐                                     │
-│                         │   Change    │                                     │
-│                         │   Request   │                                     │
-│                         └──────┬──────┘                                     │
-│                                │                                            │
-│                                ▼                                            │
-│                         ┌─────────────┐                                     │
-│                         │    Log &    │                                     │
-│                         │  Categorize │                                     │
-│                         └──────┬──────┘                                     │
-│                                │                                            │
-│                                ▼                                            │
-│                         ┌─────────────┐                                     │
-│                         │   Impact    │                                     │
-│                         │  Assessment │                                     │
-│                         └──────┬──────┘                                     │
-│                                │                                            │
-│              ┌─────────────────┼─────────────────┐                          │
-│              │                 │                 │                          │
-│              ▼                 ▼                 ▼                          │
-│       ┌─────────────┐  ┌─────────────┐  ┌─────────────┐                    │
-│       │   APPROVE   │  │   REJECT    │  │   DEFER     │                    │
-│       └──────┬──────┘  └─────────────┘  └─────────────┘                    │
-│              │                                                              │
-│              ▼                                                              │
-│       ┌─────────────┐                                                       │
-│       │  Implement  │                                                       │
-│       └──────┬──────┘                                                       │
-│              │                                                              │
-│              ▼                                                              │
-│       ┌─────────────┐                                                       │
-│       │   Update    │                                                       │
-│       │   RTM &     │                                                       │
-│       │   Docs      │                                                       │
-│       └──────┬──────┘                                                       │
-│              │                                                              │
-│              ▼                                                              │
-│       ┌─────────────┐                                                       │
-│       │   Verify &  │                                                       │
-│       │  Communicate│                                                       │
-│       └─────────────┘                                                       │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ 1. REQUEST                                                           │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Requestor submits Change Request (CR)                             │   │
+│  │ □ BA logs CR with unique ID                                          │   │
+│  │ □ Initial categorization (Type, Priority)                           │   │
+│  │ □ Assign to BA for analysis                                          │   │
+│  │ STATUS: Submitted → Under Analysis                                   │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ 2. ANALYZE                                                           │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Clarify request with requestor if needed                          │   │
+│  │ □ Perform Impact Analysis (see above)                               │   │
+│  │ □ Estimate effort and cost                                          │   │
+│  │ □ Identify risks                                                     │   │
+│  │ □ Document in Impact Analysis Report                                │   │
+│  │ STATUS: Under Analysis → Assessed                                    │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ 3. REVIEW & DECIDE                                                   │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Present to Change Control Board (CCB)                             │   │
+│  │ □ Discuss trade-offs                                                 │   │
+│  │ □ Make decision: APPROVE / REJECT / DEFER                           │   │
+│  │ □ Document decision and rationale                                   │   │
+│  │ STATUS: Assessed → Approved / Rejected / Deferred                   │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│        ┌──────────────────────┼──────────────────────┐                     │
+│        ▼                      ▼                      ▼                     │
+│  ┌──────────┐          ┌──────────┐          ┌──────────┐                  │
+│  │ APPROVED │          │ REJECTED │          │ DEFERRED │                  │
+│  └────┬─────┘          └────┬─────┘          └────┬─────┘                  │
+│       │                     │                     │                        │
+│       ▼                     ▼                     ▼                        │
+│  ┌─────────────┐      ┌─────────────┐      ┌─────────────┐                 │
+│  │ Implement   │      │ Close CR    │      │ Add to      │                 │
+│  │ Change      │      │ Notify      │      │ Backlog     │                 │
+│  │ Update RTM  │      │ Requestor   │      │ for Future  │                 │
+│  └──────┬──────┘      └─────────────┘      └─────────────┘                 │
+│         │                                                                   │
+│         ▼                                                                   │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ 4. IMPLEMENT                                                         │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Update requirements document(s)                                   │   │
+│  │ □ Update design as needed                                            │   │
+│  │ □ Develop and test changes                                           │   │
+│  │ □ Update RTM with new traceability                                  │   │
+│  │ □ Update test cases                                                  │   │
+│  │ STATUS: Approved → In Progress → Implemented                         │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ 5. VERIFY & CLOSE                                                    │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Verify change implemented correctly                               │   │
+│  │ □ Regression testing complete                                        │   │
+│  │ □ Documentation updated                                              │   │
+│  │ □ Notify requestor                                                   │   │
+│  │ □ Close CR                                                           │   │
+│  │ STATUS: Implemented → Verified → Closed                              │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Change Request Template
-
-```
-┌─────────────────────────────────────────────────────────────┐
-│ CHANGE REQUEST FORM                                         │
-├─────────────────────────────────────────────────────────────┤
-│ CR ID: CR-[XXX]                                             │
-│ Date Submitted: [YYYY-MM-DD]                                │
-│ Requestor: [Name, Role]                                     │
-│ Status: [New|Analysis|Approved|Rejected|Implemented|Closed] │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│ CHANGE DESCRIPTION:                                         │
-│ [Detailed description of the requested change]              │
-│                                                             │
-│ REASON/JUSTIFICATION:                                       │
-│ [Why is this change needed? Business driver?]               │
-│                                                             │
-│ AFFECTED REQUIREMENTS:                                      │
-│ • [REQ-ID]: [How it's affected]                             │
-│ • [REQ-ID]: [How it's affected]                             │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│ IMPACT ASSESSMENT:                                          │
-│                                                             │
-│ Schedule: [None|Low|Medium|High]  Details: [...]            │
-│ Budget:   [None|Low|Medium|High]  Details: [...]            │
-│ Quality:  [None|Low|Medium|High]  Details: [...]            │
-│ Risk:     [None|Low|Medium|High]  Details: [...]            │
-│                                                             │
-│ Dependencies: [Other changes/requirements affected]         │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│ RECOMMENDATION: [Approve|Reject|Defer]                      │
-│ Rationale: [...]                                            │
-│                                                             │
-├─────────────────────────────────────────────────────────────┤
-│ DECISION:                                                   │
-│ Decision: [Approved|Rejected|Deferred]                      │
-│ Decision Maker: [Name/Role]                                 │
-│ Decision Date: [YYYY-MM-DD]                                 │
-│ Comments: [...]                                             │
-└─────────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🎯 IMPACT ANALYSIS FRAMEWORK
-
-### Impact Analysis Checklist
+### Change Request Form
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                        IMPACT ANALYSIS CHECKLIST                            │
+│                    CHANGE REQUEST FORM                                      │
 ├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  REQUIREMENTS IMPACT:                                                       │
-│  ☐ Which requirements are directly affected?                                │
-│  ☐ Which requirements are indirectly affected (via dependencies)?           │
-│  ☐ Are new requirements needed?                                             │
-│  ☐ Should any requirements be removed?                                      │
-│  ☐ Do priorities need to change?                                            │
+│ CR NUMBER: CR-____-___   DATE: ___________   REQUESTOR: _________________  │
 │                                                                             │
-│  DESIGN IMPACT:                                                             │
-│  ☐ Architecture changes required?                                           │
-│  ☐ Database schema changes?                                                 │
-│  ☐ UI/UX changes?                                                           │
-│  ☐ API changes?                                                             │
-│  ☐ Integration points affected?                                             │
+│ PROJECT: _________________________   RELEASE: ___________________________  │
 │                                                                             │
-│  IMPLEMENTATION IMPACT:                                                     │
-│  ☐ Code modules affected?                                                   │
-│  ☐ New components needed?                                                   │
-│  ☐ Third-party dependencies?                                                │
-│  ☐ Effort estimation?                                                       │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 1. CHANGE TYPE (select one):                                                │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ ☐ New Requirement     ☐ Modify Existing     ☐ Delete Requirement           │
+│ ☐ Defect Fix          ☐ Enhancement         ☐ Clarification                │
 │                                                                             │
-│  TESTING IMPACT:                                                            │
-│  ☐ Test cases to modify?                                                    │
-│  ☐ New test cases needed?                                                   │
-│  ☐ Regression scope?                                                        │
-│  ☐ Test data changes?                                                       │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 2. AFFECTED REQUIREMENT(S):                                                 │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ REQ ID(s): _____________________________________________________________   │
 │                                                                             │
-│  PROJECT IMPACT:                                                            │
-│  ☐ Schedule impact?                                                         │
-│  ☐ Budget impact?                                                           │
-│  ☐ Resource requirements?                                                   │
-│  ☐ Risk implications?                                                       │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 3. CHANGE DESCRIPTION:                                                      │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ Current State:                                                              │
+│ _________________________________________________________________________  │
+│ _________________________________________________________________________  │
 │                                                                             │
-│  STAKEHOLDER IMPACT:                                                        │
-│  ☐ Who needs to be informed?                                                │
-│  ☐ Training requirements?                                                   │
-│  ☐ Documentation updates?                                                   │
+│ Proposed Change:                                                            │
+│ _________________________________________________________________________  │
+│ _________________________________________________________________________  │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 4. BUSINESS JUSTIFICATION:                                                  │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ _________________________________________________________________________  │
+│ _________________________________________________________________________  │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ 5. PRIORITY:                                                                │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ ☐ Critical (Blocking)   ☐ High   ☐ Medium   ☐ Low                          │
+│                                                                             │
+│ Requested Implementation Date: ___________                                 │
+│                                                                             │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ FOR BA USE:                                                                 │
+│ ═══════════════════════════════════════════════════════════════════════════│
+│ Assigned Analyst: _______________   Date Received: _______________         │
+│ Status: ☐ Submitted ☐ Analyzing ☐ Assessed ☐ Approved ☐ Rejected ☐ Closed │
+│ Impact Analysis Ref: _______________                                       │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📚 VERSION CONTROL
+## 📋 BASELINE MANAGEMENT
 
-### Naming Convention
-
-```
-Document: [Project]_[DocType]_v[Major].[Minor].[Patch]._[Status]
-
-Examples:
-• ECommerce_SRS_v1.0.0_Draft
-• ECommerce_SRS_v1.0.0_Approved
-• ECommerce_SRS_v1.1.0_Draft
-• ECommerce_SRS_v2.0.0_Approved
-
-Version Rules:
-• Major (X.0.0): Significant scope changes, new baseline
-• Minor (0.X.0): Feature additions/modifications
-• Patch (0.0.X): Typo fixes, clarifications
-```
-
-### Version History Table
-
-| Version | Date | Author | Changes | Approved By |
-|---------|------|--------|---------|-------------|
-| 1.0.0 | 2024-01-15 | BA Team | Initial release | PO |
-| 1.1.0 | 2024-02-01 | BA Team | Added FR-015 to FR-020 | PO |
-| 1.1.1 | 2024-02-05 | BA Team | Clarified FR-015 | - |
-| 2.0.0 | 2024-03-01 | BA Team | Phase 2 requirements | Sponsor |
-
-### Baseline Management
+### Baseline Lifecycle
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                   REQUIREMENTS BASELINES                    │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  Project    Analysis      Design       Dev         UAT      │
-│  Start      Complete      Complete     Complete    Start    │
-│    │           │            │            │           │      │
-│    ▼           ▼            ▼            ▼           ▼      │
-│  ──┼───────────┼────────────┼────────────┼───────────┼───►  │
-│    │           │            │            │           │      │
-│              BL-1         BL-2         BL-3       BL-4      │
-│            (Draft)     (Approved)   (Frozen)    (Final)    │
-│                                                             │
-│  Baseline = Snapshot of approved requirements               │
-│  After baseline: All changes go through CR process          │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    BASELINE MANAGEMENT                                      │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  BASELINE = A formal, approved snapshot of requirements at a point in time │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │                    BASELINE LIFECYCLE                                │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │                                                                       │  │
+│  │  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐          │  │
+│  │  │  DRAFT   │──►│ REVIEWED │──►│ APPROVED │──►│ BASELINED│          │  │
+│  │  │          │   │          │   │          │   │          │          │  │
+│  │  └──────────┘   └──────────┘   └──────────┘   └──────────┘          │  │
+│  │       │              │              │              │                 │  │
+│  │       │              │              │              │                 │  │
+│  │       ▼              ▼              ▼              ▼                 │  │
+│  │  Working         Review         Sign-off       FROZEN               │  │
+│  │  Version         Complete       Obtained       (Read-only)          │  │
+│  │                                                                       │  │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  TYPICAL BASELINES:                                                         │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ BL-1.0 │ Initial baseline after BRD approval                        │   │
+│  │ BL-1.1 │ After major change incorporated                            │   │
+│  │ BL-2.0 │ Release 2.0 requirements baseline                          │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  BASELINE RULES:                                                            │
+│  ✓ No changes without approved CR                                           │
+│  ✓ Version number incremented on each baseline                             │
+│  ✓ Previous baselines archived, never deleted                              │
+│  ✓ All stakeholders notified of new baseline                               │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Version Numbering Convention
+
+| Change Type | Version Change | Example |
+|-------------|----------------|---------|
+| Major scope change | X.0 → Y.0 | 1.0 → 2.0 |
+| Significant addition | X.Y → X.Y+1 | 1.0 → 1.1 |
+| Minor correction | X.Y.Z → X.Y.Z+1 | 1.0.0 → 1.0.1 |
+| Draft iteration | X.Y-draft.N | 1.0-draft.3 |
+
+---
+
+## 🔧 TOOL INTEGRATION GUIDANCE
+
+### Tool Selection Matrix
+
+| Tool | Strengths | Best For | Traceability Features |
+|------|-----------|----------|----------------------|
+| **Jira** | Agile, integration ecosystem | Agile teams | Epic→Story→Subtask, Custom links |
+| **Azure DevOps** | Microsoft stack, CI/CD | Enterprise Microsoft | Work item linking, Query-based RTM |
+| **DOORS** | Complex requirements, regulatory | Aerospace, Defense, Medical | Native traceability, Baselines |
+| **Confluence** | Documentation, collaboration | Documentation-heavy | Labels, Links (limited) |
+| **Airtable/Notion** | Flexibility, quick setup | Small teams, PoCs | Relations, Views |
+| **Excel** | Universally available | Simple projects | Manual maintenance |
+
+### Jira Configuration for Traceability
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    JIRA TRACEABILITY SETUP                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ISSUE TYPE HIERARCHY:                                                      │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │                                                                       │  │
+│  │  Business Requirement (BR-xxx)                                        │  │
+│  │      │                                                                │  │
+│  │      └──► Epic (EPIC-xxx)                                             │  │
+│  │              │                                                        │  │
+│  │              ├──► User Story (US-xxx)                                 │  │
+│  │              │        │                                               │  │
+│  │              │        └──► Task (TASK-xxx)                            │  │
+│  │              │        └──► Bug (BUG-xxx)                              │  │
+│  │              │                                                        │  │
+│  │              └──► Test Case (TC-xxx) [via Zephyr/Xray]               │  │
+│  │                                                                       │  │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  LINK TYPES TO CREATE:                                                      │
+│  • "implements" / "is implemented by" (FR → Code)                          │
+│  • "tests" / "is tested by" (FR → TC)                                      │
+│  • "derives from" / "is parent of" (BR → FR)                               │
+│  • "depends on" / "blocks" (FR → FR)                                       │
+│                                                                             │
+│  RTM GENERATION:                                                            │
+│  • Use JQL to query all requirements and linked items                      │
+│  • Export to Excel or use Jira Reports                                     │
+│  • Third-party add-ons: Structure, Insight, eazyBI                        │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Azure DevOps Configuration
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    AZURE DEVOPS TRACEABILITY                                │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  WORK ITEM TYPES:                                                           │
+│  • Feature (Business Requirement)                                           │
+│  • Product Backlog Item / User Story (Functional Requirement)              │
+│  • Task (Implementation)                                                    │
+│  • Test Case (Verification)                                                 │
+│  • Bug (Defect)                                                             │
+│                                                                             │
+│  LINK TYPES:                                                                │
+│  • Parent/Child (hierarchical)                                              │
+│  • Tests/Tested By                                                          │
+│  • Related                                                                  │
+│                                                                             │
+│  QUERY FOR RTM:                                                             │
+│  SELECT [System.Id], [System.Title], [System.WorkItemType]                 │
+│  FROM WorkItemLinks                                                         │
+│  WHERE [Source].[System.WorkItemType] = 'Feature'                          │
+│  AND [System.Links.LinkType] = 'Child'                                     │
+│  MODE (Recursive)                                                           │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📈 CHANGE METRICS
+## ✅ TRACEABILITY & CHANGE MANAGEMENT CHECKLIST
 
-| Metric | Formula | What It Shows |
-|--------|---------|---------------|
-| **Volatility** | CRs / Total Reqs × 100% | Requirement stability |
-| **Change Rate** | CRs per Week/Sprint | Trend of changes |
-| **Approval Rate** | Approved / Total CRs | CR quality |
-| **Cycle Time** | Days from CR to Implementation | Process efficiency |
-| **Rework Rate** | Reqs Changed > 1 time / Total | Clarity issues |
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    TRACEABILITY CHECKLIST                                   │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  RTM SETUP                                                                  │
+│  ☐ RTM created with standard columns                                        │
+│  ☐ All requirements have unique IDs                                        │
+│  ☐ Traceability approach defined (tool, manual, hybrid)                    │
+│  ☐ Link types established                                                   │
+│  ☐ Status definitions documented                                           │
+│                                                                             │
+│  TRACEABILITY MAINTENANCE                                                   │
+│  ☐ All requirements trace backward to source                               │
+│  ☐ All requirements trace forward to design/test                           │
+│  ☐ No orphan requirements (no source)                                      │
+│  ☐ No untested requirements                                                 │
+│  ☐ No gold plating (features without requirements)                         │
+│  ☐ RTM updated when requirements change                                    │
+│  ☐ Regular health checks performed                                          │
+│                                                                             │
+│  CHANGE MANAGEMENT                                                          │
+│  ☐ Change control process documented                                        │
+│  ☐ CR form and workflow established                                        │
+│  ☐ CCB members identified                                                   │
+│  ☐ Impact analysis template available                                      │
+│  ☐ All changes go through CR process after baseline                       │
+│  ☐ Decisions documented with rationale                                     │
+│                                                                             │
+│  BASELINE MANAGEMENT                                                        │
+│  ☐ Baseline criteria defined                                                │
+│  ☐ Version numbering scheme established                                    │
+│  ☐ Baseline archive maintained                                              │
+│  ☐ Stakeholders notified of new baselines                                  │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 🔗 RELATED SKILLS
+## 📊 TRACEABILITY METRICS
 
-| For... | Load |
-|--------|------|
-| Writing requirements | SKILL-03 |
-| Resolving change conflicts | SKILL-06 |
-| Validating changes | SKILL-08 |
-| Document templates | SKILL-09, 10, 11 |
+| Metric | Formula | Target | Red Flag |
+|--------|---------|--------|----------|
+| **Backward Coverage** | Reqs with Source / Total × 100% | 100% | < 95% |
+| **Forward Coverage** | Reqs with Test / Total × 100% | 100% | < 95% |
+| **Orphan Rate** | Orphans / Total × 100% | 0% | > 5% |
+| **Change Volume** | CRs per Month | Trend | Increasing |
+| **CR Cycle Time** | Days from Submit to Close | < 5 days | > 10 days |
+| **CR Approval Rate** | Approved / Total CRs × 100% | 70-80% | < 50% |
 
 ---
 
-*Use this skill to maintain requirement integrity throughout the project lifecycle.*
+## 🔗 CONNECTIONS TO OTHER SKILLS
+
+| When you need to... | Load Skill |
+|---------------------|------------|
+| Review requirements before baselining | → SKILL-08 (Validation) |
+| Prioritize change requests | → SKILL-05 (Prioritization) |
+| Resolve CR conflicts | → SKILL-06 (Conflict Resolution) |
+| Write clear requirements initially | → SKILL-03 (Writing Quality) |
+| Update document templates | → SKILL-09, 10, 11 |
+
+---
+
+*Skill upgraded to World-Class standard. Traceability is the lifeline of requirements—maintain it rigorously.*

@@ -9,9 +9,10 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-17-blue?style=for-the-badge" alt="17 Skills">
+  <img src="https://img.shields.io/badge/Skills-20-blue?style=for-the-badge" alt="20 Skills">
   <img src="https://img.shields.io/badge/Workflows-11-green?style=for-the-badge" alt="11 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
+  <img src="https://img.shields.io/badge/CMMI-Level%205-gold?style=for-the-badge" alt="CMMI Level 5">
   <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010%20%7C%20BABOK-purple?style=for-the-badge" alt="Standards">
 </p>
 
@@ -20,7 +21,7 @@
 
 <p align="center">
   <strong>Chinh Phục Nghệ Thuật Kỹ Nghệ Yêu Cầu</strong><br>
-  17 năng lực cốt lõi • 11 quy trình chiến lược • Tiêu chuẩn tài liệu đẳng cấp thế giới
+  20 năng lực cốt lõi • 11 quy trình chiến lược • Đạt chuẩn CMMI Level 5
 </p>
 
 ---
@@ -72,6 +73,13 @@ Dù được sử dụng bởi **Chuyên gia Con người** hay **AI Agent**, BA
 │  │    SKILL-01     │ │    SKILL-02     │ │    SKILL-03     │               │
 │  │    Identity     │ │   Elicitation   │ │ Writing Quality │               │
 │  │    Định danh    │ │   Khơi gợi      │ │ Chất lượng Viết │               │
+│  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
+│                              │                                              │
+│  🟣 ADVANCED LAYER (Tối ưu hóa) ─ CMMI LEVEL 5                               │
+│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
+│  │    SKILL-18     │ │    SKILL-19     │ │    SKILL-20     │               │
+│  │   Metrics/SPC   │ │  Root Cause     │ │   Innovation    │               │
+│  │   Thống kê      │ │Nguyên nhân gốc │ │   Đổi mới      │               │
 │  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -151,6 +159,33 @@ BA-Kit được xây dựng dựa trên sự tổng hợp của các tiêu chu�
 | **BABOK v3** | Khung tri thức cốt lõi của Business Analysis (IIBA) |
 | **Harvard Negotiation Project** | Phương pháp đàm phán nguyên tắc để giải quyết xung đột |
 | **SAFe® (Scaled Agile Framework)** | Mô hình ưu tiên theo giá trị kinh tế (WSJF) |
+| **CMMI Level 5** | CAR, OID, SPC frameworks |
+
+---
+
+## 🔗 Bản đồ Phối hợp Năng lực (Skill Synergy Map)
+
+Kết hợp các năng lực để tạo hiệu ứng cộng hưởng:
+
+| Kịch bản | Năng lực chính | Năng lực hỗ trợ | Kết quả |
+|----------|:-------------:|:----------------:|----------------|
+| **Product Discovery** | SKILL-02 (Elicitation) | SKILL-14 (UX) + SKILL-15 (Workshop) | Hiểu sâu user + Prototype đã validate |
+| **System Architecture** | SKILL-13 (Data) | SKILL-16 (Process) + SKILL-04 (NFR) | Backend vững chắc theo quy trình |
+| **Xử lý Khủng hoảng** | SKILL-06 (Conflict) | SKILL-05 (Priority) + SKILL-01 (Stakeholder) | Đàm phán cắt scope hiệu quả |
+| **Audit Chất lượng** | SKILL-08 (Validation) | SKILL-03 (Writing) + SKILL-18 (SPC) | Bằng chứng thống kê |
+| **Cải tiến Liên tục** | SKILL-19 (CAR) | SKILL-18 (SPC) + SKILL-20 (OID) | Tối ưu hóa bằng dữ liệu |
+
+---
+
+## 📊 Ma trận Năng lực theo Vai trò
+
+| Năng lực | **Junior BA** | **Senior BA** | **Lead BA / PO** |
+|----------|:-------------:|:-------------:|:----------------:|
+| **Tập trung** | Làm đúng việc | Làm việc đúng | Cải tiến cách làm |
+| **Bắt buộc** | SKILL-02, 03, 12 | + SKILL-04, 05, 13 | + SKILL-17, 18, 19, 20 |
+| **Trình độ** | Theo template | Tùy chỉnh template | Tạo framework mới |
+| **Chất lượng** | Tự kiểm tra | Peer Review | SPC & Năng lực quy trình |
+| **Phạm vi** | Single Feature | Complete Product | Portfolio/Enterprise |
 
 ---
 

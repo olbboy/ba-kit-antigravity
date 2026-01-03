@@ -9,9 +9,10 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-17-blue?style=for-the-badge" alt="17 Skills">
+  <img src="https://img.shields.io/badge/Skills-20-blue?style=for-the-badge" alt="20 Skills">
   <img src="https://img.shields.io/badge/Workflows-11-green?style=for-the-badge" alt="11 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
+  <img src="https://img.shields.io/badge/CMMI-Level%205-gold?style=for-the-badge" alt="CMMI Level 5">
   <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010%20%7C%20BABOK-purple?style=for-the-badge" alt="Standards">
 </p>
 
@@ -20,7 +21,7 @@
 
 <p align="center">
   <strong>Master the Art of Requirements Engineering</strong><br>
-  17 connected competencies • 11 strategic workflows • World-class documentation standards
+  20 connected competencies • 11 strategic workflows • CMMI Level 5 Certified
 </p>
 
 ---
@@ -68,6 +69,12 @@ This is the toolkit for those who refuse to compromise on clarity.
 │  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
 │  │    SKILL-01     │ │    SKILL-02     │ │    SKILL-03     │               │
 │  │    Identity     │ │   Elicitation   │ │  Writing Quality│               │
+│  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
+│                              │                                              │
+│  🟣 ADVANCED (Optimizing Layer) ─ CMMI LEVEL 5                              │
+│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
+│  │    SKILL-18     │ │    SKILL-19     │ │    SKILL-20     │               │
+│  │   Metrics/SPC   │ │  Root Cause     │ │   Innovation    │               │
 │  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
@@ -146,7 +153,7 @@ ba-kit/
 
 ---
 
-## 🎓 The 12 Skills
+## 🎓 The 20 Skills
 
 ### 🔵 Core Skills (Always Active)
 
@@ -175,6 +182,14 @@ ba-kit/
 | **11** | FRD Template | Detailed Functional Requirements |
 | **12** | Agile Artifacts | User Stories, Epics, Use Cases, Story Mapping |
 
+### 🟣 Advanced Skills (CMMI Level 5)
+
+| Skill | Name | Purpose |
+|-------|------|---------|
+| **18** | Metrics & SPC | Statistical Process Control, Cpk, KPI Dashboard |
+| **19** | Root Cause Analysis | Fishbone, 5 Whys, Pareto, Hypothesis Testing |
+| **20** | Innovation (OID) | Pilot Framework, A/B Testing, ROI Calculator |
+
 ---
 
 ## 📜 Standards Compliance
@@ -189,6 +204,33 @@ BA-Kit incorporates best practices from:
 | **RFC 2119** | Requirement keywords (SHALL/SHOULD/MAY) |
 | **IREB CPRE** | Requirements engineering syllabus |
 | **SAFe/Agile** | User stories, WSJF prioritization |
+| **CMMI Level 5** | CAR, OID, SPC frameworks |
+
+---
+
+## 🔗 Skill Synergy Map
+
+Combine skills for maximum impact:
+
+| Scenario | Primary Skill | Secondary Skills | Synergy Effect |
+|----------|:-------------:|:----------------:|----------------|
+| **Product Discovery** | SKILL-02 (Elicitation) | SKILL-14 (UX) + SKILL-15 (Workshop) | Deep user understanding + Validated prototypes |
+| **System Architecture** | SKILL-13 (Data) | SKILL-16 (Process) + SKILL-04 (NFR) | Robust backend design with process flow awareness |
+| **Crisis Management** | SKILL-06 (Conflict) | SKILL-05 (Priority) + SKILL-01 (Stakeholder) | Negotiating scope cuts with difficult stakeholders |
+| **Quality Audit** | SKILL-08 (Validation) | SKILL-03 (Writing) + SKILL-18 (SPC) | Statistical proof of requirements quality |
+| **Continuous Improvement** | SKILL-19 (CAR) | SKILL-18 (SPC) + SKILL-20 (OID) | Data-driven process optimization |
+
+---
+
+## 📊 Competency Matrix by Role
+
+| Skillset | **Junior BA** | **Senior BA** | **Lead BA / PO** |
+|----------|:-------------:|:-------------:|:----------------:|
+| **Focus** | Doing work right | Doing right work | Improving how work is done |
+| **Must-Have** | SKILL-02, 03, 12 | + SKILL-04, 05, 13 | + SKILL-17, 18, 19, 20 |
+| **Mastery** | Follows templates | Customizes templates | Creates frameworks |
+| **Quality** | Self-checks | Peer Reviews | SPC & Process Capability |
+| **Scope** | Single Feature | Complete Product | Portfolio/Enterprise |
 
 ---
 

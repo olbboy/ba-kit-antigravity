@@ -389,6 +389,63 @@ Skill này cung cấp **framework và kỹ thuật đàm phán chiến lược**
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
 
+### Cialdini's 6 Principles of Influence
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    CIALDINI'S 6 INFLUENCE PRINCIPLES                        │
+│                    (Psychology of Persuasion for BAs)                       │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  1. RECIPROCITY - "Give before you ask"                                     │
+│  ─────────────────────────────────────                                      │
+│  • Help stakeholders before requesting their time                           │
+│  • Share useful information proactively                                     │
+│  • Example: "I streamlined that report for you last week..."               │
+│                                                                             │
+│  2. COMMITMENT & CONSISTENCY - "Start small, build up"                      │
+│  ───────────────────────────────────────────────────────                    │
+│  • Get small agreements first, then build on them                           │
+│  • Reference past statements and decisions                                  │
+│  • Example: "You mentioned quality is priority. This approach..."           │
+│                                                                             │
+│  3. SOCIAL PROOF - "Others are doing it"                                    │
+│  ──────────────────────────────────────────                                 │
+│  • Reference industry standards and competitors                             │
+│  • Share success stories from similar projects                              │
+│  • Example: "Three other departments have adopted this approach..."         │
+│                                                                             │
+│  4. AUTHORITY - "Experts recommend"                                         │
+│  ─────────────────────────────────────                                      │
+│  • Cite recognized standards (ISO, IEEE, IIBA)                              │
+│  • Leverage executive sponsorship                                           │
+│  • Example: "According to IEEE 29148, this is the standard..."              │
+│                                                                             │
+│  5. LIKING - "We work well together"                                        │
+│  ─────────────────────────────────────                                      │
+│  • Build genuine rapport before negotiations                                │
+│  • Find common ground and shared goals                                      │
+│  • Example: "I know we both want this project to succeed..."                │
+│                                                                             │
+│  6. SCARCITY - "Limited time/opportunity"                                   │
+│  ──────────────────────────────────────────                                 │
+│  • Highlight deadline constraints and opportunity costs                     │
+│  • Example: "If we miss Friday, we'll delay launch by a month"              │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### BA Influence Tactics Table
+
+| Situation | Influence Tactic | Example Script |
+|-----------|------------------|----------------|
+| Need info from busy SME | Build relationship first | "I know you're busy. How can I make this easy for you?" |
+| Getting requirements buy-in | Involve them early | "What would make this work for your team?" |
+| Pushing back on scope creep | Use data and impact | "Here's the impact analysis. What should we cut?" |
+| HIPPO overriding decisions | Reframe with questions | "Help me understand the business rationale?" |
+| Getting sign-off | Make it easy | "I've prepared the summary. Just reply 'approved'" |
+| Breaking deadlock | Bring neutral party | "Could we get [respected person] to facilitate?" |
+
 ---
 
 ## 🗣️ NEGOTIATION SCRIPTS
