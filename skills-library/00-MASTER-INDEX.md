@@ -42,6 +42,25 @@ Hệ thống này chia kiến thức Requirements Engineering thành **12 Skills
 │  └─────────────────────────────────────────────────────────────────────┘   │
 │                                                                             │
 │  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │                      🟠 ADVANCED SKILLS                             │   │
+│  │                   (Deep Expertise - Complex Tasks)                  │   │
+│  │                                                                     │   │
+│  │  ┌──────────┐   ┌──────────┐   ┌──────────┐   ┌──────────┐         │   │
+│  │  │ SKILL-13 │   │ SKILL-14 │   │ SKILL-15 │   │ SKILL-16 │         │   │
+│  │  │ Data     │   │ UX &     │   │ Workshop │   │ Process  │         │   │
+│  │  │ Modeling │   │ Design   │   │ Facilit- │   │ Modeling │         │   │
+│  │  │          │   │ Thinking │   │ ation    │   │ (BPMN)   │         │   │
+│  │  └──────────┘   └──────────┘   └──────────┘   └──────────┘         │   │
+│  │                                                                     │   │
+│  │                       ┌──────────┐                                  │   │
+│  │                       │ SKILL-17 │                                  │   │
+│  │                       │ Solution │                                  │   │
+│  │                       │ Eval &   │                                  │   │
+│  │                       │ ROI      │                                  │   │
+│  │                       └──────────┘                                  │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
 │  │                      🟢 TEMPLATE SKILLS                             │   │
 │  │                 (Load when CREATING DOCUMENTS)                      │   │
 │  │                                                                     │   │
@@ -76,11 +95,6 @@ Hệ thống này chia kiến thức Requirements Engineering thành **12 Skills
 | **SKILL-06** | Conflict Resolution | `specialized/SKILL-06-conflict-resolution.md` | Khi có mâu thuẫn giữa stakeholders |
 | **SKILL-07** | Traceability & Change Mgmt | `specialized/SKILL-07-traceability-change.md` | Khi quản lý RTM, CR, versioning |
 | **SKILL-08** | Validation & Verification | `specialized/SKILL-08-validation-verification.md` | Khi review, inspect, validate requirements |
-| **SKILL-13** | Data & Information Modeling | `specialized/SKILL-13-data-modeling.md` | Khi cần ERD, DFD, Data Dictionary |
-| **SKILL-14** | UX Research & Customer Journey | `specialized/SKILL-14-ux-research.md` | Khi cần Persona, Journey Map, JTBD |
-| **SKILL-15** | Workshop Facilitation | `specialized/SKILL-15-workshop-facilitation.md` | Khi điều phối workshop nhóm |
-| **SKILL-16** | Process Modeling (BPMN) | `specialized/SKILL-16-process-modeling.md` | Khi cần BPMN, As-Is/To-Be, VSM |
-| **SKILL-17** | Solution Evaluation & ROI | `specialized/SKILL-17-solution-evaluation.md` | Khi cần Business Case, ROI, PIR |
 
 ### 🟢 TEMPLATE SKILLS (Khi tạo tài liệu)
 
@@ -90,6 +104,16 @@ Hệ thống này chia kiến thức Requirements Engineering thành **12 Skills
 | **SKILL-10** | SRS Template (IEEE 29148) | `templates/SKILL-10-srs-template.md` | Software Requirements Specification |
 | **SKILL-11** | FRD Template | `templates/SKILL-11-frd-template.md` | Functional Requirements Document |
 | **SKILL-12** | Agile Artifacts | `templates/SKILL-12-agile-artifacts.md` | User Stories, Use Cases, Epics |
+
+### 🟠 ADVANCED SKILLS (Deep Expertise)
+
+| Skill ID | Tên | File | Khi nào dùng |
+|----------|-----|------|--------------|
+| **SKILL-13** | Data Modeling & Analysis | `advanced/SKILL-13-data-modeling.md` | Data-intensive systems, ERD, DFD, Data Dictionary |
+| **SKILL-14** | UX Research & Design Thinking | `advanced/SKILL-14-ux-design-thinking.md` | User-facing systems, Personas, Journey Maps |
+| **SKILL-15** | Workshop Facilitation | `advanced/SKILL-15-workshop-facilitation.md` | Group sessions, JAD, Brainstorming workshops |
+| **SKILL-16** | Business Process Modeling | `advanced/SKILL-16-process-modeling.md` | BPMN, As-Is/To-Be analysis, Process improvement |
+| **SKILL-17** | Solution Evaluation & Business Value | `advanced/SKILL-17-solution-evaluation.md` | Business case, ROI, KPIs, Post-Implementation Review |
 
 ---
 
@@ -117,17 +141,27 @@ Hệ thống này chia kiến thức Requirements Engineering thành **12 Skills
 
 ### 📋 Decision Matrix: Chọn Skills Theo Tình Huống
 
-| Tình huống | Core | Specialized | Template |
-|------------|------|-------------|----------|
-| **Bắt đầu dự án mới** | 01, 02, 03 | 05 | 09 (BRD) |
-| **Phỏng vấn stakeholder** | 01, 02, 03 | - | - |
-| **Viết SRS** | 01, 02, 03 | 04, 07 | 10 (SRS) |
-| **Có mâu thuẫn yêu cầu** | 01, 02, 03 | 06 | - |
-| **Review requirements** | 01, 02, 03 | 08 | - |
-| **Quản lý thay đổi** | 01, 02, 03 | 07 | - |
-| **Sprint Planning (Agile)** | 01, 02, 03 | 05 | 12 (Agile) |
-| **NFR Analysis** | 01, 02, 03 | 04 | 10 hoặc 11 |
-| **Tạo FRD chi tiết** | 01, 02, 03 | 04, 07 | 11 (FRD) |
+| Tình huống | Core | Specialized | Template | Advanced |
+|------------|------|-------------|----------|----------|
+| **Bắt đầu dự án mới** | 01, 02, 03 | 05 | 09 (BRD) | 17 (Business Case) |
+| **Phỏng vấn stakeholder** | 01, 02, 03 | - | - | - |
+| **Viết SRS** | 01, 02, 03 | 04, 07 | 10 (SRS) | 13 (Data) |
+| **Có mâu thuẫn yêu cầu** | 01, 02, 03 | 06 | - | - |
+| **Review requirements** | 01, 02, 03 | 08 | - | - |
+| **Quản lý thay đổi** | 01, 02, 03 | 07 | - | - |
+| **Sprint Planning (Agile)** | 01, 02, 03 | 05 | 12 (Agile) | - |
+| **NFR Analysis** | 01, 02, 03 | 04 | 10 hoặc 11 | - |
+| **Tạo FRD chi tiết** | 01, 02, 03 | 04, 07 | 11 (FRD) | 13 (Data) |
+| **Data-intensive system** | 01, 02, 03 | 04 | 10, 11 | 13 (Data) |
+| **User-facing application** | 01, 02, 03 | - | 11, 12 | 14 (UX) |
+| **Tổ chức workshop** | 01, 02 | 05, 06 | - | 15 (Workshop) |
+| **Design Thinking session** | 01, 02 | - | - | 14, 15 |
+| **Complex integration** | 01, 02, 03 | 04, 07 | 10 | 13 (Data) |
+| **Process improvement** | 01, 02, 03 | - | - | 16 (BPMN), 17 (ROI) |
+| **System replacement** | 01, 02, 03 | 04, 07 | 10 | 16 (As-Is/To-Be) |
+| **Business case / ROI** | 01, 02 | 05 | 09 | 17 (Evaluation) |
+| **Post-implementation review** | 01 | 08 | - | 17 (PIR) |
+| **Digital transformation** | 01, 02, 03 | 04, 05 | 09, 10 | 14, 16, 17 |
 
 ---
 
@@ -170,6 +204,80 @@ SKILL-01 + 03 (Core subset)
     → SKILL-08 (Validation)
 ```
 
+### Pattern 6: Data-Centric Requirements
+```
+SKILL-01 + 02 + 03 (Core)
+    → SKILL-13 (Data Modeling)
+    → SKILL-04 (NFRs for data)
+    → SKILL-10 (SRS) or SKILL-11 (FRD)
+```
+
+### Pattern 7: UX-Focused Development
+```
+SKILL-01 + 02 (Core)
+    → SKILL-14 (UX & Design Thinking)
+    → SKILL-15 (Workshop for ideation)
+    → SKILL-12 (User Stories)
+```
+
+### Pattern 8: Comprehensive Workshop
+```
+SKILL-15 (Workshop Facilitation)
+    + SKILL-02 (Questioning techniques)
+    + SKILL-05 (Prioritization activities)
+    + SKILL-06 (Conflict management)
+```
+
+### Pattern 9: Enterprise System (Full Stack)
+```
+SKILL-01 + 02 + 03 (Core)
+    → SKILL-14 (UX for user-facing)
+    → SKILL-13 (Data modeling)
+    → SKILL-04 (NFRs)
+    → SKILL-07 (Traceability)
+    → SKILL-10 (SRS)
+```
+
+### Pattern 10: Process Improvement / Automation
+```
+SKILL-01 + 02 (Core)
+    → SKILL-16 (As-Is/To-Be Process Mapping)
+    → SKILL-15 (Workshop for process discovery)
+    → SKILL-17 (ROI/Business Case)
+    → SKILL-10 (SRS) or SKILL-11 (FRD)
+```
+
+### Pattern 11: System Replacement / Migration
+```
+SKILL-01 + 02 + 03 (Core)
+    → SKILL-16 (Current state process mapping)
+    → SKILL-13 (Data migration requirements)
+    → SKILL-04 (NFRs - especially performance)
+    → SKILL-07 (Traceability from old to new)
+    → SKILL-17 (Business case & PIR)
+```
+
+### Pattern 12: Full Project Lifecycle (End-to-End)
+```
+PHASE 1 - Initiation:
+    SKILL-01 + 02 → SKILL-17 (Business Case) → SKILL-09 (BRD)
+
+PHASE 2 - Analysis:
+    SKILL-14 (UX) + SKILL-16 (Process) + SKILL-13 (Data)
+    → SKILL-15 (Workshops)
+    → SKILL-05 (Prioritization)
+
+PHASE 3 - Specification:
+    SKILL-03 + SKILL-04 → SKILL-10/11 (SRS/FRD)
+    → SKILL-07 (Traceability)
+
+PHASE 4 - Validation:
+    SKILL-08 (V&V) → SKILL-06 (if conflicts)
+
+PHASE 5 - Closure:
+    SKILL-17 (PIR & Benefits Realization)
+```
+
 ---
 
 ## 💡 BEST PRACTICES
@@ -192,20 +300,25 @@ SKILL-01 + 03 (Core subset)
 
 ```
                     Depends On →
-                    01  02  03  04  05  06  07  08  09  10  11  12
-              ┌──────────────────────────────────────────────────────
-         01   │  -   -   -   -   -   -   -   -   -   -   -   -
-         02   │  ●   -   -   -   -   -   -   -   -   -   -   -
-         03   │  ●   ●   -   -   -   -   -   -   -   -   -   -
-         04   │  ●   -   ●   -   -   -   -   -   -   -   -   -
-         05   │  ●   ●   -   -   -   -   -   -   -   -   -   -
-   Skill 06   │  ●   ●   -   -   -   -   -   -   -   -   -   -
-         07   │  ●   -   ●   -   -   -   -   -   -   -   -   -
-         08   │  ●   -   ●   -   -   -   -   -   -   -   -   -
-         09   │  ●   ●   ●   -   ○   -   -   -   -   -   -   -
-         10   │  ●   ●   ●   ●   ○   -   ●   -   -   -   -   -
-         11   │  ●   ●   ●   ●   ○   -   ●   -   -   -   -   -
-         12   │  ●   ●   ●   -   ●   -   -   -   -   -   -   -
+                    01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17
+              ┌────────────────────────────────────────────────────────────────────────
+         01   │  -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         02   │  ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         03   │  ●   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         04   │  ●   -   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         05   │  ●   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+   Skill 06   │  ●   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         07   │  ●   -   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         08   │  ●   -   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         09   │  ●   ●   ●   -   ○   -   -   -   -   -   -   -   -   ○   -   -   ○
+         10   │  ●   ●   ●   ●   ○   -   ●   -   -   -   -   -   ○   -   -   ○   -
+         11   │  ●   ●   ●   ●   ○   -   ●   -   -   -   -   -   ○   ○   -   ○   -
+         12   │  ●   ●   ●   -   ●   -   -   -   -   -   -   -   -   ○   -   -   -
+         13   │  ●   -   ●   -   -   -   -   -   -   -   -   -   -   -   -   -   -
+         14   │  ●   ●   -   -   -   -   -   -   -   -   -   -   -   -   ○   -   -
+         15   │  ●   ●   -   -   ○   ○   -   -   -   -   -   -   -   ○   -   -   -
+         16   │  ●   ●   -   -   -   -   -   -   -   -   -   -   ○   ○   ○   -   -
+         17   │  ●   -   ●   -   ○   -   ●   ○   ○   -   -   -   -   -   -   ○   -
 
 ● = Required dependency
 ○ = Optional/Recommended dependency
