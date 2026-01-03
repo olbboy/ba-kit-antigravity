@@ -11,345 +11,728 @@
 | **Category** | 🔵 Core |
 | **Load Priority** | 2 |
 | **Dependencies** | SKILL-01 |
+| **Version** | 2.0 (World-Class Edition) |
 | **Output** | Raw requirements, insights, stakeholder needs |
+| **Related** | SKILL-15 (Workshops), SKILL-14 (UX Research) |
 
 ---
 
 ## 🎯 MỤC ĐÍCH
 
-Skill này cung cấp **kỹ thuật khai thác thông tin** và **framework đặt câu hỏi** để thu thập requirements từ stakeholders một cách hiệu quả.
+Skill này cung cấp **kỹ thuật khai thác thông tin chuyên sâu**, **tâm lý học phỏng vấn**, và **framework đặt câu hỏi nâng cao** để thu thập requirements từ stakeholders một cách hiệu quả. Đây là kỹ năng nền tảng cho mọi hoạt động BA.
+
+> **Note**: Skill này tập trung vào **Individual & Small Group Elicitation**. Cho **Group Facilitation** (workshops), xem → SKILL-15.
 
 ---
 
-## 🛠️ ELICITATION TECHNIQUES
+## 🧠 THE PSYCHOLOGY OF ELICITATION
 
-### Technique Selection Matrix
-
-```
-                        Độ sâu thông tin cần thiết
-                        Thấp ◄─────────────────► Cao
-                    ┌─────────────────────────────────┐
-         Nhiều     │  Surveys      │   Focus Groups   │
-                   │  Document     │   Workshops      │
-    Số             │  Analysis     │                  │
-    lượng          ├───────────────┼──────────────────┤
-    Stake-         │  Interface    │   Interviews     │
-    holders        │  Analysis     │   Observation    │
-         Ít        │               │   Prototyping    │
-                   └─────────────────────────────────┘
-```
-
-### Technique Comparison
-
-| Technique | Best For | Time | Depth | Scale |
-|-----------|----------|------|-------|-------|
-| **Interview** | Detailed insights, sensitive info | Medium | High | Low |
-| **Workshop** | Consensus, multiple perspectives | High | Medium | Medium |
-| **Observation** | Real workflows, tacit knowledge | High | High | Low |
-| **Survey** | Quantitative data, validation | Low | Low | High |
-| **Document Analysis** | Legacy systems, regulations | Low | Medium | N/A |
-| **Prototyping** | UI/UX, unclear requirements | Medium | High | Low |
-| **Brainstorming** | Innovation, new ideas | Low | Low | Medium |
-
----
-
-## 📞 INTERVIEW TECHNIQUE
-
-### Interview Structure (60-90 minutes)
+### Understanding Stakeholder Behavior
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│                    INTERVIEW FLOW                           │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  OPENING (5-10 min)                                         │
-│  ├── Introduce yourself and purpose                         │
-│  ├── Confirm time available                                 │
-│  ├── Build rapport                                          │
-│  └── Ask permission to take notes/record                    │
-│                                                             │
-│  BODY (40-60 min)                                           │
-│  ├── Start with open/exploratory questions                  │
-│  ├── Progress to specific/detailed questions                │
-│  ├── Use probing for unclear areas                          │
-│  └── Confirm understanding throughout                       │
-│                                                             │
-│  CLOSING (10-15 min)                                        │
-│  ├── Summarize key points                                   │
-│  ├── Ask "anything else?"                                   │
-│  ├── Confirm next steps                                     │
-│  └── Thank and schedule follow-up if needed                 │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    WHY STAKEHOLDERS DON'T TELL YOU EVERYTHING               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  1. THE ICEBERG EFFECT                                                      │
+│     ┌────────────────────────────────┐                                      │
+│     │ ~~~~~ What they SAY ~~~~~     │ 10% - Explicit needs               │
+│     ├────────────────────────────────┤                                      │
+│     │                                │                                      │
+│     │   What they KNOW but           │ 30% - Tacit knowledge               │
+│     │   don't think to mention       │      (assumed obvious)              │
+│     │                                │                                      │
+│     ├────────────────────────────────┤                                      │
+│     │                                │                                      │
+│     │   What they DON'T KNOW         │ 40% - Latent needs                 │
+│     │   they need                    │      (discovered through probing)   │
+│     │                                │                                      │
+│     ├────────────────────────────────┤                                      │
+│     │   What they HIDE               │ 20% - Political/sensitive          │
+│     │   (politics, fear, ego)        │      (requires trust)               │
+│     └────────────────────────────────┘                                      │
+│                                                                             │
+│  2. COGNITIVE BIASES TO OVERCOME                                            │
+│                                                                             │
+│  • CURSE OF KNOWLEDGE: Experts forget what beginners don't know            │
+│  • HINDSIGHT BIAS: "It's obvious" (but only after the fact)                │
+│  • AVAILABILITY BIAS: Recall dramatic events, forget routine               │
+│  • CONFIRMATION BIAS: Hear what confirms existing beliefs                  │
+│  • ANCHORING: First number mentioned becomes the baseline                  │
+│                                                                             │
+│  3. EMOTIONAL BARRIERS                                                      │
+│                                                                             │
+│  • Fear of looking incompetent                                              │
+│  • Protecting turf/job security                                             │
+│  • Past negative experiences with IT projects                               │
+│  • Resistance to change                                                     │
+│  • Lack of time/interest                                                    │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Pre-Interview Checklist
-- [ ] Research interviewee's role and background
-- [ ] Review existing documentation
-- [ ] Prepare question list (but stay flexible)
-- [ ] Confirm meeting logistics
-- [ ] Prepare note-taking tools
-- [ ] Send agenda 1-2 days before
-
----
-
-## ❓ QUESTIONING FRAMEWORK
-
-### Funnel Technique
+### Building Psychological Safety
 
 ```
-                    ┌─────────────────────────┐
-                    │    MỞ RỘNG (Open)       │
-                    │  "Hãy cho tôi biết..."  │
-                    │   Exploratory questions │
-                    └───────────┬─────────────┘
-                                │
-                    ┌───────────▼─────────────┐
-                    │    ĐÀO SÂU (Probe)      │
-                    │  "Cụ thể hơn về..."     │
-                    │   Detailed questions    │
-                    └───────────┬─────────────┘
-                                │
-                    ┌───────────▼─────────────┐
-                    │   LÀM RÕ (Clarify)      │
-                    │  "Ý bạn là..."          │
-                    │   Clarifying questions  │
-                    └───────────┬─────────────┘
-                                │
-                    ┌───────────▼─────────────┐
-                    │   XÁC NHẬN (Confirm)    │
-                    │  "Vậy đúng là..."       │
-                    │   Closed questions      │
-                    └─────────────────────────┘
-```
-
-### Question Types & Examples
-
-#### 1️⃣ Exploratory Questions (Khám phá)
-> **Purpose**: Mở rộng phạm vi, hiểu context
-
-```
-📌 Context & Goals:
-• "Mục tiêu kinh doanh chính của dự án này là gì?"
-• "Vấn đề nào đang thúc đẩy nhu cầu này?"
-• "Thành công sẽ được đo lường như thế nào?"
-
-📌 Users & Stakeholders:
-• "Ai sẽ sử dụng hệ thống này?"
-• "Những bộ phận nào bị ảnh hưởng?"
-• "Ai có quyền quyết định cuối cùng?"
-
-📌 Current State:
-• "Quy trình hiện tại hoạt động như thế nào?"
-• "Những công cụ nào đang được sử dụng?"
-• "Pain points lớn nhất là gì?"
-```
-
-#### 2️⃣ Clarifying Questions (Làm rõ)
-> **Purpose**: Loại bỏ mơ hồ, định nghĩa terms
-
-```
-📌 Definitions:
-• "Khi nói 'khách hàng', bạn đề cập đến ai cụ thể?"
-• "'Nhanh' có nghĩa là bao nhiêu giây/phút?"
-• "'Báo cáo đầy đủ' bao gồm những thông tin gì?"
-
-📌 Examples:
-• "Bạn có thể cho ví dụ cụ thể không?"
-• "Trường hợp điển hình diễn ra như thế nào?"
-• "Có thể show output mong muốn không?"
-
-📌 Boundaries:
-• "Những gì nằm trong/ngoài phạm vi?"
-• "Có giới hạn về ngân sách/thời gian không?"
-• "Hệ thống KHÔNG nên làm gì?"
-```
-
-#### 3️⃣ Probing Questions (Đào sâu)
-> **Purpose**: Tìm root cause, chi tiết ẩn
-
-```
-📌 5 Whys:
-• "Tại sao điều này quan trọng?"
-• "Điều gì xảy ra nếu không có tính năng này?"
-• "Nguyên nhân gốc rễ của vấn đề là gì?"
-
-📌 Exceptions & Edge Cases:
-• "Điều gì xảy ra khi [scenario bất thường]?"
-• "Có trường hợp ngoại lệ nào không?"
-• "Nếu dữ liệu không đầy đủ thì sao?"
-
-📌 Dependencies:
-• "Tính năng này phụ thuộc vào hệ thống nào?"
-• "Cần hoàn thành gì trước khi tính năng này hoạt động?"
-• "Có ràng buộc từ bên ngoài không?"
-```
-
-#### 4️⃣ Confirming Questions (Xác nhận)
-> **Purpose**: Đảm bảo hiểu đúng
-
-```
-📌 Paraphrasing:
-• "Nếu tôi hiểu đúng, [tóm tắt]. Đúng không?"
-• "Để xác nhận: [restate]. Chính xác chưa?"
-
-📌 Validation:
-• "Yêu cầu này đúng với tất cả trường hợp không?"
-• "Ai khác cần xác nhận yêu cầu này?"
-• "Điều này phù hợp với quy định hiện tại không?"
-```
-
-#### 5️⃣ Prioritizing Questions (Ưu tiên)
-> **Purpose**: Xác định độ quan trọng
-
-```
-📌 Importance:
-• "Nếu chỉ chọn 3 tính năng quan trọng nhất?"
-• "Yêu cầu nào là must-have vs nice-to-have?"
-• "Không có tính năng nào thì không thể go-live?"
-
-📌 Trade-offs:
-• "Nếu phải chọn giữa A và B, bạn chọn gì?"
-• "Giữa thời gian và chất lượng, ưu tiên gì?"
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    CREATING PSYCHOLOGICAL SAFETY                            │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  "People share more when they feel safe, not when they're interrogated"   │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │                    THE TRUST EQUATION                                │   │
+│  │                                                                       │  │
+│  │        CREDIBILITY + RELIABILITY + INTIMACY                          │  │
+│  │  Trust = ─────────────────────────────────────────                   │  │
+│  │                     SELF-ORIENTATION                                  │  │
+│  │                                                                       │  │
+│  │  HIGH TRUST = High numerator + LOW denominator                       │  │
+│  │  (Focus on THEIR needs, not your agenda)                             │  │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  TECHNIQUES FOR BUILDING SAFETY:                                            │
+│                                                                             │
+│  1. ACKNOWLEDGE EXPERTISE                                                   │
+│     "You know this process better than anyone. I'm here to learn."         │
+│                                                                             │
+│  2. NORMALIZE GAPS                                                          │
+│     "It's normal not to have all answers. We'll figure it out together."   │
+│                                                                             │
+│  3. SHOW VULNERABILITY                                                      │
+│     "I don't fully understand [X] yet. Can you help me?"                   │
+│                                                                             │
+│  4. VALIDATE CONCERNS                                                       │
+│     "That's a legitimate concern. Let's make sure we address it."          │
+│                                                                             │
+│  5. PROTECT CONFIDENCES                                                     │
+│     "What you share stays with the project team only."                     │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
 ---
 
-## 📋 5W1H FRAMEWORK
+## 🛠️ ELICITATION TECHNIQUE SELECTION
 
-| Question | Purpose | Examples |
-|----------|---------|----------|
-| **WHO** | Actors, Users | Ai dùng? Ai phê duyệt? Ai bị ảnh hưởng? |
-| **WHAT** | Functions, Data | Hệ thống làm gì? Dữ liệu nào cần? |
-| **WHEN** | Timing, Triggers | Khi nào xảy ra? Tần suất? |
-| **WHERE** | Location, Platform | Ở đâu? Thiết bị nào? |
-| **WHY** | Goals, Value | Tại sao cần? Giá trị gì? |
-| **HOW** | Process, Rules | Quy trình thế nào? Ràng buộc gì? |
-| **HOW MUCH** | Volume, Limits | Bao nhiêu? Giới hạn nào? |
-
----
-
-## 👥 WORKSHOP FACILITATION
-
-### Workshop Structure
-
-| Phase | Duration | Activities |
-|-------|----------|------------|
-| **Pre-work** | 1-2 weeks before | Send materials, define objectives |
-| **Opening** | 15-20 min | Objectives, ground rules, intros |
-| **Diverge** | 30-45 min | Brainstorming, idea generation |
-| **Converge** | 45-60 min | Grouping, voting, prioritization |
-| **Decide** | 30-45 min | Consensus, action items |
-| **Closing** | 15 min | Summary, next steps |
-
-### Ground Rules
-1. One person speaks at a time
-2. All ideas have value
-3. Focus on problems, not people
-4. Phones on silent
-5. Timeboxing is strict
-
-### Facilitation Tips
-- Use parking lot for off-topic items
-- Encourage quiet participants
-- Manage dominant voices
-- Visualize everything (whiteboard, sticky notes)
-- Summarize frequently
-
----
-
-## 👁️ OBSERVATION TECHNIQUE
-
-### Types of Observation
-
-| Type | Description | When to Use |
-|------|-------------|-------------|
-| **Passive** | Watch without interfering | Natural behavior needed |
-| **Active** | Ask questions during | Need context for actions |
-| **Participatory** | Do the work yourself | Deep understanding needed |
-
-### Observation Checklist
-
-During observation, note:
-- [ ] **WHAT**: What are they doing?
-- [ ] **HOW**: How are they doing it?
-- [ ] **WHY**: Why that way? (ask if active)
-- [ ] **PAIN POINTS**: Where do they struggle?
-- [ ] **WORKAROUNDS**: Any unofficial solutions?
-- [ ] **FREQUENCY**: How often does this happen?
-- [ ] **EXCEPTIONS**: Any unusual cases?
-- [ ] **TOOLS**: What tools/systems used?
-
----
-
-## ⚡ INTERACTION RULES
-
-### Golden Rules
+### Master Selection Matrix
 
 ```
-┌─────────────────────────────────────────────────────────────┐
-│              ELICITATION GOLDEN RULES                       │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│  1️⃣  Tối đa 3 câu hỏi mỗi lượt tương tác                   │
-│      (Tránh cognitive overload)                             │
-│                                                             │
-│  2️⃣  Active Listening - Lắng nghe và phản hồi              │
-│      "Tôi nghe bạn nói rằng..."                             │
-│                                                             │
-│  3️⃣  Không assume - Luôn verify                            │
-│      Kể cả khi nghĩ đã hiểu                                 │
-│                                                             │
-│  4️⃣  Ghi chép cẩn thận                                     │
-│      Hoặc record (với permission)                           │
-│                                                             │
-│  5️⃣  Follow up trong 24h                                   │
-│      Review và bổ sung notes                                │
-│                                                             │
-└─────────────────────────────────────────────────────────────┘
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    ELICITATION TECHNIQUE SELECTION                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│                              Information Depth Needed                       │
+│                    Low ◄────────────────────────────────► High              │
+│                                                                             │
+│              ┌────────────────────────┬────────────────────────┐            │
+│              │                        │                        │            │
+│   Many       │   📊 SURVEYS           │   👥 WORKSHOPS         │            │
+│   Stakeh.    │   📄 DOCUMENT ANALYSIS │   🎯 FOCUS GROUPS      │            │
+│              │                        │   → SKILL-15           │            │
+│              │   Best for: Validation │   Best for: Consensus  │            │
+│              │   Time: Low            │   Time: High           │            │
+│              │                        │                        │            │
+│   Number ────├────────────────────────┼────────────────────────┤            │
+│   of         │                        │                        │            │
+│   Stakeh.    │   🔌 INTERFACE ANAL.   │   🎤 INTERVIEWS        │            │
+│              │   📋 QUESTIONNAIRES    │   👁️ OBSERVATION        │            │
+│   Few        │                        │   🎨 PROTOTYPING       │            │
+│              │                        │   📝 USER STORIES      │            │
+│              │   Best for: Structured │   Best for: Deep dive  │            │
+│              │   Time: Low            │   Time: Medium-High    │            │
+│              │                        │                        │            │
+│              └────────────────────────┴────────────────────────┘            │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Transition Phrases
+### Technique Comparison (Detailed)
 
-**Khi đã đủ thông tin:**
-> "Tôi đã thu thập được các thông tin cần thiết. Bạn có muốn tôi tạo tài liệu yêu cầu ngay bây giờ không?"
+| Technique | Best For | Time | Depth | Scale | Skill Required | Output Type |
+|-----------|----------|------|-------|-------|----------------|-------------|
+| **Interview** | Detailed insights, sensitive info, SME knowledge | Medium | ⭐⭐⭐⭐⭐ | Low | High | Qualitative |
+| **Workshop** | Consensus, conflicts, cross-functional | High | ⭐⭐⭐ | Medium | High | Mixed |
+| **Observation** | Real workflows, tacit knowledge, workarounds | High | ⭐⭐⭐⭐⭐ | Low | Medium | Qualitative |
+| **Survey** | Quantitative data, validation, broad input | Low | ⭐⭐ | High | Low | Quantitative |
+| **Document Analysis** | Legacy systems, regulations, history | Low | ⭐⭐⭐ | N/A | Medium | Structured |
+| **Prototyping** | UI/UX, unclear requirements, validation | Medium | ⭐⭐⭐⭐ | Low | Medium | Visual |
+| **Brainstorming** | Innovation, new ideas, possibilities | Low | ⭐⭐ | Medium | Medium | Ideas |
+| **Focus Group** | User perspectives, reactions, preferences | Medium | ⭐⭐⭐ | Medium | High | Qualitative |
+| **Interface Analysis** | Integration points, data flows | Low | ⭐⭐⭐ | N/A | Medium | Technical |
 
-**Sau khi tạo tài liệu:**
-> "Bạn có muốn tôi đặt thêm câu hỏi để làm rõ hoặc bổ sung thông tin nào không?"
+---
 
-**Khi cần làm rõ:**
-> "Tôi muốn đảm bảo hiểu đúng ý bạn. Khi bạn nói '[term]', bạn có thể giải thích thêm không?"
+## 🎤 MASTERING THE INTERVIEW
+
+### The Interview Lifecycle
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                         THE INTERVIEW LIFECYCLE                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ PHASE 1: PREPARATION (1-2 days before)                              │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Research interviewee's role, background, LinkedIn                 │   │
+│  │ □ Review existing documentation and prior interviews                │   │
+│  │ □ Form hypotheses about their needs/concerns                        │   │
+│  │ □ Prepare question list (structured but flexible)                   │   │
+│  │ □ Confirm logistics (room, video link, duration)                    │   │
+│  │ □ Send agenda and objectives 1-2 days before                        │   │
+│  │ □ Prepare note-taking tools (template, recorder if permitted)       │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ PHASE 2: OPENING (5-10 minutes)                                     │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Arrive early / be ready before they join                          │   │
+│  │ □ Small talk to build rapport (not too long)                        │   │
+│  │ □ Introduce yourself and your role                                  │   │
+│  │ □ Explain the interview purpose and how info will be used           │   │
+│  │ □ Confirm time available                                            │   │
+│  │ □ Ask permission to take notes / record                             │   │
+│  │ □ Set expectations ("I'll ask many questions, interrupt if needed") │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ PHASE 3: BODY (40-60 minutes)                                       │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Start with open/context questions (warm up)                       │   │
+│  │ □ Progress to specific/detailed questions                           │   │
+│  │ □ Use probing techniques for unclear areas                          │   │
+│  │ □ Paraphrase and confirm understanding throughout                   │   │
+│  │ □ Watch for non-verbal cues (hesitation, enthusiasm)                │   │
+│  │ □ Manage time—don't rush but stay on track                          │   │
+│  │ □ Use Parking Lot for tangents                                      │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ PHASE 4: CLOSING (10-15 minutes)                                    │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Signal approaching end ("We have about 10 minutes left...")       │   │
+│  │ □ Summarize key points you captured                                 │   │
+│  │ □ Ask "What haven't I asked that I should have?"                    │   │
+│  │ □ Ask "Is there anything else you want to add?"                     │   │
+│  │ □ Confirm next steps and follow-up timing                           │   │
+│  │ □ Thank them sincerely for their time                               │   │
+│  │ □ Offer to share notes for validation                               │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                               │                                             │
+│                               ▼                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ PHASE 5: FOLLOW-UP (within 24-48 hours)                             │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │ □ Review and expand notes while memory is fresh                     │   │
+│  │ □ Identify gaps and questions for follow-up                         │   │
+│  │ □ Send thank-you email with summary                                 │   │
+│  │ □ Share notes for validation (within 24h ideal)                     │   │
+│  │ □ Log requirements in tracking system                               │   │
+│  │ □ Schedule follow-up if needed                                      │   │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### FBI Tactical Empathy Techniques (Adapted for BA)
+
+These techniques are adapted from FBI hostage negotiation training (Chris Voss, "Never Split the Difference") for requirements elicitation:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    FBI TACTICAL EMPATHY FOR BA                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  1. MIRRORING                                                               │
+│  ────────────────────────────────────────────────────────────────────────   │
+│  Repeat the last 1-3 words (or critical words) as a question.              │
+│                                                                             │
+│  Stakeholder: "This report takes forever to generate."                     │
+│  You: "Takes forever?" (Wait silently)                                     │
+│  → They elaborate without you asking a direct question                     │
+│                                                                             │
+│  2. LABELING EMOTIONS                                                       │
+│  ────────────────────────────────────────────────────────────────────────   │
+│  Name the emotion you observe. Start with "It seems like..." or            │
+│  "It sounds like..."                                                        │
+│                                                                             │
+│  "It sounds like you're frustrated with the current system."               │
+│  "It seems like this has been a pain point for a while."                   │
+│  → Validates their feelings, builds trust, encourages sharing              │
+│                                                                             │
+│  3. CALIBRATED QUESTIONS                                                    │
+│  ────────────────────────────────────────────────────────────────────────   │
+│  "How" and "What" questions that can't be answered yes/no.                 │
+│                                                                             │
+│  Instead of: "Do you need this feature?"                                   │
+│  Ask: "How would this feature help you?"                                   │
+│                                                                             │
+│  Instead of: "Is this requirement important?"                              │
+│  Ask: "What happens if we don't have this?"                                │
+│                                                                             │
+│  Power Questions:                                                           │
+│  • "How am I supposed to do that?" (reveals constraints)                   │
+│  • "What's the biggest challenge here?" (priorities)                       │
+│  • "What does success look like?" (acceptance criteria)                    │
+│  • "How will we know this is working?" (metrics)                           │
+│                                                                             │
+│  4. THE ACCUSATION AUDIT                                                    │
+│  ────────────────────────────────────────────────────────────────────────   │
+│  Preemptively acknowledge negative perceptions.                            │
+│                                                                             │
+│  "You're probably thinking this is just another IT project that won't      │
+│   deliver. I understand past experiences may not have been great.          │
+│   How can we make this one different?"                                     │
+│                                                                             │
+│  5. STRATEGIC SILENCE                                                       │
+│  ────────────────────────────────────────────────────────────────────────   │
+│  After asking a question, wait. Silence is uncomfortable—they'll fill it.  │
+│                                                                             │
+│  Count to 10 silently after they finish speaking.                          │
+│  Often, the most valuable information comes after the pause.               │
+│                                                                             │
+│  6. LATE-NIGHT FM DJ VOICE                                                  │
+│  ────────────────────────────────────────────────────────────────────────   │
+│  Slow down, lower your voice slightly, speak with a calming tone.          │
+│  This signals confidence and safety, reducing defensiveness.               │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ❓ ADVANCED QUESTIONING FRAMEWORK
+
+### The Funnel Technique (Expanded)
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    THE FUNNEL TECHNIQUE (DETAILED)                          │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │                                                                       │  │
+│  │                     ╔═══════════════════════════════╗                │  │
+│  │                     ║   1. OPEN (Exploratory)       ║                │  │
+│  │                     ║   "Tell me about..."          ║                │  │
+│  │                     ║   "Walk me through..."        ║                │  │
+│  │                     ║   "Describe..."               ║                │  │
+│  │                     ╚═══════════════╦═══════════════╝                │  │
+│  │                                     ║                                 │  │
+│  │                        ╔════════════╩════════════╗                   │  │
+│  │                        ║  2. PROBE (Dig Deeper)  ║                   │  │
+│  │                        ║  "Why is that?"         ║                   │  │
+│  │                        ║  "What happens when..."  ║                   │  │
+│  │                        ║  "How often..."         ║                   │  │
+│  │                        ╚═══════════╦═════════════╝                   │  │
+│  │                                    ║                                  │  │
+│  │                        ╔═══════════╩══════════╗                      │  │
+│  │                        ║ 3. CLARIFY (Define)  ║                      │  │
+│  │                        ║ "When you say X..."  ║                      │  │
+│  │                        ║ "For example...?"    ║                      │  │
+│  │                        ╚══════════╦═══════════╝                      │  │
+│  │                                   ║                                   │  │
+│  │                        ╔══════════╩═════════╗                        │  │
+│  │                        ║ 4. CONFIRM (Verify) ║                        │  │
+│  │                        ║ "So, [summary]...?" ║                        │  │
+│  │                        ║ "Is that correct?"  ║                        │  │
+│  │                        ╚════════════════════╝                        │  │
+│  │                                                                       │  │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  FUNNEL CYCLING: After confirming one topic, open a new funnel for next   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Question Bank by Category
+
+#### 1️⃣ Context & Goals Questions
+
+| Question Type | Example Questions |
+|---------------|-------------------|
+| **Business Context** | "What business problem are we solving?" |
+| | "What triggered this initiative?" |
+| | "What happens if we do nothing?" |
+| **Success Criteria** | "How will you measure success?" |
+| | "What does 'done' look like?" |
+| | "What metrics matter most?" |
+| **Constraints** | "What are the non-negotiables?" |
+| | "What's the timeline pressure?" |
+| | "What's the budget constraint?" |
+
+#### 2️⃣ Current State Questions
+
+| Question Type | Example Questions |
+|---------------|-------------------|
+| **Process** | "Walk me through your current workflow." |
+| | "Where does the process break down?" |
+| | "What workarounds do you use?" |
+| **Systems** | "What systems do you use today?" |
+| | "How do these systems integrate?" |
+| | "What data do you work with?" |
+| **Pain Points** | "What frustrates you most?" |
+| | "What takes too long?" |
+| | "Where do errors occur?" |
+
+#### 3️⃣ Future State Questions
+
+| Question Type | Example Questions |
+|---------------|-------------------|
+| **Vision** | "In an ideal world, how would this work?" |
+| | "What would make your job easier?" |
+| | "If you could wave a magic wand...?" |
+| **Features** | "What capabilities do you need?" |
+| | "What information do you need to see?" |
+| | "What decisions does this support?" |
+| **Priorities** | "If you could only have 3 features...?" |
+| | "What's the MVP?" |
+| | "What can we defer?" |
+
+#### 4️⃣ Edge Cases & Exceptions
+
+| Question Type | Example Questions |
+|---------------|-------------------|
+| **Exceptions** | "What happens when [X] fails?" |
+| | "How do you handle [unusual case]?" |
+| | "What are the edge cases?" |
+| **Volume** | "What's the peak load?" |
+| | "How many transactions per day?" |
+| | "What's the largest data set?" |
+| **Timing** | "When is this needed?" |
+| | "Are there seasonal patterns?" |
+| | "What's time-sensitive?" |
+
+#### 5️⃣ Validation Questions
+
+| Question Type | Example Questions |
+|---------------|-------------------|
+| **Confirmation** | "Let me confirm: [summary]. Correct?" |
+| | "Did I capture that right?" |
+| | "Anything I missed?" |
+| **Completeness** | "What haven't I asked that I should?" |
+| | "Who else should I talk to?" |
+| | "Any documents I should review?" |
+
+---
+
+## 👁️ OBSERVATION (CONTEXTUAL INQUIRY)
+
+### Observation Framework
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    CONTEXTUAL INQUIRY FRAMEWORK                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  PRINCIPLE: "Go to where the work happens"                                  │
+│                                                                             │
+│  ┌─────────────────────────────────────────────────────────────────────┐   │
+│  │ TYPES OF OBSERVATION                                                 │   │
+│  ├─────────────────────────────────────────────────────────────────────┤   │
+│  │                                                                       │  │
+│  │  PASSIVE (Fly-on-the-wall)                                           │  │
+│  │  • Watch without interfering                                         │  │
+│  │  • Best for: Natural behavior, discovering workarounds               │  │
+│  │  • Con: Can't ask why they're doing something                        │  │
+│  │                                                                       │  │
+│  │  ACTIVE (Ask along the way)                                          │  │
+│  │  • Observe + ask clarifying questions                                │  │
+│  │  • Best for: Understanding context and reasoning                     │  │
+│  │  • Con: May alter natural behavior                                   │  │
+│  │                                                                       │  │
+│  │  PARTICIPATORY (Do the work yourself)                                │  │
+│  │  • Perform the task under guidance                                   │  │
+│  │  • Best for: Deep understanding, empathy building                    │  │
+│  │  • Con: Time-intensive, may miss expert shortcuts                    │  │
+│  │                                                                       │  │
+│  └─────────────────────────────────────────────────────────────────────┘   │
+│                                                                             │
+│  WHAT TO OBSERVE (AEIOU Framework)                                          │
+│                                                                             │
+│  A - ACTIVITIES: What are they doing? What tasks? Steps?                   │
+│  E - ENVIRONMENTS: Where do they work? What tools? Setup?                  │
+│  I - INTERACTIONS: With whom? How? Communication patterns?                 │
+│  O - OBJECTS: What artifacts do they use? Forms, screens, notes?           │
+│  U - USERS: Who are they? Roles, expertise, attitudes?                     │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### Observation Capture Template
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    OBSERVATION SESSION LOG                                  │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Date: ________________  Time: ________ to ________                          │
+│ Location: _____________________________________________                     │
+│ Participant: ___________________  Role: __________________                  │
+│ Observer: _____________________                                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ TASK OBSERVED: _____________________________________________                │
+│                                                                             │
+│ ┌────────────────────────────────────────────────────────────────────────┐ │
+│ │ Time  │ Action/Event           │ Tool/System   │ Notes/Pain Points    │ │
+│ ├────────────────────────────────────────────────────────────────────────┤ │
+│ │ 09:00 │                        │               │                      │ │
+│ │ 09:05 │                        │               │                      │ │
+│ │ 09:10 │                        │               │                      │ │
+│ │ ...   │                        │               │                      │ │
+│ └────────────────────────────────────────────────────────────────────────┘ │
+│                                                                             │
+│ KEY OBSERVATIONS:                                                           │
+│ □ Workarounds used: ________________________________________________       │
+│ □ Pain points observed: ____________________________________________       │
+│ □ Unexpected behaviors: ____________________________________________       │
+│ □ Frequently used features: ________________________________________       │
+│ □ Rarely/never used features: ______________________________________       │
+│                                                                             │
+│ QUOTES (verbatim):                                                          │
+│ " ___________________________________________________________________ "    │
+│ " ___________________________________________________________________ "    │
+│                                                                             │
+│ FOLLOW-UP QUESTIONS:                                                        │
+│ 1. _________________________________________________________________       │
+│ 2. _________________________________________________________________       │
+│ 3. _________________________________________________________________       │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📄 DOCUMENT ANALYSIS
+
+### Document Types & Value
+
+| Document Type | What to Look For | Caution |
+|---------------|------------------|---------|
+| **Existing SRS/FRD** | Requirements, business rules, data models | May be outdated |
+| **User Guides/Training** | Features, workflows, terminology | Shows "as designed" not "as used" |
+| **Process Documentation** | Workflows, roles, decision points | Often idealized, not actual |
+| **Regulations/Policies** | Constraints, compliance requirements | May have changed |
+| **Contracts/SLAs** | Non-functional requirements, interfaces | Legal constraints |
+| **Bug Reports** | Pain points, edge cases, workarounds | Shows real issues |
+| **Support Tickets** | User problems, frequent issues | What actually frustrates users |
+
+### Document Analysis Worksheet
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    DOCUMENT ANALYSIS WORKSHEET                              │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ Document Name: _________________________________________________            │
+│ Type: __________________  Date: ____________  Version: _________            │
+│ Source: ________________________  Author: _______________________           │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│ RELEVANCE ASSESSMENT:                                                       │
+│ □ Current/up-to-date     □ Partially relevant     □ Historical only        │
+│                                                                             │
+│ KEY FINDINGS:                                                               │
+│                                                                             │
+│ Business Rules Found:                                                       │
+│ •                                                                           │
+│ •                                                                           │
+│                                                                             │
+│ Data Elements Identified:                                                   │
+│ •                                                                           │
+│ •                                                                           │
+│                                                                             │
+│ Processes Described:                                                        │
+│ •                                                                           │
+│ •                                                                           │
+│                                                                             │
+│ Constraints/Rules:                                                          │
+│ •                                                                           │
+│ •                                                                           │
+│                                                                             │
+│ QUESTIONS TO VERIFY:                                                        │
+│ 1.                                                                          │
+│ 2.                                                                          │
+│ 3.                                                                          │
+│                                                                             │
+│ GAPS/AMBIGUITIES FOUND:                                                     │
+│ •                                                                           │
+│ •                                                                           │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 📊 SURVEYS & QUESTIONNAIRES
+
+### When to Use Surveys
+
+| ✅ Good For | ❌ Not Good For |
+|-------------|-----------------|
+| Validating findings from interviews | Initial discovery |
+| Gathering quantitative data | Complex, nuanced topics |
+| Reaching many stakeholders | When you need to probe |
+| Measuring attitudes/preferences | When questions need clarification |
+| Before/after comparisons | Building relationships |
+
+### Survey Design Principles
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    SURVEY DESIGN BEST PRACTICES                             │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  1. KEEP IT SHORT                                                           │
+│     • 5-10 minutes max (>10 min = high drop-off)                           │
+│     • Prioritize ruthlessly                                                 │
+│                                                                             │
+│  2. START EASY                                                              │
+│     • Begin with simple, engaging questions                                 │
+│     • Save demographic/sensitive for last                                   │
+│                                                                             │
+│  3. USE CLEAR LANGUAGE                                                      │
+│     • Avoid jargon and double negatives                                     │
+│     • One concept per question                                              │
+│                                                                             │
+│  4. PROVIDE BALANCED OPTIONS                                                │
+│     • Include "N/A" or "Don't know" options                                │
+│     • Use consistent scales (e.g., always 1-5)                             │
+│                                                                             │
+│  5. TEST FIRST                                                              │
+│     • Pilot with 3-5 people                                                 │
+│     • Check for confusion, timing                                           │
+│                                                                             │
+│  QUESTION TYPES:                                                            │
+│  • Closed (scale 1-5, yes/no, multiple choice) → Easy to analyze           │
+│  • Open (free text) → Rich data but hard to analyze. Use sparingly.       │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## ⚡ GOLDEN RULES OF ELICITATION
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                    ELICITATION GOLDEN RULES                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│                                                                             │
+│  1️⃣  MAXIMUM 3 QUESTIONS PER TURN                                          │
+│      Avoid cognitive overload. Quality > Quantity.                          │
+│                                                                             │
+│  2️⃣  LISTEN MORE THAN YOU TALK (80/20 rule)                                │
+│      Your job is to learn, not to impress.                                  │
+│                                                                             │
+│  3️⃣  NEVER ASSUME—ALWAYS VERIFY                                            │
+│      Even if you think you understand, confirm it.                          │
+│      "If I'm hearing you correctly..."                                      │
+│                                                                             │
+│  4️⃣  CAPTURE VERBATIM QUOTES                                               │
+│      Stakeholder's exact words are gold.                                    │
+│      "They said: '...'" is more powerful than your summary.                │
+│                                                                             │
+│  5️⃣  FOLLOW UP WITHIN 24 HOURS                                             │
+│      Review notes while memory is fresh.                                    │
+│      Send summary for validation.                                           │
+│                                                                             │
+│  6️⃣  TRIANGULATE INFORMATION                                               │
+│      Never rely on a single source.                                         │
+│      Cross-check with other stakeholders and documents.                     │
+│                                                                             │
+│  7️⃣  SEPARATE FACTS FROM OPINIONS                                          │
+│      "The report takes 5 minutes" (fact) vs                                │
+│      "The report is slow" (opinion—probe for specifics).                   │
+│                                                                             │
+│  8️⃣  ASK FOR EXAMPLES                                                      │
+│      Abstract → Concrete. Always.                                           │
+│      "Can you show me?" "Can you give an example?"                         │
+│                                                                             │
+│  9️⃣  WATCH FOR WHAT'S NOT SAID                                             │
+│      Hesitation, deflection, enthusiasm—all are data.                       │
+│                                                                             │
+│  🔟  END WITH "WHAT ELSE?"                                                  │
+│      The best information often comes at the end.                           │
+│      "Is there anything I should have asked but didn't?"                   │
+│                                                                             │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 📝 NOTE-TAKING TEMPLATE
 
-| Time | Speaker | Content | Category | Action |
-|------|---------|---------|----------|--------|
-| 10:05 | PM | "Cần báo cáo real-time" | NFR | Clarify "real-time" |
-| 10:08 | User | "Export Excel mất 5 phút" | Pain Point | Document |
-| 10:12 | PM | "Tích hợp với SAP" | Integration | Verify API available |
+### Interview Notes Template
 
-### Categories:
-- **FR** - Functional Requirement
-- **NFR** - Non-Functional Requirement
-- **BR** - Business Rule
-- **Constraint** - Limitation
-- **Pain Point** - Current problem
-- **Assumption** - To be verified
-- **TBD** - To be determined
+| Time | Speaker | Content | Category | Action Needed |
+|------|---------|---------|----------|---------------|
+| 10:05 | PM | "Report takes 5 min to generate" | Pain Point | Quantify current state |
+| 10:08 | User | "We export to Excel and manually fix" | Workaround | Document current process |
+| 10:12 | PM | "Must integrate with SAP S/4HANA" | Integration | Verify API available |
+| 10:15 | User | "I wish I could see real-time data" | Latent Need | Explore NFR-PERF |
 
----
+### Categories Legend
 
-## 🔗 NEXT SKILLS
-
-| After gathering info... | Load |
-|------------------------|------|
-| Write requirements | → SKILL-03 |
-| Prioritize requirements | → SKILL-05 |
-| Handle conflicts | → SKILL-06 |
-| Create documents | → SKILL-09, 10, 11, 12 |
+| Code | Category | Color |
+|------|----------|-------|
+| **FR** | Functional Requirement | 🔵 Blue |
+| **NFR** | Non-Functional Requirement | 🟣 Purple |
+| **BR** | Business Rule | 🟢 Green |
+| **CONS** | Constraint | 🔴 Red |
+| **PAIN** | Pain Point | 🟠 Orange |
+| **WORK** | Workaround | 🟡 Yellow |
+| **ASMP** | Assumption (to verify) | ⚪ Gray |
+| **TBD** | To Be Determined | ⬛ Black |
+| **DATA** | Data Element | 🔷 Cyan |
+| **INT** | Integration Point | 🔶 Orange |
 
 ---
 
-*Proceed to SKILL-03 for Requirements Writing & Quality Standards*
+## ✅ SKILL-02 CHECKLIST
+
+### Pre-Elicitation
+- [ ] Stakeholder research completed
+- [ ] Existing documentation reviewed
+- [ ] Hypotheses formed about needs/concerns
+- [ ] Question list prepared (flexible)
+- [ ] Logistics confirmed
+- [ ] Agenda sent to participants
+
+### During Elicitation
+- [ ] Rapport built (don't skip this!)
+- [ ] Purpose and ground rules established
+- [ ] Funnel technique applied
+- [ ] FBI tactical empathy techniques used
+- [ ] Active listening demonstrated
+- [ ] Understanding verified throughout
+- [ ] Notes captured with categories
+- [ ] "What else?" asked at end
+
+### Post-Elicitation
+- [ ] Notes reviewed within 24h
+- [ ] Summary sent for validation
+- [ ] Requirements logged in system
+- [ ] Follow-up questions identified
+- [ ] Triangulation with other sources planned
+
+---
+
+## 🔗 CONNECTIONS TO OTHER SKILLS
+
+| When you need to... | Load Skill |
+|---------------------|------------|
+| Facilitate group workshops | → SKILL-15 (Workshop Facilitation) |
+| Conduct UX research | → SKILL-14 (UX & Design Thinking) |
+| Write requirements | → SKILL-03 (Writing Quality) |
+| Model data discovered | → SKILL-13 (Data Modeling) |
+| Model processes observed | → SKILL-16 (Process Modeling) |
+| Prioritize requirements | → SKILL-05 (Prioritization) |
+| Handle stakeholder conflicts | → SKILL-06 (Conflict Resolution) |
+
+---
+
+*Skill upgraded to World-Class standard. Load SKILL-03 next for Requirements Writing & Quality Standards.*
