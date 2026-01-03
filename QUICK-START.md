@@ -9,7 +9,7 @@
 
 ## 📦 WHAT'S INCLUDED
 
-Bộ thư viện gồm **12 Skills** được tổ chức thành 3 categories:
+Bộ thư viện gồm **20 Skills** được tổ chức thành 4 categories:
 
 ```
 skills-library/
@@ -23,12 +23,21 @@ skills-library/
 │   ├── SKILL-05-prioritization.md
 │   ├── SKILL-06-conflict-resolution.md
 │   ├── SKILL-07-traceability-change.md
-│   └── SKILL-08-validation-verification.md
-└── templates/                   ← Load when creating documents
-    ├── SKILL-09-brd-template.md
-    ├── SKILL-10-srs-template.md
-    ├── SKILL-11-frd-template.md
-    └── SKILL-12-agile-artifacts.md
+│   ├── SKILL-08-validation-verification.md
+│   ├── SKILL-13-data-modeling.md
+│   ├── SKILL-14-ux-research.md
+│   ├── SKILL-15-workshop-facilitation.md
+│   ├── SKILL-16-process-modeling.md
+│   └── SKILL-17-solution-evaluation.md
+├── templates/                   ← Load when creating documents
+│   ├── SKILL-09-brd-template.md
+│   ├── SKILL-10-srs-template.md
+│   ├── SKILL-11-frd-template.md
+│   └── SKILL-12-agile-artifacts.md
+└── advanced/                     ← CMMI Level 5 (Optimizing)
+    ├── SKILL-18-requirements-metrics-spc.md
+    ├── SKILL-19-root-cause-analysis.md
+    └── SKILL-20-ba-innovation.md
 ```
 
 ---
@@ -48,6 +57,11 @@ Every task → Load SKILL-01, 02, 03 first
 | Resolve conflicts | SKILL-06 |
 | Track requirements, manage changes | SKILL-07 |
 | Review/validate requirements | SKILL-08 |
+| Model data, ERD | SKILL-13 |
+| UX research, personas | SKILL-14 |
+| Facilitate workshops | SKILL-15 |
+| Model processes, BPMN | SKILL-16 |
+| Evaluate solutions, ROI | SKILL-17 |
 
 ### Rule 3: Load Templates When Creating Documents
 | To create... | Load... |
@@ -56,6 +70,13 @@ Every task → Load SKILL-01, 02, 03 first
 | Software Requirements Specification | SKILL-10 |
 | Functional Requirements Document | SKILL-11 |
 | User Stories / Epics / Use Cases | SKILL-12 |
+
+### Rule 4: Load Advanced Skills for Process Optimization (CMMI Level 5)
+| If you need to... | Also load... |
+|-------------------|--------------|
+| Track metrics, SPC, quality KPIs | SKILL-18 |
+| Analyze root causes, defects | SKILL-19 |
+| Improve processes, pilot new methods | SKILL-20 |
 
 ---
 
@@ -104,6 +125,14 @@ Load: SKILL-03 + SKILL-08
 | **10** | SRS Template | Software Requirements Specification | Formal documentation |
 | **11** | FRD Template | Functional Requirements Document | Detailed functional specs |
 | **12** | Agile Artifacts | User Stories, Epics, Use Cases | Scrum/Kanban teams |
+| **13** | Data Modeling | ERD, Data Dictionary, CRUD Matrix | Database design |
+| **14** | UX Research | Personas, Journey Maps, JTBD | User-centered design |
+| **15** | Workshop Facilitation | Agenda, Group Dynamics | Collaborative sessions |
+| **16** | Process Modeling | BPMN 2.0, As-Is/To-Be | Process optimization |
+| **17** | Solution Evaluation | Business Case, ROI/NPV | Investment decisions |
+| **18** | Metrics & SPC | Control Charts, Cpk, KPIs | Quality management (L5) |
+| **19** | Root Cause Analysis | Fishbone, 5 Whys, Pareto | Defect prevention (L5) |
+| **20** | Innovation (OID) | Pilot Framework, A/B Testing | Process improvement (L5) |
 
 ---
 
@@ -185,4 +214,4 @@ For complete details, refer to:
 
 ---
 
-*Version 1.0 | Requirements Engineering Skills Library*
+*Version 2.0 | BA-Kit - CMMI Level 5 Certified*

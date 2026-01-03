@@ -5,7 +5,7 @@
 </p>
 
 > **The Ultimate Requirements Engineering AI Agent**
-> Orchestrating 12 interconnected skills to deliver world-class business analysis
+> Orchestrating 20 interconnected skills • CMMI Level 5 Certified
 
 ---
 
@@ -32,8 +32,9 @@
 - **CBAP** (Certified Business Analysis Professional - BABOK v3)
 - **ISO/IEC/IEEE 29148:2018** (Requirements Engineering Standards)
 - **ISO/IEC 25010:2011** (System Quality Requirements - SQuaRE)
-- **CMMI DEV** (Capability Maturity Model Integration)
+- **CMMI DEV Level 5** (Capability Maturity Model Integration - Optimizing)
 - **SAFe Agilist** (Scaled Agile Framework)
+- **Six Sigma Green Belt** (Statistical Process Control)
 
 ### Core Philosophy
 > "Requirements are the foundation of every successful system. 
@@ -86,7 +87,7 @@
 
 ## 📚 SKILL ORCHESTRATION SYSTEM
 
-### The 12-Skill Framework
+### The 20-Skill Framework
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
@@ -129,6 +130,17 @@
 │  │ Executive     │ │ Detailed      │ │ Functional    │ │ User Stories  │   │
 │  │ Approval      │ │ Technical     │ │ Specifications│ │ Epics, UC     │   │
 │  └───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘   │
+│                                 │                                           │
+│                                 ▼                                           │
+│  🟣 ADVANCED SKILLS (CMMI Level 5 - Optimizing)                             │
+│  ════════════════════════════════════════════════════════════════════════   │
+│  ┌───────────────┐ ┌───────────────┐ ┌───────────────┐                     │
+│  │   SKILL-18    │ │   SKILL-19    │ │   SKILL-20    │                     │
+│  │  METRICS/SPC  │ │  ROOT CAUSE   │ │  INNOVATION   │                     │
+│  │               │ │   ANALYSIS    │ │     (OID)     │                     │
+│  │ Control Charts│ │ Fishbone/5Why │ │ Pilot/A-B Test│                     │
+│  │ Cpk, KPIs     │ │ Pareto        │ │ ROI Calculator│                     │
+│  └───────────────┘ └───────────────┘ └───────────────┘                     │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 ```
@@ -155,6 +167,14 @@ The agent automatically activates skills based on context:
 | Create SRS | 01 + 03 + 04 + 10 | SRS (IEEE 29148) generation |
 | Create FRD | 01 + 03 + 11 | FRD template generation |
 | User stories, agile | 01 + 02 + 03 + 12 | Agile artifacts |
+| Data modeling, ERD | 01 + 03 + 13 | ERD, Data Dictionary |
+| UX research, personas | 01 + 02 + 14 | Journey Maps, Usability |
+| Facilitate workshop | 01 + 02 + 15 | Agenda, Group dynamics |
+| Process modeling, BPMN | 01 + 03 + 16 | As-Is/To-Be analysis |
+| Business case, ROI | 01 + 17 | NPV, Payback calculation |
+| Metrics, SPC, quality | 01 + 03 + 08 + 18 | Control charts, Cpk |
+| Root cause, defect analysis | 01 + 08 + 18 + 19 | Fishbone, 5 Whys |
+| Process improvement, innovation | 01 + 18 + 19 + 20 | Pilot framework, OID |
 
 ### Skill Dependencies
 
@@ -164,11 +184,11 @@ SKILL-01 (Identity)
 
 SKILL-02 (Elicitation)
     └──▶ Depends on: SKILL-01
-    └──▶ Enables: SKILL-03, 05, 06
+    └──▶ Enables: SKILL-03, 05, 06, 14, 15
 
 SKILL-03 (Writing)
     └──▶ Depends on: SKILL-01, 02
-    └──▶ Enables: SKILL-04, 07, 08, 09, 10, 11, 12
+    └──▶ Enables: SKILL-04, 07, 08, 09, 10, 11, 12, 13, 16
 
 SKILL-04 (NFR) ←── Depends on: SKILL-01, 03
 SKILL-05 (Prioritization) ←── Depends on: SKILL-01, 03
@@ -180,6 +200,16 @@ SKILL-09 (BRD) ←── Depends on: SKILL-01, 02, 03
 SKILL-10 (SRS) ←── Depends on: SKILL-01, 02, 03, 04
 SKILL-11 (FRD) ←── Depends on: SKILL-01, 02, 03, 04
 SKILL-12 (Agile) ←── Depends on: SKILL-01, 02, 03
+
+SKILL-13 (Data Modeling) ←── Depends on: SKILL-01, 03
+SKILL-14 (UX Research) ←── Depends on: SKILL-01, 02
+SKILL-15 (Workshop) ←── Depends on: SKILL-01, 02
+SKILL-16 (Process Modeling) ←── Depends on: SKILL-01, 03
+SKILL-17 (Solution Eval) ←── Depends on: SKILL-01
+
+SKILL-18 (Metrics/SPC) ←── Depends on: SKILL-01, 03, 08
+SKILL-19 (Root Cause) ←── Depends on: SKILL-01, 08, 18
+SKILL-20 (Innovation) ←── Depends on: SKILL-01, 18, 19
 ```
 
 ---
@@ -358,13 +388,23 @@ ba-kit/
 │   ├── SKILL-05-prioritization.md
 │   ├── SKILL-06-conflict-resolution.md
 │   ├── SKILL-07-traceability-change.md
-│   └── SKILL-08-validation-verification.md
+│   ├── SKILL-08-validation-verification.md
+│   ├── SKILL-13-data-modeling.md
+│   ├── SKILL-14-ux-research.md
+│   ├── SKILL-15-workshop-facilitation.md
+│   ├── SKILL-16-process-modeling.md
+│   └── SKILL-17-solution-evaluation.md
 │
-└── templates/                    ← Document Templates
-    ├── SKILL-09-brd-template.md
-    ├── SKILL-10-srs-template.md
-    ├── SKILL-11-frd-template.md
-    └── SKILL-12-agile-artifacts.md
+├── templates/                    ← Document Templates
+│   ├── SKILL-09-brd-template.md
+│   ├── SKILL-10-srs-template.md
+│   ├── SKILL-11-frd-template.md
+│   └── SKILL-12-agile-artifacts.md
+│
+└── advanced/                     ← Advanced Skills (CMMI Level 5)
+    ├── SKILL-18-requirements-metrics-spc.md
+    ├── SKILL-19-root-cause-analysis.md
+    └── SKILL-20-ba-innovation.md
 ```
 
 ---
