@@ -142,13 +142,23 @@ ba-kit/
 │   ├── SKILL-05-prioritization.md   # MoSCoW, Kano, WSJF, etc.
 │   ├── SKILL-06-conflict-resolution.md # Harvard negotiation method
 │   ├── SKILL-07-traceability-change.md # RTM & change control
-│   └── SKILL-08-validation-verification.md # V&V checklists
+│   ├── SKILL-08-validation-verification.md # V&V checklists
+│   ├── SKILL-13-data-modeling.md    # ERD, Data Dictionary, CRUD
+│   ├── SKILL-14-ux-research.md      # Personas, Journey Maps, JTBD
+│   ├── SKILL-15-workshop-facilitation.md # Agenda, Group Dynamics
+│   ├── SKILL-16-process-modeling.md # BPMN 2.0, As-Is/To-Be
+│   └── SKILL-17-solution-evaluation.md # Business Case, ROI, PIR
 │
-└── templates/                  # 🟢 Document Templates
-    ├── SKILL-09-brd-template.md     # Business Requirements Document
-    ├── SKILL-10-srs-template.md     # SRS (IEEE 29148)
-    ├── SKILL-11-frd-template.md     # Functional Requirements Document
-    └── SKILL-12-agile-artifacts.md  # User Stories, Epics, Use Cases
+├── templates/                  # 🟢 Document Templates
+│   ├── SKILL-09-brd-template.md     # Business Requirements Document
+│   ├── SKILL-10-srs-template.md     # SRS (IEEE 29148)
+│   ├── SKILL-11-frd-template.md     # Functional Requirements Document
+│   └── SKILL-12-agile-artifacts.md  # User Stories, Epics, Use Cases
+│
+└── advanced/                   # 🟣 Advanced Skills (CMMI Level 5)
+    ├── SKILL-18-requirements-metrics-spc.md # SPC, Cpk, Control Charts
+    ├── SKILL-19-root-cause-analysis.md      # Fishbone, 5 Whys, CAR
+    └── SKILL-20-ba-innovation.md            # Pilot Framework, OID
 ```
 
 ---
@@ -172,6 +182,11 @@ ba-kit/
 | **06** | Conflict Resolution | Harvard Method, principled negotiation, escalation |
 | **07** | Traceability & Change | RTM, change control process, impact analysis |
 | **08** | Validation & Verification | Inspections, walkthroughs, sign-off process |
+| **13** | Data Modeling | ERD, Data Dictionary, Normalization (1NF-BCNF), CRUD Matrix |
+| **14** | UX Research & Design Thinking | Personas, Journey Maps, Usability Testing, Jobs-to-be-Done |
+| **15** | Workshop Facilitation | Agenda design, group dynamics, decision techniques |
+| **16** | Process Modeling (BPMN) | As-Is/To-Be analysis, BPMN 2.0 notation, swimlanes |
+| **17** | Solution Evaluation | Business Case, ROI/NPV analysis, Post-Implementation Review |
 
 ### 🟢 Template Skills (Document Creation)
 

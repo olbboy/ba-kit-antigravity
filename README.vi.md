@@ -103,6 +103,50 @@ BA-Kit được thiết kế linh hoạt để hoạt động như một "hệ �
 
 ---
 
+## 🎓 20 Năng lực BA-Kit
+
+### 🔵 Core Skills (Năng lực Cốt lõi)
+
+| Skill | Tên | Mục đích |
+|-------|-----|----------|
+| **01** | Identity & Competencies | Định danh BA, phân tích stakeholder, RACI |
+| **02** | Elicitation & Questioning | Kỹ thuật phỏng vấn, 5W1H, cấu trúc câu hỏi |
+| **03** | Writing & Quality | RFC 2119, INVEST, acceptance criteria |
+
+### 🟡 Specialized Skills (Năng lực Chuyên sâu)
+
+| Skill | Tên | Mục đích |
+|-------|-----|----------|
+| **04** | NFR Framework | ISO 25010 cho Performance, Security, Reliability |
+| **05** | Prioritization | MoSCoW, Kano Model, WSJF, Value vs Effort |
+| **06** | Conflict Resolution | Harvard Method, đàm phán nguyên tắc, escalation |
+| **07** | Traceability & Change | RTM, quy trình kiểm soát thay đổi |
+| **08** | Validation & Verification | Inspections, walkthroughs, sign-off |
+| **13** | Data Modeling | ERD, Data Dictionary, Normalization, CRUD |
+| **14** | UX Research & Design Thinking | Personas, Journey Maps, JTBD, Usability Testing |
+| **15** | Workshop Facilitation | Thiết kế agenda, động lực nhóm |
+| **16** | Process Modeling (BPMN) | As-Is/To-Be, BPMN 2.0, swimlanes |
+| **17** | Solution Evaluation | Business Case, ROI/NPV, Post-Implementation Review |
+
+### 🟢 Template Skills (Biểu mẫu)
+
+| Skill | Tên | Mục đích |
+|-------|-----|----------|
+| **09** | BRD Template | Business Requirements Document |
+| **10** | SRS Template | IEEE 29148 Software Requirements Specification |
+| **11** | FRD Template | Functional Requirements Document |
+| **12** | Agile Artifacts | User Stories, Epics, Use Cases, Story Mapping |
+
+### 🟣 Advanced Skills (CMMI Level 5)
+
+| Skill | Tên | Mục đích |
+|-------|-----|----------|
+| **18** | Metrics & SPC | Statistical Process Control, Cpk, KPI Dashboard |
+| **19** | Root Cause Analysis | Fishbone, 5 Whys, Pareto, Hypothesis Testing |
+| **20** | Innovation (OID) | Pilot Framework, A/B Testing, ROI Calculator |
+
+---
+
 ## 📁 Cấu trúc Repository
 
 ```
@@ -137,13 +181,23 @@ ba-kit/
 │   ├── SKILL-05-prioritization.md   # Các mô hình định giá trị (WSJF, Kano)
 │   ├── SKILL-06-conflict-resolution.md # Đàm phán nguyên tắc (Harvard)
 │   ├── SKILL-07-traceability-change.md # Ma trận truy vết (RTM)
-│   └── SKILL-08-validation-verification.md # Quy trình kiểm tra chất lượng (V&V)
+│   ├── SKILL-08-validation-verification.md # Quy trình kiểm tra chất lượng (V&V)
+│   ├── SKILL-13-data-modeling.md    # ERD, Data Dictionary, CRUD
+│   ├── SKILL-14-ux-research.md      # Personas, Journey Maps, JTBD
+│   ├── SKILL-15-workshop-facilitation.md # Điều phối Workshop
+│   ├── SKILL-16-process-modeling.md # BPMN 2.0, As-Is/To-Be
+│   └── SKILL-17-solution-evaluation.md # Business Case, ROI, PIR
 │
-└── templates/                  # 🟢 Output Layer (Biểu mẫu Chuẩn hóa)
-    ├── SKILL-09-brd-template.md     # Business Requirements Document (BRD)
-    ├── SKILL-10-srs-template.md     # Software Requirements Specification (SRS)
-    ├── SKILL-11-frd-template.md     # Functional Requirements Document (FRD)
-    └── SKILL-12-agile-artifacts.md  # User Stories & Epics
+├── templates/                  # 🟢 Output Layer (Biểu mẫu Chuẩn hóa)
+│   ├── SKILL-09-brd-template.md     # Business Requirements Document (BRD)
+│   ├── SKILL-10-srs-template.md     # Software Requirements Specification (SRS)
+│   ├── SKILL-11-frd-template.md     # Functional Requirements Document (FRD)
+│   └── SKILL-12-agile-artifacts.md  # User Stories & Epics
+│
+└── advanced/                   # 🟣 Advanced Layer (CMMI Level 5)
+    ├── SKILL-18-requirements-metrics-spc.md # SPC, Cpk, Control Charts
+    ├── SKILL-19-root-cause-analysis.md      # Fishbone, 5 Whys, CAR
+    └── SKILL-20-ba-innovation.md            # Pilot Framework, OID
 ```
 
 ---
