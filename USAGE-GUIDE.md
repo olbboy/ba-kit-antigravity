@@ -1,5 +1,9 @@
 # 📘 BA-Kit Antigravity Workflows - Comprehensive Usage Guide
 
+<p align="center">
+  <img src="assets/logo.png" alt="BA-Kit Logo" width="150">
+</p>
+
 ## 🧠 Philosophy & Deep Understanding
 
 ### The Core Principle: Layered Competency
