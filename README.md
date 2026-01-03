@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="assets/logo.png" alt="BA-Kit Logo" width="200">
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Skills-12-blue?style=for-the-badge" alt="12 Skills">
   <img src="https://img.shields.io/badge/Workflows-9-green?style=for-the-badge" alt="9 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
