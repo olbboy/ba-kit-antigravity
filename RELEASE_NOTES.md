@@ -1,5 +1,5 @@
-# 🎉 BA-Kit v2.0.0 Release Notes
-## CMMI Level 5 (Optimizing) Achievement
+# 🚀 BA-Kit v2.1.0 - The Experience Update
+## Persona Guide, Workflow Optimization & Repository Cleanup
 
 **Release Date:** 2026-01-04
 
@@ -7,162 +7,57 @@
 
 ## 🏆 Executive Summary
 
-BA-Kit v2.0.0 represents a **transformational upgrade** that elevates the framework from a comprehensive documentation toolkit to a **world-class, self-optimizing Requirements Engineering system**. This release achieves full **CMMI Level 5 (Optimizing)** compliance—the highest level of process maturity.
-
-### Key Numbers
-
-| Metric | Value |
-|--------|-------|
-| 📊 **CMMI Level** | 5.0 (Optimizing) |
-| 📚 **Total Skills** | 20 |
-| 📝 **Total Content** | 22,500+ lines |
-| ⭐ **Average Score** | 4.7 / 5.0 |
+Following the massive **CMMI Level 5** update (v2.0), this **v2.1.0 "Experience Update"** focuses on **usability and adoption**. We've added a comprehensive **Persona-Based User Guide** for different experience levels, streamlined the repository by removing redundant files, and fully updated all agent workflows to utilize the new 20-skill framework.
 
 ---
 
-## 🆕 What's New
+## ⭐ Highlights
 
-### 1. Advanced Skills (CMMI Level 5)
+### 1. 🆕 Persona-Based User Guide
+**File:** [`USER-GUIDE-BY-PERSONA.md`](USER-GUIDE-BY-PERSONA.md)
 
-Three new flagship skills enable continuous process optimization:
+A massive new bilingual (English-Vietnamese) guide that teaches BA-Kit through a real-world **Attendance System** project:
 
-#### SKILL-18: Requirements Metrics & SPC
-*Statistical Process Control for Requirements Engineering*
+| Level | Experience | Focus | Output |
+|-------|------------|-------|--------|
+| 🟢 **Beginner** | 1-2 years | Doing the work right | User Stories, Use Cases |
+| 🟡 **Intermediate** | 3-5 years | Doing the right work | NFRs, Data Models, Prioritization |
+| 🔵 **Advanced** | 5+ years | Improving how work is done | ROI, SPC, Root Cause Analysis |
 
-- 📈 **KPI Dashboard**: Quality, Process, and Productivity metrics
-- 📊 **Control Charts**: UCL/LCL with Nelson Rules for anomaly detection
-- 🎯 **Process Capability (Cpk)**: Target ≥ 1.33 for mature processes
-- 🔄 **PDCA Cycle**: Plan-Do-Check-Act for continuous improvement
+### 2. 🔄 Workflow & Agent Updates
+- **Master Workflow**: `ba-master.md` updated with:
+  - **Pattern F**: Process Improvement (CMMI Level 5)
+  - **Pattern G**: Business Case Development
+  - New Advanced Skills section (SKILL-18, 19, 20)
+- **Agent Awareness**: `AGENT.MD` updated with 8 new triggers for advanced skills.
 
-#### SKILL-19: Root Cause Analysis (CAR)
-*Systematic elimination of defect sources*
-
-- 🐟 **Fishbone Diagrams**: 6M analysis (Man, Method, Machine, Material, Measurement, Mother Nature)
-- ❓ **5 Whys Template**: Drill down to systemic root causes
-- 📊 **Pareto Analysis**: Focus on top 20% of issues causing 80% of problems
-- 🧪 **Statistical Validation**: Hypothesis testing (T-Test, ANOVA)
-
-#### SKILL-20: Innovation & Improvement (OID)
-*Framework for controlled organizational change*
-
-- 💡 **Innovation Pipeline**: Ideate → Evaluate → Pilot → Deploy
-- 🧪 **Pilot Framework**: A/B testing for process changes
-- 💰 **ROI Calculator**: Quantify improvement value
-- 📢 **ADKAR Model**: Change management for rollout
+### 3. 🧹 Repository Purification
+- **Removed `00-MASTER-INDEX.md`**: Content was redundant with README and QUICK-START.
+- **Simplification**: Reduced root-level files to clear confusion ("Which file do I read first?").
 
 ---
 
-### 2. Skill Synergy Map
+## 📋 Changelog
 
-New strategic guidance on combining skills for maximum impact:
+### Added
+- **`USER-GUIDE-BY-PERSONA.md`**: 600+ lines of guide content.
+- **New Patterns**: Process Improvement and Business Case patterns in `ba-master.md`.
 
-| Scenario | Skill Combination |
-|----------|-------------------|
-| Product Discovery | Elicitation + UX + Workshop |
-| System Architecture | Data Modeling + Process + NFR |
-| Crisis Management | Conflict + Priority + Stakeholder |
-| Quality Audit | Validation + Writing + SPC |
-| Continuous Improvement | CAR + SPC + OID |
+### Changed
+- **`AGENT.MD`**: Updated to 20 skills, added Six Sigma cert, improved trigger table.
+- **`QUICK-START.md`**: Updated to 20 skills, 4 categories.
+- **`ba-master.md`**: Added CMMI Level 5 badge and advanced workflows.
 
----
-
-### 3. Competency Matrix by Role
-
-Clear progression path for BA career development:
-
-| Level | Focus | Key Skills |
-|-------|-------|------------|
-| **Junior BA** | Execution | SKILL-02, 03, 12 |
-| **Senior BA** | Strategy | + SKILL-04, 05, 13 |
-| **Lead BA / PO** | Optimization | + SKILL-17, 18, 19, 20 |
+### Removed
+- **`00-MASTER-INDEX.md`**: Deleted to improve navigation clarity.
 
 ---
 
-## 📊 Before vs. After
+## 🚀 Upgrade Guidance
 
-| Aspect | v1.x | v2.0.0 |
-|--------|------|--------|
-| CMMI Level | 3.85 (Defined+) | **5.0 (Optimizing)** |
-| Total Skills | 17 | **20** |
-| Quantitative Metrics | Limited | **Full SPC Framework** |
-| Root Cause Analysis | Ad-hoc | **Systematic (CAR)** |
-| Innovation Process | None | **Formal Pipeline (OID)** |
-| Process Improvement | Reactive | **Proactive & Data-Driven** |
+- **For New Users**: Start with `README.md` then jump to `USER-GUIDE-BY-PERSONA.md` to find your level.
+- **For AI Agents**: Re-read `AGENT.MD` to update your internal context window with the new triggers.
 
 ---
 
-## 🛠️ Technical Improvements
-
-### Process Performance Baselines
-
-Industry benchmarks now embedded in:
-- **SKILL-02**: Elicitation Effectiveness Metrics
-- **SKILL-03**: Requirements Quality Benchmarks
-- **SKILL-08**: Review Effectiveness Standards
-
-### Statistical Methods
-
-| Method | Application |
-|--------|-------------|
-| Control Charts | Defect rate monitoring |
-| Cpk Index | Process capability assessment |
-| Nelson Rules | Anomaly detection |
-| Pareto Analysis | Defect prioritization |
-| Hypothesis Testing | Root cause validation |
-
----
-
-## 📁 New File Structure
-
-```
-ba-kit/
-├── advanced/                          [NEW DIRECTORY]
-│   ├── SKILL-18-requirements-metrics-spc.md
-│   ├── SKILL-19-root-cause-analysis.md
-│   └── SKILL-20-ba-innovation.md
-├── CHANGELOG.md                       [NEW FILE]
-└── RELEASE_NOTES.md                   [NEW FILE]
-```
-
----
-
-## 🌐 Documentation Updates
-
-| File | Changes |
-|------|---------|
-| README.md | CMMI L5 badge, 20 skills, Synergy Map, Competency Matrix |
-| README.vi.md | Full Vietnamese localization of all new content |
-| CHANGELOG.md | Complete version history |
-
----
-
-## 🚀 Upgrade Path
-
-For existing BA-Kit users:
-
-1. **Review new skills**: Start with SKILL-18 to understand the SPC framework
-2. **Adopt incrementally**: Integrate metrics tracking into your existing workflow
-3. **Train team**: Use Competency Matrix to identify skill gaps
-4. **Measure & Improve**: Apply SKILL-19 (CAR) when issues exceed control limits
-
----
-
-## 🙏 Credits
-
-Developed with **"Super Ultra Deep Reasoning"** methodology, ensuring:
-- ✅ Comprehensive CMMI compliance verification
-- ✅ Statistical validation of all metrics
-- ✅ Industry standard alignment (ISO, IEEE, BABOK, Six Sigma)
-- ✅ Vietnamese localization
-
----
-
-## 📞 Support
-
-For questions or feedback about this release:
-- Open an issue on the repository
-- Reference the [CHANGELOG.md](CHANGELOG.md) for detailed changes
-
----
-
-**BA-Kit v2.0.0** — *The Definitive Business Analysis Framework, Now Self-Optimizing*
+**BA-Kit v2.1.0** — *Making World-Class Business Analysis Accessible to Everyone*

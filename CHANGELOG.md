@@ -7,6 +7,36 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.0] - 2026-01-04
+
+### 🚀 The Experience Update (Persona Guide & Optimization)
+
+This update focuses on **Usability and User Experience**, introducing a comprehensive persona-based learning path and streamlining the repository structure.
+
+#### 🆕 Added
+- **Persona-Based User Guide**: `USER-GUIDE-BY-PERSONA.md` (Bilingual EN-VI)
+  - 3 Levels: Beginner, Intermediate, Advanced
+  - Real-world "Attendance System" example throughout
+  - Skills mapping and progression checklists
+- **New Workflow Patterns**:
+  - **Pattern F**: Process Improvement (CMMI Level 5)
+  - **Pattern G**: Business Case Development
+
+#### 🔄 Changed
+- **Master Workflow Updated**: `ba-master.md` now fully integrates CMMI Level 5 and 20 skills
+- **Agent Orchestration**: `AGENT.MD` updated with:
+  - Six Sigma certification
+  - 8 new trigger mappings for skills 13-20
+  - Advanced Skills layer in skill orchestra diagram
+- **Quick Start**: `QUICK-START.md` updated to reflect 20 skills layout
+
+#### 🗑️ Removed
+- **00-MASTER-INDEX.md**: Removed as redundant (content migrated to README/QUICK-START)
+  - Reduces cognitive load for new users
+  - Eliminates "which file first?" confusion
+
+---
+
 ## [2.0.0] - 2026-01-04
 
 ### 🏆 CMMI Level 5 (Optimizing) Release
