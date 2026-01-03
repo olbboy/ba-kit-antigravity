@@ -16,35 +16,27 @@
 </p>
 
 <h1 align="center">🏆 BA-Kit</h1>
-<h3 align="center">Requirements Engineering Skills Library for AI Agents</h3>
+<h3 align="center">The Definitive Business Analysis Framework</h3>
 
 <p align="center">
-  <strong>Transform any AI into a Legendary Business Analyst</strong><br>
-  12 interconnected skills • 9 executable workflows • 4 professional templates
+  <strong>Master the Art of Requirements Engineering</strong><br>
+  12 connected competencies • 9 strategic workflows • World-class documentation standards
 </p>
-
-<br>
-
-## 🎥 Video Tutorial
-
-<a href="#video-tutorial">
-  <img src="assets/video_thumbnail.png" alt="BA-Kit Video Tutorial" width="100%">
-</a>
-
-> *Watch how to transform your AI into an expert Business Analyst using BA-Kit + Antigravity.*
 
 ---
 
-## 🎯 What is BA-Kit?
+## 🎯 The Gold Standard in Business Analysis
 
-BA-Kit is a comprehensive **prompt engineering library** that transforms AI assistants into expert Business Analysts. It provides:
+BA-Kit is not just a library; it is a **comprehensive cognitive framework** designed to elevate requirements engineering to an art form. It bridges the gap between abstract business strategy and precise technical execution.
 
-- **12 Professional Skills** covering the entire requirements engineering lifecycle
-- **9 Executable Workflows** for AI agents (Antigravity/Claude/GPT compatible)
-- **4 Professional Templates** (BRD, SRS, FRD, Agile Artifacts)
-- **Standards Compliance** with ISO 29148, ISO 25010, BABOK v3
+Whether used by **Human Experts** or **Agentic AI**, BA-Kit delivers a structured, ISO-compliant methodology to:
 
-Whether you're building AI-powered BA tools or enhancing your own requirements engineering practice, BA-Kit provides the knowledge framework you need.
+- **Elicit** hidden value and unspoken needs
+- **Architect** robust, conflict-free requirements
+- **Validate** specifications with surgical precision
+- **Orchestrate** the entire product definition lifecycle
+
+This is the toolkit for those who refuse to compromise on clarity.
 
 ---
 

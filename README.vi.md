@@ -16,62 +16,55 @@
 </p>
 
 <h1 align="center">🏆 BA-Kit</h1>
-<h3 align="center">Thư viện Kỹ năng Requirements Engineering cho AI Agents</h3>
+<h3 align="center">Khung Năng Lực Phân Tích Nghiệp Vụ Toàn Diện</h3>
 
 <p align="center">
-  <strong>Biến mọi AI thành một Business Analyst Huyền thoại</strong><br>
-  12 kỹ năng liên kết • 9 workflow thực thi • 4 template chuyên nghiệp
+  <strong>Chinh Phục Nghệ Thuật Kỹ Nghệ Yêu Cầu</strong><br>
+  12 năng lực cốt lõi • 9 quy trình chiến lược • Tiêu chuẩn tài liệu đẳng cấp thế giới
 </p>
 
-<br>
+---
 
-## 🎥 Video Hướng dẫn
+## 🎯 Tiêu Chuẩn Vàng trong Business Analysis
 
-<a href="#video-tutorial">
-  <img src="assets/video_thumbnail.png" alt="BA-Kit Video Tutorial" width="100%">
-</a>
+BA-Kit không chỉ là một thư viện công cụ; đây là một **khung tư duy toàn diện** được thiết kế để nâng tầm kỹ nghệ yêu cầu (requirements engineering) lên thành một nghệ thuật. Nó là cầu nối giữa chiến lược kinh doanh trừu tượng và sự chính xác trong triển khai kỹ thuật.
 
-> *Xem cách biến AI của bạn thành chuyên gia Business Analyst sử dụng BA-Kit + Antigravity.*
+Dù được sử dụng bởi **Chuyên gia Con người** hay **AI Agent**, BA-Kit cung cấp một phương pháp luận tuân thủ chuẩn ISO để:
+
+- **Khơi gợi (Elicit)** những giá trị tiềm ẩn và nhu cầu chưa được nói ra
+- **Kiến trúc (Architect)** các hệ thống yêu cầu vững chắc, không xung đột
+- **Thẩm định (Validate)** các đặc tả kỹ thuật với độ chính xác tuyệt đối
+- **Điều phối (Orchestrate)** toàn bộ vòng đời định nghĩa sản phẩm
+
+Đây là bộ công cụ dành cho những ai không chấp nhận sự thỏa hiệp về tính minh bạch và chất lượng.
 
 ---
 
-## 🎯 BA-Kit là gì?
-
-BA-Kit là một **thư viện prompt engineering** toàn diện giúp chuyển đổi các trợ lý AI thành những chuyên gia Business Analysis (BA). Bộ công cụ cung cấp:
-
-- **12 Kỹ năng Chuyên nghiệp** bao phủ toàn bộ vòng đời requirements engineering
-- **9 Workflow Thực thi** cho AI agents (tương thích Antigravity/Claude/GPT)
-- **4 Template Chuyên nghiệp** (BRD, SRS, FRD, Agile Artifacts)
-- **Tuân thủ Tiêu chuẩn** ISO 29148, ISO 25010, BABOK v3
-
-Dù bạn đang xây dựng công cụ BA dựa trên AI hay muốn nâng cao thực hành requirements engineering của riêng mình, BA-Kit cung cấp khung kiến thức nền tảng mà bạn cần.
-
----
-
-## 📊 Kiến trúc Kỹ năng
+## 📊 Kiến trúc Năng lực (Skill Architecture)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────────┐
-│                          KIM TỰ THÁP KỸ NĂNG BA-KIT                         │
-40: ├─────────────────────────────────────────────────────────────────────────────┤
+│                          KIM TỰ THÁP NĂNG LỰC BA-KIT                        │
+├─────────────────────────────────────────────────────────────────────────────┤
 │                                                                             │
-│  🟢 TEMPLATES (Lớp Output)                                                  │
+│  🟢 OUTPUT LAYER (Sản phẩm đầu ra)                                          │
 │  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐                   │
 │  │ SKILL-09  │ │ SKILL-10  │ │ SKILL-11  │ │ SKILL-12  │                   │
 │  │    BRD    │ │    SRS    │ │    FRD    │ │   Agile   │                   │
 │  └───────────┘ └───────────┘ └───────────┘ └───────────┘                   │
 │                              │                                              │
-│  🟡 SPECIALIZED (Lớp Ngữ cảnh)                                              │
+│  🟡 CONTEXT LAYER (Ngữ cảnh & Kỹ thuật)                                     │
 │  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐               │
 │  │SKILL-04 │ │SKILL-05 │ │SKILL-06 │ │SKILL-07 │ │SKILL-08 │               │
 │  │   NFR   │ │Priority │ │Conflict │ │ Trace   │ │Validate │               │
-│  │   NFR   │ │Ưu tiên  │ │Xung đột │ │Truy vết │ │Kiểm thử │               │
+│  │ Phi chức│ │Ưu tiên  │ │Xung đột │ │Truy vết │ │Thẩm định│               │
+│  │  năng   │ │         │ │         │ │         │ │         │               │
 │  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘               │
 │                              │                                              │
-│  🔵 CORE (Lớp Nền tảng) ─ LUÔN KÍCH HOẠT                                    │
+│  🔵 FOUNDATION LAYER (Nền tảng tư duy) ─ LUÔN KÍCH HOẠT                     │
 │  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
 │  │    SKILL-01     │ │    SKILL-02     │ │    SKILL-03     │               │
-│  │    Indentity    │ │   Elicitation   │ │ Writing Quality │               │
+│  │    Identity     │ │   Elicitation   │ │ Writing Quality │               │
 │  │    Định danh    │ │   Khơi gợi      │ │ Chất lượng Viết │               │
 │  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
 │                                                                             │
@@ -82,29 +75,17 @@ Dù bạn đang xây dựng công cụ BA dựa trên AI hay muốn nâng cao th
 
 ## 🚀 Hướng dẫn Nhanh
 
-### Tích hợp cho AI Agent
+### Phương thức Tích hợp
 
-1. **Copy các workflow** từ `.agent/workflows/` vào thư mục workflow của AI agent
-2. **Tham chiếu AGENT.MD** như là system prompt hoặc persona
-3. **Sử dụng slash commands** để kích hoạt kỹ năng cụ thể:
+BA-Kit được thiết kế linh hoạt để hoạt động như một "hệ điều hành" cho quy trình phân tích:
 
-```
-/ba-master        → Xem bản đồ workflow đầy đủ
-/ba-identity      → Kích hoạt BA persona
-/ba-elicitation   → Bắt đầu thu thập yêu cầu
-/ba-writing       → Chế độ viết tài liệu chất lượng cao
-/ba-nfr           → Đặc tả NFR (ISO 25010)
-/ba-prioritization → MoSCoW, Kano, WSJF
-/ba-conflict      → Giải quyết xung đột stakeholder
-/ba-traceability  → RTM và quản lý thay đổi
-/ba-validation    → Chế độ review yêu cầu
-```
+1. **Cho AI Agents (Antigravity/Claude/GPT)**:
+   - Sử dụng các file workflow trong `.agent/workflows/` để điều hướng tư duy của AI.
+   - Tham chiếu `AGENT.MD` để thiết lập "Persona" chuyên gia với tư duy phản biện sâu sắc.
 
-### Cho BA (Con người)
-
-1. **Đọc USAGE-GUIDE.vi.md** để xem hướng dẫn sử dụng chi tiết
-2. **Tham chiếu các file kỹ năng** trong thư mục `core/`, `specialized/`, `templates/`
-3. **Sử dụng template** như điểm khởi đầu cho tài liệu của bạn
+2. **Cho Chuyên gia Business Analyst**:
+   - Sử dụng `USAGE-GUIDE.vi.md` như cuốn cẩm nang thực chiến (playbook).
+   - Áp dụng các **Template** trong thư mục `templates/` để chuẩn hóa tài liệu dự án ngay từ đầu.
 
 ---
 
@@ -113,196 +94,77 @@ Dù bạn đang xây dựng công cụ BA dựa trên AI hay muốn nâng cao th
 ```
 ba-kit/
 │
-├── AGENT.MD                    # 🏆 Master orchestrator - AI agent persona
-├── USAGE-GUIDE.md              # 📘 Hướng dẫn sử dụng toàn diện (English)
-├── USAGE-GUIDE.vi.md           # 📘 Hướng dẫn sử dụng toàn diện (Vietnamese)
-├── 00-MASTER-INDEX.md          # 📋 Mục lục thư viện kỹ năng gốc
-├── QUICK-START.md              # ⚡ Hướng dẫn tham khảo nhanh
-├── README.md                   # 📄 File này (English)
-├── README.vi.md                # 📄 File này (Vietnamese)
+├── AGENT.MD                    # 🏆 Master Orchestrator - Trí tuệ của Agent
+├── USAGE-GUIDE.md              # 📘 Cẩm nang sử dụng (Tiếng Anh)
+├── USAGE-GUIDE.vi.md           # 📘 Cẩm nang sử dụng (Tiếng Việt)
+├── 00-MASTER-INDEX.md          # 📋 Mục lục năng lực gốc
+├── QUICK-START.md              # ⚡ Tham khảo nhanh
+├── README.md                   # 📄 Giới thiệu (Tiếng Anh)
+├── README.vi.md                # 📄 Giới thiệu (Tiếng Việt)
 │
-├── .agent/workflows/           # 🤖 Antigravity/AI Agent Workflows
-│   ├── ba-master.md            #    Workflow điều hướng
-│   ├── ba-identity.md          #    SKILL-01 workflow
-│   ├── ba-elicitation.md       #    SKILL-02 workflow
-│   ├── ba-writing.md           #    SKILL-03 workflow
-│   ├── ba-nfr.md               #    SKILL-04 workflow
-│   ├── ba-prioritization.md    #    SKILL-05 workflow
-│   ├── ba-conflict.md          #    SKILL-06 workflow
-│   ├── ba-traceability.md      #    SKILL-07 workflow
-│   └── ba-validation.md        #    SKILL-08 workflow
+├── .agent/workflows/           # 🤖 Quy trình Tư duy Chiến lược
+│   ├── ba-master.md            #    Bộ điều hướng trung tâm
+│   ├── ba-identity.md          #    Thiết lập tư duy & stakeholder
+│   ├── ba-elicitation.md       #    Chiến lược khai thác thông tin
+│   ├── ba-writing.md           #    Tiêu chuẩn chất lượng tài liệu
+│   ├── ba-nfr.md               #    Khung yêu cầu phi chức năng
+│   ├── ba-prioritization.md    #    Ma trận ưu tiên
+│   ├── ba-conflict.md          #    Đàm phán & Giải quyết xung đột
+│   ├── ba-traceability.md      #    Quản trị thay đổi & Truy vết
+│   └── ba-validation.md        #    Kiểm thử & Thẩm định
 │
-├── core/                       # 🔵 Kỹ năng Cốt lõi (Luôn tải)
-│   ├── SKILL-01-identity.md    #    BA persona & khung stakeholder
-│   ├── SKILL-02-elicitation.md #    Kỹ thuật đặt câu hỏi & phỏng vấn
-│   └── SKILL-03-writing-quality.md # Tiêu chuẩn viết yêu cầu
+├── core/                       # 🔵 Foundation Layer (Tư duy Cốt lõi)
+│   ├── SKILL-01-identity.md    #    Định vị vai trò & Phân tích bên liên quan
+│   ├── SKILL-02-elicitation.md #    Nghệ thuật phỏng vấn & Đặt câu hỏi
+│   └── SKILL-03-writing-quality.md # Tiêu chuẩn kỹ thuật viết (RFC 2119, INVEST)
 │
-├── specialized/                # 🟡 Kỹ năng Chuyên sâu (Dựa trên ngữ cảnh)
-│   ├── SKILL-04-nfr-framework.md    # ISO 25010 NFR templates
-│   ├── SKILL-05-prioritization.md   # MoSCoW, Kano, WSJF...
-│   ├── SKILL-06-conflict-resolution.md # Phương pháp đàm phán Harvard
-│   ├── SKILL-07-traceability-change.md # RTM & kiểm soát thay đổi
-│   └── SKILL-08-validation-verification.md # V&V checklists
+├── specialized/                # 🟡 Context Layer (Kỹ thuật Chuyên sâu)
+│   ├── SKILL-04-nfr-framework.md    # Tiêu chuẩn ISO 25010 (Perf, Sec, Rel...)
+│   ├── SKILL-05-prioritization.md   # Các mô hình định giá trị (WSJF, Kano)
+│   ├── SKILL-06-conflict-resolution.md # Đàm phán nguyên tắc (Harvard)
+│   ├── SKILL-07-traceability-change.md # Ma trận truy vết (RTM)
+│   └── SKILL-08-validation-verification.md # Quy trình kiểm tra chất lượng (V&V)
 │
-└── templates/                  # 🟢 Mẫu Tài liệu
-    ├── SKILL-09-brd-template.md     # Business Requirements Document
-    ├── SKILL-10-srs-template.md     # SRS (IEEE 29148)
-    ├── SKILL-11-frd-template.md     # Functional Requirements Document
-    └── SKILL-12-agile-artifacts.md  # User Stories, Epics, Use Cases
+└── templates/                  # 🟢 Output Layer (Biểu mẫu Chuẩn hóa)
+    ├── SKILL-09-brd-template.md     # Business Requirements Document (BRD)
+    ├── SKILL-10-srs-template.md     # Software Requirements Specification (SRS)
+    ├── SKILL-11-frd-template.md     # Functional Requirements Document (FRD)
+    └── SKILL-12-agile-artifacts.md  # User Stories & Epics
 ```
 
 ---
 
-## 🎓 12 Kỹ năng
+## 📜 Cam kết Chất lượng & Tiêu chuẩn
 
-### 🔵 Kỹ năng Cốt lõi (Core Skills)
+BA-Kit được xây dựng dựa trên sự tổng hợp của các tiêu chuẩn công nghiệp hàng đầu thế giới:
 
-| Skill | Tên | Mục đích |
-|-------|-----|----------|
-| **01** | Identity & Competencies | BA persona, bản đồ stakeholder, RACI |
-| **02** | Elicitation & Questioning | Kỹ thuật phễu, 5W1H, cấu trúc phỏng vấn |
-| **03** | Writing & Quality | Từ khóa RFC 2119, tiêu chuẩn INVEST, tiêu chí nghiệm thu |
-
-### 🟡 Kỹ năng Chuyên sâu (Specialized Skills)
-
-| Skill | Tên | Mục đích |
-|-------|-----|----------|
-| **04** | NFR Framework | Template ISO 25010 cho Hiệu năng, Bảo mật, Tin cậy |
-| **05** | Prioritization | MoSCoW, Kano Model, WSJF, Value vs Effort |
-| **06** | Conflict Resolution | Phương pháp Harvard, đàm phán nguyên tắc, quy trình leo thang |
-| **07** | Traceability & Change | RTM, quy trình kiểm soát thay đổi, phân tích tác động |
-| **08** | Validation & Verification | Thanh tra, rà soát (walkthroughs), quy trình ký duyệt |
-
-### 🟢 Kỹ năng Template (Tạo Tài liệu)
-
-| Skill | Tên | Mục đích |
-|-------|-----|----------|
-| **09** | BRD Template | Yêu cầu kinh doanh phê duyệt bởi lãnh đạo |
-| **10** | SRS Template | Đặc tả yêu cầu phần mềm theo IEEE 29148 |
-| **11** | FRD Template | Yêu cầu chức năng chi tiết |
-| **12** | Agile Artifacts | User Stories, Epics, Use Cases, Story Mapping |
-
----
-
-## 📜 Tuân thủ Tiêu chuẩn
-
-BA-Kit tích hợp các thực hành tốt nhất từ:
-
-| Tiêu chuẩn | Phạm vi |
+| Tiêu chuẩn | Ứng dụng |
 |------------|---------|
-| **ISO/IEC/IEEE 29148:2018** | Quy trình requirements engineering |
-| **ISO/IEC 25010:2011** | Mô hình chất lượng hệ thống (SQuaRE) |
-| **BABOK v3** | Business Analysis Body of Knowledge |
-| **RFC 2119** | Từ khóa yêu cầu (SHALL/SHOULD/MAY) |
-| **IREB CPRE** | Giáo trình requirements engineering |
-| **SAFe/Agile** | User stories, ưu tiên WSJF |
+| **ISO/IEC/IEEE 29148:2018** | Quy trình kỹ nghệ yêu cầu phần mềm và hệ thống |
+| **ISO/IEC 25010:2011** | Mô hình chất lượng sản phẩm phần mềm (SQuaRE) |
+| **BABOK v3** | Khung tri thức cốt lõi của Business Analysis (IIBA) |
+| **Harvard Negotiation Project** | Phương pháp đàm phán nguyên tắc để giải quyết xung đột |
+| **SAFe® (Scaled Agile Framework)** | Mô hình ưu tiên theo giá trị kinh tế (WSJF) |
 
 ---
 
-## 🤖 Tích hợp AI Agent
+## 🤝 Tham gia Đóng góp
 
-### Antigravity (Google DeepMind)
+Sự hoàn hảo là một hành trình. Chúng tôi chào đón sự đóng góp từ cộng đồng:
 
-Copy workflows vào `.agent/workflows/` trong dự án của bạn:
-
-```bash
-cp -r ba-kit/.agent/workflows/ your-project/.agent/workflows/
-```
-
-### Claude / ChatGPT / Khác
-
-Sử dụng `AGENT.MD` làm system prompt hoặc tham chiếu trực tiếp các file kỹ năng trong prompt của bạn.
-
-### Tích hợp Tùy chỉnh
-
-Các file kỹ năng là Markdown thuần túy—có thể parse và tích hợp vào bất kỳ hệ thống AI nào.
+1. **Kiến nghị (Issues)**: Báo cáo các điểm chưa hoàn thiện.
+2. **Cải tiến (PRs)**: Đề xuất các kỹ thuật hoặc template mới.
+3. **Lan tỏa**: Chia sẻ cách bạn ứng dụng BA-Kit trong tổ chức.
 
 ---
 
-## 📖 Ví dụ Sử dụng
+## 📄 Bản quyền
 
-### Ví dụ 1: Khám phá Dự án Mới
-
-```
-User: Tôi cần thu thập yêu cầu cho một nền tảng thương mại điện tử mới.
-
-AI (với BA-Kit): 
-/ba-identity → Lập bản đồ stakeholders (Product, IT, Marketing, Khách hàng)
-/ba-elicitation → Áp dụng kỹ thuật đặt câu hỏi Phễu:
-  - Khám phá: "Mục tiêu kinh doanh chính là gì?"
-  - Làm rõ: "Khi bạn nói 'thanh toán nhanh', mục tiêu thời gian là bao nhiêu?"
-  - Thăm dò: "Điều gì xảy ra nếu thanh toán thất bại giữa chừng?"
-```
-
-### Ví dụ 2: Giải quyết Xung đột
-
-```
-User: Sales muốn báo cáo thời gian thực nhưng IT nói không khả thi.
-
-AI (với BA-Kit):
-/ba-conflict → Áp dụng Phương pháp Harvard:
-  - VỊ THẾ Sales: "Báo cáo thời gian thực"
-  - LỢI ÍCH Sales: Cần dữ liệu hiện tại để ra quyết định nhanh
-  - VỊ THẾ IT: "Xử lý theo lô (batch)"
-  - LỢI ÍCH IT: Lo ngại về hiệu năng hệ thống
-  
-  LỰA CHỌN: Gần thời gian thực (5-phút), chiến lược cache, phân cấp ưu tiên
-```
-
-### Ví dụ 3: Review Yêu cầu
-
-```
-User: Review tài liệu SRS này và tìm lỗi chất lượng.
-
-AI (với BA-Kit):
-/ba-validation → Áp dụng checklist kiểm thử:
-  ☐ Sử dụng đúng SHALL/SHOULD/MAY
-  ☐ Không dùng từ ngữ mơ hồ ("nhanh", "thân thiện")
-  ☐ Có tiêu chí nghiệm thu
-  ☐ Truy vết được về nhu cầu kinh doanh
-  
-  LỖI TÌM THẤY:
-  - FR-003: "phản hồi nhanh" → MƠ HỒ
-  - FR-007: Thiếu tiêu chí nghiệm thu → KHÔNG ĐẦY ĐỦ
-```
-
----
-
-## 🤝 Đóng góp
-
-Chúng tôi hoan nghênh mọi đóng góp! Hãy tự nhiên:
-
-1. **Báo cáo vấn đề** - Tìm thấy lỗ hổng trong các kỹ năng?
-2. **Đề xuất cải tiến** - Có kỹ thuật hay template tốt hơn?
-3. **Thêm bản dịch** - Giúp BA-Kit đa ngôn ngữ hơn.
-4. **Chia sẻ use cases** - Bạn đang sử dụng BA-Kit như thế nào?
-
----
-
-## 📄 Giấy phép
-
-Dự án này được cấp phép theo Giấy phép MIT - xem file [LICENSE](LICENSE) để biết chi tiết.
-
----
-
-## 🙏 Lời cảm ơn
-
-- **IIBA** - Khung kiến thức BABOK v3
-- **IREB** - Giáo trình CPRE
-- **ISO** - Các tiêu chuẩn 29148 và 25010
-- **Harvard Negotiation Project** - Phương pháp đàm phán nguyên tắc
-- **SAFe** - Khung Agile và WSJF
+Dự án được phát hành dưới giấy phép **MIT License**. Xem file [LICENSE](LICENSE) để biết thêm chi tiết.
 
 ---
 
 <p align="center">
-  <strong>Xây dựng với 💜 cho Cộng đồng Requirements Engineering</strong><br>
-  <em>Biến AI của bạn thành một Business Analyst Huyền thoại</em>
-</p>
-
-<p align="center">
-  <a href="#-hướng-dẫn-nhanh">Bắt đầu Nhanh</a> •
-  <a href="#-12-kỹ-năng">Kỹ năng</a> •
-  <a href="#-tích-hợp-ai-agent">Tích hợp</a> •
-  <a href="#-ví-dụ-sử-dụng">Ví dụ</a>
+  <strong>Được thiết kế với sự Tỉ mỉ & Đam mê cho Cộng đồng Requirements Engineering</strong><br>
+  <em>Nâng tầm Trí tuệ Phân tích của bạn</em>
 </p>
