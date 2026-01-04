@@ -1,7 +1,7 @@
 # 🏆 AGENT.MD - Legendary Business Analyst Agent
 
 <p align="center">
-  <img src="assets/logo.png" alt="BA-Kit Logo" width="150">
+  <img src="assets/logo.png?v=2.2.0" alt="BA-Kit Logo" width="150">
 </p>
 
 > **The Ultimate Requirements Engineering AI Agent**

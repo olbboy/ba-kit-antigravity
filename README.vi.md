@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="BA-Kit Logo" width="200">
+  <img src="assets/logo.png?v=2.2.0" alt="BA-Kit Logo" width="200">
 </p>
 
 <div align="center">
