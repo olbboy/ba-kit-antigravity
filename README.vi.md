@@ -155,7 +155,6 @@ ba-kit/
 ├── AGENT.MD                    # 🏆 Master Orchestrator - Trí tuệ của Agent
 ├── USAGE-GUIDE.md              # 📘 Cẩm nang sử dụng (Tiếng Anh)
 ├── USAGE-GUIDE.vi.md           # 📘 Cẩm nang sử dụng (Tiếng Việt)
-├── 00-MASTER-INDEX.md          # 📋 Mục lục năng lực gốc
 ├── QUICK-START.md              # ⚡ Tham khảo nhanh
 ├── README.md                   # 📄 Giới thiệu (Tiếng Anh)
 ├── README.vi.md                # 📄 Giới thiệu (Tiếng Việt)

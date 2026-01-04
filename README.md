@@ -117,7 +117,6 @@ ba-kit/
 │
 ├── AGENT.MD                    # 🏆 Master orchestrator - AI agent persona
 ├── USAGE-GUIDE.md              # 📘 Comprehensive usage documentation
-├── 00-MASTER-INDEX.md          # 📋 Original skill library index
 ├── QUICK-START.md              # ⚡ Quick reference guide
 ├── README.md                   # 📄 This file
 │

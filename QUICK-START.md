@@ -13,7 +13,6 @@ Bộ thư viện gồm **20 Skills** được tổ chức thành 4 categories:
 
 ```
 skills-library/
-├── 00-MASTER-INDEX.md          ← Start here! Router & Overview
 ├── core/                        ← Always load these
 │   ├── SKILL-01-identity.md
 │   ├── SKILL-02-elicitation.md
@@ -209,8 +208,9 @@ Load: SKILL-03 + SKILL-08
 ## 📖 FULL DOCUMENTATION
 
 For complete details, refer to:
-1. **00-MASTER-INDEX.md** - Complete overview and decision matrix
-2. Individual skill files for detailed guidance
+1. **USAGE-GUIDE.md** - Comprehensive usage documentation
+2. **README.md** - System overview
+3. Individual skill files for detailed guidance
 
 ---
 

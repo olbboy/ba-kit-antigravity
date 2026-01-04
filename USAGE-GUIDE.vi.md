@@ -393,3 +393,85 @@ AI sẽ:
 2. Giúp bạn map stakeholders
 3. Hướng dẫn bạn qua các câu hỏi có cấu trúc
 4. Tài liệu hóa yêu cầu theo định dạng chuẩn
+
+---
+
+## 🌟 Best Practice: Tổ chức Template theo Dự án
+
+### "Context-Aware" Workspace
+Để tối ưu hóa khả năng của AI Agent, bạn nên tổ chức thư mục  theo từng **Dự án** hoặc **Domain**. Điều này giúp Agent hiểu sâu hơn về ngữ cảnh (Context) mà không cần bạn phải giải thích lại nhiều lần.
+
+### 🏛️ Cấu trúc thư mục khuyến nghị (Best Practice)
+
+~~~bash
+ba-kit/
+├── templates/
+│   ├── Internal-Tools/             <-- Context: Tool nội bộ (Technical, Agile)
+│   │   ├── brd-simple.md
+│   │   └── user-story.md
+│   │
+│   ├── Banking-Core/               <-- Context: Core Banking (Strict, Compliance, ISO)
+│   │   ├── brd-enterprise.md
+│   │   ├── srs-iso-29148.md
+│   │   └── security-nfr.md
+│   │
+│   ├── E-Commerce/                 <-- Context: Bán lẻ (UX-heavy, Marketing driven)
+│   │   ├── brd-marketing.md
+│   │   └── ux-journey-map.md
+~~~
+
+### 🧠 Tại sao cách này hiệu quả?
+
+Với khả năng **Super Ultra Deep Reasoning**, Agent sẽ phân tích được 2 tầng ngữ cảnh:
+
+1.  **Cấu trúc (Structure):** Agent đọc nội dung file template để hiểu *Format* bạn muốn.
+2.  **Ngữ cảnh dự án (Semantic Context):** Tên thư mục (ví dụ ) gợi ý cho Agent về *Tone of Voice* (trang trọng), *Độ chi tiết* (cao), và *Tiêu chuẩn* (bảo mật, compliance) cần áp dụng.
+
+### Ví dụ sử dụng:
+
+> **User:** "Dùng template BRD của dự án Banking để viết requirements cho tính năng Chuyển tiền 24/7."
+
+> **Agent:** (Tự động tìm đến  và viết nội dung với văn phong ngân hàng chuyên nghiệp, chú trọng bảo mật và kiểm toán).
+
+***Kết luận:*** *Đây là cách tổ chức thông minh giúp bạn mở rộng quy mô (Scale) BA-Kit cho hàng chục dự án khác nhau mà vẫn giữ được sự ngăn nắp và chất lượng chuyên biệt.*
+
+---
+
+## 🌟 Best Practice: Tổ chức Template theo Dự án
+
+### "Context-Aware" Workspace
+Để tối ưu hóa khả năng của AI Agent, bạn nên tổ chức thư mục `templates/` theo từng **Dự án** hoặc **Domain**. Điều này giúp Agent hiểu sâu hơn về ngữ cảnh (Context) mà không cần bạn phải giải thích lại nhiều lần.
+
+### 🏛️ Cấu trúc thư mục khuyến nghị (Best Practice)
+
+```bash
+ba-kit/
+├── templates/
+│   ├── Internal-Tools/             <-- Context: Tool nội bộ (Technical, Agile)
+│   │   ├── brd-simple.md
+│   │   └── user-story.md
+│   │
+│   ├── Banking-Core/               <-- Context: Core Banking (Strict, Compliance, ISO)
+│   │   ├── brd-enterprise.md
+│   │   ├── srs-iso-29148.md
+│   │   └── security-nfr.md
+│   │
+│   ├── E-Commerce/                 <-- Context: Bán lẻ (UX-heavy, Marketing driven)
+│   │   ├── brd-marketing.md
+│   │   └── ux-journey-map.md
+```
+
+### 🧠 Tại sao cách này hiệu quả?
+
+Với khả năng **Super Ultra Deep Reasoning**, Agent sẽ phân tích được 2 tầng ngữ cảnh:
+
+1.  **Cấu trúc (Structure):** Agent đọc nội dung file template để hiểu *Format* bạn muốn.
+2.  **Ngữ cảnh dự án (Semantic Context):** Tên thư mục (ví dụ `Banking-Core`) gợi ý cho Agent về *Tone of Voice* (trang trọng), *Độ chi tiết* (cao), và *Tiêu chuẩn* (bảo mật, compliance) cần áp dụng.
+
+### Ví dụ sử dụng:
+
+> **User:** "Dùng template BRD của dự án Banking để viết requirements cho tính năng Chuyển tiền 24/7."
+
+> **Agent:** (Tự động tìm đến `templates/Banking-Core/brd-enterprise.md` và viết nội dung với văn phong ngân hàng chuyên nghiệp, chú trọng bảo mật và kiểm toán).
+
+***Kết luận:*** *Đây là cách tổ chức thông minh giúp bạn mở rộng quy mô (Scale) BA-Kit cho hàng chục dự án khác nhau mà vẫn giữ được sự ngăn nắp và chất lượng chuyên biệt.*
