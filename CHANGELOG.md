@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.2.0] - 2026-01-04
+
+### 💎 The Professional Branding Update
+
+This release elevates BA-Kit's visual identity to "World Class" standards and introduces "Context-Aware" best practices for enterprise-scale adoption.
+
+#### 🆕 Added
+- **New World-Class Logo**: "The Knowledge Block" (Letter 'B') with transparent background, designed for professional/dark mode compatibility.
+- **Best Practice Guide**: Added "Context-Aware Template Organization" to `USAGE-GUIDE.vi.md`.
+- **Transparency Tool**: `remove_bg.py` script used for automated asset processing.
+
+#### 🔄 Changed
+- **Visual Identity**: Replaced all instances of the old logo with the new "B-Block" design.
+- **Repository Cleanup**: Removed deprecated `00-MASTER-INDEX.md` reference to improve navigation.
+- **Documentation**: Updated `QUICK-START`, `README`, and `USAGE-GUIDE` to reflect the cleaner structure.
+
+---
+
 ## [2.1.0] - 2026-01-04
 
 ### 🚀 The Experience Update (Persona Guide & Optimization)
