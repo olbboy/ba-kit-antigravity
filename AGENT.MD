@@ -368,6 +368,12 @@ ba-kit/
 ├── QUICK-START.md                ← Quick reference guide
 │
 ├── .agent/workflows/             ← Antigravity Workflow Files
+├── tools/                        ← 🛠️ Active Agent Tools (Scripts)
+│   ├── lint_req.py               ← Quality Linter
+│   ├── lint_expert.py            ← 🧠 Expert Logic Linter (Gherkin/INVEST)
+│   ├── gen_prompt.py             ← 🤖 AI Bridge (Prompt Generator)
+│   └── trace_graph.py            ← Traceability Visualizer
+│
 │   ├── ba-master.md              ← Router workflow
 │   ├── ba-identity.md            ← SKILL-01
 │   ├── ba-elicitation.md         ← SKILL-02

@@ -17,7 +17,44 @@ Ensure requirements are correct (building the right product) and complete (build
 | **Performed by** | Internal team | Stakeholders, users |
 | **When** | Throughout development | At key milestones |
 
-## Step 2: Apply Verification Techniques
+## Step 2: Automated Quality Check (Active Rules)
+
+Before manual inspection, run the **Requirements Linter** to catch common errors automatically.
+
+**Command (Basic):**
+```bash
+python3 tools/lint_req.py [file.md]
+```
+
+**Command (Expert - Gherkin/INVEST):**
+```bash
+python3 tools/lint_expert.py [file.md]
+```
+
+**What it checks:**
+- 🚫 Ambiguous words (fast, easy, robust)
+- 🆔 Duplicate Requirement IDs
+- 🥒 Gherkin Syntax (Given/When/Then) in Acceptance Criteria
+- 💎 INVEST Criteria heuristics
+
+**Fix any errors reported by the tool before proceeding.**
+
+## Step 3: AI-Assisted Deep Review (The Magic Hook)
+
+Don't just rely on human eyes. Generate a specialized "System Prompt" to get a deep architectural audit from AI.
+
+**Command:**
+```bash
+python3 tools/gen_prompt.py [file.md]
+```
+
+**Action:**
+1. Run the command.
+2. Copy the generated prompt.
+3. Paste it into your AI Chat window.
+4. Review the AI's findings (Security, Scalability, Edge Cases).
+
+## Step 4: Apply Verification Techniques
 
 ### 🔍 Inspection (Most Formal)
 

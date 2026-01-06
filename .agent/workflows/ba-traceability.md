@@ -86,9 +86,24 @@ Track requirements throughout their lifecycle and manage changes effectively usi
 | **Deferred** | Postponed to later phase | Track in backlog |
 | **Rejected** | Will not be implemented | Document reason |
 
-## Step 3: Perform RTM Health Checks
+## Step 3: Automated Traceability Analysis (Active Hook)
 
-Run these checks regularly to ensure RTM integrity:
+Generate a visualization of your requirements dependencies automatically.
+
+**Command:**
+```bash
+python3 tools/trace_graph.py [your_markup_file.md]
+```
+
+**Output:**
+- Generates `traceability_matrix.mermaid` in the same directory.
+- Lists all identified Requirement IDs (Nodes) and Links (Edges).
+
+**Action:**
+- Copy the Mermaid content into your markdown file to visualize the graph.
+- Verify "orphaned" nodes (reqs with no connections).
+
+## Step 4: Perform RTM Health Checks
 
 ### ⚠️ Orphan Requirements
 ```
