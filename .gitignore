@@ -50,4 +50,9 @@ out/
 drafts/
 scratch/
 
+plans/
+
+# User templates (ignore subfolders, keep root files)
+templates/*/
+
 plans
