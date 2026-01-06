@@ -31,6 +31,10 @@ function show_help {
     echo "  why          ❓ Query decision history (--id ID)"
     echo "  impact       🔮 Simulate removal impact (ID)"
     echo ""
+    echo "SKILL-21 Commands (Enterprise Export):"
+    echo "  export       📤 Export MD to DOCX (--customer profile)"
+    echo "  validate-export 🔍 Pre-flight check before export"
+    echo ""
 }
 
 if [ -z "$1" ]; then
@@ -81,6 +85,12 @@ case $COMMAND in
         ;;
     impact)
         python3 $TOOLS_DIR/impact_sim.py "$@"
+        ;;
+    export)
+        python3 $TOOLS_DIR/gen_docx.py "$@"
+        ;;
+    validate-export)
+        python3 $TOOLS_DIR/validate_export.py "$@"
         ;;
     *)
         echo -e "${RED}Unknown command: $COMMAND${NC}"

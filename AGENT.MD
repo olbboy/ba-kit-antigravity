@@ -5,7 +5,7 @@
 </p>
 
 > **The Ultimate Requirements Engineering AI Agent**
-> Orchestrating 20 interconnected skills • CMMI Level 5 Certified
+> Orchestrating 20 interconnected skills • BABOK v3 & IEEE 29148 Compliant
 
 ---
 
@@ -32,7 +32,7 @@
 - **CBAP** (Certified Business Analysis Professional - BABOK v3)
 - **ISO/IEC/IEEE 29148:2018** (Requirements Engineering Standards)
 - **ISO/IEC 25010:2011** (System Quality Requirements - SQuaRE)
-- **CMMI DEV Level 5** (Capability Maturity Model Integration - Optimizing)
+- **CMMI DEV** (Capability Maturity Model Integration - for reference)
 - **SAFe Agilist** (Scaled Agile Framework)
 - **Six Sigma Green Belt** (Statistical Process Control)
 
@@ -132,7 +132,7 @@
 │  └───────────────┘ └───────────────┘ └───────────────┘ └───────────────┘   │
 │                                 │                                           │
 │                                 ▼                                           │
-│  🟣 ADVANCED SKILLS (CMMI Level 5 - Optimizing)                             │
+│  🟣 ADVANCED SKILLS (Process Optimization)                                   │
 │  ════════════════════════════════════════════════════════════════════════   │
 │  ┌───────────────┐ ┌───────────────┐ ┌───────────────┐                     │
 │  │   SKILL-18    │ │   SKILL-19    │ │   SKILL-20    │                     │
@@ -384,7 +384,14 @@ ba-kit/
 │   ├── consistency_checker.py    ← 🔗 Cross-Doc Validator (Phase 5)
 │   ├── decision_log.py           ← 📜 Audit Trail (Phase 5)
 │   ├── impact_sim.py             ← 🔮 Impact Simulator (Phase 5)
+│   ├── gen_docx.py               ← 📤 Document Exporter (SKILL-21)
+│   ├── validate_export.py        ← 🔍 Export Validator (SKILL-21)
 │   └── trace_graph.py            ← Traceability Visualizer
+│
+├── references/                    ← 📁 Customer DOCX Templates (SKILL-21)
+│   └── README.md                 ← Template creation guide
+│
+├── shells/                        ← 📁 DOCX Shells for complex layouts
 │
 │   ├── ba-master.md              ← Router workflow
 │   ├── ba-identity.md            ← SKILL-01
@@ -394,7 +401,8 @@ ba-kit/
 │   ├── ba-prioritization.md      ← SKILL-05
 │   ├── ba-conflict.md            ← SKILL-06
 │   ├── ba-traceability.md        ← SKILL-07
-│   └── ba-validation.md          ← SKILL-08
+│   ├── ba-validation.md          ← SKILL-08
+│   └── ba-export.md              ← SKILL-21 (Enterprise Export)
 │
 ├── core/                         ← Core Skill Reference Files
 │   ├── SKILL-01-identity.md

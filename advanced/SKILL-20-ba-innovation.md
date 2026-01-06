@@ -1,5 +1,5 @@
 # 🟣 SKILL-20: INNOVATION & IMPROVEMENT (OID)
-## Advanced Skill - CMMI Level 5 Optimizing (Organizational Innovation & Deployment)
+## Advanced Skill - Process Optimization (Organizational Innovation & Deployment)
 
 ---
 

@@ -12,8 +12,8 @@
   <img src="https://img.shields.io/badge/Skills-20-blue?style=for-the-badge" alt="20 Skills">
   <img src="https://img.shields.io/badge/Workflows-11-green?style=for-the-badge" alt="11 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
-  <img src="https://img.shields.io/badge/CMMI-Level%205-gold?style=for-the-badge" alt="CMMI Level 5">
-  <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010%20%7C%20BABOK-purple?style=for-the-badge" alt="Standards">
+  <img src="https://img.shields.io/badge/BABOK-v3%20Certified-gold?style=for-the-badge" alt="BABOK v3">
+  <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010-purple?style=for-the-badge" alt="Standards">
 </p>
 
 <h1 align="center">🏆 BA-Kit</h1>
@@ -21,7 +21,7 @@
 
 <p align="center">
   <strong>Chinh Phục Nghệ Thuật Kỹ Nghệ Yêu Cầu</strong><br>
-  20 năng lực cốt lõi • 11 quy trình chiến lược • Đạt chuẩn CMMI Level 5
+  20 năng lực cốt lõi • 11 quy trình chiến lược • Đạt chuẩn BABOK v3
 </p>
 
 ---
@@ -75,7 +75,7 @@ Dù được sử dụng bởi **Chuyên gia Con người** hay **AI Agent**, BA
 │  │    Định danh    │ │   Khơi gợi      │ │ Chất lượng Viết │               │
 │  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
 │                              │                                              │
-│  🟣 ADVANCED LAYER (Tối ưu hóa) ─ CMMI LEVEL 5                               │
+│  🟣 ADVANCED LAYER (Tối ưu hóa) ─ PROCESS OPTIMIZATION                       │
 │  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
 │  │    SKILL-18     │ │    SKILL-19     │ │    SKILL-20     │               │
 │  │   Metrics/SPC   │ │  Root Cause     │ │   Innovation    │               │
@@ -137,7 +137,7 @@ BA-Kit được thiết kế linh hoạt để hoạt động như một "hệ �
 | **11** | FRD Template | Functional Requirements Document |
 | **12** | Agile Artifacts | User Stories, Epics, Use Cases, Story Mapping |
 
-### 🟣 Advanced Skills (CMMI Level 5)
+### 🟣 Advanced Skills (Process Optimization)
 
 | Skill | Tên | Mục đích |
 |-------|-----|----------|
@@ -193,7 +193,7 @@ ba-kit/
 │   ├── SKILL-11-frd-template.md     # Functional Requirements Document (FRD)
 │   └── SKILL-12-agile-artifacts.md  # User Stories & Epics
 │
-└── advanced/                   # 🟣 Advanced Layer (CMMI Level 5)
+└── advanced/                   # 🟣 Advanced Layer (Process Optimization)
     ├── SKILL-18-requirements-metrics-spc.md # SPC, Cpk, Control Charts
     ├── SKILL-19-root-cause-analysis.md      # Fishbone, 5 Whys, CAR
     └── SKILL-20-ba-innovation.md            # Pilot Framework, OID
@@ -212,7 +212,7 @@ BA-Kit được xây dựng dựa trên sự tổng hợp của các tiêu chu�
 | **BABOK v3** | Khung tri thức cốt lõi của Business Analysis (IIBA) |
 | **Harvard Negotiation Project** | Phương pháp đàm phán nguyên tắc để giải quyết xung đột |
 | **SAFe® (Scaled Agile Framework)** | Mô hình ưu tiên theo giá trị kinh tế (WSJF) |
-| **CMMI Level 5** | CAR, OID, SPC frameworks |
+| **Process Optimization** | CAR, OID, SPC frameworks |
 
 ---
 

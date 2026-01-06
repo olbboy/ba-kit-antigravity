@@ -1,5 +1,5 @@
 # 🟣 SKILL-19: ROOT CAUSE ANALYSIS & RESOLUTION (CAR)
-## Advanced Skill - CMMI Level 5 Optimizing
+## Advanced Skill - Process Optimization
 
 ---
 
@@ -18,7 +18,7 @@
 
 ## 🎯 MỤC ĐÍCH
 
-Skill này cung cấp phương pháp luận **Causal Analysis and Resolution (CAR)** để đạt CMMI Level 5. Không chỉ sửa lỗi (Correction), skill này giúp loại bỏ **nguyên nhân gốc rễ** (Root Cause) để ngăn ngừa lỗi tái diễn một cách có hệ thống.
+Skill này cung cấp phương pháp luận **Causal Analysis and Resolution (CAR)** để đạt mức tối ưu hóa quy trình. Không chỉ sửa lỗi (Correction), skill này giúp loại bỏ **nguyên nhân gốc rễ** (Root Cause) để ngăn ngừa lỗi tái diễn một cách có hệ thống.
 
 ---
 
@@ -145,7 +145,7 @@ Sử dụng để ưu tiên giải quyết các nguyên nhân gây ra nhiều t�
 
 ## 📈 QUANTITATIVE CAUSAL ANALYSIS (Advanced)
 
-Đối với CMMI Level 5, phân tích định tính (Fishbone) cần được hỗ trợ bởi dữ liệu thống kê.
+Đối với quy trình tối ưu hóa, phân tích định tính (Fishbone) cần được hỗ trợ bởi dữ liệu thống kê.
 
 ### 1. Correlation Analysis (Phân tích tương quan)
 *   **Mục đích**: Kiểm tra xem yếu tố X có ảnh hưởng đến Y không.

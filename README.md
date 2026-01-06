@@ -12,8 +12,8 @@
   <img src="https://img.shields.io/badge/Skills-20-blue?style=for-the-badge" alt="20 Skills">
   <img src="https://img.shields.io/badge/Workflows-11-green?style=for-the-badge" alt="11 Workflows">
   <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
-  <img src="https://img.shields.io/badge/CMMI-Level%205-gold?style=for-the-badge" alt="CMMI Level 5">
-  <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010%20%7C%20BABOK-purple?style=for-the-badge" alt="Standards">
+  <img src="https://img.shields.io/badge/BABOK-v3%20Certified-gold?style=for-the-badge" alt="BABOK v3">
+  <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010-purple?style=for-the-badge" alt="Standards">
 </p>
 
 <h1 align="center">🏆 BA-Kit</h1>
@@ -21,7 +21,7 @@
 
 <p align="center">
   <strong>Master the Art of Requirements Engineering</strong><br>
-  20 connected competencies • 11 strategic workflows • CMMI Level 5 Certified
+  20 connected competencies • 11 strategic workflows • BABOK v3 Certified
 </p>
 
 ---
@@ -71,7 +71,7 @@ This is the toolkit for those who refuse to compromise on clarity.
 │  │    Identity     │ │   Elicitation   │ │  Writing Quality│               │
 │  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
 │                              │                                              │
-│  🟣 ADVANCED (Optimizing Layer) ─ CMMI LEVEL 5                              │
+│  🟣 ADVANCED (Optimizing Layer) ─ PROCESS OPTIMIZATION                       │
 │  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
 │  │    SKILL-18     │ │    SKILL-19     │ │    SKILL-20     │               │
 │  │   Metrics/SPC   │ │  Root Cause     │ │   Innovation    │               │
@@ -154,7 +154,7 @@ ba-kit/
 │   ├── SKILL-11-frd-template.md     # Functional Requirements Document
 │   └── SKILL-12-agile-artifacts.md  # User Stories, Epics, Use Cases
 │
-└── advanced/                   # 🟣 Advanced Skills (CMMI Level 5)
+└── advanced/                   # 🟣 Advanced Skills (Process Optimization)
     ├── SKILL-18-requirements-metrics-spc.md # SPC, Cpk, Control Charts
     ├── SKILL-19-root-cause-analysis.md      # Fishbone, 5 Whys, CAR
     └── SKILL-20-ba-innovation.md            # Pilot Framework, OID
@@ -196,7 +196,7 @@ ba-kit/
 | **11** | FRD Template | Detailed Functional Requirements |
 | **12** | Agile Artifacts | User Stories, Epics, Use Cases, Story Mapping |
 
-### 🟣 Advanced Skills (CMMI Level 5)
+### 🟣 Advanced Skills (Process Optimization)
 
 | Skill | Name | Purpose |
 |-------|------|---------|
@@ -218,7 +218,7 @@ BA-Kit incorporates best practices from:
 | **RFC 2119** | Requirement keywords (SHALL/SHOULD/MAY) |
 | **IREB CPRE** | Requirements engineering syllabus |
 | **SAFe/Agile** | User stories, WSJF prioritization |
-| **CMMI Level 5** | CAR, OID, SPC frameworks |
+| **Process Optimization** | CAR, OID, SPC frameworks |
 
 ---
 

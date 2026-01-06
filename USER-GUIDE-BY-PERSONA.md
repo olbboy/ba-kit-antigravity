@@ -427,12 +427,12 @@ Load workflow: `/ba-conflict`
 
 ### 📚 Advanced Skills | Kỹ Năng Nâng Cao
 
-| Skill | Name | CMMI Level |
-|-------|------|------------|
-| **SKILL-17** | Solution Evaluation | L4 |
-| **SKILL-18** | Metrics & SPC | L4-L5 |
-| **SKILL-19** | Root Cause Analysis | L5 |
-| **SKILL-20** | Innovation (OID) | L5 |
+| Skill | Name | Process Level |
+|-------|------|---------------|
+| **SKILL-17** | Solution Evaluation | Advanced |
+| **SKILL-18** | Metrics & SPC | Advanced |
+| **SKILL-19** | Root Cause Analysis | Advanced |
+| **SKILL-20** | Innovation (OID) | Advanced |
 
 ---
 
@@ -658,6 +658,6 @@ Load workflow: `/ba-conflict`
 ---
 
 <p align="center">
-  <strong>BA-Kit v2.0 | CMMI Level 5 Certified</strong><br>
+  <strong>BA-Kit v2.0 | BABOK v3 Certified</strong><br>
   <em>From Beginner to Legendary Business Analyst</em>
 </p>

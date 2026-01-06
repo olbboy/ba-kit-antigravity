@@ -33,7 +33,7 @@ skills-library/
 │   ├── SKILL-10-srs-template.md
 │   ├── SKILL-11-frd-template.md
 │   └── SKILL-12-agile-artifacts.md
-└── advanced/                     ← CMMI Level 5 (Optimizing)
+└── advanced/                     ← Process Optimization
     ├── SKILL-18-requirements-metrics-spc.md
     ├── SKILL-19-root-cause-analysis.md
     └── SKILL-20-ba-innovation.md
@@ -70,7 +70,7 @@ Every task → Load SKILL-01, 02, 03 first
 | Functional Requirements Document | SKILL-11 |
 | User Stories / Epics / Use Cases | SKILL-12 |
 
-### Rule 4: Load Advanced Skills for Process Optimization (CMMI Level 5)
+### Rule 4: Load Advanced Skills for Process Optimization
 | If you need to... | Also load... |
 |-------------------|--------------|
 | Track metrics, SPC, quality KPIs | SKILL-18 |
@@ -214,4 +214,4 @@ For complete details, refer to:
 
 ---
 
-*Version 2.0 | BA-Kit - CMMI Level 5 Certified*
+*Version 2.0 | BA-Kit - BABOK v3 Certified*
