@@ -113,11 +113,11 @@ All agents now follow a **Reflective Cognitive Loop**:
 ba-kit/
 │
 ├── .agent/workflows/           # 🤖 The Brains (15 Agent Definitions)
-├── core/                       # 🔵 Core Skills (Markdown Knowledge Base)
-├── specialized/                # 🟡 Specialized Skills
-├── advanced/                   # 🟣 Advanced Skills (Level 5)
+├── docs/knowledge_base/        # 📚 The Knowledge (Skills & Manuals)
+│   ├── core/                   # 🔵 Core Skills
+│   ├── specialized/            # 🟡 Specialized Skills
+│   └── advanced/               # 🟣 Advanced Skills
 ├── templates/                  # 🟢 Templates (BRD, SRS, User Stories)
-├── tools/                      # 🛠️ Python Tools (Hands for the Agents)
 ├── docs/                       # 📘 Protocol Documentation
 │   └── ANTIGRAVITY_PROTOCOL.md #    The Technical Spec
 └── README.md                   # 📄 This file

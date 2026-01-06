@@ -94,11 +94,11 @@ graph TD
 ba-kit/
 │
 ├── .agent/workflows/       # 🧠 The Brains (The Agents live here)
-├── core/                   # 🔵 Knowledge Base
-├── specialized/            # 🟡 Expert Knowledge
-├── advanced/               # 🟣 Optimization Knowledge
+├── docs/knowledge_base/    # 📚 The Knowledge
+│   ├── core/               # 🔵 Core Skills
+│   ├── specialized/        # 🟡 Expert Knowledge
+│   └── advanced/           # 🟣 Optimization Knowledge
 ├── templates/              # 🟢 Document Templates
-└── tools/                  # 🛠️ The Hands (Python Scripts)
 ```
 
 ---

@@ -1,7 +1,0 @@
-#!/bin/bash
-# BA-Kit Cognitive Multi-Agent System CLI
-# Usage: ./ba-agent "your natural language request"
-
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
-python3 -m agents "$@"
