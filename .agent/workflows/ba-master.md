@@ -10,6 +10,16 @@ This is the master router for all Business Analysis workflows. Based on your tas
 
 ---
 
+## Step 0: Pre-Flight Health Check (Auto-Run)
+// turbo
+Before starting any BA work, run a quick health check on the project:
+
+```bash
+./ba doctor
+```
+
+This ensures you're aware of any existing quality issues before adding new work.
+
 ## Step 1: Identify Your Task Context
 
 Before starting any BA task, identify which category your work falls into:

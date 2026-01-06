@@ -208,6 +208,24 @@ Every resolved conflict should be documented with:
 | Skip documentation | Record all decisions |
 | Assume silence = agreement | Explicitly confirm |
 
+## Step 9: Log the Resolution (Auto-Run)
+// turbo
+Record the decision for future reference:
+
+```bash
+./ba log --id [REQ-ID] --reason "Resolution: [brief summary of decision]"
+```
+
+## Step 10: AI Conflict Analysis (Optional, Auto-Run)
+// turbo
+For complex conflicts, get AI analysis of stakeholder positions:
+
+```bash
+python3 tools/gen_prompt.py [conflict_document.md]
+```
+
+The AI can provide objective perspective on trade-offs.
+
 ## Next Steps
 After resolution, proceed to:
 - `/ba-writing` to update requirements

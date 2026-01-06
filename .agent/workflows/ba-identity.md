@@ -107,6 +107,16 @@ Business Requirements (WHY)
 | **BABOK v3** | BA techniques, knowledge areas |
 | **RFC 2119** | Shall/Should/May keywords |
 
+## Step 0: Project Awareness Check (Auto-Run)
+// turbo
+Before starting any BA work, understand the current project health:
+
+```bash
+./ba doctor
+```
+
+This gives you immediate awareness of existing quality issues, requirements volume, and gaps.
+
 ## Next Steps
 After establishing identity, proceed to:
 - `/ba-elicitation` for gathering requirements

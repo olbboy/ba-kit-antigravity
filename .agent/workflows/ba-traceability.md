@@ -87,17 +87,24 @@ Track requirements throughout their lifecycle and manage changes effectively usi
 | **Rejected** | Will not be implemented | Document reason |
 
 ## Step 3: Automated Traceability Analysis (Active Hook)
-
+// turbo
 Generate a visualization of your requirements dependencies automatically.
 
 **Command:**
 ```bash
-python3 tools/trace_graph.py [your_markup_file.md]
+./ba graph
 ```
 
 **Output:**
-- Generates `traceability_matrix.mermaid` in the same directory.
-- Lists all identified Requirement IDs (Nodes) and Links (Edges).
+- Generates `project_graph.mermaid` with all nodes and edges.
+
+## Step 4: Impact Analysis Before Change (Auto-Run)
+// turbo
+Before removing or changing any requirement, check impact:
+
+```bash
+./ba impact [REQ-ID]
+```
 
 **Action:**
 - Copy the Mermaid content into your markdown file to visualize the graph.

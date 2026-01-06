@@ -178,6 +178,14 @@ Progress from broad to specific:
 **Khi cần làm rõ:**
 > "Tôi muốn đảm bảo hiểu đúng ý bạn. Khi bạn nói '[term]', bạn có thể giải thích thêm không?"
 
+## Step 7: Structure Your Notes (Auto-Run)
+// turbo
+After the interview, quickly convert your notes to structured markdown:
+
+```bash
+./ba struct [interview_notes.txt]
+```
+
 ## Next Steps
 After gathering information, proceed to:
 - `/ba-writing` for documenting requirements

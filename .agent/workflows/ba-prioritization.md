@@ -242,6 +242,14 @@ Impact: Low=1, Med=2, High=3
 - [ ] Document any dissenting opinions
 - [ ] Review priorities periodically
 
+## Step 5: Verify Priority Consistency (Auto-Run)
+// turbo
+Ensure priority assignments are consistent across all documents:
+
+```bash
+./ba consistency
+```
+
 ## Next Steps
 After prioritization, proceed to:
 - `/ba-conflict` if stakeholders disagree

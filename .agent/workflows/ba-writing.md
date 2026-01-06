@@ -238,6 +238,42 @@ QUALITY:
 - Assume reader knowledge - Define context explicitly
 - Leave TBDs unresolved - Follow up before baseline
 
+## Step 10: Auto-Generate Draft Story (Optional, Auto-Run)
+// turbo
+If you have BRD text and want a quick User Story draft:
+
+```bash
+./ba story --text "Your BRD requirement text here"
+```
+
+## Step 11: Final Quality Check (Auto-Run)
+// turbo
+Before submitting, run the expert linter:
+
+```bash
+./ba check [your_file.md]
+```
+
+## Step 12: Auto-Generate Test Code (Auto-Run)
+// turbo
+If your document has Gherkin Acceptance Criteria, instantly generate Playwright tests:
+
+```bash
+./ba gen [your_file.md]
+```
+
+This creates `[filename].spec.ts` with executable test stubs.
+
+## Step 13: AI Deep Review (Auto-Run)
+// turbo
+Generate a specialized prompt for AI architectural review:
+
+```bash
+python3 tools/gen_prompt.py [your_file.md]
+```
+
+Copy the output and send to AI for expert-level review.
+
 ## Next Steps
 After writing requirements, proceed to:
 - `/ba-validation` for quality review

@@ -57,6 +57,14 @@ Load SKILL-16 from `specialized/SKILL-16-process-modeling.md`
 - Process Specification Document
 - Value Stream Map (if applicable)
 
+## Step 7: Visualize Process Connections (Auto-Run)
+// turbo
+Generate knowledge graph to visualize process relationships:
+
+```bash
+./ba graph
+```
+
 ## Related Skills
 - SKILL-02: Elicitation (for process discovery)
 - SKILL-13: Data Modeling (for data flows)

@@ -258,6 +258,24 @@ When gathering NFRs, ask:
 ☐ All NFRs are testable/verifiable
 ```
 
+## Step 5: Validate NFR Quality (Auto-Run)
+// turbo
+Before finalizing NFRs, run the expert linter:
+
+```bash
+./ba check [nfr_document.md]
+```
+
+## Step 6: AI NFR Review (Auto-Run)
+// turbo
+Get expert AI review of your NFR document:
+
+```bash
+python3 tools/gen_prompt.py [nfr_document.md]
+```
+
+Copy the generated prompt and send to AI for architectural quality review.
+
 ## Next Steps
 After specifying NFRs, proceed to:
 - `/ba-srs` or `/ba-frd` for complete documentation

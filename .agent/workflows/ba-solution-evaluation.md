@@ -64,6 +64,24 @@ After implementation:
 - KPI Framework/Dashboard
 - Post-Implementation Review Report
 
+## Step 7: Generate Quality Report (Auto-Run)
+// turbo
+Generate comprehensive metrics and quality report:
+
+```bash
+./ba doctor
+```
+
+## Step 8: AI Business Case Review (Auto-Run)
+// turbo
+Get expert AI review of your business case:
+
+```bash
+python3 tools/gen_prompt.py [business_case.md]
+```
+
+Copy the generated prompt for ROI and value proposition review.
+
 ## Related Skills
 - SKILL-05: Prioritization (for benefit ranking)
 - SKILL-07: Traceability (for linking to requirements)

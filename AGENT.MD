@@ -368,10 +368,22 @@ ba-kit/
 ├── QUICK-START.md                ← Quick reference guide
 │
 ├── .agent/workflows/             ← Antigravity Workflow Files
+├── ba                          ← 🚀 Unified CLI Wrapper (THE COMMAND CENTER)
+│
 ├── tools/                        ← 🛠️ Active Agent Tools (Scripts)
 │   ├── lint_req.py               ← Quality Linter
 │   ├── lint_expert.py            ← 🧠 Expert Logic Linter (Gherkin/INVEST)
 │   ├── gen_prompt.py             ← 🤖 AI Bridge (Prompt Generator)
+│   ├── gen_test_playwright.py    ← ⚡ Automated Test Gen (Gherkin -> Playwright)
+│   ├── knowledge_graph.py        ← 🕸️ Semantic Linker & Visualizer
+│   ├── metrics_dashboard.py      ← 📊 Quantitative Analysis (SKILL-18)
+│   ├── gap_analyst.py            ← 🕵️ Traceability Gap Detector (Phase 4)
+│   ├── gen_report.py             ← 📜 Quality Certificate Generator (Phase 4)
+│   ├── structure_notes.py        ← 📝 Note Structurizer (Phase 4)
+│   ├── gen_story.py              ← 🪄 Auto User Story Gen (Phase 5)
+│   ├── consistency_checker.py    ← 🔗 Cross-Doc Validator (Phase 5)
+│   ├── decision_log.py           ← 📜 Audit Trail (Phase 5)
+│   ├── impact_sim.py             ← 🔮 Impact Simulator (Phase 5)
 │   └── trace_graph.py            ← Traceability Visualizer
 │
 │   ├── ba-master.md              ← Router workflow

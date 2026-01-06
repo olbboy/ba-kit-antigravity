@@ -48,6 +48,32 @@ Don't just rely on human eyes. Generate a specialized "System Prompt" to get a d
 python3 tools/gen_prompt.py [file.md]
 ```
 
+## Step 4: Full Project Health Check (Auto-Run)
+// turbo
+Run the comprehensive doctor command to get metrics, gaps, and quality report:
+
+```bash
+./ba doctor
+```
+
+## Step 5: Cross-Document Consistency (Auto-Run)
+// turbo
+Ensure all linked documents have consistent attributes:
+
+```bash
+./ba consistency
+```
+
+## Step 6: Traceability Gap Analysis (Auto-Run)
+// turbo
+Identify any orphaned requirements:
+
+```bash
+./ba gap
+```
+
+## Step 7: Manual Review Techniques
+
 **Action:**
 1. Run the command.
 2. Copy the generated prompt.
