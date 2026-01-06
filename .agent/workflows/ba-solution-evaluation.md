@@ -1,89 +1,84 @@
 ---
-description: Solution Evaluation - Business Case, ROI analysis, and Post-Implementation Review (SKILL-17)
+description: [Agentic] Solution Evaluation - Business Case, ROI analysis, and Post-Implementation Review (SKILL-17)
 ---
 
-# Solution Evaluation Workflow
+# 💰 SKILL-17: Agentic Solution Evaluation
 
-Use this workflow when you need to evaluate solutions, build business cases, calculate ROI, or conduct post-implementation reviews.
+<AGENCY>
+Role: Investment Analyst & Strategic Advisor
+Tone: Objective, Data-Driven, Prudent
+Goal: Validate that every feature has a positive ROI and aligns with strategic goals.
+Approach:
+1.  **Money Talks**: If it doesn't make cents (money), it doesn't make sense.
+2.  **Risk Aware**: Optimism is a bug. Assume delays and cost overruns.
+3.  **Value First**: Trace every requirement to a specific dollar or strategic benefit.
+</AGENCY>
 
-## Prerequisites
-Load SKILL-17 from `specialized/SKILL-17-solution-evaluation.md`
+<MEMORY>
+Required Context:
+- Projec Budget & Timeline
+- Strategic Goals (OKRs / KPIs)
+- Industry Benchmarks (For cost/benefit comparison)
+</MEMORY>
 
-## Workflow Steps
+## Step 1: Pre-Investment Analysis (Business Case)
 
-### 1. Define Value Framework
-- Identify business objectives and success criteria
-- Define stakeholder value expectations
-- Establish baseline metrics for comparison
-- Determine measurement timeline
+Before writing a single line of code, validate the "Why".
 
-### 2. Build Business Case
-Complete the business case framework:
-- **Executive Summary**: One-page overview
-- **Problem Statement**: Current pain and impact
-- **Proposed Solution**: What we're recommending
-- **Cost Analysis**: Development, implementation, ongoing costs
-- **Benefit Analysis**: Tangible and intangible benefits
-- **Financial Analysis**: ROI, NPV, IRR, Payback Period
-- **Risk Assessment**: Key risks and mitigation
-- **Recommendation**: Clear go/no-go recommendation
+<TRIGGER>
+Command: ./ba-agent "evaluate business case for ${FEATURE}"
+Agent: SearchAgent (Internal/External)
+Expectation: A "Go/No-Go" recommendation based on market data and projected costs.
+</TRIGGER>
 
-### 3. Quantify Benefits
-Use standard quantification techniques:
-- **Labor Cost Savings**: (Hours saved × Hourly rate × Volume)
-- **Error Reduction**: (Error rate reduction × Cost per error × Volume)
-- **Revenue Increase**: (Additional transactions × Revenue per transaction)
-- **Cost Avoidance**: (Future costs prevented)
+## Step 2: Automated ROI Calculation
 
-### 4. Calculate Financial Metrics
-- **Simple ROI**: (Benefits - Costs) / Costs × 100%
-- **Payback Period**: Initial Investment / Annual Net Benefit
-- **NPV**: Present value of future cash flows minus investment
-- **IRR**: Discount rate where NPV = 0
-- **Benefit-Cost Ratio (BCR)**: Total Benefits / Total Costs
+Don't guess the numbers. Calculate them.
 
-### 5. Define KPI Framework
-For each key outcome:
-- Define the metric and calculation
-- Set baseline and target values
-- Assign owner and measurement frequency
-- Document data source
+<TRIGGER>
+Command: ./ba-agent "calculate ROI for ${PROJECT_SCOPE}"
+Agent: ExportAgent (Metrics Mode)
+Expectation: A spreadsheet with NPV, IRR, and Payback Period based on developer rates and expected revenue.
+</TRIGGER>
 
-### 6. Conduct Post-Implementation Review (PIR)
-After implementation:
-- Assess objectives achievement (Met/Partially/Not Met)
-- Measure actual benefits vs projected
-- Compare budget actuals vs planned
-- Evaluate schedule performance
-- Document lessons learned
-- Capture recommendations for future
+<LOOP>
+Condition: If ROI < 0 (Negative)
+Action:
+1.  Identify "Nice-to-have" features inflating the cost.
+2.  Suggest scope cuts to reach break-even.
+3.  Re-calculate ROI.
+MaxAttempts: 3
+</LOOP>
 
-## Output Artifacts
-- Business Case Document
-- ROI Analysis Spreadsheet
-- KPI Framework/Dashboard
-- Post-Implementation Review Report
+## Step 3: Value Engineering
 
-## Step 7: Generate Quality Report (Auto-Run)
+Optimize the solution for maximum value per unit of effort.
+
+<TRIGGER>
+Command: ./ba-agent "optimize scope for value"
+Agent: PrioritizationAgent
+Expectation: A ranked list of features by Value/Effort ratio (Pareto Analysis).
+</TRIGGER>
+
+## Step 4: Post-Implementation Review (PIR)
+
+Did we actually get the value we promised?
+
+<TRIGGER>
+Command: ./ba-agent "generate PIR report"
+Agent: ValidationAgent
+Expectation: Comparison of "Projected vs. Actual" benefits.
+</TRIGGER>
+
+---
+
+## Agentic Guidelines
+
+1.  **Tangible vs. Intangible**: Always separate "Hard Satisfaction ($)" from "Soft Satisfaction (Happiness)".
+2.  **Sunk Cost Fallacy**: Ignore what has been spent. Only look at future value.
+3.  **Conservative Estimates**: Double the cost, halve the benefit. If it still works, do it.
+
+---
 // turbo
-Generate comprehensive metrics and quality report:
-
-```bash
-./ba doctor
-```
-
-## Step 8: AI Business Case Review (Auto-Run)
-// turbo
-Get expert AI review of your business case:
-
-```bash
-python3 tools/gen_prompt.py [business_case.md]
-```
-
-Copy the generated prompt for ROI and value proposition review.
-
-## Related Skills
-- SKILL-05: Prioritization (for benefit ranking)
-- SKILL-07: Traceability (for linking to requirements)
-- SKILL-09: BRD Template (for business requirements context)
-- SKILL-15: Workshop Facilitation (for stakeholder alignment)
+# Quick Actions
+./ba-agent "status"

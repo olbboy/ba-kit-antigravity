@@ -1,193 +1,100 @@
 ---
-description: Elicitation & Questioning techniques for gathering requirements from stakeholders (SKILL-02)
+description: [Agentic] Elicitation & Questioning - gather requirements from stakeholders (SKILL-02)
 ---
 
-# 🔵 SKILL-02: Elicitation & Questioning Workflow
+# 🔵 SKILL-02: Agentic Elicitation & Questioning
 
-## Purpose
-Master techniques for extracting requirements from stakeholders through structured interviews, workshops, and questioning frameworks.
+<AGENCY>
+Role: Expert Requirement Engineer & Investigative Journalist
+Tone: Curious, Empathetic, Persistent
+Goal: Uncover hidden needs, resolve ambiguity, and build a shared understanding.
+Approach:
+1.  Don't just ask; *interrogate* the context (5 Whys).
+2.  Identify stakeholders who *should* be there but aren't.
+3.  Listen for what is *not* said (assumptions, fears).
+4.  Synthesize disparate inputs into a coherent model.
+</AGENCY>
 
-## Step 1: Select Elicitation Technique
+<MEMORY>
+Required Context:
+- Project Vision (To align questions with goals)
+- Stakeholder List (To tailor language)
+- Existing System Documentation (To avoid asking knowns)
+</MEMORY>
 
-Choose based on your context:
+## Step 1: Pre-Interview Analysis
 
-| Technique | Best For | Time | Depth | Scale |
-|-----------|----------|------|-------|-------|
-| **Interview** | Detailed insights, sensitive info | Medium | High | Low |
-| **Workshop** | Consensus, multiple perspectives | High | Medium | Medium |
-| **Observation** | Real workflows, tacit knowledge | High | High | Low |
-| **Survey** | Quantitative data, validation | Low | Low | High |
-| **Document Analysis** | Legacy systems, regulations | Low | Medium | N/A |
-| **Prototyping** | UI/UX, unclear requirements | Medium | High | Low |
-| **Brainstorming** | Innovation, new ideas | Low | Low | Medium |
+Before meeting stakeholders, have the AI analyze the domain and preparation materials.
 
-## Step 2: Prepare for Interview (If Conducting Interview)
+<TRIGGER>
+Command: ./ba-agent "analyze domain and suggest questions for ${TOPIC}"
+Agent: ElicitationAgent
+Expectation: A list of deep, probing questions tailored to the specific domain and gaps.
+</TRIGGER>
 
-### Pre-Interview Checklist
-- [ ] Research interviewee's role and background
-- [ ] Review existing documentation
-- [ ] Prepare question list (but stay flexible)
-- [ ] Confirm meeting logistics
-- [ ] Prepare note-taking tools
-- [ ] Send agenda 1-2 days before
+## Step 2: The Interview (funnel Technique)
 
-### Interview Structure (60-90 minutes)
-1. **OPENING (5-10 min)** - Introduce, build rapport, confirm time, ask permission to record
-2. **BODY (40-60 min)** - Start open, progress to specific, probe unclear areas
-3. **CLOSING (10-15 min)** - Summarize, ask "anything else?", confirm next steps
+Use the Funnel Technique: Open -> Specific -> Probing -> Confirming.
 
-## Step 3: Apply Funnel Questioning Technique
+### 1️⃣ Exploratory (The "What")
+*   "What is the core business problem we are solving?"
+*   "Walk me through a typical day in this process."
 
-Progress from broad to specific:
+### 2️⃣ Clarifying (The "Define")
+*   "When you say 'fast', what specific metric do you mean?"
+*   "Can you define 'Administrator' in this context?"
 
-### 1️⃣ Exploratory Questions (MỞ RỘNG)
-**Purpose**: Mở rộng phạm vi, hiểu context
+### 3️⃣ Probing (The "Why")
+*   "Why is this feature mandatory for MVP?"
+*   "What happens if we *don't* build this?"
 
-```
-📌 Context & Goals:
-• "Mục tiêu kinh doanh chính của dự án này là gì?"
-• "Vấn đề nào đang thúc đẩy nhu cầu này?"
-• "Thành công sẽ được đo lường như thế nào?"
+<LOOP>
+Condition: If answer is vague or high-level
+Action:
+1.  Ask "Why?" (5 Whys technique).
+2.  Ask for a concrete example.
+3.  Ask for an exception case ("What if it fails?").
+</LOOP>
 
-📌 Users & Stakeholders:
-• "Ai sẽ sử dụng hệ thống này?"
-• "Những bộ phận nào bị ảnh hưởng?"
-• "Ai có quyền quyết định cuối cùng?"
+## Step 3: Real-time Synthesis & Gap Detection
 
-📌 Current State:
-• "Quy trình hiện tại hoạt động như thế nào?"
-• "Những công cụ nào đang được sử dụng?"
-• "Pain points lớn nhất là gì?"
-```
+During or immediately after the session, use AI to find holes in the story.
 
-### 2️⃣ Clarifying Questions (LÀM RÕ)
-**Purpose**: Loại bỏ mơ hồ, định nghĩa terms
+<TRIGGER>
+Command: ./ba-agent "analyze interview notes for gaps and contradictions"
+Agent: ElicitationAgent
+Expectation: Identification of conflicting stakeholder statements or missing logical branches.
+</TRIGGER>
 
-```
-📌 Definitions:
-• "Khi nói 'khách hàng', bạn đề cập đến ai cụ thể?"
-• "'Nhanh' có nghĩa là bao nhiêu giây/phút?"
-• "'Báo cáo đầy đủ' bao gồm những thông tin gì?"
+## Step 4: Requirement Extraction
 
-📌 Examples:
-• "Bạn có thể cho ví dụ cụ thể không?"
-• "Trường hợp điển hình diễn ra như thế nào?"
+Convert conversation notes into structured data.
 
-📌 Boundaries:
-• "Những gì nằm trong/ngoài phạm vi?"
-• "Hệ thống KHÔNG nên làm gì?"
-```
+<TRIGGER>
+Command: ./ba-agent "extract user stories from notes"
+Agent: WritingAgent
+Expectation: Draft user stories with 'Role-Action-Benefit' format.
+</TRIGGER>
 
-### 3️⃣ Probing Questions (ĐÀO SÂU)
-**Purpose**: Tìm root cause, chi tiết ẩn
+## Step 5: Validation Loop (Reflective Listening)
 
-```
-📌 5 Whys:
-• "Tại sao điều này quan trọng?"
-• "Điều gì xảy ra nếu không có tính năng này?"
-• "Nguyên nhân gốc rễ của vấn đề là gì?"
+Verify your understanding with the stakeholder.
 
-📌 Exceptions & Edge Cases:
-• "Điều gì xảy ra khi [scenario bất thường]?"
-• "Có trường hợp ngoại lệ nào không?"
-• "Nếu dữ liệu không đầy đủ thì sao?"
+<TRIGGER>
+Command: ./ba-agent "generate summary for stakeholder review"
+Agent: ElicitationAgent
+Expectation: A concise non-technical summary of agreed requirements for sign-off.
+</TRIGGER>
 
-📌 Dependencies:
-• "Tính năng này phụ thuộc vào hệ thống nào?"
-• "Có ràng buộc từ bên ngoài không?"
-```
+---
 
-### 4️⃣ Confirming Questions (XÁC NHẬN)
-**Purpose**: Đảm bảo hiểu đúng
+## Agentic Guidelines
 
-```
-📌 Paraphrasing:
-• "Nếu tôi hiểu đúng, [tóm tắt]. Đúng không?"
-• "Để xác nhận: [restate]. Chính xác chưa?"
+1.  **Assume Ignorance**: Never assume you know the jargon. Ask.
+2.  **Silence is Golden**: After asking, wait. Let them fill the silence.
+3.  **Triangulate**: Verify facts with at least two sources/stakeholders.
 
-📌 Validation:
-• "Yêu cầu này đúng với tất cả trường hợp không?"
-• "Ai khác cần xác nhận yêu cầu này?"
-```
-
-### 5️⃣ Prioritizing Questions (ƯU TIÊN)
-**Purpose**: Xác định độ quan trọng
-
-```
-📌 Importance:
-• "Nếu chỉ chọn 3 tính năng quan trọng nhất?"
-• "Yêu cầu nào là must-have vs nice-to-have?"
-• "Không có tính năng nào thì không thể go-live?"
-
-📌 Trade-offs:
-• "Nếu phải chọn giữa A và B, bạn chọn gì?"
-• "Giữa thời gian và chất lượng, ưu tiên gì?"
-```
-
-## Step 4: Apply 5W1H Framework
-
-| Question | Purpose | Examples |
-|----------|---------|----------|
-| **WHO** | Actors, Users | Ai dùng? Ai phê duyệt? Ai bị ảnh hưởng? |
-| **WHAT** | Functions, Data | Hệ thống làm gì? Dữ liệu nào cần? |
-| **WHEN** | Timing, Triggers | Khi nào xảy ra? Tần suất? |
-| **WHERE** | Location, Platform | Ở đâu? Thiết bị nào? |
-| **WHY** | Goals, Value | Tại sao cần? Giá trị gì? |
-| **HOW** | Process, Rules | Quy trình thế nào? Ràng buộc gì? |
-| **HOW MUCH** | Volume, Limits | Bao nhiêu? Giới hạn nào? |
-
-## Step 5: Follow Golden Rules
-
-### ⚡ ELICITATION GOLDEN RULES
-
-1️⃣ **Tối đa 3 câu hỏi mỗi lượt tương tác** (Tránh cognitive overload)
-
-2️⃣ **Active Listening** - Lắng nghe và phản hồi: "Tôi nghe bạn nói rằng..."
-
-3️⃣ **Không assume** - Luôn verify kể cả khi nghĩ đã hiểu
-
-4️⃣ **Ghi chép cẩn thận** - Hoặc record (với permission)
-
-5️⃣ **Follow up trong 24h** - Review và bổ sung notes
-
-## Step 6: Use Note-Taking Template
-
-| Time | Speaker | Content | Category | Action |
-|------|---------|---------|----------|--------|
-| 10:05 | PM | "Cần báo cáo real-time" | NFR | Clarify "real-time" |
-| 10:08 | User | "Export Excel mất 5 phút" | Pain Point | Document |
-| 10:12 | PM | "Tích hợp với SAP" | Integration | Verify API available |
-
-### Content Categories
-- **FR** - Functional Requirement
-- **NFR** - Non-Functional Requirement
-- **BR** - Business Rule
-- **Constraint** - Limitation
-- **Pain Point** - Current problem
-- **Assumption** - To be verified
-- **TBD** - To be determined
-
-## Transition Phrases
-
-**Khi đã đủ thông tin:**
-> "Tôi đã thu thập được các thông tin cần thiết. Bạn có muốn tôi tạo tài liệu yêu cầu ngay bây giờ không?"
-
-**Sau khi tạo tài liệu:**
-> "Bạn có muốn tôi đặt thêm câu hỏi để làm rõ hoặc bổ sung thông tin nào không?"
-
-**Khi cần làm rõ:**
-> "Tôi muốn đảm bảo hiểu đúng ý bạn. Khi bạn nói '[term]', bạn có thể giải thích thêm không?"
-
-## Step 7: Structure Your Notes (Auto-Run)
+---
 // turbo
-After the interview, quickly convert your notes to structured markdown:
-
-```bash
-./ba struct [interview_notes.txt]
-```
-
-## Next Steps
-After gathering information, proceed to:
-- `/ba-writing` for documenting requirements
-- `/ba-prioritization` for ranking features
-- `/ba-brd`, `/ba-srs`, `/ba-frd`, or `/ba-agile` for creating documents
+# Quick Actions
+./ba-agent "suggest agenda"
