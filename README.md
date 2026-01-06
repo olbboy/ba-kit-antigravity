@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png?v=2.2.0" alt="BA-Kit Logo" width="200">
+  <img src="assets/logo.png?v=2.4.0" alt="BA-Kit Logo" width="200">
 </p>
 
 <div align="center">
@@ -9,104 +9,101 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Skills-20-blue?style=for-the-badge" alt="20 Skills">
-  <img src="https://img.shields.io/badge/Workflows-11-green?style=for-the-badge" alt="11 Workflows">
-  <img src="https://img.shields.io/badge/Templates-4-orange?style=for-the-badge" alt="4 Templates">
-  <img src="https://img.shields.io/badge/BABOK-v3%20Certified-gold?style=for-the-badge" alt="BABOK v3">
-  <img src="https://img.shields.io/badge/Standards-ISO%2029148%20%7C%20ISO%2025010-purple?style=for-the-badge" alt="Standards">
+  <img src="https://img.shields.io/badge/Version-2.4-blue?style=for-the-badge" alt="Version 2.4">
+  <img src="https://img.shields.io/badge/Agents-15-green?style=for-the-badge" alt="15 Agents">
+  <img src="https://img.shields.io/badge/Protocol-Antigravity%20Native-orange?style=for-the-badge" alt="Antigravity Native">
+  <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205-purple?style=for-the-badge" alt="CMMI Level 5">
 </p>
 
-<h1 align="center">🏆 BA-Kit</h1>
-<h3 align="center">The Definitive Business Analysis Framework</h3>
+<h1 align="center">🏆 BA-Kit (Antigravity Edition)</h1>
+<h3 align="center">The Cognitive Swarm for Requirements Engineering</h3>
 
 <p align="center">
-  <strong>Master the Art of Requirements Engineering</strong><br>
-  20 connected competencies • 11 strategic workflows • BABOK v3 Certified
+  <strong>Transform your AI into a World-Class Business Analysis Team</strong><br>
+  15 Self-Correcting Agents • System 2 Reflection • Mathematical Precision
 </p>
 
 ---
 
-## 🎯 The Gold Standard in Business Analysis
+## 🎯 What is BA-Kit?
 
-BA-Kit is not just a library; it is a **comprehensive cognitive framework** designed to elevate requirements engineering to an art form. It bridges the gap between abstract business strategy and precise technical execution.
+BA-Kit is not just a library of prompts; it is a **Cognitive Swarm** designed for the **Antigravity Native Protocol (ANP)**.
 
-Whether used by **Human Experts** or **Agentic AI**, BA-Kit delivers a structured, ISO-compliant methodology to:
+It replaces the "Single Chatbot" paradigm with a **Team of 15 Specialists**:
+*   Need a User Story? Summon **`@ba-writing`**.
+*   Need to solve a conflict? Summon **`@ba-conflict`**.
+*   Need to audit quality? Summon **`@ba-metrics`**.
 
-- **Elicit** hidden value and unspoken needs
-- **Architect** robust, conflict-free requirements
-- **Validate** specifications with surgical precision
-- **Orchestrate** the entire product definition lifecycle
-
-This is the toolkit for those who refuse to compromise on clarity.
+Each agent is equipped with **System 2 Thinking** (Reflective Loops) to "Stop & Think" before answering, ensuring hallucination-free High Assurance results.
 
 ---
 
-## 📊 Skill Architecture
+## 🤖 The Agent Swarm (15 Personas)
 
-```
-┌─────────────────────────────────────────────────────────────────────────────┐
-│                         BA-KIT SKILL PYRAMID                                │
-├─────────────────────────────────────────────────────────────────────────────┤
-│                                                                             │
-│  🟢 TEMPLATES (Output Layer)                                                │
-│  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌───────────┐                   │
-│  │ SKILL-09  │ │ SKILL-10  │ │ SKILL-11  │ │ SKILL-12  │                   │
-│  │    BRD    │ │    SRS    │ │    FRD    │ │   Agile   │                   │
-│  └───────────┘ └───────────┘ └───────────┘ └───────────┘                   │
-│                              │                                              │
-│  🟡 SPECIALIZED (Context Layer)                                             │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐               │
-│  │SKILL-04 │ │SKILL-05 │ │SKILL-06 │ │SKILL-07 │ │SKILL-08 │               │
-│  │   NFR   │ │Priority │ │Conflict │ │ Trace   │ │Validate │               │
-│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘               │
-│  ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐ ┌─────────┐               │
-│  │SKILL-13 │ │SKILL-14 │ │SKILL-15 │ │SKILL-16 │ │SKILL-17 │               │
-│  │  Data   │ │   UX    │ │Workshop │ │ Process │ │Solution │               │
-│  │Modeling │ │Research │ │ Facil.  │ │Modeling │ │  Eval   │               │
-│  └─────────┘ └─────────┘ └─────────┘ └─────────┘ └─────────┘               │
-│                              │                                              │
-│  🔵 CORE (Foundation Layer) ─ ALWAYS ACTIVE                                 │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
-│  │    SKILL-01     │ │    SKILL-02     │ │    SKILL-03     │               │
-│  │    Identity     │ │   Elicitation   │ │  Writing Quality│               │
-│  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
-│                              │                                              │
-│  🟣 ADVANCED (Optimizing Layer) ─ PROCESS OPTIMIZATION                       │
-│  ┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐               │
-│  │    SKILL-18     │ │    SKILL-19     │ │    SKILL-20     │               │
-│  │   Metrics/SPC   │ │  Root Cause     │ │   Innovation    │               │
-│  └─────────────────┘ └─────────────────┘ └─────────────────┘               │
-│                                                                             │
-└─────────────────────────────────────────────────────────────────────────────┘
-```
+### 🔴 The Orchestrator
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`@ba-master`** | **Dispatcher** | Strategy, Routing, Context Management. |
+
+### 🔵 Core Agents (The Foundation)
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`@ba-identity`** | Chief of Staff | Stakeholder Mapping, RACI, Competency Grid. |
+| **`@ba-elicitation`**| Journalist | Funnel Questioning, "Colombo" Method. |
+| **`@ba-writing`** | Architect | **Visual UI Scan**, Gherkin Drafting (BDD). |
+
+### 🟡 Specialized Agents (The Experts)
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`@ba-validation`** | QA Lead | **Visual QA**, Edge Case Detection. |
+| **`@ba-traceability`**| CCB Secretary| **Grep Verification** (No Hallucinations). |
+| **`@ba-nfr`** | SRE Architect | **Web-Validated** ISO 25010 Standards. |
+| **`@ba-process`** | Lean Master | **Whiteboard Vision**, BPMN Waste Analysis. |
+| **`@ba-prioritization`**| Product Mgr | MoSCoW, RICE, WSJF Frameworks. |
+| **`@ba-solution`** | Investor | **Python-Verified** ROI & NPV Math. |
+| **`@ba-conflict`** | Mediator | Harvard Negotiation, ADR Drafting. |
+| **`@ba-export`** | Publisher | Compliance Check, Pandoc Formatting. |
+
+### 🟣 Advanced Agents
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`@ba-metrics`** | Data Scientist| **SPC Charts**, Defect Density, Cpk stats. |
+| **`@ba-root-cause`**| Investigator | 5 Whys, Fishbone, Pareto Analysis. |
+| **`@ba-innovation`**| R&D Scientist | **A/B Testing**, Hypothesis Designs. |
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Quick Start (Antigravity Native)
 
-### For AI Agent Integration
-
-1. **Copy the workflows** from `.agent/workflows/` to your AI agent's workflow directory
-2. **Reference AGENT.MD** as the system prompt or persona
-3. **Use slash commands** to activate specific skills:
-
-```
-/ba-master        → See complete workflow map
-/ba-identity      → Activate BA persona
-/ba-elicitation   → Start requirements gathering
-/ba-writing       → Quality documentation mode
-/ba-nfr           → NFR specification (ISO 25010)
-/ba-prioritization → MoSCoW, Kano, WSJF
-/ba-conflict      → Stakeholder conflict resolution
-/ba-traceability  → RTM and change management
-/ba-validation    → Requirements review mode
+### 1. Installation
+Copy the workflows into your Agent's brain:
+```bash
+cp -r ba-kit/.agent/workflows/ ~/.gemini/antigravity/workflows/
 ```
 
-### For Human BAs
+### 2. Summoning
+In your chat, simply type `@` followed by the Agent Name:
+> **User**: *"@ba-writing I need a login feature."*
 
-1. **Read USAGE-GUIDE.md** for comprehensive usage documentation
-2. **Reference the skill files** in `core/`, `specialized/`, `templates/`
-3. **Use the templates** as starting points for your deliverables
+> **@ba-writing**: *"Architect online. I see you want a Login. Shall we use Email/OTP or Social Auth? Let's draft the Happy Path first..."*
+
+### 3. The "Flash Mode"
+You can switch agents instantly to handle complex tasks:
+> **User**: *"This requirement seems risky. @ba-solution check the ROI."*
+
+> **@ba-solution**: *"Investor here. I'll calculate the NPV using Python..."*
+
+---
+
+## 🧠 System 2 Intelligence (New in v2.4)
+
+All agents now follow a **Reflective Cognitive Loop**:
+1.  **Analysis (System 1)**: Fast pattern matching.
+2.  **Action (System 1)**: Draft content.
+3.  **Reflection (System 2)**: **STOP & THINK**.
+    *   *Critic*: "Did I hallucinate that dependency?"
+    *   *Action*: Verify with `grep` or `python`.
+4.  **Output**: Verified, High-Precision Answer.
 
 ---
 
@@ -115,243 +112,25 @@ This is the toolkit for those who refuse to compromise on clarity.
 ```
 ba-kit/
 │
-├── AGENT.MD                    # 🏆 Master orchestrator - AI agent persona
-├── USAGE-GUIDE.md              # 📘 Comprehensive usage documentation
-├── QUICK-START.md              # ⚡ Quick reference guide
-├── README.md                   # 📄 This file
-│
-├── .agent/workflows/           # 🤖 Antigravity/AI Agent Workflows
-│   ├── ba-master.md            #    Router workflow
-│   ├── ba-identity.md          #    SKILL-01 workflow
-│   ├── ba-elicitation.md       #    SKILL-02 workflow
-│   ├── ba-writing.md           #    SKILL-03 workflow
-│   ├── ba-nfr.md               #    SKILL-04 workflow
-│   ├── ba-prioritization.md    #    SKILL-05 workflow
-│   ├── ba-conflict.md          #    SKILL-06 workflow
-│   ├── ba-traceability.md      #    SKILL-07 workflow
-│   └── ba-validation.md        #    SKILL-08 workflow
-│
-├── core/                       # 🔵 Core Skills (Always Load)
-│   ├── SKILL-01-identity.md    #    BA persona & stakeholder framework
-│   ├── SKILL-02-elicitation.md #    Questioning & interviewing
-│   └── SKILL-03-writing-quality.md # Requirements writing standards
-│
-├── specialized/                # 🟡 Specialized Skills (Context-Based)
-│   ├── SKILL-04-nfr-framework.md    # ISO 25010 NFR templates
-│   ├── SKILL-05-prioritization.md   # MoSCoW, Kano, WSJF, etc.
-│   ├── SKILL-06-conflict-resolution.md # Harvard negotiation method
-│   ├── SKILL-07-traceability-change.md # RTM & change control
-│   ├── SKILL-08-validation-verification.md # V&V checklists
-│   ├── SKILL-13-data-modeling.md    # ERD, Data Dictionary, CRUD
-│   ├── SKILL-14-ux-research.md      # Personas, Journey Maps, JTBD
-│   ├── SKILL-15-workshop-facilitation.md # Agenda, Group Dynamics
-│   ├── SKILL-16-process-modeling.md # BPMN 2.0, As-Is/To-Be
-│   └── SKILL-17-solution-evaluation.md # Business Case, ROI, PIR
-│
-├── templates/                  # 🟢 Document Templates
-│   ├── SKILL-09-brd-template.md     # Business Requirements Document
-│   ├── SKILL-10-srs-template.md     # SRS (IEEE 29148)
-│   ├── SKILL-11-frd-template.md     # Functional Requirements Document
-│   └── SKILL-12-agile-artifacts.md  # User Stories, Epics, Use Cases
-│
-└── advanced/                   # 🟣 Advanced Skills (Process Optimization)
-    ├── SKILL-18-requirements-metrics-spc.md # SPC, Cpk, Control Charts
-    ├── SKILL-19-root-cause-analysis.md      # Fishbone, 5 Whys, CAR
-    └── SKILL-20-ba-innovation.md            # Pilot Framework, OID
+├── .agent/workflows/           # 🤖 The Brains (15 Agent Definitions)
+├── core/                       # 🔵 Core Skills (Markdown Knowledge Base)
+├── specialized/                # 🟡 Specialized Skills
+├── advanced/                   # 🟣 Advanced Skills (Level 5)
+├── templates/                  # 🟢 Templates (BRD, SRS, User Stories)
+├── tools/                      # 🛠️ Python Tools (Hands for the Agents)
+├── docs/                       # 📘 Protocol Documentation
+│   └── ANTIGRAVITY_PROTOCOL.md #    The Technical Spec
+└── README.md                   # 📄 This file
 ```
-
----
-
-## 🎓 The 20 Skills
-
-### 🔵 Core Skills (Always Active)
-
-| Skill | Name | Purpose |
-|-------|------|---------|
-| **01** | Identity & Competencies | BA persona, stakeholder mapping, RACI |
-| **02** | Elicitation & Questioning | Funnel technique, 5W1H, interview structure |
-| **03** | Writing & Quality | RFC 2119 keywords, INVEST criteria, acceptance criteria |
-
-### 🟡 Specialized Skills (Context-Based)
-
-| Skill | Name | Purpose |
-|-------|------|---------|
-| **04** | NFR Framework | ISO 25010 templates for Performance, Security, Reliability |
-| **05** | Prioritization | MoSCoW, Kano Model, WSJF, Value vs Effort |
-| **06** | Conflict Resolution | Harvard Method, principled negotiation, escalation |
-| **07** | Traceability & Change | RTM, change control process, impact analysis |
-| **08** | Validation & Verification | Inspections, walkthroughs, sign-off process |
-| **13** | Data Modeling | ERD, Data Dictionary, Normalization (1NF-BCNF), CRUD Matrix |
-| **14** | UX Research & Design Thinking | Personas, Journey Maps, Usability Testing, Jobs-to-be-Done |
-| **15** | Workshop Facilitation | Agenda design, group dynamics, decision techniques |
-| **16** | Process Modeling (BPMN) | As-Is/To-Be analysis, BPMN 2.0 notation, swimlanes |
-| **17** | Solution Evaluation | Business Case, ROI/NPV analysis, Post-Implementation Review |
-
-### 🟢 Template Skills (Document Creation)
-
-| Skill | Name | Purpose |
-|-------|------|---------|
-| **09** | BRD Template | Business Requirements for executive approval |
-| **10** | SRS Template | IEEE 29148 Software Requirements Specification |
-| **11** | FRD Template | Detailed Functional Requirements |
-| **12** | Agile Artifacts | User Stories, Epics, Use Cases, Story Mapping |
-
-### 🟣 Advanced Skills (Process Optimization)
-
-| Skill | Name | Purpose |
-|-------|------|---------|
-| **18** | Metrics & SPC | Statistical Process Control, Cpk, KPI Dashboard |
-| **19** | Root Cause Analysis | Fishbone, 5 Whys, Pareto, Hypothesis Testing |
-| **20** | Innovation (OID) | Pilot Framework, A/B Testing, ROI Calculator |
-
----
-
-## 📜 Standards Compliance
-
-BA-Kit incorporates best practices from:
-
-| Standard | Coverage |
-|----------|----------|
-| **ISO/IEC/IEEE 29148:2018** | Requirements engineering processes |
-| **ISO/IEC 25010:2011** | System quality model (SQuaRE) |
-| **BABOK v3** | Business Analysis Body of Knowledge |
-| **RFC 2119** | Requirement keywords (SHALL/SHOULD/MAY) |
-| **IREB CPRE** | Requirements engineering syllabus |
-| **SAFe/Agile** | User stories, WSJF prioritization |
-| **Process Optimization** | CAR, OID, SPC frameworks |
-
----
-
-## 🔗 Skill Synergy Map
-
-Combine skills for maximum impact:
-
-| Scenario | Primary Skill | Secondary Skills | Synergy Effect |
-|----------|:-------------:|:----------------:|----------------|
-| **Product Discovery** | SKILL-02 (Elicitation) | SKILL-14 (UX) + SKILL-15 (Workshop) | Deep user understanding + Validated prototypes |
-| **System Architecture** | SKILL-13 (Data) | SKILL-16 (Process) + SKILL-04 (NFR) | Robust backend design with process flow awareness |
-| **Crisis Management** | SKILL-06 (Conflict) | SKILL-05 (Priority) + SKILL-01 (Stakeholder) | Negotiating scope cuts with difficult stakeholders |
-| **Quality Audit** | SKILL-08 (Validation) | SKILL-03 (Writing) + SKILL-18 (SPC) | Statistical proof of requirements quality |
-| **Continuous Improvement** | SKILL-19 (CAR) | SKILL-18 (SPC) + SKILL-20 (OID) | Data-driven process optimization |
-
----
-
-## 📊 Competency Matrix by Role
-
-| Skillset | **Junior BA** | **Senior BA** | **Lead BA / PO** |
-|----------|:-------------:|:-------------:|:----------------:|
-| **Focus** | Doing work right | Doing right work | Improving how work is done |
-| **Must-Have** | SKILL-02, 03, 12 | + SKILL-04, 05, 13 | + SKILL-17, 18, 19, 20 |
-| **Mastery** | Follows templates | Customizes templates | Creates frameworks |
-| **Quality** | Self-checks | Peer Reviews | SPC & Process Capability |
-| **Scope** | Single Feature | Complete Product | Portfolio/Enterprise |
-
----
-
-## 🤖 AI Agent Integration
-
-### Antigravity (Google DeepMind)
-
-Copy workflows to `.agent/workflows/` in your project:
-
-```bash
-cp -r ba-kit/.agent/workflows/ your-project/.agent/workflows/
-```
-
-### Claude / ChatGPT / Other
-
-Use `AGENT.MD` as system prompt or reference the skill files directly in your prompts.
-
-### Custom Integration
-
-The skill files are pure Markdown—parse and integrate into any AI system.
-
----
-
-## 📖 Usage Examples
-
-### Example 1: New Project Discovery
-
-```
-User: I need to gather requirements for a new e-commerce platform.
-
-AI (with BA-Kit): 
-/ba-identity → Maps stakeholders (Product, IT, Marketing, Customers)
-/ba-elicitation → Applies Funnel Questioning:
-  - Exploratory: "What are the primary business goals?"
-  - Clarifying: "When you say 'fast checkout', what's the target time?"
-  - Probing: "What happens if payment fails mid-transaction?"
-```
-
-### Example 2: Conflict Resolution
-
-```
-User: Sales wants real-time reporting but IT says it's not feasible.
-
-AI (with BA-Kit):
-/ba-conflict → Applies Harvard Method:
-  - Sales POSITION: "Real-time reports"
-  - Sales INTEREST: Need current data for quick decisions
-  - IT POSITION: "Batch processing"
-  - IT INTEREST: System performance concerns
-  
-  OPTIONS: Near-real-time (5-min), cache strategy, priority tiering
-```
-
-### Example 3: Requirements Review
-
-```
-User: Review this SRS for quality issues.
-
-AI (with BA-Kit):
-/ba-validation → Applies verification checklist:
-  ☐ Uses SHALL/SHOULD/MAY correctly
-  ☐ No ambiguous terms ("fast", "user-friendly")
-  ☐ Has acceptance criteria
-  ☐ Traces to business need
-  
-  DEFECTS FOUND:
-  - FR-003: "fast response" → AMBIGUOUS
-  - FR-007: Missing acceptance criteria → INCOMPLETE
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to:
-
-1. **Report issues** - Found a gap in the skills? Let us know.
-2. **Suggest improvements** - Better techniques or templates to add?
-3. **Add translations** - Help make BA-Kit multilingual.
-4. **Share use cases** - How are you using BA-Kit?
 
 ---
 
 ## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **IIBA** - For BABOK v3 framework
-- **IREB** - For CPRE syllabus
-- **ISO** - For 29148 and 25010 standards
-- **Harvard Negotiation Project** - For principled negotiation method
-- **SAFe** - For WSJF and Agile frameworks
+MIT License. Free to use for personal and enterprise projects.
 
 ---
 
 <p align="center">
-  <strong>Built with 💜 for the Requirements Engineering Community</strong><br>
-  <em>Transform your AI into a Legendary Business Analyst</em>
-</p>
-
-<p align="center">
-  <a href="#-quick-start">Quick Start</a> •
-  <a href="#-the-12-skills">Skills</a> •
-  <a href="#-ai-agent-integration">Integration</a> •
-  <a href="#-usage-examples">Examples</a>
+  <strong>Built for the Antigravity Age.</strong><br>
+  <em>Code Less. Think More.</em>
 </p>
