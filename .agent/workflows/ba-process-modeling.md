@@ -44,6 +44,11 @@ Generate the MermaidJS/BPMN code.
 Present the Diagram + Waste Analysis Report.
 *   **Highlight**: "This 'Manual Approval' step is a bottleneck (Wait Time)."
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-writing` to draft User Stories for each Process Box."
+*   "Handover: Summon `@ba-metrics` to measure the Cycle Time of this flow."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

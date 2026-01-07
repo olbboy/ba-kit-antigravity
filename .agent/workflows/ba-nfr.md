@@ -45,6 +45,14 @@ Generate NFRs adhering to strict patterns:
 *   *Critic*: "Did I use an old ISO standard?"
 *   *Action*: Re-verify with web search if unsure.
 
+### 4. Output Mode
+Present the ISO-Compliant NFR Table.
+
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-solution` to calculate the cost of these NFRs."
+*   "Handover: Summon `@ba-validation` to verify if the architecture meets these constraints."
+
 ---
 
 ## 🛠️ Tool Usage (Mandatory)

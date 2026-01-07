@@ -44,6 +44,11 @@ Draft 3-5 probing questions using the **5W1H Framework**.
 
 ### 4. Output Mode
 Present the prioritized, unbiased questions.
+
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-writing` to convert these interview notes into User Stories."
+*   "Handover: Summon `@ba-process` if the user described a complex workflow."
 *   **Format**: "I see you mentioned [X]. However, it's unclear [Y]. Could you clarify...?"
 *   **Constraint**: Do not overwhelm. Max 5 questions per turn.
 

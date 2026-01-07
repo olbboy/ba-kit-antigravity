@@ -44,6 +44,11 @@ Prepare the Pandoc/Conversion arguments and mapped variables.
 Execute the export command or confirm readiness.
 *   **Statement**: "Document polished. 0 Errors found. Ready to build DOCX."
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-traceability` to baseline this version."
+*   "Handover: Summon `@ba-master` to close the project."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

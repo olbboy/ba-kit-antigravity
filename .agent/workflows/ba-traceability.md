@@ -45,6 +45,11 @@ When a change is proposed to `REQ-X`:
 ### 4. Output Mode (CR Record)
 Generate the **Verified** Impact Graph.
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-conflict` if the Blast Radius is politically dangerous."
+*   "Handover: Summon `@ba-validation` to re-test the affected nodes."
+
 ---
 
 ## 🛠️ Tool Usage (Mandatory)

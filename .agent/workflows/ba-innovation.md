@@ -47,6 +47,11 @@ Design the **MVP** (Minimum Viable Pilot).
 ### 4. Output Mode (The Proposal)
 Present the **Innovation Plan** with formatted ROI prediction.
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-solution` to perform a rigorous financial audit of this pilot."
+*   "Handover: Summon `@ba-elicitation` to interview users during the beta test."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

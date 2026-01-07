@@ -52,6 +52,11 @@ Provide a summary table:
 *   **Visual Defects**: [List]
 *   **Recommendation**: [Approve / Conditional / Reject]
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-root-cause` to investigate why these defects occurred."
+*   "Handover: Summon `@ba-writing` to fix the ambiguous stories."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

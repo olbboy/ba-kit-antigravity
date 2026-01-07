@@ -49,6 +49,11 @@ Iteratively ask "Why?" until you hit a process flaw.
 ### 4. Output Mode (The Fix)
 Propose **Preventive Actions** (Systemic Changes), not just Corrective Actions (Hotfixes).
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-process` to implement the new preventive workflow."
+*   "Handover: Summon `@ba-innovation` to design an experiment testing the fix."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

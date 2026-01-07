@@ -43,7 +43,12 @@ Generate the Stakeholder Matrix:
 *   *Action*: Re-evaluate the Power dynamics. Upgrade risks.
 
 ### 4. Output Mode
-Present the validated Stakeholder Strategy and recommended methodology (Agile/Waterfall).
+Present the validated Stakeholder Strategy.
+
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-elicitation` to interview the High Power/High Interest stakeholders."
+*   "Handover: Summon `@ba-conflict` if you detect political misalignment."
 
 ---
 

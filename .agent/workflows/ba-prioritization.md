@@ -47,6 +47,11 @@ Score every item based on the framework.
 Present the Forced Rank list.
 *   **Statement**: "Here is the prioritized list. I demoted Feature X to 'Could Have' to protect the release date."
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-writing` to start drafting the 'MUST HAVE' items."
+*   "Handover: Summon `@ba-conflict` if stakeholders refuse to accept the cutline."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

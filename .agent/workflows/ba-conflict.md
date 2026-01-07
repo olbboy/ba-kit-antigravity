@@ -50,6 +50,11 @@ Draft an Architecture Decision Record (ADR):
 *   **Decision**: The chosen path.
 *   **Consequences**: Who wins, who loses, and the mitigation plan.
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-traceability` to record this decision in the graph."
+*   "Handover: Summon `@ba-writing` to update the requirements based on the agreement."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

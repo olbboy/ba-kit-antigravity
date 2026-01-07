@@ -55,6 +55,11 @@ Generate a User Story table for each identified feature:
 ### 4. Output Mode
 Present the finalized, self-corrected User Story.
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-validation` to find defects in this draft."
+*   "Handover: Summon `@ba-nfr` to define performance constraints for this story."
+
 ---
 
 ## 🛠️ Tool Usage (Optional)

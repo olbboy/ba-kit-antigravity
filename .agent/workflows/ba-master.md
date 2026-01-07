@@ -40,6 +40,11 @@ When activated via `/ba-master` or asked to "coordinate", perform the following 
 ### 3. Action Mode (The Plan)
 Output a clear **Execution Plan** for the user to follow:
 
+### 4. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-elicitation` to detailed interviews."
+*   "Handover: Summon `@ba-nfr` if safety is the priority."
+
 > **📋 Proposed Strategy:**
 > 1.  **@ba-elicitation**: Interview stakeholders about 'Login' specifics (Social login? SSO?).
 > 2.  **@ba-writing**: Draft the User Stories.

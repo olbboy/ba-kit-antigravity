@@ -46,6 +46,11 @@ python3 -c "print(f'NPV: {-50000 + (12000 / 1.05) + (12000 / 1.05**2)}')"
 ### 4. Output Mode
 Present the Risk-Adjusted Assessment supported by **Hard Math**.
 
+### 5. Swarm Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-prioritization` to de-prioritize features with negative ROI."
+*   "Handover: Summon `@ba-innovation` to find a cheaper way to achieve the same goal."
+
 ---
 
 ## 🛠️ Tool Usage (Mandatory)
