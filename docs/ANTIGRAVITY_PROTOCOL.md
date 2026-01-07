@@ -1,6 +1,6 @@
 # 🧠 Antigravity Native Protocol (ANP)
 
-**Version:** 2.4 (CMMI Level 5 Swarm)
+**Version:** 2.5 (CMMI Level 5 Enabler - Squad Protocol)
 **Date:** 2026-01-07
 **Status:** PRODUCTION READY
 
@@ -14,7 +14,7 @@ We repurpose the `@` symbol to represent **Agent Context Switching**.
 ### 🔴 The Orchestrator
 | Command | Role | Native Capabilities |
 | :--- | :--- | :--- |
-| **`@ba-master`** | **Dispatcher** | **Swarm Planning**, Routing, Strategy. |
+| **`@ba-master`** | **Dispatcher** | **Squad Planning**, Routing, Strategy. |
 
 ### 🔵 Core Workflows (The Foundation)
 | Command | Role | Native Capabilities |

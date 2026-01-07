@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-2.4-blue?style=for-the-badge" alt="Version 2.4">
+  <img src="https://img.shields.io/badge/Version-2.5-blue?style=for-the-badge" alt="Version 2.5">
   <img src="https://img.shields.io/badge/Agents-15-green?style=for-the-badge" alt="15 Agents">
   <img src="https://img.shields.io/badge/Protocol-Antigravity%20Native-orange?style=for-the-badge" alt="Antigravity Native">
   <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205%20Enabler-purple?style=for-the-badge" alt="CMMI Level 5 Enabler">

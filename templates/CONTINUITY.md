@@ -1,4 +1,4 @@
-# 📒 CONTINUITY.md (The Swarm Ledger)
+# 📒 CONTINUITY.md (The Squad Ledger)
 
 > **Antigravity Protocol Note**: This file serves as the **Shared Working Memory** for all 15 Agents.
 > **Rule**: Agents MUST read this file (if it exists) at the start of every task to understand the Global Context.
