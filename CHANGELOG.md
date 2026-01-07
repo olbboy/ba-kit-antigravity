@@ -7,6 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.5.0] - 2026-01-07
+
+### ⚔️ The Squad Protocol Update
+*   **Terminology Overhaul**: Renamed "Swarm" (Bầy đàn) to **"Squad" (Biệt Đội)** across all documentation (Eng/Viet).
+*   **New Feature**: Added **Continuity Ledger** (`templates/CONTINUITY.md`) for inter-agent memory sharing.
+*   **Maturity Pivot**: Refined CMMI Level 5 claims to **"Level 5 Enabler"** (Exoskeleton Theory).
+*   **Usage Guide**: Rewrote `USAGE-GUIDE` as **"The Antigravity Codex"**.
+
 ## [2.4.0] - 2026-01-07
 
 ### 🧠 The Antigravity Native Update (System 2 Swarm)

@@ -1,82 +1,94 @@
-# 📘 Hướng Dẫn Sử Dụng BA-Kit (Antigravity Native)
+# 📘 BA-Kit: Mật Mã Phản Trọng Lực (The Antigravity Codex v2.4.1)
 
-**Chào mừng đến với "Bầy Đàn Nhận Thức" (Cognitive Swarm).**
-Hướng dẫn này giải thích cách điều khiển 15 Agent của BA-Kit để đạt được kết quả "World Class".
+> **"Chúng tôi không chỉ chat. Chúng tôi suy nghĩ, liên kết, và ghi nhớ."**
 
----
-
-## 🏗️ Kiến Trúc: Sự Khác Biệt Của "System 2"
-
-Không giống như các workflow "Chat với AI" thông thường, các agent của BA-Kit hoạt động dựa trên một **Vòng Lặp Nhận Thức (Cognitive Loop)**:
-
-1.  **Kích Thích (Stimulus)**: Input của người dùng.
-2.  **Hệ Thống 1 (Nhanh)**: Agent phác thảo câu trả lời ngay lập tức dựa trên khớp mẫu (pattern matching).
-3.  **Hệ Thống 2 (Chậm)**: Agent **Suy Ngẫm (Reflect)**.
-    *   Nó tự phê bình bản nháp của mình ("Cái này có quá mơ hồ không?").
-    *   Nó kiểm tra ảo giác ("Mình có bịa ra dependency này không nhỉ?").
-    *   Nó xác minh sự thật ("Để mình grep lại codebase cho chắc").
-4.  **Phản Hồi**: Kết quả đã được trau chuốt và xác minh.
-
-**Lợi ích**: Bạn nhận được ít lỗi hơn, toán học chính xác, và trích dẫn thực tế.
+Chào mừng đến với **Biệt Đội Phân Tích (The Cognitive Squad - Antigravity Native)**.
+Đây không phải là chatbot. Đây là một **Hệ thống Chuyên gia Đa Tác tử (Multi-Agent Expert System)** được thiết kế để kích hoạt **Quy trình Phân tích Nghiệp vụ Tiêu chuẩn Quốc tế (High-Assurance)**.
 
 ---
 
-## 🚦 15 Agent: Khi Nào Dùng Ai?
+## 🌌 Triết Lý: Ba Trụ Cột Của Trí Tuệ
 
-### 🔴 The Boss (Sếp)
-*   **`@ba-master`**: Dùng khi bạn không biết phải dùng ai. "Tôi có vấn đề này, cứu với."
+Để làm chủ bộ kit này, bạn phải hiểu cách Biệt đội này "tư duy".
 
-### 🔵 Giai Đoạn Sáng Tạo (Khởi Đầu Vòng Đời)
-1.  **`@ba-identity`**: Bắt đầu tại đây. Xác định *Ai* là stakeholders? Ai là Nhà tài trợ?
-2.  **`@ba-elicitation`**: Dùng để phỏng vấn người dùng. "Bạn cần gì?" (Funnel Questioning).
-3.  **`@ba-writing`**: Dùng để soạn thảo Yêu cầu (User Stories / GHERKIN).
+### 1. 🧠 Tư Duy Hệ Thống 2 (The Brain)
+AI thông thường trả lời ngay lập tức (Hệ thống 1). Điều này dễ sinh ra ảo giác.
+**Chuyên gia của chúng tôi biết "Dừng & Nghĩ".**
+*   **Vòng Lặp Phản Tư (Reflection Loop)**: Trước khi nói, mỗi chuyên gia tự phê bình bản nháp của chính mình.
+*   **Kỷ Luật Công Cụ (Tool Mandates)**: Họ không đoán mò toán học (họ dùng Python). Họ không bịa ra liên kết (họ dùng Grep).
 
-### 🟡 Giai Đoạn Kỹ Thuật (Giữa Vòng Đời)
-4.  **`@ba-nfr`**: Định nghĩa *Ràng buộc*. "Nhanh thế nào? Bảo mật ra sao?" (ISO 25010).
-5.  **`@ba-process`**: Vẽ luồng. "Trực quan hóa quy trình thanh toán." (BPMN).
-6.  **`@ba-traceability`**: Map các liên kết. "Cái gì sẽ hỏng nếu tôi đổi X?" (Lý thuyết đồ thị).
-7.  **`@ba-conflict`**: Giải quyết tranh cãi. "Sales muốn A, Dev muốn B." (Đàm phán Harvard).
+### 2. 🤝 Phối Hợp Tác Chiến (The Collaboration)
+Các Chuyên gia không hoạt động cô độc. Họ tạo thành một **Mạng Lưới Cộng Tác (Collaborative Network)**.
+*   **Cách Cũ**: Bạn gọi `@ba-writing`. Nó làm xong. Bạn tự hỏi làm gì tiếp theo.
+*   **Cách Mới**: `@ba-writing` làm xong và *tham mưu cho bạn*: "Bàn giao: Hãy gọi `@ba-validation` để kiểm tra bản nháp này."
 
-### 🟣 Giai Đoạn Tối Ưu Hóa (Cuối Vòng Đời)
-8.  **`@ba-validation`**: Kiểm tra chất lượng. "Tìm lỗi trong spec này." (Visual QA).
-9.  **`@ba-prioritization`**: Quyết định thứ tự. "Xây cái gì trước?" (WSJF).
-10. **`@ba-solution`**: Kiểm tra tiền bạc. "Cái này có lãi không?" (ROI/NPV).
-11. **`@ba-export`**: Xuất bản. "Biến nó thành PDF." (Compliance).
-
-### ⚫ Giai Đoạn "Level 5" (Tối Ưu Hóa Sâu)
-12. **`@ba-metrics`**: Kiểm toán *Quy trình*. "Chúng ta đang nhanh hơn hay ẩu hơn?" (SPC).
-13. **`@ba-root-cause`**: Sửa *Hệ thống*. "Tại sao chúng ta cứ gặp lỗi này mãi?" (5 Whys).
-14. **`@ba-innovation`**: Thiết kế *Thử nghiệm*. "AI có giúp ích không?" (A/B Testing).
+### 3. 📒 Hồ Sơ Tác Chiến (The Mission Log)
+Biệt đội chia sẻ một "Bộ nhớ Chiến dịch" thông qua `templates/CONTINUITY.md`.
+*   **Vấn đề**: "Tôi bảo `@ba-elicitation` là làm Agile, nhưng `@ba-nfr` lại tưởng là Waterfall."
+*   **Giải pháp**: Bạn định nghĩa Ngữ cảnh MỘT LẦN trong Hồ sơ. Cả 15 chuyên gia đều đọc nó trước khi hành động.
 
 ---
 
-## 🛠️ Tool Mandates (Tại Sao Agent Chạy Lệnh?)
+## 🚦 Đội Hình: 15 Chuyên Gia, Một Sứ Mệnh
 
-Bạn sẽ thấy các Agent chạy lệnh `run_command` hoặc `grep_search`. **Đừng ngăn cản họ.**
-
-*   **Python**: Được dùng bởi `@ba-solution`, `@ba-innovation`, `@ba-metrics` để đảm bảo **Tính Toàn Vẹn Của Toán Học**. LLM không biết, Python biết.
-*   **Grep**: Được dùng bởi `@ba-traceability` để đảm bảo **Tính Toàn Vẹn Của Liên Kết**. Agent phải "nhìn thấy" file thì mới link được.
-*   **Web Search**: Được dùng bởi `@ba-nfr` để đảm bảo **Tính Toàn Vẹn Của Tiêu Chuẩn**. Nó kiểm tra web thực tế để cập nhật GDPR/ISO.
+| Agent | Vai Trò (Role) | Khi Nào Triệu Hồi |
+| :--- | :--- | :--- |
+| **BỘ CHỈ HUY** | | |
+| **`@ba-master`** | *Tổng Chỉ Huy* | "Tôi lạc lối. Hãy đánh giá tình hình và điều động nhân sự." |
+| **KHỐI SÁNG TẠO** | | |
+| **`@ba-identity`** | *Tham Mưu Trưởng* | "Dự án mới. Ai là stakeholder? Ai nắm quyền?" |
+| **`@ba-elicitation`**| *Nhà Báo* | "Tôi cần Yêu cầu. Hãy phỏng vấn tôi." (Phương pháp Phễu) |
+| **`@ba-writing`** | *Kiến Trúc Sư*| "Biến đống ghi chú này thành User Stories chuẩn Gherkin." |
+| **KHỐI KỸ THUẬT** | | |
+| **`@ba-nfr`** | *Kỹ Sư SRE* | "Định nghĩa Ràng buộc Phi chức năng (ISO 25010)." |
+| **`@ba-process`** | *Bậc Thầy Lean* | "Trực quan hóa quy trình rối rắm này thành biểu đồ BPMN." |
+| **`@ba-traceability`**| *Nhà Lý Thuyết Đồ Thị*| "Chuyện gì xảy ra nếu sửa yêu cầu này? Truy vết tác động." |
+| **`@ba-conflict`** | *Nhà Ngoại Giao* | "Sales và Dev đang cãi nhau. Giúp đàm phán đi." |
+| **KHỐI TỐI ƯU HÓA** | | |
+| **`@ba-validation`** | *Nhà Phê Bình* | "Roast (chửi) cái spec này đi. Tìm mọi lỗi logic có thể." |
+| **`@ba-prioritization`**| *Nhà Chiến Lược*| "Nhiều tính năng quá. Sắp xếp thứ tự đi (WSJF/RICE)." |
+| **`@ba-solution`** | *Nhà Đầu Tư* | "Tính ROI của tính năng này. Dùng Python nhé." |
+| **`@ba-export`** | *Nhà Xuất Bản* | "Đóng gói tất cả thành file DOCX chuẩn chỉ cho khách hàng." |
+| **KHỐI TIÊN TRI (Level 5 Enabler)**| | |
+| **`@ba-metrics`** | *Nhà Khoa Học Dữ Liệu*| "Chất lượng có ổn định không? Vẽ biểu đồ kiểm soát (SPC)." |
+| **`@ba-root-cause`** | *Thám Tử* | "Chúng ta thất bại. Tìm nguyên nhân gốc rễ (5 Whys)." |
+| **`@ba-innovation`** | *Nhà Tương Lai Học* | "Thiết kế một bài A/B Test để chứng minh ý tưởng này." |
 
 ---
 
-## 🎓 Mẹo Chuyên Gia (Pro-Tips)
+## ⚔️ Các Giao Thức Chiến Thuật (Tactical Protocols)
 
-### 1. "Bàn Giao Persona" (The Persona Handover)
-Bạn có thể chuỗi các agent thủ công để tạo workflow mạnh mẽ:
-> *User*: `@ba-elicitation Phỏng vấn tôi về tính năng Đăng nhập.`
-> *(Hội thoại diễn ra...)*
-> *User*: `Tuyệt. Giờ thì @ba-writing hãy biến cuộc phỏng vấn đó thành Gherkin scenarios.`
+### Giao thức 1: "Tiêm Ngữ Cảnh" (Context Injection)
+**Ngừng lặp lại bản thân.**
+1.  Copy `templates/CONTINUITY.md` ra thư mục gốc.
+2.  Điền vào: `Goal: MVP Release`. `Constraint: Mobile Only`.
+3.  **Kết quả**: Mọi chuyên gia giờ đều biết điều này.
 
-### 2. "Kiểm Tra Thiên Kiến" (The Bias Check)
-Nếu thấy Agent quá hiền, hãy yêu cầu nó dùng Chế độ Phê bình (Critic Mode):
-> *User*: `@ba-validation Roast (chửi) yêu cầu này đi. Hãy cực kỳ khắc nghiệt.`
+### Giao thức 2: "Kích Thích Thị Giác" (Visual Stimulus)
+**Ngừng mô tả UI bằng lời.**
+1.  Chụp ảnh màn hình bảng trắng hoặc bản vẽ tay.
+2.  Kéo & Thả vào khung chat.
+3.  Ra lệnh: `@[image] @ba-writing Chuyển đổi giao diện này thành Đặc tả Trường tin (Field Specs).`
 
-### 3. "Quét Hình Ảnh" (The Visual Scan)
-Bạn có thể đưa ảnh cho Agent (Drag & Drop):
-> *User*: `@[image.png] @ba-writing Viết yêu cầu UI dựa trên mockup này.`
+### Giao thức 3: "Kiểm Chứng Giả Thuyết" (Hypothesis Check)
+**Ngừng đoán mò.**
+1.  Đừng nói "Tôi nghĩ cái này lãi."
+2.  Ra lệnh: `@ba-solution Tính NPV nếu tỷ lệ chấp nhận là 5%.`
+3.  Xem chuyên gia viết script Python để chứng minh bạn đúng (hoặc sai).
 
 ---
 
-**Kết Thúc Hướng Dẫn**
-*Đi và Kiến tạo đi.*
+## 🚀 Cách Bắt Đầu (Zero-Shot)
+
+Bạn không cần học prompt phức tạp. Các Chuyên gia tự biết phải làm gì.
+
+**Chỉ cần gõ:**
+> `@ba-master Tôi muốn xây dựng một cổng thanh toán.`
+
+**Biệt đội sẽ tiếp quản:**
+1.  `@ba-master` phân tích yêu cầu.
+2.  Nó điều hướng bạn sang `@ba-identity` để xác định người trả tiền.
+3.  `@ba-identity` điều hướng sang `@ba-elicitation` để thu thập nhu cầu.
+4.  **Phản ứng dây chuyền** bắt đầu.
+
+*Chào mừng đến với Antigravity.*

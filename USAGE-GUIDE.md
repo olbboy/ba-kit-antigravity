@@ -1,82 +1,94 @@
-# 📘 BA-Kit Usage Guide (Antigravity Native)
+# 📘 BA-Kit: The Antigravity Codex (v2.4.1)
 
-**Welcome to the Cognitive Swarm.**
-This guide explains how to pilot the 15 Agents of the BA-Kit to achieve "World Class" results.
+> **"We don't just chat. We think, we link, and we remember."**
 
----
-
-## 🏗️ Architecture: The "System 2" Difference
-
-Unlike standard "Chat with LLM" workflows, BA-Kit agents operate on a **Cognitive Loop**:
-
-1.  **Stimulus**: User Input.
-2.  **System 1 (Fast)**: The Agent drafts an immediate response based on pattern matching.
-3.  **System 2 (Slow)**: The Agent **Reflects**.
-    *   It critiques its own draft ("Is this too vague?").
-    *   It checks for hallucinations ("Did I invent that dependency?").
-    *   It verifies facts ("Let me grep the codebase to be sure").
-4.  **Response**: The polished, verified output.
-
-**Benefit**: You get fewer errors, better math, and real citations.
+Welcome to the **Cognitive Squad (Antigravity Native)**.
+This is not a chatbot. It is a **Multi-Agent Expert System** designated to enable **High-Assurance Business Analysis** (inspired by CMMI Level 5).
 
 ---
 
-## 🚦 The 15 Agents: When to Use Who?
+## 🌌 The Philosophy: Three Pillars of Intelligence
 
-### 🔴 The Boss
-*   **`@ba-master`**: Use when you don't know who to use. "I have a problem, help."
+To master this kit, you must understand how the Squad "thinks".
 
-### 🔵 The Creator Phase (Lifecycle Start)
-1.  **`@ba-identity`**: Start here. Define *Who* are the stakeholders? Who is the Sponsor?
-2.  **`@ba-elicitation`**: Use this to interview users. "What do you need?" (Funnel Questioning).
-3.  **`@ba-writing`**: Use this to draft the Requirements (User Stories / GHERKIN).
+### 1. 🧠 System 2 Cognition (The Brain)
+Standard AI answers instantly (System 1). This is prone to hallucination.
+**Our Agents Stop & Think.**
+*   **Reflection Loop**: Before speaking, every agent critiques its own draft.
+*   **Tool Mandates**: They don't guess math (they use Python). They don't guess links (they use Grep).
 
-### 🟡 The Engineering Phase (Lifecycle Middle)
-4.  **`@ba-nfr`**: Define *Constraints*. "How fast? How secure?" (ISO 25010).
-5.  **`@ba-process`**: Draw the flow. "Visualize the checkout process." (BPMN).
-6.  **`@ba-traceability`**: Map the links. "What breaks if I change X?" (Graph Theory).
-7.  **`@ba-conflict`**: Resolve fights. "Sales wants A, Dev wants B." (Harvard Negotiation).
+### 2. 🤝 Squad Collaboration (The Network)
+Agents are no longer isolated. They form a **Collaborative Network (DAG)**.
+*   **Old Way**: You call `@ba-writing`. It finishes. You wonder what to do next.
+*   **New Way**: `@ba-writing` finishes and *advises you*: "Handover: Summon `@ba-validation` to QA this draft."
 
-### 🟣 The Optimization Phase (Lifecycle End)
-8.  **`@ba-validation`**: Check quality. "Find bugs in this spec." (Visual QA).
-9.  **`@ba-prioritization`**: Decide order. "What do we build first?" (WSJF).
-10. **`@ba-solution`**: Check money. "Is this profitable?" (ROI/NPV).
-11. **`@ba-export`**: Publish. "Make it a PDF." (Compliance).
-
-### ⚫ The "Level 5" Phase (Deep Optimization)
-12. **`@ba-metrics`**: Audit the *Process*. "Are we getting faster or just sloppier?" (SPC).
-13. **`@ba-root-cause`**: Fix the *System*. "Why do we keep having bugs?" (5 Whys).
-14. **`@ba-innovation`**: Design *Experiments*. "Will AI help?" (A/B Testing).
+### 3. 📒 Mission Log (The Memory)
+The Squad shares a "Working Brain" via `templates/CONTINUITY.md`.
+*   **Problem**: "I told `@ba-elicitation` we are an Agile team, but `@ba-nfr` thinks we are Waterfall."
+*   **Solution**: You define the Context ONCE in the Mission Log. All 15 agents read it before acting.
 
 ---
 
-## 🛠️ Tool Mandates (Why Agents Run Commands)
+## 🚦 The Roster: 15 Specialists, One Mission
 
-You will see Agents running `run_command` or `grep_search`. **Do not stop them.**
-
-*   **Python**: Used by `@ba-solution`, `@ba-innovation`, `@ba-metrics` to ensure **Math Integrity**. LLMs cannot add; Python can.
-*   **Grep**: Used by `@ba-traceability` to ensure **Link Integrity**. The Agent must "see" the file to link it.
-*   **Web Search**: Used by `@ba-nfr` to ensure **Standard Integrity**. It checks the live web for GDPR/ISO updates.
+| Agent | The Archetype | When to Summon |
+| :--- | :--- | :--- |
+| **COMMANDER** | | |
+| **`@ba-master`** | *Mission Control* | "I'm lost. Review my situation and tell me who to call." |
+| **CREATIVE SQUAD** | | |
+| **`@ba-identity`** | *Chief of Staff* | "New project. Who are the stakeholders? Who matters?" |
+| **`@ba-elicitation`**| *The Journalist* | "I need Requirements. Interview me." (Funnel Method) |
+| **`@ba-writing`** | *The Architect*| "Turn these raw notes into Gherkin User Stories." |
+| **ENGINEERING SQUAD**| | |
+| **`@ba-nfr`** | *The SRE* | "Define the Non-Functional Constraints (ISO 25010)." |
+| **`@ba-process`** | *Lean Master* | "Visualize this messy workflow as a BPMN diagram." |
+| **`@ba-traceability`**| *Graph Theorist*| "What happens if I change this requirement? Trace the impact." |
+| **`@ba-conflict`** | *The Diplomat* | "Sales and Eng are fighting. Help us negotiate (Harvard Method)." |
+| **OPTIMIZATION SQUAD**| | |
+| **`@ba-validation`** | *The Critic* | "Roast this spec. Find every bug and logical fallacy." |
+| **`@ba-prioritization`**| *The Strategist*| "We have too many features. Rank them (WSJF/RICE)." |
+| **`@ba-solution`** | *The Investor* | "Calculate the ROI of this feature. Use Python." |
+| **`@ba-export`** | *The Publisher* | "Compile everything into a compliant DOCX for the client." |
+| **PRECOG SQUAD (Level 5)**| | |
+| **`@ba-metrics`** | *Data Scientist* | "Is our Quality Control stable? Show me the Control Chart." |
+| **`@ba-root-cause`** | *The Detective* | "We failed. Find the Root Cause (5 Whys)." |
+| **`@ba-innovation`** | *The Futurist* | "Design an A/B test to prove this idea works." |
 
 ---
 
-## 🎓 Pro-Tips
+## ⚔️ Tactical Protocols
 
-### 1. The "Persona Handover"
-You can chain agents manually for powerful workflows:
-> *User*: `@ba-elicitation Interview me about the Login feature.`
-> *(Conversation happens...)*
-> *User*: `Great. Now @ba-writing turn that interview into Gherkin scenarios.`
+### Protocol 1: The "Context Injection"
+**Stop repeating yourself.**
+1.  Copy `templates/CONTINUITY.md` to your root.
+2.  Fill it out: `Goal: MVP Release`. `Constraint: Mobile Only`.
+3.  **Result**: Every agent now knows this.
 
-### 2. The "Bias Check"
-If sure an Agent is being too nice, ask it to use its Critic Mode explicitly:
-> *User*: `@ba-validation Roast this requirement. Be extremely harsh.`
+### Protocol 2: The "Visual Stimulus"
+**Stop describing UI.**
+1.  Take a screenshot of a whiteboard or mockup.
+2.  Drag & Drop it into the chat.
+3.  Command: `@[image] @ba-writing Convert this UI into Field Specifications.`
 
-### 3. The "Visual Scan"
-You can show images to Agents (Drag & Drop):
-> *User*: `@[image.png] @ba-writing Write UI requirements based on this mockup.`
+### Protocol 3: The "Hypothesis Check"
+**Stop guessing.**
+1.  Don't say "I think this is a good idea."
+2.  Command: `@ba-solution Calculate the Net Present Value (NPV) if adoption is 5%.`
+3.  Watch the agent write a Python script to prove you right (or wrong).
 
 ---
 
-**End of Guide**
-*Go forth and Engineer.*
+## 🚀 How to Begin (Zero-Shot)
+
+You do not need to learn complex prompts. The Agents know what to do.
+
+**Just Type:**
+> `@ba-master I want to build a payment gateway.`
+
+**The Squad will take over:**
+1.  `@ba-master` will analyze the request.
+2.  It will route you to `@ba-identity` to identify who is paying.
+3.  `@ba-identity` will route you to `@ba-elicitation` to gather needs.
+4.  The **Chain Reaction** begins.
+
+*Welcome to System 2.*

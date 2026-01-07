@@ -12,22 +12,22 @@
   <img src="https://img.shields.io/badge/Version-2.4-blue?style=for-the-badge" alt="Version 2.4">
   <img src="https://img.shields.io/badge/Agents-15-green?style=for-the-badge" alt="15 Agents">
   <img src="https://img.shields.io/badge/Protocol-Antigravity%20Native-orange?style=for-the-badge" alt="Antigravity Native">
-  <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205-purple?style=for-the-badge" alt="CMMI Level 5">
+  <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205%20Enabler-purple?style=for-the-badge" alt="CMMI Level 5 Enabler">
 </p>
 
 <h1 align="center">🏆 BA-Kit (Antigravity Edition)</h1>
-<h3 align="center">The Cognitive Swarm for Requirements Engineering</h3>
+<h3 align="center">The Cognitive Squad for Requirements Engineering</h3>
 
 <p align="center">
   <strong>Transform your AI into a World-Class Business Analysis Team</strong><br>
-  15 Self-Correcting Agents • System 2 Reflection • Mathematical Precision
+  15 Self-Correcting Specialists • System 2 Reflection • Mathematical Precision
 </p>
 
 ---
 
 ## 🎯 What is BA-Kit?
 
-BA-Kit is not just a library of prompts; it is a **Cognitive Swarm** designed for the **Antigravity Native Protocol (ANP)**.
+BA-Kit is not just a library of prompts; it is a **Cognitive Squad** designed for the **Antigravity Native Protocol (ANP)**.
 
 It replaces the "Single Chatbot" paradigm with a **Team of 15 Specialists**:
 *   Need a User Story? Summon **`@ba-writing`**.
@@ -38,7 +38,7 @@ Each agent is equipped with **System 2 Thinking** (Reflective Loops) to "Stop & 
 
 ---
 
-## 🤖 The Agent Swarm (15 Personas)
+## 🤖 The Agent Squad (15 Personas)
 
 ### 🔴 The Orchestrator
 | Agent | Role | Capability |

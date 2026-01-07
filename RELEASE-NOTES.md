@@ -1,4 +1,36 @@
-# 🚀 Release 2.4.0: The Antigravity Native Update
+# 🚀 Release 2.5.0: The Antigravity Squad Protocol
+
+**Date:** 2026-01-07
+**Codename:** "The Specialist Squad"
+
+We have evolved. No longer a "Swarm" of bots, we are now a **Cognitive Squad** of 15 Specialists.
+This release brings **Military-Grade Professionalism** and **High-Assurance Capabilities** to your workflow.
+
+---
+
+## 🌟 What's New?
+
+### 1. ⚔️ The "Squad" Terminology Pivot
+We have deprecated the biological "Swarm" metaphor in favor of the professional **"Squad" (Biệt Đội)** concept.
+*   **Old**: Insects, Instincts, Swarm Intelligence.
+*   **New**: Specialists, Collaboration, Mission Control.
+*   **Why**: To align with our **System 2** (Critical Thinking) architecture. We don't just buzz; we think.
+
+### 2. 📒 The Continuity Ledger (Shared Memory)
+The Squad now shares a "Working Brain" via `templates/CONTINUITY.md`.
+*   **Context Injection**: Define your Goal & Constraints once.
+*   **Squad Synchronization**: All 15 agents read this file before acting.
+*   **Result**: Zero repetition. Maximum alignment.
+
+### 3. 🛡️ "Level 5 Enabler" Maturity
+We have refined our claim from "Level 5 Organization" to **"High-Assurance Enabler"**.
+*   We provide the **Tools** (SPC, Root Cause, Python).
+*   You provide the **Agency**.
+*   Together, we achieve **CMMI Level 5 behaviors**.
+
+---
+
+## 🚀 Release 2.4.0: The Antigravity Native Update
 
 **Date:** 2026-01-07
 **Codename:** "System 2 Swarm"
