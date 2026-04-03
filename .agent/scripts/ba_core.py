@@ -189,10 +189,19 @@ class BM25:
 
 
 # ============ SEARCH FUNCTIONS ============
+_csv_cache = {}  # filepath → (mtime, rows) — avoids re-reading unchanged files
+
+
 def _load_csv(filepath):
-    """Load CSV file and return list of row dicts."""
+    """Load CSV file with mtime-based caching."""
+    fp = str(filepath)
+    mtime = filepath.stat().st_mtime
+    if fp in _csv_cache and _csv_cache[fp][0] == mtime:
+        return _csv_cache[fp][1]
     with open(filepath, "r", encoding="utf-8") as f:
-        return list(csv.DictReader(f))
+        rows = list(csv.DictReader(f))
+    _csv_cache[fp] = (mtime, rows)
+    return rows
 
 
 def _search_domain(filepath, query, max_results):
@@ -227,7 +236,7 @@ def _search_domain(filepath, query, max_results):
 
 def detect_domain(query):
     """Auto-detect the most relevant domain from query keywords."""
-    query_lower = query.lower()
+    query_lower = str(query).lower()
 
     scores = {}
     for domain, keywords in DOMAIN_KEYWORDS.items():
@@ -276,7 +285,10 @@ def search_multi(query, domains=None, max_results=MAX_RESULTS):
 
     all_results = []
     for domain in domains:
-        filepath = DATA_DIR / DOMAIN_FILES.get(domain, "")
+        csv_name = DOMAIN_FILES.get(domain)
+        if not csv_name:
+            continue
+        filepath = DATA_DIR / csv_name
         if filepath and filepath.exists():
             results = _search_domain(filepath, query, max_results)
             for r in results:

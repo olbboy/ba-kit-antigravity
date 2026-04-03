@@ -83,6 +83,63 @@ def list_domains():
     return "\n".join(lines)
 
 
+def show_stats():
+    """Show knowledge base statistics and coverage analytics."""
+    import csv as csv_mod
+    lines = ["## BA Knowledge Base Statistics", ""]
+    total = 0
+    type_counts = {}
+    agent_counts = {}
+    source_counts = {}
+    ready_domains = []
+
+    for domain in AVAILABLE_DOMAINS:
+        filepath = DATA_DIR / DOMAIN_FILES[domain]
+        if not filepath.exists():
+            continue
+        ready_domains.append(domain)
+        with open(filepath, "r", encoding="utf-8") as f:
+            rows = list(csv_mod.DictReader(f))
+        total += len(rows)
+        for row in rows:
+            t = row.get("type", "unknown")
+            type_counts[t] = type_counts.get(t, 0) + 1
+            for agent in row.get("agents", "").split():
+                agent_counts[agent] = agent_counts.get(agent, 0) + 1
+            src = row.get("source", "")
+            if src:
+                source_counts[src] = source_counts.get(src, 0) + 1
+
+    lines.append(f"**Total entries:** {total}")
+    lines.append(f"**Active domains:** {len(ready_domains)}/{len(AVAILABLE_DOMAINS)}")
+    lines.append("")
+
+    lines.append("### Entries by Domain")
+    for domain in ready_domains:
+        filepath = DATA_DIR / DOMAIN_FILES[domain]
+        with open(filepath, "r", encoding="utf-8") as f:
+            count = sum(1 for _ in csv_mod.DictReader(f))
+        bar = "#" * (count // 2)
+        lines.append(f"  {domain:18s} {count:3d} {bar}")
+    lines.append("")
+
+    lines.append("### Entries by Type")
+    for t, c in sorted(type_counts.items(), key=lambda x: -x[1]):
+        lines.append(f"  {t:18s} {c:3d}")
+    lines.append("")
+
+    lines.append("### Top 10 Agents by Coverage")
+    for agent, c in sorted(agent_counts.items(), key=lambda x: -x[1])[:10]:
+        lines.append(f"  {agent:22s} {c:3d} entries")
+    lines.append("")
+
+    lines.append("### Top 5 Source Files")
+    for src, c in sorted(source_counts.items(), key=lambda x: -x[1])[:5]:
+        lines.append(f"  {c:3d} entries ← {src}")
+
+    return "\n".join(lines)
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="BA-Kit Knowledge Search (BM25)")
     parser.add_argument("query", nargs="?", help="Search query")
@@ -91,8 +148,13 @@ if __name__ == "__main__":
     parser.add_argument("--multi-domain", "-m", action="store_true", help="Search across all domains")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
     parser.add_argument("--list-domains", "-l", action="store_true", help="List available domains")
+    parser.add_argument("--stats", action="store_true", help="Show knowledge base statistics")
 
     args = parser.parse_args()
+
+    if args.stats:
+        print(show_stats())
+        sys.exit(0)
 
     if args.list_domains:
         print(list_domains())

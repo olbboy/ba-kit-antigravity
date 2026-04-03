@@ -51,6 +51,12 @@ Present the **Quality Health Card**:
 *   **Stability**: [Stable/Unstable]
 *   **Verdict**: "Process is out of control. Stop feature work. Fix the build."
 
+### 4. Squad Handoffs (The Relay)
+Don't stop here. Recommend the next step:
+*   "Handover: Summon `@ba-root-cause` to investigate why these metrics are out of control."
+*   "Handover: Summon `@ba-innovation` to design an experiment to improve the process."
+*   "Handover: Summon `@ba-process` to redesign the workflow based on bottleneck data."
+
 ---
 
 ## 🛠️ Tool Usage (Mandatory)

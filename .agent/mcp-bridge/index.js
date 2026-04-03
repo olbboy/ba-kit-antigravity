@@ -23,8 +23,10 @@ function authMiddleware(req, res, next) {
         }
         return res.status(403).send('Remote access requires MCP_BRIDGE_TOKEN');
     }
-    const auth = req.headers.authorization;
-    if (auth === `Bearer ${token}`) {
+    const auth = req.headers.authorization || '';
+    const expected = Buffer.from(`Bearer ${token}`);
+    const received = Buffer.from(auth);
+    if (expected.length === received.length && crypto.timingSafeEqual(expected, received)) {
         return next();
     }
     return res.status(401).send('Unauthorized');
@@ -165,8 +167,8 @@ async function main() {
         }
     });
 
-    app.listen(PORT, () => {
-        console.log(`MCP Bridge running on port ${PORT}`);
+    app.listen(PORT, '127.0.0.1', () => {
+        console.log(`MCP Bridge running on 127.0.0.1:${PORT}`);
     });
 }
 
