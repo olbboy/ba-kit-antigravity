@@ -116,6 +116,12 @@ Wish:   ≤ 0.5 seconds (p50)
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain nfr`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-techniques.md (Wiegers NFR Patterns), ISO/IEC 25010, ebook-requirements-memory-jogger.md (Gottesdiener — Quality Attributes Appendix E)
 *   **Standards**: ISO 25010 Quality Model, GDPR, PCI-DSS, OWASP, Planguage

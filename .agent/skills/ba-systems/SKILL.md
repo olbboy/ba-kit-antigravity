@@ -85,6 +85,12 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain systems`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-systems-thinking.md (Thinking in Systems - Donella Meadows), ebook-requirements-memory-jogger.md (Gottesdiener — Context Diagram, State Diagram, Event-Response Table Ch.4)
 *   **Concepts**: Stocks & Flows, Reinforcing/Balancing Loops, 12 Leverage Points, System Archetypes, Context Diagram, State Diagram, Event-Response Table

@@ -63,6 +63,12 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain writing`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📄 Templates
 *   **BRD**: `templates/brd_template.md` — Business Requirements Document
 *   **SRS**: `templates/srs_template.md` — Software Requirements Specification

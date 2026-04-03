@@ -104,6 +104,12 @@ Apply this checklist to every specification under review:
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain validation`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK Requirements Validation), ebook-techniques.md (Wiegers Quality Attributes), ebook-requirements-memory-jogger.md (Gottesdiener — Validation Ch.6, SRS Inspection Appendix D)
 *   **Standards**: INVEST, Ambiguity Detection, Passive Voice Check, Testability, SRS Inspection Checklist

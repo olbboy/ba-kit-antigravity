@@ -96,6 +96,12 @@ Use these at the end of a requirements phase to improve:
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain workshop`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-leadership.md (Making Workshops Work - Penny Pullan), ebook-requirements-memory-jogger.md (Gottesdiener — Facilitated Workshops Ch.3, Retrospective Questions Appendix G)
 *   **Techniques**: Silent Brainstorming, Dot Voting, Round Robin, Fishbowl, Parking Lot, Prioritization Workshop, Requirements Retrospective

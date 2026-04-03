@@ -102,6 +102,12 @@ Before starting elicitation, assess these risk factors to calibrate effort:
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain elicitation`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK Elicitation & Collaboration), ebook-techniques.md (99 Tools), ebook-requirements-memory-jogger.md (Gottesdiener — Stakeholder Categories, Elicitation Ch.3)
 *   **Techniques**: 5W1H, Funnel Technique, Why Laddering, Interview, Observation, Facilitated Workshop, Document Analysis, Prototyping

@@ -100,6 +100,12 @@ Vision Statement → Context Diagram → Event-Response Table
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain identity`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📄 Templates
 *   **BRD**: `templates/brd_template.md` — Business Requirements Document (Strategic Context section)
 

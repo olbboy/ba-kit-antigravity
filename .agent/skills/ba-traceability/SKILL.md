@@ -108,6 +108,12 @@ Submit Change → Review Request → Decide (CCB) → Update Baseline
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain traceability`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK Requirements Lifecycle, PMI RTM), ebook-requirements-memory-jogger.md (Gottesdiener — Requirements Management Ch.7, RTM, Change Control)
 *   **Frameworks**: Requirements Traceability Matrix (RTM), Blast Radius Analysis, Change Control, Requirements Attributes Catalog

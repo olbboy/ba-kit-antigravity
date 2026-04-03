@@ -115,6 +115,11 @@ After each agent completes, return to ba-master for the next step:
 
 ---
 
+## 🔍 Knowledge Search
+Before routing or planning, search the knowledge base for relevant context:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<user query keywords>" --multi-domain`
+*   Use search results to inform agent routing and workflow chain decisions.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK), ebook-leadership.md, ebook-techniques.md
 *   **Standards**: BABOK v3, ISO 25010, IREB

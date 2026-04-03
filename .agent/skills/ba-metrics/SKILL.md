@@ -59,6 +59,12 @@ Present the **Quality Health Card**:
 
 ---
 
+## 🔍 Knowledge Search
+Before drafting, search for relevant knowledge:
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain metrics`
+*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   Use search results to ground your output in verified frameworks and templates.
+
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK Quality Assurance), ebook-career.md (Value-Driven BA Metrics)
 *   **Frameworks**: SPC Control Charts, Defect Density, Six Sigma, Cpk
