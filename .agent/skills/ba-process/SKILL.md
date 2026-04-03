@@ -57,8 +57,32 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 🗺️ Relationship Map (Memory Jogger Ch.4)
+**Purpose**: Shows dependencies between business functions BEFORE diving into process details.
+- Draw internal business functions as boxes
+- Connect with arrows showing data/trigger dependencies
+- Identify external entities (customers, suppliers)
+- **Key output**: Which functions are most connected = highest impact areas
+
+## 📊 Process Map (Memory Jogger Ch.4)
+**Purpose**: Cross-functional analysis of business processes — who does what across departments.
+- Use swimlanes for each role/department
+- Map sequential activities with handoffs between swimlanes
+- Identify wait times, bottlenecks, and redundant steps
+- **Links to**: Context Diagram (system boundary), Use Cases (system tasks)
+
+## 🔀 Activity Diagram for Complex Use Cases (Memory Jogger Ch.4)
+When a use case has forks, joins, or parallel flows that text can't express clearly:
+- Use **Fork** (thick bar) for parallel activities
+- Use **Join** (thick bar) to synchronize
+- Use **Decision** (diamond) with guard conditions
+- **When to use**: UC has >3 alternative flows, or involves concurrent tasks
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-techniques.md (UML Activity Diagrams, BPMN), ebook-fundamentals.md (BCS Process Modeling)
-*   **Frameworks**: BPMN 2.0, Lean Six Sigma, Value Stream Mapping
+*   **Source**: ebook-techniques.md (UML Activity Diagrams, BPMN), ebook-fundamentals.md (BCS Process Modeling), ebook-requirements-memory-jogger.md (Gottesdiener — Relationship Map, Process Map Ch.4)
+*   **Frameworks**: BPMN 2.0, Lean Six Sigma, Value Stream Mapping, Relationship Map, Process Map
+*   **Deep Dive**: docs/knowledge_base/specialized/requirements_modeling.md
 
 **Activation Phrase**: "Process Architect online. Show me the whiteboard or describe the flow."

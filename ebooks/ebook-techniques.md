@@ -177,6 +177,40 @@ Skill này tổng hợp **99+ kỹ thuật thực hành** được sử dụng t
 **Triết lý Fowler:**
 > "Chỉ dùng UML khi nó giúp giao tiếp hiệu quả hơn. Đừng vẽ diagram chỉ vì quy trình yêu cầu."
 
+### 4. Requirements Memory Jogger (Gottesdiener) — Quy Trình Yêu Cầu Thực Chiến
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                   GOTTESDIENER 4W+H MODEL                       │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│  WHO?  → Stakeholder Categories, Actor Table, Personas          │
+│  WHAT? → Context Diagram, Data Model, Dialog Map, Glossary      │
+│  WHEN? → Event-Response Table, State Diagram                    │
+│  WHY?  → Business Policies, Business Rules, Decision Tables     │
+│  HOW?  → Process Map, Use Cases, Scenarios, Activity Diagram    │
+│                                                                 │
+│  REQUIREMENTS LIFECYCLE:                                        │
+│  ══════════════════════                                         │
+│  Set Stage → Elicit → Analyze → Specify → Validate → Manage   │
+│                                                                 │
+│  KEY OUTPUTS:                                                   │
+│  ════════════                                                   │
+│  • Vision Statement (For/Who/The/Is/That/Unlike)               │
+│  • 15 Analysis Models (linked via 4W+H)                        │
+│  • SRS/URD Document Templates                                  │
+│  • Requirements Trace Matrix (Forward + Backward)              │
+│  • Change Control Process & CCB                                 │
+│  • Risk-Driven vs Change-Driven Calibration                    │
+│                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+**Triết lý Gottesdiener:**
+> "No single analysis model describes all requirements. Elements of one model link to and uncover elements in another."
+
+> **Chi tiết đầy đủ**: Xem EBOOK-05 — `ebook-requirements-memory-jogger.md`
+
 ---
 
 ## 📋 TECHNIQUE SELECTION MATRIX
@@ -185,12 +219,17 @@ Skill này tổng hợp **99+ kỹ thuật thực hành** được sử dụng t
 |---------|------------------|
 | Hiểu bối cảnh kinh doanh | PESTLE, SWOT, Business Model Canvas |
 | Thu thập yêu cầu từ SME | Interview, Workshop, Observation |
-| Mô tả luồng nghiệp vụ | BPMN, Activity Diagram, Swimlanes |
+| Mô tả luồng nghiệp vụ | BPMN, Activity Diagram, Swimlanes, Process Map |
 | Mô tả dữ liệu | ERD, Class Diagram, Data Dictionary |
 | Mô tả tương tác hệ thống | Use Case Diagram, Sequence Diagram |
-| Mô tả trạng thái | State Machine Diagram |
-| Mô tả logic quyết định | Decision Table, Decision Tree |
-| Ưu tiên yêu cầu | MoSCoW, RICE, WSJF |
+| Mô tả trạng thái | State Machine Diagram, State-Data Matrix |
+| Mô tả logic quyết định | Decision Table, Decision Tree, Business Rules Catalog |
+| Ưu tiên yêu cầu | MoSCoW (20% rule), RICE, WSJF, Weighted Criteria Matrix |
+| Xác định tầm nhìn sản phẩm | Vision Statement (For/Who/The/Is/That/Unlike) |
+| Xác định ranh giới hệ thống | Context Diagram, Event-Response Table |
+| Quản lý thay đổi yêu cầu | RTM, Change Control Board, Requirements Attributes |
+| Validate yêu cầu | Peer Review, UAT, Model Validation, SRS Inspection Checklist |
+| Calibrate mức độ formal | Risk-Driven vs Change-Driven Matrix (Memory Jogger Ch.8) |
 
 ---
 
@@ -201,13 +240,17 @@ Skill này tổng hợp **99+ kỹ thuật thực hành** được sử dụng t
 - [ ] Đã tạo Traceability Matrix (Wiegers)?
 - [ ] Chỉ dùng UML khi thực sự cần (Fowler)?
 - [ ] Đã validate kết quả kỹ thuật với stakeholder?
+- [ ] Đã áp dụng 4W+H model để kiểm tra completeness (Gottesdiener)?
+- [ ] Đã loại bỏ ambiguous words (Appendix F)?
+- [ ] Đã xác định project type adaptation (New/Enhancement/COTS)?
 
 ---
 
 ## 🔗 KỸ NĂNG LIÊN QUAN
 
 | Để làm... | Tham khảo Skill |
-|-----------|-----------------|
+|-----------|-----------------| 
 | Nền tảng BA | EBOOK-01 (Fundamentals) |
 | Workshop facilitation | EBOOK-03 (Leadership) |
 | Kỹ thuật Agile | EBOOK-04 (Agile) |
+| Quy trình yêu cầu phần mềm | EBOOK-05 (Requirements Memory Jogger) |

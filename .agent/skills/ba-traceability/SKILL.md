@@ -59,8 +59,52 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 📊 Requirements Trace Matrix Patterns (Memory Jogger Ch.7)
+
+**Forward Tracing** (Requirements → Implementation):
+```
+Requirement → Design Component → Code Module → Test Case
+```
+
+**Backward Tracing** (Tests → Source):
+```
+Test Case → Code Module → Design Component → Requirement → Business Need
+```
+
+**RTM Template**:
+| Requirement | Use Case | Design | Code | Test | Status |
+|-------------|----------|--------|------|------|--------|
+| SCH-3.2 | UC1, UC3 | DE-436 | CVSC9897 | ACTSC421 | Approved |
+
+## 📋 Requirements Attributes Catalog (Memory Jogger)
+Track these attributes for every requirement:
+
+| Attribute | Purpose |
+|-----------|---------|
+| **Rationale** | Why this requirement exists |
+| **Priority** | Must / Should / Could / Won't |
+| **Status** | Proposed → Approved → Tested → Deferred → Rejected |
+| **Status Date** | Date of current status assignment |
+| **Owner** | Person responsible for verification |
+| **Source** | Origin (regulation, customer, derived) |
+| **Complexity** | High / Medium / Low |
+| **Volatility** | Likelihood of change during implementation |
+| **Supporting Material** | References to regulations, standards |
+
+## 🔄 Change Control Board (CCB) Setup (Memory Jogger)
+```
+Submit Change → Review Request → Decide (CCB) → Update Baseline
+                    │                  │
+                    ▼                  ▼
+               [Invalid:          [Reject →
+                Revise]           Record reason]
+```
+**CCB Rules**: <10 members, balance business+technical, clear decision process, document all decisions.
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-fundamentals.md (BABOK Requirements Lifecycle, PMI RTM)
-*   **Frameworks**: Requirements Traceability Matrix (RTM), Blast Radius Analysis, Change Control
+*   **Source**: ebook-fundamentals.md (BABOK Requirements Lifecycle, PMI RTM), ebook-requirements-memory-jogger.md (Gottesdiener — Requirements Management Ch.7, RTM, Change Control)
+*   **Frameworks**: Requirements Traceability Matrix (RTM), Blast Radius Analysis, Change Control, Requirements Attributes Catalog
 
 **Activation Phrase**: "Traceability Scan Initiated. Calculating Blast Radius."

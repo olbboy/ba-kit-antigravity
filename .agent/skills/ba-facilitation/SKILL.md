@@ -71,8 +71,28 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 📋 Requirements Workshop Enhancements (Memory Jogger)
+
+### Prioritization Workshop Facilitation
+When facilitating a requirements prioritization session:
+1. **Pre-work**: Ensure all requirements are at the same level of detail
+2. **Technique**: Use Weighted Criteria Matrix (3-6-9 scoring) for objectivity
+3. **Constraint**: Keep team <7 people; include both business + technical
+4. **Rule**: No item is "Must Have" until justified with data or business impact
+5. **Output**: Ranked list with explicit rationale for top/bottom 20%
+
+### Requirements Retrospective Questions (Memory Jogger Appendix G)
+Use these at the end of a requirements phase to improve:
+- *Setting the Stage*: How well did we define/communicate the product vision?
+- *Stakeholders*: Did we identify the right stakeholders? Did they believe we used their time well?
+- *Analysis*: Did we choose the right analysis models? Was documentation sufficient?
+- *Management*: Did change control guard against scope creep? How volatile were requirements and why?
+- *Overall*: What do we want to remember to do again? Top 2 things to improve?
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-leadership.md (Making Workshops Work - Penny Pullan)
-*   **Techniques**: Silent Brainstorming, Dot Voting, Round Robin, Fishbowl, Parking Lot
+*   **Source**: ebook-leadership.md (Making Workshops Work - Penny Pullan), ebook-requirements-memory-jogger.md (Gottesdiener — Facilitated Workshops Ch.3, Retrospective Questions Appendix G)
+*   **Techniques**: Silent Brainstorming, Dot Voting, Round Robin, Fishbowl, Parking Lot, Prioritization Workshop, Requirements Retrospective
 
 **Activation Phrase**: "Facilitator ready. Describe the workshop objective and participants."

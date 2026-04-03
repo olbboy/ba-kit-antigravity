@@ -1,6 +1,6 @@
 # 📚 eBook Knowledge Base — Agent Skills
 
-Thư mục này chứa **6 Agent Skills** được tổng hợp từ **16 cuốn sách kinh điển** về Business Analysis.
+Thư mục này chứa **7 Agent Skills** được tổng hợp từ **17 cuốn sách kinh điển** về Business Analysis.
 
 ---
 
@@ -14,6 +14,7 @@ Thư mục này chứa **6 Agent Skills** được tổng hợp từ **16 cuốn
 | **Agile BA** | [ebook-agile.md](ebook-agile.md) | Business Analysis Agility (Robertson & Robertson) |
 | **Systems Thinking** | [ebook-systems-thinking.md](ebook-systems-thinking.md) | Thinking in Systems (Donella Meadows) |
 | **Career Development** | [ebook-career.md](ebook-career.md) | Value-Driven BA (Brandenburg), How to Start (Brandenburg), Seven Steps (Carkenord) |
+| **Requirements Engineering** | [ebook-requirements-memory-jogger.md](ebook-requirements-memory-jogger.md) | The Software Requirements Memory Jogger (Gottesdiener) |
 
 ---
 
@@ -33,7 +34,7 @@ Thư mục này chứa **6 Agent Skills** được tổng hợp từ **16 cuốn
 
 ---
 
-## 📚 Nguồn Sách Gốc (16 cuốn)
+## 📚 Nguồn Sách Gốc (17 cuốn)
 
 1. Business Analysis For Dummies — Kupe Kupersmith, Paul Mulvey, Kate McGoey
 2. Business Analysis Techniques: 99 Essential Tools for Success — Debra Paul, James Cadle, Paul Turner
@@ -51,20 +52,28 @@ Thư mục này chứa **6 Agent Skills** được tổng hợp từ **16 cuốn
 14. Business Analysis (Fourth Edition) — Debra Paul và cộng sự (BCS)
 15. How to Start a Business Analyst Career — Laura Brandenburg
 16. Business Analysis for Practitioners: A Practice Guide — PMI
+17. The Software Requirements Memory Jogger — Ellen Gottesdiener
 
 ---
 
 ## 🔗 Tích Hợp Agent Skills (v2.7)
 
-Kiến thức từ eBooks đã được tích hợp vào **4 Agent Skills mới**:
+Kiến thức từ eBooks đã được tích hợp vào **15 Agent Skills**:
 
 | Agent Skill | Nguồn eBook | Vị trí |
 |-------------|-------------|--------|
-| `@ba-strategy` | ebook-fundamentals, ebook-techniques | [.agent/skills/ba-strategy/](../.agent/skills/ba-strategy/) |
-| `@ba-facilitation` | ebook-leadership | [.agent/skills/ba-facilitation/](../.agent/skills/ba-facilitation/) |
-| `@ba-systems` | ebook-systems-thinking | [.agent/skills/ba-systems/](../.agent/skills/ba-systems/) |
-| `@ba-agile` | ebook-agile | [.agent/skills/ba-agile/](../.agent/skills/ba-agile/) |
+| `@ba-strategy` | ebook-fundamentals, ebook-techniques, ebook-requirements-memory-jogger | [.agent/skills/ba-strategy/](../.agent/skills/ba-strategy/) |
+| `@ba-facilitation` | ebook-leadership, ebook-requirements-memory-jogger | [.agent/skills/ba-facilitation/](../.agent/skills/ba-facilitation/) |
+| `@ba-systems` | ebook-systems-thinking, ebook-requirements-memory-jogger | [.agent/skills/ba-systems/](../.agent/skills/ba-systems/) |
+| `@ba-agile` | ebook-agile, ebook-requirements-memory-jogger | [.agent/skills/ba-agile/](../.agent/skills/ba-agile/) |
+| `@ba-elicitation` | ebook-fundamentals, ebook-techniques, ebook-requirements-memory-jogger | [.agent/skills/ba-elicitation/](../.agent/skills/ba-elicitation/) |
+| `@ba-writing` | ebook-fundamentals, ebook-techniques, ebook-requirements-memory-jogger | [.agent/skills/ba-writing/](../.agent/skills/ba-writing/) |
+| `@ba-validation` | ebook-fundamentals, ebook-techniques, ebook-requirements-memory-jogger | [.agent/skills/ba-validation/](../.agent/skills/ba-validation/) |
+| `@ba-prioritization` | ebook-fundamentals, ebook-techniques, ebook-requirements-memory-jogger | [.agent/skills/ba-prioritization/](../.agent/skills/ba-prioritization/) |
+| `@ba-traceability` | ebook-fundamentals, ebook-requirements-memory-jogger | [.agent/skills/ba-traceability/](../.agent/skills/ba-traceability/) |
+| `@ba-process` | ebook-techniques, ebook-fundamentals, ebook-requirements-memory-jogger | [.agent/skills/ba-process/](../.agent/skills/ba-process/) |
+| `@ba-nfr` | ebook-techniques, ebook-requirements-memory-jogger | [.agent/skills/ba-nfr/](../.agent/skills/ba-nfr/) |
 
 ---
 
-*Được tạo bởi BA-Kit v2.7.0 — Antigravity Agent Skills Framework*
+*Được tạo bởi BA-Kit v2.8.0 — Antigravity Agent Skills Framework (Memory Jogger Edition)*

@@ -60,8 +60,44 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 📊 Weighted Criteria Matrix (Memory Jogger — 3-6-9 Scoring)
+
+**Steps**:
+1. Organize requirements at the same level of detail
+2. Assemble stakeholder team (<7 people)
+3. Identify criteria (value, cost, risk, time-to-market)
+4. Weight criteria via pairwise comparison
+5. Score requirements: **3** = Weak, **6** = Medium, **9** = Strong
+6. Calculate weighted total → sort descending → delivery order
+
+## 📐 Value/Cost/Risk Formula (Memory Jogger)
+```
+Priority = Value% (Benefit + Penalty) / (Cost% + Risk%)
+```
+- **Benefit**: Gain from implementing
+- **Penalty**: Loss from NOT implementing
+- Sort descending — highest priority first
+
+## ⚖️ MoSCoW with 20% Rule (Memory Jogger)
+| Rank | Meaning | **Hard Constraint** |
+|------|---------|:---:|
+| **Must** | Product unusable without it | Max 20% of total |
+| **Should** | Important, significant loss without it | Max 20% |
+| **Could** | Nice-to-have, can postpone | Max 20% |
+| **Won't** | Not this release | Remainder |
+
+> **Rule**: If more than 20% of requirements are "Must Have", challenge and re-prioritize.
+
+## 📦 Requirements Dependencies Table
+Before finalizing priority order, identify dependencies:
+| Requirement | Depends On | Blocks | Implication |
+|-------------|-----------|--------|------------|
+| FR-003 | FR-001 | FR-007 | Must implement FR-001 first |
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-fundamentals.md (BABOK Requirements Lifecycle), ebook-techniques.md (99 Tools - Prioritization)
-*   **Frameworks**: MoSCoW, RICE, WSJF, Kano Model
+*   **Source**: ebook-fundamentals.md (BABOK Requirements Lifecycle), ebook-techniques.md (99 Tools - Prioritization), ebook-requirements-memory-jogger.md (Gottesdiener — Prioritized Requirements Ch.4)
+*   **Frameworks**: MoSCoW, RICE, WSJF, Kano Model, Weighted Criteria Matrix, Value/Cost/Risk Formula
 
 **Activation Phrase**: "Prioritization Engine ready. Send me the backlog."

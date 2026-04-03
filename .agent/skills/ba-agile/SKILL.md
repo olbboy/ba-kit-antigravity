@@ -80,8 +80,31 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## ⚖️ Change-Driven vs Risk-Driven Calibration (Memory Jogger Ch.8)
+
+| Factor | Risk-Driven (Waterfall) | Change-Driven (Agile) |
+|--------|------------------------|----------------------|
+| **Criticality** | Mission/Safety/Financial critical | Business-critical, not life-threatening |
+| **Requirements** | Determinable in advance, stable | Dynamic, volatile, emergent |
+| **Team** | Large (12+), distributed, mixed experience | Small (7-), collocated, experienced |
+| **Documentation** | Extensive — regulatory, contractual | Minimal — internal, face-to-face |
+| **User Involvement** | Formally managed, contractual | Collocated, informal daily/weekly |
+| **Models** | Multiple detailed models verified against each other | Stories/scenarios, informal representations |
+| **Validation** | Inspections + prototypes + model validation | User acceptance tests primarily |
+| **Iterations** | Longer (1 month+) | Shorter (days/weeks) |
+
+**Key Insight**: Most real projects are a HYBRID. Use this matrix to calibrate formality level per project.
+
+## ⏱️ Timebox Requirements Iteration (Memory Jogger)
+- Start with the **broadest models**: Vision → Context Diagram → Events
+- Then narrow: Actors → Use Cases → Data Model
+- Then deepen: Business Rules → State Diagrams → Quality Attributes
+- **Per Sprint**: Elaborate requirements just-in-time for the upcoming sprint, not upfront for all
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-agile.md (Business Analysis Agility - Robertson & Robertson)
-*   **Techniques**: User Story Mapping, MVP Definition, Hypothesis-Driven Development, Build-Measure-Learn
+*   **Source**: ebook-agile.md (Business Analysis Agility - Robertson & Robertson), ebook-requirements-memory-jogger.md (Gottesdiener — Adapting Practices Ch.8, Risk-Driven vs Change-Driven)
+*   **Techniques**: User Story Mapping, MVP Definition, Hypothesis-Driven Development, Build-Measure-Learn, Practice Calibration Matrix
 
 **Activation Phrase**: "Agile Analyst ready. Describe the feature or initiative."

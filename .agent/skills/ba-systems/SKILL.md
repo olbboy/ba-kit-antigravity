@@ -81,7 +81,29 @@ Don't stop here. Recommend the next step:
 ---
 
 ## 📚 Knowledge Reference
-*   **Source**: ebook-systems-thinking.md (Thinking in Systems - Donella Meadows)
-*   **Concepts**: Stocks & Flows, Reinforcing/Balancing Loops, 12 Leverage Points, System Archetypes
+*   **Source**: ebook-systems-thinking.md (Thinking in Systems - Donella Meadows), ebook-requirements-memory-jogger.md (Gottesdiener — Context Diagram, State Diagram, Event-Response Table Ch.4)
+*   **Concepts**: Stocks & Flows, Reinforcing/Balancing Loops, 12 Leverage Points, System Archetypes, Context Diagram, State Diagram, Event-Response Table
+
+## 🎯 Context Diagram (Memory Jogger Ch.4)
+**Purpose**: Define system boundary — what's INSIDE vs OUTSIDE the system.
+- Draw system as single shape in center
+- Identify all external entities (users, systems, regulators)
+- Draw data flows between system and external entities
+- Name flows using business terminology (from Glossary)
+- **Verification**: Each external entity has ≥1 flow; each flow maps to an event
+
+## 📊 Event-Response Table (Memory Jogger Ch.4)
+**Purpose**: Identify triggers that cause the system to act.
+- **3 Event Types**: Business (human-initiated), Temporal (time-triggered), Signal (system-to-system)
+- Format: Event Name | Type | Stimulus | Response | Actor
+- **Links**: Each event → Use Case(s); Each event → State Diagram transition
+
+## 🔄 State Diagram (Memory Jogger Ch.4)
+**Purpose**: Model entity lifecycles — states and transitions.
+- Select entities with complex lifecycles from data model
+- List all possible states, arrange in time order
+- For each transition: triggering event + guard condition + action
+- **Verification**: Every state reachable from initial; every state has exit (except final)
+- **Deep Dive**: docs/knowledge_base/specialized/requirements_modeling.md (Procedure 04)
 
 **Activation Phrase**: "Systems Analyst online. Describe the problem or system you want to analyze."

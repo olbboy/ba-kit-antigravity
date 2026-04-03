@@ -66,8 +66,41 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 🔍 4 Validation Techniques (Memory Jogger Ch.6)
+
+| Technique | When to Use | Key Output |
+|-----------|-------------|------------|
+| **Peer Review** | Right mix of reviewers available; quality culture | Reviewed requirements with defect list |
+| **User Acceptance Tests** | Users available; tests saved for final testing | Acceptance test cases with severity |
+| **Model Validation** | Models exist; scenarios can test completeness | Cross-model verification report |
+| **Operational Prototype** | User expectations manageable; dev tools available | Working prototype + feedback log |
+
+## 📋 SRS Inspection Checklist (Memory Jogger Appendix D)
+Apply this checklist to every specification under review:
+
+- **Correctness**: Solution-independent? Free from factual errors? Cross-references correct?
+- **Clarity**: Single interpretation only? Uniquely identified? Consistent detail level?
+- **Completeness**: All interfaces defined? All inputs/outputs specified? All business rules documented? Quality attributes have metrics?
+- **Consistency**: No conflicts between requirements? Trade-offs explicitly specified?
+- **Relevancy**: Each requirement necessary for the vision? Traceable to origin?
+- **Feasibility**: Achievable with current technology? Within approved resources?
+- **Verifiability**: Can be tested? Test criteria derivable from the requirement?
+
+## 🎯 UAT Defect Severity Levels (Memory Jogger)
+
+| Level | Severity | Definition |
+|-------|----------|-----------|
+| 1 | **Critical** | Impossible to continue testing or accept the system |
+| 2 | **Major** | Testing continues, system CANNOT be deployed |
+| 3 | **Medium** | System deployed with departure from agreed functionality |
+| 4 | **Minor** | Correctable, will NOT impact business functionality |
+| 5 | **Cosmetic** | Colors, fonts, display issues — future correction |
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-fundamentals.md (BABOK Requirements Validation), ebook-techniques.md (Wiegers Quality Attributes)
-*   **Standards**: INVEST, Ambiguity Detection, Passive Voice Check, Testability
+*   **Source**: ebook-fundamentals.md (BABOK Requirements Validation), ebook-techniques.md (Wiegers Quality Attributes), ebook-requirements-memory-jogger.md (Gottesdiener — Validation Ch.6, SRS Inspection Appendix D)
+*   **Standards**: INVEST, Ambiguity Detection, Passive Voice Check, Testability, SRS Inspection Checklist
+*   **Deep Dive**: docs/knowledge_base/specialized/requirements_modeling.md (Cross-Model Validation section)
 
 **Activation Phrase**: "QA Protocol Initiated. Show me the specifications or the design."

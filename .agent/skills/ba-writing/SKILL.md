@@ -69,8 +69,46 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 📐 SRS Functional Requirement Template (Memory Jogger)
+
+When writing software-level functional requirements, use this sentence pattern:
+```
+[<restriction>] <subject> <action verb> [<observable result>] [<qualifier>]
+
+Where:
+  [<restriction>]       = Condition ("When approved,", "If no contractor,")
+  <subject>             = "The system" or actor name
+  <action verb>         = Task being performed
+  [<observable result>] = Outcome the user can observe
+  [<qualifier>]         = Quality constraint ("within 3 seconds")
+```
+
+**Examples**:
+- ✅ "The system shall allow a scheduler to select services for the job."
+- ✅ "When approved, the system shall generate a dispatch ticket within 30 seconds."
+- ❌ "The system should handle jobs efficiently." (ambiguous!)
+
+## 📦 Feature → FR Hierarchy Pattern
+```
+FEATURE: Schedule Jobs
+├── FR-SCH-001: System shall display available time slots
+├── FR-SCH-002: System shall allow scheduler to select services
+├── FR-SCH-003: When contractor unavailable, system shall suggest alternatives
+└── FR-SCH-004: System shall send confirmation to customer within 60 seconds
+```
+
+**Continuance Patterns** (when decomposing): Use "below:", "as follows:", "following:" to link feature → FRs.
+
+## 🚫 Ambiguity Detection List (Memory Jogger Appendix F)
+**ALWAYS scan for these words and replace with testable metrics**:
+- **Forbidden**: adequate, appropriate, as quickly as possible, easy, efficient, fast, flexible, good, intuitive, lightweight, maximize, minimize, normal, optimal, quick, reasonable, robust, seamless, simple, sufficient, timely, transparent, user-friendly, TBD
+- **Fix pattern**: Replace with `<metric> <threshold> <measurement method>`
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-fundamentals.md (BABOK Requirements Analysis), ebook-techniques.md (Wiegers INVEST)
-*   **Techniques**: User Story Format, Gherkin/BDD, INVEST Criteria, Acceptance Criteria
+*   **Source**: ebook-fundamentals.md (BABOK Requirements Analysis), ebook-techniques.md (Wiegers INVEST), ebook-requirements-memory-jogger.md (Gottesdiener — SRS Template Ch.5, Ambiguity List Appendix F)
+*   **Techniques**: User Story Format, Gherkin/BDD, INVEST Criteria, Acceptance Criteria, FR Sentence Template, Feature Hierarchy
+*   **Deep Dive**: docs/knowledge_base/specialized/business_rules.md (for documenting business rules within specs)
 
 **Activation Phrase**: "I am ready. Provide the raw notes or upload a screenshot."

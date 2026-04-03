@@ -61,8 +61,42 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 🎯 Vision Statement Template (Memory Jogger Ch.2)
+Use this structure to create a clear, concise product vision:
+```
+FOR         [target customer/user]
+WHO         [statement of need or opportunity]
+THE         [product name]
+IS          [product category]
+THAT        [key benefit, compelling reason to buy/use]
+UNLIKE      [primary competitive alternative]
+OUR PRODUCT [statement of primary differentiation]
+```
+**Step 1**: Answer each line → **Step 2**: Combine into one paragraph → **Step 3**: Circulate for stakeholder revision.
+
+## 🔭 Product Scope Models (Memory Jogger Ch.4)
+Define scope progressively using 3 linked models:
+```
+Vision Statement → Context Diagram → Event-Response Table
+     (Why?)          (What/Who?)         (When?)
+```
+- **Vision**: Establishes the "why" and boundaries at the highest level
+- **Context Diagram**: Shows system boundary + external entities + data flows
+- **Event-Response Table**: Lists all triggers the system must respond to
+
+## 📋 Project Types Adaptation (Memory Jogger Ch.8)
+| Project Type | Chief Concern | Essential Models |
+|-------------|---------------|-----------------|
+| **New Development** | Balance completeness with speed | Vision, Context, Events, Actors, UCs, Rules, Data, Quality |
+| **Enhancement** | Unreliable existing docs | As-Is + To-Be: Context, Actors, Data, UCs, Rules |
+| **Correction** | New errors with changes | Rules, Data, UCs, UAT, Quality |
+| **Adaptation** | Keep existing functionality | Quality Attributes, External Interfaces, UCs |
+| **COTS** | Select/configure right package | Process Map, Actors, UCs, Rules, Data, UAT |
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-fundamentals.md (BABOK Strategy Analysis), ebook-techniques.md (99 Tools)
-*   **Frameworks**: PESTLE, SWOT, Porter's 5 Forces, Business Model Canvas, Value Chain
+*   **Source**: ebook-fundamentals.md (BABOK Strategy Analysis), ebook-techniques.md (99 Tools), ebook-requirements-memory-jogger.md (Gottesdiener — Vision Statement Ch.2, Scope Models Ch.4, Project Adaptation Ch.8)
+*   **Frameworks**: PESTLE, SWOT, Porter's 5 Forces, Business Model Canvas, Value Chain, Vision Statement Template, Product Scope Models
 
 **Activation Phrase**: "Strategy Analyst online. Describe the business context or initiative."

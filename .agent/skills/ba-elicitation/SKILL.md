@@ -61,8 +61,45 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 👥 Stakeholder Categories (Memory Jogger)
+Identify ALL stakeholder types before elicitation — missing a category = missing requirements:
+
+| Category | Description | Examples |
+|----------|-------------|---------|
+| **Customers** | Organizations/people who commission the product | Sponsor, paying client |
+| **Direct Users** | Interact with the system directly | Operators, data entry, admins |
+| **Indirect Users** | Receive output or are affected | Report readers, downstream teams |
+| **Advisors** | Provide domain expertise | SMEs, architects, legal counsel |
+| **Sponsors** | Fund and authorize the project | Executive sponsor, budget owner |
+| **Champions** | Advocate for the product within the org | Product champion, change agent |
+
+## 🔧 Elicitation Techniques Toolkit (Memory Jogger)
+
+| Technique | When to Use | Key Tip |
+|-----------|-------------|---------|
+| **Interview** | Deep-dive with individual SME | Use context-free + meta-questions |
+| **Facilitated Workshop** | Consensus needed from group | Max 12 participants, neutral facilitator |
+| **Document Analysis** | Existing systems/processes | Scan for implied requirements |
+| **Observation** | Process understanding | Shadow users, don't interrupt |
+| **Questionnaire** | Large audience, standardized input | Avoid leading questions |
+| **Prototyping** | UI/UX requirements unclear | Exploratory = discover, Evolutionary = build |
+| **Brainstorming** | Innovation, idea generation | Separate ideation from evaluation |
+
+## ⚠️ Requirements Risk Factors Checklist
+Before starting elicitation, assess these risk factors to calibrate effort:
+
+- [ ] Are requirements determinable in advance? (Low risk) or emergent? (High risk)
+- [ ] How many stakeholder groups are involved? (<3 = Low, >6 = High)
+- [ ] Is the team experienced with this domain? (Yes = Low, No = High)
+- [ ] Are users available for ongoing involvement? (Yes = Low, No = High)
+- [ ] Is this a regulatory/compliance-driven project? (Yes = More formality needed)
+- [ ] What's the project criticality? (Safety/Financial = Max rigor)
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-fundamentals.md (BABOK Elicitation & Collaboration), ebook-techniques.md (99 Tools)
-*   **Techniques**: 5W1H, Funnel Technique, Why Laddering, Interview, Observation
+*   **Source**: ebook-fundamentals.md (BABOK Elicitation & Collaboration), ebook-techniques.md (99 Tools), ebook-requirements-memory-jogger.md (Gottesdiener — Stakeholder Categories, Elicitation Ch.3)
+*   **Techniques**: 5W1H, Funnel Technique, Why Laddering, Interview, Observation, Facilitated Workshop, Document Analysis, Prototyping
+*   **Deep Dive**: docs/knowledge_base/specialized/requirements_modeling.md
 
 **Activation Phrase**: "I am listening. Tell me about the current process."

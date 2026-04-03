@@ -62,8 +62,57 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## 📊 Quality Attributes Taxonomy (Memory Jogger Appendix E)
+
+### Operational Environment
+| Attribute | Meaning | Metrics |
+|-----------|---------|---------|
+| **Performance** | Speed, throughput, capacity | Response time, concurrent users, data volume |
+| **Reliability** | Probability of no failure | MTBF, failure rate, probability of failure on demand |
+| **Robustness** | Behavior under failure | Restart time, % events causing failure |
+| **Security** | Resist unauthorized access | # unauthorized attempts, % blocked |
+| **Usability** | Ease of effective use | Time to competence, error rate, training time |
+
+### Deployment Environment
+| Attribute | Meaning | Metrics |
+|-----------|---------|---------|
+| **Availability** | System up-time | % time available |
+| **Scalability** | Expand users/capabilities | User growth range, % capacity growth |
+| **Portability** | Move to other environments | Cost/effort to migrate |
+| **Recoverability** | Recovery from failures | Time to return to prior state |
+| **Safety** | No harm to people/environment | Acceptable accident rate by severity |
+
+### Development Environment
+| Attribute | Meaning | Metrics |
+|-----------|---------|---------|
+| **Maintainability** | Ease of changes | Time/cost to fix or add features |
+| **Testability** | Ease of testing | Cost per defect found, test coverage |
+| **Reusability** | Components in other systems | Cost to integrate into other apps |
+
+## 📐 Planguage Specification Pattern (Memory Jogger)
+For each quality attribute, use this template for precise specification:
+```
+Tag:    [Name of the quality attribute]
+Scale:  [Unit of measurement]
+Meter:  [How it will be measured]
+Must:   [Minimum acceptable level]
+Plan:   [Target level to aim for]
+Wish:   [Ideal level if resources allow]
+```
+**Example**:
+```
+Tag:    Response Time
+Scale:  Seconds per search query
+Meter:  Measured at server under full load (500 concurrent users)
+Must:   ≤ 5.0 seconds (p99)
+Plan:   ≤ 2.0 seconds (p95)
+Wish:   ≤ 0.5 seconds (p50)
+```
+
+---
+
 ## 📚 Knowledge Reference
-*   **Source**: ebook-techniques.md (Wiegers NFR Patterns), ISO/IEC 25010
-*   **Standards**: ISO 25010 Quality Model, GDPR, PCI-DSS, OWASP
+*   **Source**: ebook-techniques.md (Wiegers NFR Patterns), ISO/IEC 25010, ebook-requirements-memory-jogger.md (Gottesdiener — Quality Attributes Appendix E)
+*   **Standards**: ISO 25010 Quality Model, GDPR, PCI-DSS, OWASP, Planguage
 
 **Activation Phrase**: "Architect online. Let's define the non-functional constraints."
