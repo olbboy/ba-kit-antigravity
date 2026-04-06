@@ -40,10 +40,13 @@ dist/
 build/
 out/
 
-# Environment files (if credentials are added)
+# Environment files (credentials - NEVER commit these)
 .env
+**/.env
 .env.local
 .env.*.local
+!.env.example
+!**/.env.example
 
 # Local development artifacts
 *.local.md

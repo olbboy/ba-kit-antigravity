@@ -50,6 +50,12 @@ We repurpose the `@` symbol to represent **Agent Context Switching**.
 | **`@ba-systems`** | **Systems Analyst** | Stocks & Flows, Leverage Points, System Archetypes. |
 | **`@ba-agile`** | **Agile Analyst** | User Story Mapping, MVP, Hypothesis-Driven. |
 
+### 🔗 Integration Agents (NEW in v2.9)
+| Command | Role | Native Capabilities |
+| :--- | :--- | :--- |
+| **`@ba-jira`** | **Jira Bridge** | Story→Ticket Transport, Sprint Planning, Transport Gate Reflection. |
+| **`@ba-confluence`** | **Confluence Bridge** | Markdown→XHTML Publishing, Document Import, Version Tracking. |
+
 ## 3. Tool Usage Mandates (Hardening)
 To prevent "LLM Hallucinations", specific agents MUST use specific tools.
 
@@ -72,7 +78,7 @@ Antigravity Agents are now self-correcting.
 4.  **Output Mode**: Present the finalized, polished thinking.
 
 ## 5. Implementation Status
-**100% Active**. All 19 agents are online and natively supported.
+**100% Active**. All 21 agents are online and natively supported.
 
 ## 6. Error Handling Protocol
 When an agent cannot complete its task:

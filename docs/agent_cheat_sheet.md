@@ -1,6 +1,6 @@
-# 📋 BA-Kit Agent Cheat Sheet (v2.7.0)
+# 📋 BA-Kit Agent Cheat Sheet (v2.9.0)
 
-> **Quick Reference Card: 19 Specialists at Your Fingertips**
+> **Quick Reference Card: 21 Specialists at Your Fingertips**
 
 ---
 
@@ -53,6 +53,14 @@
 
 ---
 
+## 🔗 THE CONNECTORS (Integration) — NEW in v2.9
+| Agent | Summon When | Example Prompt |
+| :--- | :--- | :--- |
+| **`@ba-jira`** | Publish to Jira | *"Create Jira tickets from these validated User Stories."* |
+| **`@ba-confluence`** | Publish to wiki | *"Publish this BRD to Confluence space PROJ."* |
+
+---
+
 ## ⚡ POWER COMBOS
 
 | Scenario | Chain | Result |
@@ -64,6 +72,9 @@
 | **Strategic Analysis** | `strategy` → `systems` → `elicitation` | Root Cause with Context |
 | **Agile Kickoff** | `agile` → `facilitation` → `writing` | Sprint-Ready Backlog |
 | **Workshop Success** | `facilitation` → `elicitation` → `prioritization` | Consensus Decisions |
+| **Jira Pipeline** | `writing` → `validation` → `jira` | Dev-Ready Tickets |
+| **Confluence Publish** | `writing` → `export` → `confluence` | Wiki Documentation |
+| **Full Pipeline** | `writing` → `validation` → `jira` + `confluence` | Tickets + Docs |
 
 ---
 

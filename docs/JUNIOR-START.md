@@ -1,6 +1,29 @@
 # BA-Kit: Hướng Dẫn Cho BA Mới (Junior Quick Start)
 
 > Bạn mới vào team? Đừng lo — đây là tất cả những gì bạn cần để bắt đầu ngay hôm nay.
+> BA-Kit chạy trên **3 nền tảng agentic chính / 3 primary agentic platforms**:
+> - **Antigravity IDE** (Google DeepMind) — full experience, cho Technical BA
+> - **Claude Code** (Anthropic) — agentic CLI, cho BA + DevOps
+> - **Claude CoWork** (Anthropic) — desktop app dễ dùng nhất, cho BA truyền thống
+> *Choose the platform that matches your skill level. See `docs/ai-foundation-for-ba.md` Section 1.4 for guidance.*
+
+---
+
+## Tuần 0: Nền Tảng AI ★ Bắt Buộc (AI Foundation ★ Required)
+
+> 📖 Đọc `docs/ai-foundation-for-ba.md` trước khi bắt đầu.
+> *Read `docs/ai-foundation-for-ba.md` before starting.*
+
+### Checklist trước khi dùng BA-Kit / Pre-requisites:
+- [ ] Hiểu LLM là gì và tại sao AI hallucinate / Understand LLMs and hallucinations
+- [ ] Hiểu Tokens và Context Window / Understand Tokens and Context Window
+- [ ] Hiểu tại sao Multi-Agent tốt hơn Single Chatbot / Understand Multi-Agent vs Single Chatbot
+- [ ] Biết RAG và MCP là gì (BA-Kit dùng cả hai) / Know what RAG and MCP are
+- [ ] Đọc qua CONTINUITY.md template / Review the CONTINUITY.md template
+- [ ] Nắm được dữ liệu nào KHÔNG được đưa vào AI / Know what data NOT to share with AI
+- [ ] Đọc `docs/ai-tools-guide.md` để biết khi nào dùng tool nào / Read the AI Tools Guide
+
+**Thời gian:** 2-3 giờ tự học / **Time:** 2-3 hours self-study
 
 ---
 

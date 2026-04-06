@@ -62,6 +62,12 @@ When activated via `@ba-master` or asked to "coordinate", perform the following 
 | "Data dictionary", "ETL", "Data warehouse", "Reporting" | `@ba-writing` | `@ba-nfr` |
 | "Communication plan", "Status report", "Stakeholder update" | `@ba-identity` | `@ba-facilitation` |
 | "Business rule", "Policy", "Constraint", "Authorization" | `@ba-writing` | `@ba-validation` |
+| "Jira", "ticket", "sprint", "backlog", "create issue" | `@ba-jira` | `@ba-writing` |
+| "Confluence", "publish page", "wiki", "knowledge base" | `@ba-confluence` | `@ba-export` |
+| "sync Jira", "update tickets", "import from Jira" | `@ba-jira` | `@ba-validation` |
+| "Figma", "mockup", "wireframe", "screenshot" | `@ba-writing` (Visual Scan) | `@ba-validation` |
+| "Cursor", "Lovable", "vibe coding", "generate code" | `@ba-validation` (Review) | `@ba-nfr` |
+| "AI tool", "which tool", "ChatGPT vs" | Recommend `docs/ai-tools-guide.md` | |
 | (Unrecognized intent) | `@ba-elicitation` | `@ba-master` |
 
 ### 2. Reflection Mode (System 2: The Strategist)
@@ -119,6 +125,12 @@ After each agent completes, return to ba-master for the next step:
 | **@ba-facilitation** | Workshop Design & Facilitation | Pullan (Making Workshops Work) |
 | **@ba-systems** | Systems Thinking & Leverage Points | Meadows (Thinking in Systems) |
 | **@ba-agile** | User Story Mapping, MVP, Hypothesis | Robertson (BA Agility) |
+
+### Integration Skills (NEW in v2.9)
+| Agent | Proficiency | Connector |
+| :--- | :--- | :--- |
+| **@ba-jira** | BA→Jira Transport, Story→Ticket, Sprint Planning | jira-connector |
+| **@ba-confluence** | BA→Confluence Publishing, Markdown→XHTML, Doc Import | confluence-connector |
 
 ---
 

@@ -9,19 +9,19 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-2.8-blue?style=for-the-badge" alt="Version 2.8">
-  <img src="https://img.shields.io/badge/Agents-19-green?style=for-the-badge" alt="19 Agents">
+  <img src="https://img.shields.io/badge/Version-2.9-blue?style=for-the-badge" alt="Version 2.9">
+  <img src="https://img.shields.io/badge/Agents-21-green?style=for-the-badge" alt="21 Agents">
   <img src="https://img.shields.io/badge/Protocol-Antigravity%20Native-orange?style=for-the-badge" alt="Antigravity Native">
   <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205%20Enabler-purple?style=for-the-badge" alt="CMMI Level 5 Enabler">
   <img src="https://img.shields.io/badge/Knowledge-786%20Entries-teal?style=for-the-badge" alt="786 Knowledge Entries">
+  <img src="https://img.shields.io/badge/Integration-Jira%20%2B%20Confluence-blue?style=for-the-badge" alt="Jira + Confluence">
 </p>
 
 <h1 align="center">🏆 BA-Kit (Antigravity Edition)</h1>
 <h3 align="center">The Cognitive Squad for Requirements Engineering</h3>
 
-<p align="center">
-  <strong>Transform your AI into a World-Class Business Analysis Team</strong><br>
-  19 Self-Correcting Specialists • System 2 Reflection • eBook-Powered Knowledge
+  <strong>21 Agent Specialists for Requirements Engineering</strong><br>
+  System 2 Reflection • Multi-Platform (Antigravity • Claude Code • Claude CoWork)
 </p>
 
 
@@ -29,14 +29,16 @@
 
 ## 🎯 What is BA-Kit?
 
-BA-Kit is not just a library of prompts; it is a **Cognitive Squad** designed for the **Antigravity Native Protocol (ANP)**.
+BA-Kit is not a library of prompts. It is an **agent squad** for **agentic AI platforms**.
 
-It replaces the "Single Chatbot" paradigm with a **Team of 19 Specialists**:
-*   Need a User Story? Summon **`@ba-writing`**.
-*   Need strategic context? Summon **`@ba-strategy`**.
-*   Need to run a workshop? Summon **`@ba-facilitation`**.
+It replaces the single-chatbot approach with **21 specialists** running on:
+*   **Antigravity IDE** (Google DeepMind) — Agent Skills, MCP, System 2
+*   **Claude Code** (Anthropic) — CLI: project-level reasoning, CI/CD, Git
+*   **Claude CoWork** (Anthropic) — Desktop: non-technical BA, document synthesis
 
-Each agent is equipped with **System 2 Thinking** (Reflective Loops) to "Stop & Think" before answering, ensuring hallucination-free High Assurance results.
+Summon specialists: `@ba-writing` for specs, `@ba-strategy` for context, `@ba-facilitation` for workshops.
+
+Each agent uses **System 2 Thinking** (Reflective Loops) — self-critique before responding to reduce hallucination.
 
 ---
 
@@ -81,6 +83,12 @@ Each agent is equipped with **System 2 Thinking** (Reflective Loops) to "Stop & 
 | **`@ba-systems`** | Systems Analyst | Stocks & Flows, Leverage Points, System Archetypes. |
 | **`@ba-agile`** | Agile Analyst | User Story Mapping, MVP Definition, Hypothesis-Driven. |
 
+### 🔗 Integration Agents (NEW in v2.9)
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`@ba-jira`** | Jira Bridge | Story→Ticket Transport, Sprint Planning, Transport Gate Reflection. |
+| **`@ba-confluence`** | Confluence Bridge | Markdown→XHTML Publishing, Document Import, Version Tracking. |
+
 ---
 
 ## 🚀 Quick Start (Antigravity Native)
@@ -122,9 +130,13 @@ All agents now follow a **Reflective Cognitive Loop**:
 ```
 ba-kit/
 │
-├── .agent/skills/              # 🤖 The Brains (19 Agent Skills)
+├── .agent/skills/              # 🤖 The Brains (21 Agent Skills)
+├── .agent/skills/ba-jira/      # 🔗 Jira Integration Bridge (NEW)
+├── .agent/skills/ba-confluence/ # 🔗 Confluence Integration Bridge (NEW)
 ├── ebooks/                     # 📚 eBook Knowledge Base (6 Synthesized Skills)
 ├── docs/knowledge_base/        # 📖 The Knowledge (Core & Specialized)
+├── docs/ai-foundation-for-ba.md # 🧠 AI Foundation for BAs (NEW)
+├── docs/ai-tools-guide.md      # 🛠️ Multi-Tool Guide (NEW)
 ├── templates/                  # 🟢 Templates (BRD, SRS, User Stories)
 ├── .agent/scripts/             # 🔍 BM25+ Knowledge Search Engine
 ├── .agent/data/                # 📊 786 Indexed Knowledge Entries (23 domains)

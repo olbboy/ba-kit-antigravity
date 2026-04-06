@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.9.0] - 2026-04-06
+
+### 🔗 The Integration & Foundation Update
+*   **2 New Integration Agents**: `@ba-jira` (BA→Jira Transport Bridge with Transport Gate reflection) and `@ba-confluence` (BA→Confluence Publishing Bridge with Publishing Gate reflection). Squad now has **21 agents**.
+*   **Multi-Platform Support**: BA-Kit now officially supports 3 agentic platforms: **Antigravity IDE** (primary), **Claude Code** (developer CLI), and **Claude CoWork** (non-technical desktop). Platform comparison tables and recommendation matrix added.
+*   **Transport Gate Pattern**: New System 2 reflection variant — focuses on "deployment safety" (duplicate detection, field completeness, format correctness) rather than content quality.
+*   **AI Foundation Module**: New `docs/ai-foundation-for-ba.md` — bilingual (Vi/En) educational document covering LLM, Tokens, Context Window, AI Agents, RAG, MCP, the 3 Platforms (Antigravity/Claude Code/Claude CoWork), Prompt Thinking, Security.
+*   **AI Tools Guide**: New `docs/ai-tools-guide.md` — decision matrix for 9 tools across 3 platforms, input/output adapters (including Claude Code reverse engineering and Claude CoWork document synthesis), 6 multi-tool/multi-platform workflow recipes.
+*   **Junior BA Week 0**: Added AI Foundation prerequisite to onboarding path with 3-platform choice guidance.
+*   **Security**: `.env` files added to `.gitignore`. 3-platform security comparison table in Foundation doc.
+*   **ba-master Routing**: 6 new routing rules for Jira, Confluence, Figma, vibe coding, and AI tool selection.
+*   **6 New COOKBOOK Scenarios**: Jira Pipeline (#18), Confluence Publisher (#19), Multi-Tool Pipeline (#20) + Claude Code Reverse Engineering, Claude CoWork Synthesis, Multi-Platform CI.
+*   **New Power Combos**: Jira Pipeline, Confluence Publish, Full Pipeline chains added to cheat sheet.
+
 ## [2.8.0] - 2026-04-03
 
 ### 🔍 The Knowledge Engine & Completion Update

@@ -217,3 +217,45 @@ Each recipe shows exactly which agents to summon (`@`) and in what order to achi
 3.  **`@ba-traceability`**: "Calculate blast radius — which requirements are affected?"
 4.  **`@ba-prioritization`**: "Re-prioritize the backlog given the new strategic direction."
 5.  **`@ba-facilitation`**: "Plan a stakeholder workshop to communicate the pivot."
+
+---
+
+## 🔗 SCENARIO 18: The "Jira Pipeline" (BA → PM) (New in v2.9)
+**Context**: You have validated User Stories and need them in Jira for sprint planning.
+**Goal**: Publish BA artifacts to Jira with zero data loss.
+
+**The Chain:**
+1.  **`@ba-writing`**: "Write User Stories for the Login feature with Gherkin AC."
+2.  **`@ba-validation`**: "Review these stories. Ensure Health Score ≥ 80."
+3.  **`@ba-jira`**: "Create Jira tickets in project PROJ from these validated stories. Set priority based on MoSCoW."
+    *   *(Agent runs Transport Gate: duplicate check, field completeness, format validation)*
+4.  **`@ba-jira`**: "Assign these tickets to Sprint 5. Set story points based on estimates."
+
+---
+
+## 📚 SCENARIO 19: The "Confluence Publisher" (Docs → Wiki) (New in v2.9)
+**Context**: BRD/SRS is ready. Team needs it on Confluence for stakeholder review.
+**Goal**: Publish polished docs to Confluence with proper formatting and hierarchy.
+
+**The Chain:**
+1.  **`@ba-writing`**: "Draft the SRS for the Payment module."
+2.  **`@ba-validation`**: "Validate spec quality. Ensure no placeholder markers remain."
+3.  **`@ba-export`**: "Final formatting check. Verify all cross-references are valid."
+4.  **`@ba-confluence`**: "Publish to Confluence space PROJ under parent page 'Technical Specs'. Add labels: srs, payment, v2.0."
+    *   *(Agent runs Publishing Gate: duplicate page check, XHTML validation, version conflict check)*
+
+---
+
+## 🌐 SCENARIO 20: The "Multi-Tool Pipeline" (New in v2.9)
+**Context**: Design team has Figma mockups. Need to turn them into validated specs, Jira tickets, and Confluence docs.
+**Goal**: Full design-to-delivery pipeline using multiple tools.
+
+**The Chain:**
+1.  **[Figma/v0]**: Design the Payment screen UI.
+2.  **`@ba-writing`**: "(Upload screenshot) Scan this UI. Extract Field Specs, buttons, validation rules."
+3.  **`@ba-nfr`**: "Define WCAG accessibility and performance constraints for the extracted elements."
+4.  **`@ba-validation`**: "Review specs against INVEST criteria. Health Score target: 85+."
+5.  **`@ba-jira`**: "Create Jira tickets from validated specs in project PROJ."
+6.  **`@ba-confluence`**: "Publish the full spec document to Confluence."
+7.  **[Cursor/Lovable]**: Implement from validated specs + Jira tickets.
+8.  **`@ba-validation`**: "Review generated code against original specs. Flag deviations."

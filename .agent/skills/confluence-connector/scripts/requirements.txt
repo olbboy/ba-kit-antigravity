@@ -1,0 +1,2 @@
+# No external dependencies — all scripts use Python stdlib only
+# (urllib, json, ssl, argparse, etc.)
