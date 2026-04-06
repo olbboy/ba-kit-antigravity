@@ -4,7 +4,7 @@
   <img src="assets/logo.png?v=2.7.0" alt="BA-Kit Logo" width="150">
 </p>
 
-> **The Cognitive Squad (Antigravity Native)**
+> **The Agent Squad (Antigravity Native)**
 > 21 Interconnected Specialists • System 2 Reflection • eBook-Powered Knowledge • Atlassian Integration
 
 ---

@@ -87,7 +87,7 @@
 
 ---
 
-*Print this page. Pin it to your monitor. Conquer the world.*
+*Print this page. Pin it next to your monitor.*
 
 ---
 

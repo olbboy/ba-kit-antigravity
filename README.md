@@ -18,7 +18,7 @@
 </p>
 
 <h1 align="center">🏆 BA-Kit (Antigravity Edition)</h1>
-<h3 align="center">The Cognitive Squad for Requirements Engineering</h3>
+<h3 align="center">Agent Squad for Requirements Engineering</h3>
 
   <strong>21 Agent Specialists for Requirements Engineering</strong><br>
   System 2 Reflection • Multi-Platform (Antigravity • Claude Code • Claude CoWork)

@@ -134,4 +134,4 @@ EXPERT
 | `templates/` | Template sẵn dùng cho mọi deliverable |
 | `python3 .agent/scripts/ba_search.py "keyword"` | Tìm kiếm trong knowledge base |
 
-> **Nhớ nhé:** BA giỏi không phải người biết nhiều — mà là người hỏi đúng câu hỏi.
+> BA giỏi không phải người biết nhiều — mà là người hỏi đúng câu hỏi.
