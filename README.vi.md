@@ -137,7 +137,7 @@ ba-kit/
 ├── docs/knowledge_base/        # 📖 Kho Tri thức
 ├── templates/                  # 🟢 Templates (BRD, SRS, User Stories)
 ├── docs/                       # 📘 Tài liệu Giao thức
-│   └── ANTIGRAVITY_PROTOCOL.md #    Đặc tả Kỹ thuật
+│   └── antigravity-protocol.md #    Đặc tả Kỹ thuật
 └── README.md                   # 📄 File này
 ```
 

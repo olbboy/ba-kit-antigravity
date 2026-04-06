@@ -1,4 +1,4 @@
-# 🟢 SKILL-12: COMMUNICATION PLAN TEMPLATE
+# Communication Plan Template
 ## Template Skill - Stakeholder Communication Plan
 
 ---

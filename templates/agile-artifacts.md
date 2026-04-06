@@ -1,4 +1,4 @@
-# 🟢 SKILL-12: AGILE ARTIFACTS
+# Agile Artifacts Template
 ## Template Skill - User Stories, Use Cases, Epics
 
 ---

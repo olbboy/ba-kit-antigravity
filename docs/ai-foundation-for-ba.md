@@ -494,7 +494,7 @@ WEEK 3-4: Chọn nền tảng & cài BA-Kit / Choose platform & install BA-Kit
    Technical BA → Antigravity (full experience)
    Non-technical BA → Claude CoWork (dễ dùng nhất)
    DevOps BA → Claude Code (CI/CD power)
-   BA-Kit Junior Start (docs/JUNIOR-START.md)
+   BA-Kit Junior Start (docs/junior-start.md)
    @ba-elicitation → @ba-writing → @ba-validation
    ↓
 MONTH 2: BA-Kit full squad orchestration

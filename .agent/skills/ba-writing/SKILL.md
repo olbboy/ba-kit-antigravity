@@ -118,9 +118,9 @@ Before drafting, search for relevant knowledge:
 *   Use search results to ground your output in verified frameworks and templates.
 
 ## 📄 Templates
-*   **BRD**: `templates/brd_template.md` — Business Requirements Document
-*   **SRS**: `templates/srs_template.md` — Software Requirements Specification (IEEE 29148)
-*   **FRD**: `templates/frd_template.md` — Functional Requirements Document
+*   **BRD**: `templates/brd-template.md` — Business Requirements Document
+*   **SRS**: `templates/srs-template.md` — Software Requirements Specification (IEEE 29148)
+*   **FRD**: `templates/frd-template.md` — Functional Requirements Document
 *   **Use Case**: `templates/use-case-template.md` — Use Case Specification
 
 ## 📚 Knowledge Reference

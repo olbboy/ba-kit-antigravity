@@ -116,7 +116,7 @@
 **Agent**: `@ba-writing`
 
 > Tạo PRD cho [product/feature name].
-> Dùng template từ `templates/prd_template.md`.
+> Dùng template từ `templates/prd-template.md`.
 >
 > Thông tin:
 > - Problem: [1-2 câu]
@@ -136,7 +136,7 @@
 **Agent**: `@ba-writing`
 
 > Tạo BRD cho initiative [name].
-> Dùng template từ `templates/brd_template.md`.
+> Dùng template từ `templates/brd-template.md`.
 >
 > Business context: [context]
 > Problem statement: [problem]

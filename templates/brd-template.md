@@ -1,4 +1,4 @@
-# 🟢 SKILL-09: BRD TEMPLATE
+# BRD Template — Business Requirements Document
 ## Template Skill - Business Requirements Document
 
 ---

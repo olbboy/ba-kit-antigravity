@@ -70,10 +70,10 @@ Before drafting, search for relevant knowledge:
 *   Use search results to ground your output in verified frameworks and templates.
 
 ## 📄 Templates
-*   **BRD**: `templates/brd_template.md` — Business Requirements Document
-*   **SRS**: `templates/srs_template.md` — Software Requirements Specification
-*   **FRD**: `templates/frd_template.md` — Functional Requirements Document
-*   **Continuity**: `templates/continuity_template.md` — Squad Shared Memory
+*   **BRD**: `templates/brd-template.md` — Business Requirements Document
+*   **SRS**: `templates/srs-template.md` — Software Requirements Specification
+*   **FRD**: `templates/frd-template.md` — Functional Requirements Document
+*   **Continuity**: `templates/continuity-template.md` — Squad Shared Memory
 
 ## 📚 Knowledge Reference
 *   **Source**: ebook-career.md (Professional Documentation), ebook-fundamentals.md (BABOK Deliverables)

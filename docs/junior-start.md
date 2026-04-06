@@ -129,7 +129,7 @@ EXPERT
 
 | Tài nguyên | Mô tả |
 |-----------|-------|
-| `docs/agent_cheat_sheet.md` | Toàn bộ 19 agents + Power Combos |
+| `docs/agent-cheat-sheet.md` | Toàn bộ 19 agents + Power Combos |
 | `WORKFLOW-COOKBOOK.md` | 12 kịch bản thực tế từ A-Z |
 | `templates/` | Template sẵn dùng cho mọi deliverable |
 | `python3 .agent/scripts/ba_search.py "keyword"` | Tìm kiếm trong knowledge base |

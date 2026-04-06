@@ -1,4 +1,4 @@
-# 🧠 Antigravity Native Protocol (ANP)
+# Antigravity Native Protocol
 
 **Version:** 2.7.0 (Agent Skills Framework)
 **Date:** 2026-04-03

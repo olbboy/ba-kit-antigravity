@@ -1,4 +1,4 @@
-# 📒 CONTINUITY.md (The Squad Ledger)
+# Continuity Template — Project Context Handoff
 
 > **Antigravity Protocol Note**: This file serves as the **Shared Working Memory** for all 19 Agents.
 > **Rule**: Agents (Skills) MUST read this file (if it exists) at the start of every task to understand the Global Context.

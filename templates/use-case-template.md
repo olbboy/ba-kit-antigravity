@@ -1,4 +1,4 @@
-# 🟢 SKILL-10: USE CASE TEMPLATE
+# Use Case Template
 ## Template Skill - Use Case Specification
 
 ---

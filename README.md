@@ -141,7 +141,7 @@ ba-kit/
 ├── .agent/scripts/             # 🔍 BM25+ Knowledge Search Engine
 ├── .agent/data/                # 📊 786 Indexed Knowledge Entries (23 domains)
 ├── docs/                       # 📘 Protocol Documentation
-│   └── ANTIGRAVITY_PROTOCOL.md #    The Technical Spec
+│   └── antigravity-protocol.md #    The Technical Spec
 └── README.md                   # 📄 This file
 ```
 

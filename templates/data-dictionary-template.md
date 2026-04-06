@@ -1,4 +1,4 @@
-# 🟢 SKILL-11: DATA DICTIONARY TEMPLATE
+# Data Dictionary Template
 ## Template Skill - Data Dictionary & Glossary
 
 ---

@@ -1,4 +1,4 @@
-# 🟢 SKILL-13: API CONTRACT TEMPLATE
+# API Contract Template
 ## Template Skill - API Integration Contract
 
 ---

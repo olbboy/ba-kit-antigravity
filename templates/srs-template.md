@@ -1,4 +1,4 @@
-# 🟢 SKILL-10: SRS TEMPLATE (IEEE 29148)
+# SRS Template — Software Requirements Specification (IEEE 29148)
 ## Template Skill - Software Requirements Specification
 
 ---

@@ -116,7 +116,7 @@ Before drafting, search for relevant knowledge:
 *   Use search results to ground your output in verified frameworks and templates.
 
 ## 📄 Templates
-*   **Agile Artifacts**: `templates/agile_artifacts.md` — Theme/Epic/Story hierarchy, INVEST, Gherkin
+*   **Agile Artifacts**: `templates/agile-artifacts.md` — Theme/Epic/Story hierarchy, INVEST, Gherkin
 
 ## 📚 Knowledge Reference
 *   **Source**: ebook-agile.md (Business Analysis Agility - Robertson & Robertson), ebook-requirements-memory-jogger.md (Gottesdiener — Adapting Practices Ch.8, Risk-Driven vs Change-Driven)

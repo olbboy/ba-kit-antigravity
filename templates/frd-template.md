@@ -1,4 +1,4 @@
-# 🟢 SKILL-11: FRD TEMPLATE
+# FRD Template — Functional Requirements Document
 ## Template Skill - Functional Requirements Document
 
 ---

@@ -1,4 +1,4 @@
-# 📋 BA-Kit Agent Cheat Sheet (v2.9.0)
+# BA-Kit Agent Cheat Sheet
 
 > **Quick Reference Card: 21 Specialists at Your Fingertips**
 
@@ -82,7 +82,7 @@
 
 ## 🧠 KEY PROTOCOLS
 
-1.  **Context Injection**: Copy `templates/continuity_template.md` to root as `CONTINUITY.md`. Fill in Goal/Constraints.
+1.  **Context Injection**: Copy `templates/continuity-template.md` to root as `CONTINUITY.md`. Fill in Goal/Constraints.
 2.  **Visual Input**: Drag & Drop images directly. Use `@[image] @ba-writing ...`
 3.  **Math Verification**: Agents use Python. **Never stop them**.
 4.  **Link Verification**: Agents use Grep. **Never stop them**.
@@ -121,4 +121,4 @@
 | `@ba-conflict` | Cách đàm phán khi stakeholder bất đồng | Luyện tập Interest vs Position mapping với 2 stakeholder giả định |
 | `@ba-solution` | Cách tính business value và thuyết phục bằng số | Tính ROI cho một tính năng đang được đề xuất trong dự án |
 
-> **Quick start ngay bây giờ:** Xem `docs/JUNIOR-START.md` — hướng dẫn từng ngày cho tuần đầu tiên.
+> **Quick start ngay bây giờ:** Xem `docs/junior-start.md` — hướng dẫn từng ngày cho tuần đầu tiên.
