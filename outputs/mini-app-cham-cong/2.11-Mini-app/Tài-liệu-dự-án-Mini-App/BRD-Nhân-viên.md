@@ -21,9 +21,31 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
-**
-bottomWF Mini App NV.pngpVdbc5s6EP41zNgPzWCIY/uRS4g7bVO3SdP2UcUKaAwSAdHW59efXQkJcOw4bScO1nUv3367i51Lt5Gklm1ZOG7suIFksqCO534V9e6xEL9geF871zMnDJzAZzDlWc7UQugsFyUs3OZO5DuBx2H8k6lxgOM38H8nayJFA6P1Z3h8YBxFBFWltTU7xitSExQTpJL9ZHIfknSX1aLl20gUooYdx/OTGP9euCTqLa0HF7z5lX8d6gvdcxGdsrTs/FmFDE51WhAWPQRlAAsTXIn2vrL/SL3FcXTprFyDRchzWNsS9TX5yH8IOMV4NoUreHhhrEEh5uMHYFOHblwh2MrE8JJnMJEMVUbK0BlCb+33jwu7yRFefSpCQ5IvVSGIMrbT4in7dnnb6bHuB064kKcEP9CaPe7Rv87dIIFJ0ROhxWC8PXqdPSIgb2M1u0IWDPShtZ1EH/0vrETHT6aIQU7Rxsn6xLHpEXvHtq+FwsNFMdLAMEfVqd5gJpazM0DQosHcmLw3fFnA1eSDmcXnbfmuSdcq5Z0pCrsnFY9gJa1zsDNjx+Mx+GypJGl+xFS+Bdw74sevzIMHS0VuaYSkMzkBDkSWrvPSINix9aklyFZS0ppoNgzwniHIjS0kINR65gcWQSRVTJpc5Y4OvlCkQy1zFHHPTIwSPg4bXF/BylKl32dKijeSlXQ61DPINUWGYa790FkmdI5Ho6Tk/T05djoZUcFNT6Lj9Xao5yPU1+dRO6g0XYGB59JXRu6UQMyk/SkigetPLW3QzohySesX68+YnZHJxaXCpxCj6HVYR1cwVyl5m9nzgHzy8R4eo5q4UiFLyfQsjZ8XQm6DijK2rfJf14/MlIL4uVmvUHT/jFTSdriZrrua+srruN3bWoOgTjZtgxS7FRIq4gnPTMapKHsuyQhU8nPRvmE2PTqjbBm39a6j2YC3k0jUNU1RzB9E+htFfnbNqtHepjgOuChJgZV+8qDzH7EqWxsNMDa5s/0SpCSf2r6CPLUmPVfyfNR1Z4D3CwheaEkTphj+TGvf91kFW7OD9HO9+UGbUM0y9HT9skE9V5jH4Nz1vOenmHg6WGcZeMDGkZyih3LcsEumviwUwUpHf3zqN3X6hrpM8Eg0XImri4uLV2Tj2MSbUb5lf+25aZ8dYWb/EiP9psPHBR34/4BdZ7M2y/Cu4bmfvnyHZ2QWw+tROX6FvkaK6oxrg3Z7rBDAPkwHRd+04rUtLorElugQumHXfakdvdugz8feEk3BDPvelvbDDa3BoJLwlA6bZJTjZqWFrFDfN5PU+q2pyvse3B7kY3rUiskmhs6eXP9OadGzb4DqJQJof4P8Dw==fittrue1
-**
+```mermaid
+graph TD
+    A["👤 Nhân viên mở Mini App"] --> B["📊 Dashboard Cá nhân<br/>Giờ vào + Progress bar 8h"]
+    
+    B --> C["📒 Nhật ký Chấm công<br/>In/Out + Ảnh Face ID"]
+    B --> D["📝 Trung tâm Đăng ký<br/>Nghỉ phép / Đổi ca / OT"]
+    B --> E["⚠️ Giải trình công<br/>Muộn/Sớm + Minh chứng"]
+    B --> F["📈 Báo cáo cá nhân<br/>KPI + Score chuyên cần"]
+    B --> G["⚙️ Setup Hồ sơ<br/>Thông tin + Face ID"]
+
+    D --> H["📤 Gửi đơn → PENDING"]
+    E --> H
+    H --> I["👔 Manager/HR phê duyệt"]
+    I -->|"Duyệt"| J["✅ Cập nhật dữ liệu"]
+    I -->|"Từ chối"| K["❌ Phản hồi lý do"]
+    J --> B
+    K --> B
+
+    G -->|"Bước 1"| G1["Thông tin cá nhân"]
+    G1 -->|"Bước 2"| G2["📷 Định danh Face AI"]
+    G2 -->|"Bước 3"| G3["✅ Hoàn tất"]
+
+    style A fill:#4CAF50,color:#fff
+    style B fill:#1976D2,color:#fff
+```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
@@ -38,9 +60,27 @@ bottomWF Mini App NV.pngpVdbc5s6EP41zNgPzWCIY/uRS4g7bVO3SdP2UcUKaAwSAdHW59efXQkJ
 
 ### **4. USE CASE**
 
-**
-bottomUC Mini App NV.pngpVbbbuIwEP0aS/ShUghQyGMupa22261aKu0+rUwwidXEpraz2v79euzEkEvRAhIyvozncuZ4JmjqSYWFqsoCeQnywoJsFfI9xfUgaJbDYkMFSRXlzIrgVHGht5HvP+UonqDQZ3r5h5p5CPPRq8Lb7ZWW0Ass9WA27H077nD6jjNi9awEuh2jKEThhOodluXUbERoMS/1xld2XpXAioP++xdrDM2j2goobn69nZZ1FE9R4DUGI5ZDzNj8If8GlNdnwUQvJIpvUDg+Zu7gV0mSYtmEWeuJ9G0vbUKeVXplA4yN0ZVZRFOWQSYoM8JwDNfYHgoH7lv8+5YJXhQPbMtP8KcOXI+LiTH2bgwnerbEKQg9JENmzGHfzDw5TPCXcCdY5muOxcbhG+fV5z6pDpg5OwvknAB5NyaUGdBpRWuN0RL0m6jHTUoDvVMY415p2dUQL9XLRd6OfyV0JM+CZ4JIeYpTArvIIhQGlSV1HWiiWtjHOUnfryHvS17BUfjQ9uKRZ0bmBAd+EojuNeWCOAhcqJPyeBK8EfJnV20frKqzSbASlaW3ZTM48Mtar1rWYTV6IR8VkerqHDoc4fhTljcIAAt29mUFO3NxqccfKzdt1YjA0CrFHUSqdUlV7etFhH10tSiFeiAb2oDTypXKsQXQej2me2ab+tSpD7r+qkre00HP/jNnd7RVpT80X5p3BSyVmJq35N4P+D4KGS9x8XlW7u5c4KA5a5vXQOxLpklquAAafadmJ83dYzM4jZrLPss7VL79uyswZRc+5ybwYE735qG8l6iu33VFt3PTy5RrLL3CtEhA+NDNGsnHi3IYWbZw5HoKTNnB+yhck4ICOHomQnKGCz1/ITsulDwrlbb+RC6DxtS3Z13YPG1hy0WJmek49/qjo4APD9mOHmRPMFc5+IGa68Goe0npNthORqKaajU+kx6LNDoOriMZaqfKfhn53vU1Guzkw+f7Ftw9H2hRXZF2/+ieHlT23lG/xPVEOoWm5/7hY+se9ijeFXAsGFDbR9+OU4+wjfvA/Qc=fittrue1
-**
+```mermaid
+graph LR
+    NV["👤 Nhân viên"]
+
+    F01["F01: Dashboard Cá nhân<br/>Giờ vào + Progress 8h"]
+    F02["F02: Nhật ký Chấm công<br/>In/Out + Tag trạng thái"]
+    F03["F03: Trung tâm Đăng ký<br/>Nghỉ phép / Đổi ca / OT"]
+    F04["F04: Giải trình<br/>Muộn/Sớm + Ảnh"]
+    F05["F05: Báo cáo cá nhân<br/>Score + KPI Highlights"]
+    F06["F06: Setup Hồ sơ<br/>Thông tin + Face ID"]
+
+    NV --> F01 & F02 & F03 & F04 & F05 & F06
+
+    style NV fill:#4CAF50,color:#fff
+    style F01 fill:#E3F2FD
+    style F02 fill:#E3F2FD
+    style F03 fill:#FFF3E0
+    style F04 fill:#FFEBEE
+    style F05 fill:#E8F5E9
+    style F06 fill:#F3E5F5
+```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 

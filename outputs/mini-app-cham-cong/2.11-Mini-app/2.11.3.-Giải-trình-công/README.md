@@ -24,9 +24,25 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ (WORKFLOW)**
 
-**
-bottomBRD Giải trình công.pngrVVNj5swEP01ljaHSnwkm3C0Id4edqNWqra9UqCxFT4icKLm33c8xgZvSdRDowiN8fjNmzczhqyDQeW9ujQ1CTISUCVVXZEo+Hq5wVP1JI0JTVsBixdJ9iFhlNBYftwrtM3W7dGgmOdwku057/MGHGih5FUqDUq2bPQC2/5ZXpyOfXdpy7Srux7efBdSVQuOXV9WvXUiURxtnuO9RdxmcwJkm4ID33HKU7A/I39GdltNX4yrJATWUZB+epeD7Fp9xrDXuow4Mf0iMNtQgauQDqiFZW2BtlqWQliVNo0nTMwcGEnXJAmsX3JDP6st6vnTROvAvKIZaLPMcXMwm4VAAaJXP74FQm7H+zWLJkYzsfacP3MO9sEkHGmUq0SbTuJAEj+qZpmSr4eyBEK9akwyGlT8U2vNVEttxXbZguxe2r/HPZqhoy6Btsg+IsmeJGuw3+xxDgve9c1DtWY0Dq7A2RmcXh162WE9GDwPFjzROOUFO6wQCGpjMK4WekIHzFCTE9o7zetNmiGzAtAEAZ8skUhvcy7rarXMdKNFIRv24nSRD9PdZIvNwfEH9sLtMA4IxXxvbkDUvGX88Eq42fAavhAdXkDTRHhFhKgGhYWFr+fZkZa/tDx3ITKPYMxXyKZqUdNpNqF+MZIzB1d/X0a6K71uaKfmUBNX3f0IpMZbRJrJndU8hjfnexLOZ9WP/s1pgTQBLnSthxEHJ3mO42fvvGKqPyyNrh2eOPgpnEbVLIGqHvT34clGpmzemUko/79Md0M9EuZhcx3e/QGr/SFWdwM6FdoSemz+rVPdeVyvA9h1H9Q/fittrue1
-**
+```mermaid
+graph TD
+    A["⚙️ Hệ thống AI quét<br/>So khớp dữ liệu chấm công vs Lịch phân ca"] --> B{"Phát hiện<br/>sai lệch?"}
+    B -->|"Không"| C["✅ Dữ liệu hợp lệ"]
+    B -->|"Có"| D["⚠️ Tạo Anomaly<br/>Quên quẹt / Muộn / Sớm / Vắng"]
+    D --> E["📱 Hiển thị danh sách lỗi<br/>trên App nhân viên"]
+    E --> F{"Trước ngày<br/>chốt công?"}
+    F -->|"Có"| G["🔴 Badge: CHỜ GIẢI TRÌNH<br/>NV nhấn tạo đơn"]
+    F -->|"Không"| H["⛔ Badge: VI PHẠM QUY CHẾ<br/>Nút bị vô hiệu hóa"]
+    G --> I["📝 NV nhập Form giải trình<br/>Lý do + Upload minh chứng"]
+    I --> J["📤 Gửi đơn → PENDING"]
+    J --> K["👔 Manager/HR phê duyệt"]
+    K -->|"Duyệt"| L["✅ Cập nhật Nhật ký<br/>Tính lại trạng thái Đủ công"]
+    K -->|"Từ chối"| M["❌ Giữ nguyên lỗi<br/>+ Lý do từ chối"]
+
+    style D fill:#FF9800,color:#fff
+    style H fill:#D32F2F,color:#fff
+    style L fill:#4CAF50,color:#fff
+```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
@@ -41,9 +57,29 @@ bottomBRD Giải trình công.pngrVVNj5swEP01ljaHSnwkm3C0Id4edqNWqra9UqCxFT4icKL
 
 ### **4. USE CASE DIAGRAM**
 
-**
-bottomUC Giải trình công.pnglVRta4MwEP41ge5DR3yb7Udf1g3KBmMt7GtQa8I0Fo0D//3uEnW2xcqgjXdn7p7nnlwkLm0Uq1VbFoTGhAZKqCIjNj02uEZMP2LB8pqVYK3h/yLIs0XCgASOAFfVJHJIEEkOToJ26MrcVCuyk8ItFSy1yDk6qaizRIlKmi1mZYmqanhJbPud63q2BPdHaDsA2waXNbB8KnY63WR9tCMpTCw0j3iS9sYky7N6CnpmyTfETIFXnR+SjY+Eee9tLWjlbssIQPywr4ul+l/bZImRDzZ9ZaheyrRIjc62Eq6J9kA+Fk74gOOVF2r+9XGMnEdrAW0/0t9pukNRC8+BRC60RaIn8FGq/M5xSs6GHkdwewH8eC4qloJdCjMSA5lgq7VcDXA2vt4dNBxF6EKMZ9A+XKE6C6gHnmFzqVbMExNlN2FiRO9ZwFDQzoxVqzXu6fjo5aMnJ1LhOHZXhNwFQsM8BX73T9FXe97PAmwPKcO22m6URl1L4/VM/Hg63OaawI1dXw7NTdyeiTszcXcm7k3Rh9t2kQcyOMHccYEEw5TqMVHmM2AJ7NZUdmkm0/FL9Qs=fittrue1
-**
+```mermaid
+graph LR
+    NV["👤 Nhân viên"]
+    MGR["👔 Quản lý"]
+    SYS["⚙️ Hệ thống"]
+
+    UC1["Xem danh sách lỗi<br/>cần giải trình"]
+    UC2["Tạo đơn giải trình<br/>Chọn ngày + Lý do"]
+    UC3["Đính kèm minh chứng<br/>Ảnh / PDF ≤ 5MB"]
+    UC4["Theo dõi trạng thái<br/>Pending / Approved / Rejected"]
+    UC5["Xem lịch sử giải trình"]
+    UC6["Phê duyệt / Từ chối<br/>đơn giải trình"]
+    UC7["Quét phát hiện Anomaly<br/>tự động cuối ngày"]
+    UC8["Khóa giải trình<br/>sau ngày chốt công"]
+
+    NV --> UC1 & UC2 & UC3 & UC4 & UC5
+    MGR --> UC6
+    SYS --> UC7 & UC8
+
+    style NV fill:#4CAF50,color:#fff
+    style MGR fill:#2196F3,color:#fff
+    style SYS fill:#607D8B,color:#fff
+```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 

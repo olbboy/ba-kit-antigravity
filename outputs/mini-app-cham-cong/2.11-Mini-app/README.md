@@ -94,6 +94,35 @@ Ràng buộc: Cho phép nhân viên tắt/mở thông báo nhắc nhở cá nhâ
 
 ### **3. USE CASE DIAGRAM**
 
-**
-bottomChấm công C Vision.pngpVZbb5swFP411raHRASSEh65pO2kttt6015dQsAqGAZO1fz7+djYsRNSolaKHNvY33fux2judAy3bFuVyEmQEzLCygy5zlMHY4zFX0Jw3uKKzyawOXkmHakpn4aMZXSNaQqnbgklsNc0EqrMNoyvWc2HluQFLNakzVIGl8UROeKU1S3/iFz3rkCxh0IXwN+ImId87vIl7vjwwPBmc3TrzxatZigKUejBxRLuRYn4dsnH63sDIVxXhB4hXAuACC19kLjoV8GM5pbCezl2MCIvhp9YsqwSOyv4Gco1OH3FeSZpVlVT1rsMVg9Z+0bSDGC+S60jDxDunn9IHuRHPQ5c7X/bLkulT/ihv4KStUp5KS2TJpwRcegCIAt1IgEfvCrzaG2e4tl5VKQHii7BziiecxMpWwXK8qFTSe8pk6Y21XSMTOAK9KUnVNISO3e58s0S+Bqpa9BoX8u7oHu11ZJRSwD38/T9px53ATQp1ty/Hm2eUUWveqQwAaSc6Cgm0q+gW0wLYBEizIU4peL3icXnneXDFxkdtQK1pnxG9xloYM97bD85GdsysVTMQc45t5jyz1VG2WGU/xvM2LMj/2TCG9I7XW+naKal+lk1dQvCrN7TrLQ0XIz5SlajWSWQxRSAin2YU1HfrOV9hssJI1VmU40GRqzUW2yBwwiEGGtlfhu6QhQaDBej+CJPiZ3EPK990OlG6RClQEntnOv9W5dkjaEKGrT+WRGY4K54qXG7ts0HmnbarwvROnSmQeAbRMsxIhtnQ0RPe9kHTX6QU8fxsBx1Um9/OLDe7rQebF8nuB94UTYUCSNdLK5OZ7shRTCYd98gt3SPIiKfMBWRYrSxVJH6EDPDnVXAyabKm/sEGb3gcHc6vO8O75447Q3uzr+q3AftW/KJdq31gz4t/eoaFZ27ItiBMxU0uKm0AtQdgINsNgB16iaNrEdm6/2gV7tftgGvuJcnCqMAVQVayT28qxx3sH8xuOsP7i6Hd08gB4eK3+zffbz1qgcHmC8n2jUY6aaVwlQZJgxgSXX3FqhA4jrTKTzNZMyaESAece+6FRtmk4855ZpDFO+TKEsRMHuc2TGOXfi010Ov+TA+baZ+nDv8ib6t5Oo/fittrue1
-**
+```mermaid
+graph LR
+    NV["👤 Nhân viên"]
+    MGR["👔 Quản lý"]
+    HR["📋 HR Admin"]
+    IT["🔧 IT Admin"]
+    BGD["🏢 Ban Giám đốc"]
+
+    M01["Module 01<br/>Chấm công & Nhật ký"]
+    M02["Module 02<br/>Trung tâm Đăng ký"]
+    M03["Module 03<br/>Giải trình công"]
+    M04["Module 04<br/>Báo cáo cá nhân"]
+    M05["Module 05<br/>Quản lý Nhân sự"]
+    M06["Module 06<br/>Ca làm việc & Phân ca"]
+    M07["Module 07<br/>Lịch & Ngày nghỉ"]
+    M08["Module 08<br/>Camera AI"]
+    M09["Module 09<br/>Thông báo"]
+    M10["Module 10<br/>Trung tâm Phê duyệt"]
+    M11["Module 11<br/>Báo cáo tổng & Xuất"]
+
+    NV --> M01 & M02 & M03 & M04
+    MGR --> M01 & M10 & M11
+    HR --> M05 & M06 & M07 & M09 & M10 & M11
+    IT --> M08 & M09
+    BGD --> M11
+
+    style NV fill:#4CAF50,color:#fff
+    style MGR fill:#2196F3,color:#fff
+    style HR fill:#FF9800,color:#fff
+    style IT fill:#9C27B0,color:#fff
+    style BGD fill:#F44336,color:#fff
+```

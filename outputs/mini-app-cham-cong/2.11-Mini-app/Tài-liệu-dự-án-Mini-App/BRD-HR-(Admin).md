@@ -19,9 +19,27 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
-**
-bottomWF Mini App HR.pnglVbbctowEP0azZAHZowNIX70BUOmhFCgpG8ZxXawBl+oLbfl77srWYqchCQdgqO193r27BoythpOa94WObFCYnmc8TwltvVQ1cfnvPoDx+8tmY2I7xHPKUHktRB9cuODROxruO6VRogaGQkc4lllBuchfLe8prxq4LTYwGXgJQUDveiOlvSQ1lcycnNk5YnWtAAVL+bsN+Nnn8bHQ121ZRJUeVWLeE4U4ucDo6pO0towsCfXzsyXBt11Gtzu0ERkMg06Z4hEp+B4u7o9g0qsSzuBFChp0upCA1HoQqEyRYyyTnJH5YE4vnYKWKKJy0EpocKwEXdGMZ4DWqQ1RQedvYcYJ0qIQMiZDoQpBEOw0REACmggq0pRuH05Wx2IBGPiWtqnU+jEbHw6VamjP/XneIGq70Y0XHvLZecL5XjUd9yZYUKFgBa0/bGJUD/MXEKDIQoNaAzSL0VJXyA5CLI0Pg4FqeSxavnVJa9LElwT32pfuOxhkIPsm4jIsKGVfsZ1PSoL10x6Gr7ilqB5n1tf7sx3wTqunkdY7i7TSNnWk0yx+q8ONZ3kj0A4vlAInw32IRjAIfJul7PwcXk/v10RSNG2fmxnm8dgM/N2s/Ainq9CfRP5eaKYMusthsG6beB2NCsoy+H/9m570esuY6rHERfU6s1hhrgdVVUOOl8dKEAXrQ6yv2poRGejeQWMi5Z6dcXZV/ixacUyXFc5i8/vNPzTNHEoBtuMPfPmSm/LucLf9ZnovubgO9Ret6VYDUtWMJPTn4U2S9WR9QD60VtKY7QFVJrQcyPb/xAtxMaByI0RWtH81YtBDL8fohu92RX9cZiZJG7xsvO4rBfPtslSF1ka0iZ7qmidoMNNSvMhZ0XaQ+BntzrfMu2jwV7tzQETt8REQte9kbnxxWyqTexO8JGiuufGOH9GLmsZAcmUwAirAdOrw5L+S8lUPTKI+kmautC26B5eS1FnoAJjhjFFEjMNOJNFdnvjneZ88D4ymmJEQlJgdqAglvjZrNcVvYqNNTRYGXr2pNeXvdRDbvffVnKPOVT0XYMkQLlYm9E9ERiSmABYPR5oIk54b0PKjOUx79aCbAN6WtNzXeW5qFN7cDGZ2d84zXWEhlenLtbYSstE/1iS138=fittrue1
-**
+```mermaid
+graph TD
+    A["👔 HR Admin đăng nhập<br/>Hệ thống Quản trị"] --> B["📊 Dashboard Admin<br/>On-site / WFH / Vắng"]
+    
+    B --> C["🏢 Cơ cấu tổ chức<br/>Sơ đồ cây + Import NV"]
+    B --> D["⏰ Cấu hình Ca<br/>In/Out/Break + Punch Limit"]
+    B --> E["📅 Lịch & Ngày nghỉ<br/>Lễ tết + Policy"]
+    B --> F["📷 Camera AI<br/>Device + Mapping + Health"]
+    B --> G["🔔 Thông báo<br/>36 events × 3 channels"]
+    B --> H["✅ Phê duyệt<br/>Nghỉ/OT/Giải trình/Đổi ca"]
+    B --> I["📈 Báo cáo & Xuất<br/>Payroll Excel + KPI"]
+
+    C -->|"Import Excel"| J["💾 Master Data NV"]
+    D -->|"Áp dụng"| K["⚙️ Engine tính công"]
+    E -->|"Batch Job"| K
+    F -->|"Webhook"| K
+    K --> I
+
+    style A fill:#FF9800,color:#fff
+    style B fill:#1976D2,color:#fff
+```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
@@ -37,7 +55,29 @@ bottomWF Mini App HR.pnglVbbctowEP0azZAHZowNIX70BUOmhFCgpG8ZxXawBl+oLbfl77srWYqc
 ### **4. USE CASE**
 
  
-bottomUC Mini App HR.pngpVbbTuMwEP0aS/CAFJoW6GMuLaC9sdBFvK2MaxKraVw5Dgt/v2M7dm0Xqm1XqlxfJjNn5syMjcZJJ7GQ/bpBSYmSrKEvEo0SyWEQrKrVYskEJZLx1ohgIrmAbTQa3dzDf7ZcsxYWMMWdW8eit4sPRGEzlrurUZGifNRWsH7GIJ2cfMMtrqg49b4ctsznZtxgsoI9o2Yheq1BKm3ZaA3Tnz2anaM8Q1mqtEqhlzm6ymH1IAWWXGlWPikz6DIftCuF9rezE1jda+LGLi7VUT2spucaJxpdwFjgNRV4n33v13eU4G6wXFh9V2Xr1F1r589bT3OCijHYZFY6VZFZ4rb2Yvur+A3iRc0ZoYdAsL5PetjQNGaFUpykFzr875qPQWhOYLUwZI8N2QYtD5F855Ld9w3tDkAS0dBoI6WOOhtO8rnUJj1+XIiy251glPQVgvERhsvSz8FPM2MRWW4swnLzSWwKLzTy/aic+JSQQrl5UtSUrM5UQc55D6AK2LzrW6IkGrZm8jSMw0PNXuShXOx3vMANbZdYbCugdtIuWW2lTGGnrVyiT2OWBlVHc/TooLUuXomOl8FmWlOmFCyBMFvN8hhurpnJdlV+nZmq6JS4q585FkvnvGKK+D6DuO0cYQDUt17v/Td2hM68N1cwE2lS7wIAKctBCklreeKDyqYkRO6D+iGqR0b/HADpyaotg9K1dFRxWmQp28uNkU6MS63nRZaHULPNRvBXWnLyH3VeWuVzXUQOSB9nuOJP6gi7Mj88i55C3nLXQY1aMx2SF78L3jQwm70R2oSuz942XMhjrpvBiVr5txr28tRZ/WIafKqyuGKuKyvG4HJ0DcnHsqBi/ZWT1T4OQjKGV0VydoY+7FPxedgp4tMgY+NDP1DxWQRcj/rVs7UbXKrxWXDHBIfxHahH+wLaikUNYFcgcG33eLcAzDhOIFzuhfgXfittrue1
+```mermaid
+graph LR
+    HR["📋 HR Admin"]
+    MGR["👔 Quản lý"]
+    IT["🔧 IT Admin"]
+
+    F01["F01: Dashboard<br/>Quân số + Biểu đồ"]
+    F02["F02: Cơ cấu tổ chức<br/>NV + Phòng ban"]
+    F03["F03: Cấu hình Ca<br/>In/Out/Break"]
+    F04["F04: Lịch & Ngày nghỉ<br/>Lễ + Policy"]
+    F05["F05: Camera AI<br/>Device + Mapping"]
+    F06["F06: Thông báo<br/>36 events + Policy"]
+    F07["F07: Phê duyệt<br/>Nghỉ/OT/Giải trình"]
+    F08["F08: Báo cáo & Xuất<br/>Payroll + KPI"]
+
+    HR --> F01 & F02 & F03 & F04 & F07 & F08
+    MGR --> F01 & F07 & F08
+    IT --> F05 & F06
+
+    style HR fill:#FF9800,color:#fff
+    style MGR fill:#2196F3,color:#fff
+    style IT fill:#9C27B0,color:#fff
+```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 

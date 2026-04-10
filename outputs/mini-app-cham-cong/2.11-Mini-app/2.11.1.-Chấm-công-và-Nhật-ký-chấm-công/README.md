@@ -21,9 +21,24 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
-*
-bottomChấm công và Nhật ký chấm công.pnghVXbbqMwEP0aS8lDJQK58WigbqvddrVVlH12gQ1WuERgKvXvd2aMiZMmbFUhjz2eOXPmjMOWXqdlq/uqZF7CPK6VLnPme7/7L/jqlsUB43FdgBGzxwWLOOPJCSzYsqYGk/lr+D4r2ozYNqjxemHNCKy3yxtHDB0lGHg8WFVgpnSwrA+wnr02WU+AFnMD0Hy7o6pPspXoz1OtPpVGvGwTDV6IaPiPZHo8tE1fZ3FTNi3s/CmUzm84Nm2Wt9aJ+YG/WgePNuImcQGwTQwOYiu4iGEdyypvJYJ5wYIe9qpTTY1OBi5yPFwMuEMEspSNpG3QPBb9QAAY1eAZbbThHNvh48mnojWvWRCNkWNLOF9hj2yagPonZIpEviRju54KNeaIWLhIwTpYNGHiRn6ygRO8kllLgFGe8fdgdpI69zxuukIIF3A4hnWYfBRiLQSsJ+5ZNgHOTllixJUYkZtkAp6pnEiYplP9Rf1NhRrJDhBDeQYeiDmBzzHyLKZ2BvPvgoNCfrJ4zSKvN8Pm5PokPF6D5UgtP2SX35+h4IbskSWKkVD3dUPGoj5n4mgeDM10hq2dsXjJQo8Cczp1FeGLnUW5Xc3v5TW6umrKRRhvP5Yn3uUYJy+pytmPwr4Bt1mLDN7GoT3c3Mh5MVq3wHa6OQ2p6ww6bvU1kDDECr/+o/n3XJYPWlX5Wf+vqkZA/HS6qXdBf7B2/KDwJyWb70/C237uin/yIZ7qbSK74qORbeZO9uSbfdm0F3AQv3rtukX0auhxHC+eo0mghSRhOqOM+Yn5hc0aUodJKpWZUstL6ibamSJ5RX1C6fhUfH3vJ8eZrszA6AxNaXHVrrNC2NIDkfSVsf4Bfittrue1
-*
+```mermaid
+graph TD
+    A["📷 Camera AI C-Vision<br/>Quét khuôn mặt NV"] -->|Webhook| B["🔐 EAMS Backend<br/>Xác thực HMAC-SHA256"]
+    B -->|Idempotency check| C["⚙️ Queue Processing<br/>BullMQ"]
+    C --> D{"Confidence<br/>≥ 0.85?"}
+    D -->|"Không"| E["❌ Failed<br/>Cần HR Review"]
+    D -->|"Có"| F["🔗 Mapping<br/>personId → employeeId"]
+    F --> G{"Xác định<br/>hướng"}
+    G -->|"IN_ONLY / Xen kẽ"| H["✅ CHECK_IN"]
+    G -->|"OUT_ONLY / Xen kẽ"| I["✅ CHECK_OUT"]
+    H & I --> J["💾 Tạo AttendanceRecord<br/>status: APPROVED"]
+    J --> K["📊 Cập nhật<br/>DailyAttendanceSummary"]
+    K --> L["📱 Mini App<br/>Dashboard + Nhật ký<br/>cập nhật Real-time ≤ 60s"]
+
+    style A fill:#7B1FA2,color:#fff
+    style L fill:#4CAF50,color:#fff
+    style E fill:#F44336,color:#fff
+```
 
 ---
 
@@ -42,9 +57,31 @@ bottomChấm công và Nhật ký chấm công.pnghVXbbqMwEP0aS8lDJQK58Wigbqvddr
 
 ### **4. USE CASE**
 
-**
-bottomChấm công và Nhật ký UC.pngnVRNj5swEP01VttDVmCgbI4GNmoP6aXdqlfLELASIAVTbf59Z8aGOrtss61EjMcZ3puPN2ZxMBo5mKk9saBggTDanCrGg8cR11zSq9CyHmQLuw389n05kU/IIoFODXsIWSaYSNBFsTxiWdzVsGf8I6xfFofCgHkkh8LynaoDnpkelkHXDRqlHipldN9ZF7tKZfqBIDngAYLgHZi/NO0F7DmYcoTlq5GHw4uvPlEQGbtPka9x1jakQPPNdz0io4dywZVFOT5kmqqlkwd8vNDOUh1lXb2BZq87DS9xPlsilmYOCL91zzRWytYdnH4QpxnmClocYysQIph6vfyN3eNxJy9ebo95eIP3W1NhS0pCSJDHaMeT7bDwLI8hqzm9LZycKKagtV2Zq6DAfH/ffLhi57fYB0mpWBCxnQjeQWaQMQ/G+c8Cs1tXmE8Z3aDcz6nsUIlLXlRHoVQ/lCSP4MmKwNFFHcaykwpRPl8zxm9r7TOJHK2eqbHTZRG3KwZQpp0nAPzEo0wcZVr4+nyHyltYsJc/J9mRPjytLtVOpZ3ZlRkjODtecBdsfCU9O+Wrp9HqafLvwdazwMROOmSI0wrQLz5ueHB3hxM7u9lbyw529WSqrnw50v9Tsr9Mvs2aLhTI2cUS/omF83yi7i9dTuCGgFGaMZSf85Z0tooZ38S8Vu71FFOiY2+lZRYSt8YBlGpqrfUbfittrue1
-**
+```mermaid
+graph LR
+    NV["👤 Nhân viên"]
+    HRS["📋 HR Admin"]
+    MGR["👔 Quản lý"]
+    SYS["⚙️ Hệ thống"]
+
+    UC1["Xem Dashboard<br/>Trạng thái hôm nay"]
+    UC2["Xem Thanh tiến độ<br/>% hoàn thành ca"]
+    UC3["Xem Thống kê tháng<br/>Đúng giờ / Nghỉ / OT"]
+    UC4["Tra cứu Nhật ký<br/>Ảnh Face ID + mốc giờ"]
+    UC5["Xem Cảnh báo vi phạm<br/>Muộn / Sớm / Thiếu quẹt"]
+    UC6["Giải trình ngay<br/>Prefill ngày vi phạm"]
+
+    NV --> UC1 & UC2 & UC3 & UC4 & UC5
+    UC5 --> UC6
+    HRS --> UC4
+    MGR --> UC3
+    SYS -->|"Real-time ≤ 60s"| UC1
+
+    style NV fill:#4CAF50,color:#fff
+    style HRS fill:#FF9800,color:#fff
+    style MGR fill:#2196F3,color:#fff
+    style SYS fill:#607D8B,color:#fff
+```
 
 ---
 

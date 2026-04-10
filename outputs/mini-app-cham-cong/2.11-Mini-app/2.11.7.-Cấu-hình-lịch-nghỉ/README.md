@@ -25,9 +25,31 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
-**
-bottomWF Cấu hình lịch nghỉ.pnglVVtb9pADP41J7XfAkca8vEuaYa0Dmkbavs1TRg5Ee5QuHTqv599bxxQqCZVNA62H/t5bENmyUHXgx53PUlKkjAtdL8m0+RFDds/vfoLjz9H8jghnBFGJZg9KSjhJTw9mfeczHnTgUmmD/C53OD3LPmAZ7npvEsO5t0P1Y4me5LdW7jDVsh9PdQ7eMkaLd6F/uB1s90MapRtoXo1mMy0mlesKm4EqaFdD1HANH2gj9wGuM+sWPzCkHYnJBguGbbvHChbDSMW3viOyz1YhbfSEazO9FfI7r8ZoK4cqB1oFkqakOmqEw6AV9oQHIOfQQQzhUiMz3yPmMv/UVYE3FKe1lStbAcTuYEv9GAMhk5F3a9lWw+h0LOc31wc1qh8kRNxKXQfFZncufnhJJ80YG9EDUUs/bsc49+CdX8N/IkUD4QnqEBbG/IPthygJYRkZSz4Gc/fjX9paOyO9SPlji1UAH2LGdQaSjp9Az4ZtvEmfJOZvi0FD3pqZN9bRmuS8uUpd7+FaU52UVRaXmPl9uwsQpNIwc7BsLyxyKYr09ucmmHYhtV+qRaICuo9AzaiYodvQckUVKt0OAyZvKrb7QqfDWJu0I9XprNrhnp7wMq6XNCF6cMA61q4qmXAHM06Iwq9vzYocAyWdimmmOY9pPRHAvp4Xe8ut/Fs7hubpDQN6O6E73jR2H5/LIWy5VFraZJevaDaGXxyOaZunZX9H+/44ZORiuC/GINpZR1EIHJmIdz6GbS1MpLdGDdbLIbQ+MCenVR6cbHDlsWU5thYJM7qS14iYeImYHM9AqP7+HRldqmbDjtbPuNYWFmUT2F7j9WKjvMlv67hHB1bj4nnpj9eEiTjUJvKuIWI0FT4hXkNi5celTxotXeYswTuePhJ/wc=fittrue1
-**
+```mermaid
+graph TD
+    A["📋 HR Admin cấu hình"] --> B["📅 CRUD Danh mục ngày nghỉ<br/>Lễ quốc gia / Nội bộ"]
+    A --> C["⚙️ Cấu hình Policy & Rules<br/>Sinh nhật / WFH / Thiên tai"]
+    
+    B --> D["🔄 Batch Job 00:01 hằng ngày<br/>Quét toàn bộ NV"]
+    C --> D
+    
+    D --> E{"Ngày hôm nay<br/>là ngày nghỉ?"}
+    E -->|"Có"| F["✅ Gán trạng thái<br/>HỢP LỆ / HƯỞNG LƯƠNG"]
+    E -->|"Không"| G{"NV có sinh nhật<br/>trong tháng?"}
+    G -->|"Có + NV chính thức"| H["🎂 Cộng 1 ngày phép<br/>vào quỹ phép cá nhân"]
+    G -->|"Không"| I["➡️ Bỏ qua"]
+    
+    F --> J["📱 App NV hiển thị<br/>Calendar màu sắc + Thông báo"]
+    H --> J
+    
+    C --> K{"Kích hoạt<br/>Nghỉ thiên tai?"}
+    K -->|"Có"| L["🌊 Chọn vùng ảnh hưởng<br/>→ Gán nghỉ khẩn cấp<br/>cho NV thuộc khu vực"]
+
+    style A fill:#FF9800,color:#fff
+    style F fill:#4CAF50,color:#fff
+    style H fill:#E91E63,color:#fff
+    style L fill:#F44336,color:#fff
+```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
@@ -42,9 +64,32 @@ bottomWF Cấu hình lịch nghỉ.pnglVVtb9pADP41J7XfAkca8vEuaYa0Dmkbavs1TRg5Ee
 
 ### **4. USE CASE DIAGRAM**
 
-**
-bottomUC Cấu hình ngày nghỉ.pngpVTJboMwEP2akdpDKrOV5migUaS2kbqpvTpAwCpLBKbf3/FGgCjKoRIy857HfjPPBvBJL1gnhroCkgChVX4Q4BLR4tDxopQg412eCt42OoWlou2QBtfdvuGbZjVvEGDI+hEvU3clxB5QFzPJL1cxna56F+xw0Kv0eGTpDytyvfqlzYZKxiQEj+L7dYBHByIK1JM7VnLDKMHoWfERPERpqdbe47grSkuvtSaEkRGTOeYZ+jxlvZH8KLmRiDZCSRjB5Iiome1oJhEECG5McRGsnRRxwRm4m53l1hy5/YhuJyZ8xuGdc6Wu2NYRDEhoV+NG9hprkCjQq9hRJszbJxD7WJltLpQl7rlNCMWiHvdfPm0tcuQx1UaFrqXo12a70PKuaH3n9fkRL44i1Y3LidOVm6n4V1SetI1q87IdGxDaYtvr3Eh5kudOi/J004lgfFFIYAoJk+nFN98TWa3mN+KMdy/w3gU+mKro720ya13xSd5k4//gDw==fittrue1
-**
+```mermaid
+graph LR
+    HR["📋 HR Admin"]
+    NV["👤 Nhân viên"]
+    BGD["🏢 Ban Lãnh đạo"]
+    SYS["⚙️ Hệ thống"]
+
+    UC1["CRUD Danh mục ngày nghỉ<br/>Lễ quốc gia / Nội bộ"]
+    UC2["Cấu hình Policy<br/>Sinh nhật / WFH"]
+    UC3["Kích hoạt Nghỉ thiên tai<br/>Chọn vùng ảnh hưởng"]
+    UC4["Clone lịch nghỉ<br/>sang năm mới"]
+    UC5["Xem Calendar cá nhân<br/>Mã màu Đỏ/Xanh"]
+    UC6["Xem chi tiết ngày nghỉ<br/>Loại + Đãi ngộ"]
+    UC7["Batch Job tự động<br/>Gán công 00:01"]
+    UC8["Gửi thông báo<br/>trước 3 ngày nghỉ lễ"]
+
+    HR --> UC1 & UC2 & UC4
+    BGD --> UC3
+    NV --> UC5 & UC6
+    SYS --> UC7 & UC8
+
+    style HR fill:#FF9800,color:#fff
+    style NV fill:#4CAF50,color:#fff
+    style BGD fill:#F44336,color:#fff
+    style SYS fill:#607D8B,color:#fff
+```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 
