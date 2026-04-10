@@ -1,0 +1,89 @@
+# 2.11.5. Báo cáo cá nhân
+
+---
+
+| Thông tin | Nội dung |
+| --- | --- |
+| Target release | Version 1.0 (Sprint 10) |
+| Epic | STRATOS-ESS: Trải nghiệm dành cho Nhân viên |
+| Document owner | BA Team |
+| Stakeholder | Nhân viên, Quản lý |
+| Status | Draft |
+| Tham chiếu | EAMS v2.0 §9.1 (Dashboard tổng quan) |
+
+---
+
+### **1. MỤC TIÊU**
+
+- **Lý do tồn tại:** Nhân viên cần tự theo dõi hiệu suất chuyên cần cá nhân mà không phải hỏi HR mỗi cuối tháng.
+- **Bài toán:** Tổng hợp và trực quan hóa các chỉ số KPI chuyên cần: tỷ lệ đúng giờ, tổng giờ làm, ngày nghỉ, giờ OT theo kỳ.
+- **Giá trị mang lại:** Tăng tính minh bạch dữ liệu, giúp NV tự điều chỉnh hành vi; giảm khiếu nại cuối tháng.
+
+---
+
+### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
+
+```
+NV mở mục "Báo cáo cá nhân" trên Mini App
+        ↓
+Hệ thống tổng hợp dữ liệu từ:
+  ├─ AttendanceAggregator (chấm công)
+  ├─ LeaveAggregator (nghỉ phép)
+  └─ OTAggregator (tăng ca)
+        ↓
+Hiển thị:
+  ├─ Score chuyên cần tổng (điểm/100)
+  ├─ Biểu đồ xu hướng theo tuần/tháng
+  ├─ Bảng KPI Highlights
+  └─ So sánh với trung bình phòng ban (ẩn danh)
+        ↓
+NV chọn kỳ báo cáo (tháng/quý) để xem chi tiết
+```
+
+---
+
+### **3. NHU CẦU NGƯỜI DÙNG**
+
+| Persona | Nhu cầu cụ thể | Tài liệu / Căn cứ |
+| --- | --- | --- |
+| Nhân viên | Muốn biết điểm chuyên cần của mình để đảm bảo KPI và quyền lợi thưởng. | Score chuyên cần |
+| Nhân viên | Muốn theo dõi xu hướng đi trễ/về sớm theo thời gian để tự cải thiện. | Biểu đồ trend |
+| Quản lý | Muốn xem tổng quan hiệu suất team trên giao diện quản lý (cross-ref Module 11). | KPI Highlights |
+
+---
+
+### **4. PHẠM VI CHỨC NĂNG**
+
+| Mã | Chức năng | Mô tả chi tiết | User Story |
+| --- | --- | --- | --- |
+| F05.1 | Dashboard hiệu suất cá nhân | Score chuyên cần (0-100), tổng giờ làm tháng, tổng ngày nghỉ, tổng giờ OT. Biểu đồ trend 4 tuần. Cập nhật real-time khi có dữ liệu mới. | [US-RPTPRS-01](./US-RPTPRS-01-Dashboard-hiệu-suất-cá-nhân.md) |
+| F05.2 | Bảng KPI & Highlights | Bảng tổng hợp KPI theo quý: % đúng giờ, số lần trễ, số ngày vắng, giờ OT lũy kế. Performance highlights so sánh kỳ trước. | [US-RPTPRS-02](./US-RPTPRS-02-Bảng-KPI-và-highlights.md) |
+
+---
+
+### **5. CÔNG THỨC TÍNH** *(Nguồn: EAMS v2.0 §3.4, §9.1)*
+
+| Chỉ số | Công thức | Nguồn dữ liệu |
+| --- | --- | --- |
+| Score chuyên cần | (Ngày đúng giờ / Tổng ngày làm) × 100 | DailyAttendanceSummary |
+| Tổng giờ làm | SUM(netHours) trong tháng | DailyAttendanceSummary |
+| Tổng ngày nghỉ | COUNT(LeaveRequest status=APPROVED) | LeaveRequest |
+| Giờ OT lũy kế | SUM(approvedOTHours) trong tháng | OvertimeRequest |
+| Số lần đi trễ | COUNT(status=LATE or LATE_AND_EARLY) | DailyAttendanceSummary |
+
+---
+
+### **6. YÊU CẦU PHI CHỨC NĂNG**
+
+- **Hiệu năng:** Tải dashboard báo cáo ≤ 2 giây.
+- **Cập nhật:** Dữ liệu tự động refresh khi có sự kiện chấm công hoặc đơn từ được duyệt.
+- **Bảo mật:** NV chỉ xem được báo cáo của chính mình (ABAC: filter theo User_ID).
+- **Responsive:** Hiển thị tốt trên cả mobile và web.
+
+---
+
+### **7. ĐIỀU KIỆN GIẢ ĐỊNH**
+
+1. Nhân viên đã có dữ liệu chấm công ít nhất 1 tháng.
+2. Hệ thống đã tính toán DailyAttendanceSummary cho các ngày đã qua.
+3. Các đơn nghỉ phép và OT đã được phê duyệt xong.
