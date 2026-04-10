@@ -21,9 +21,6 @@
 
 ### **2. ACCESS CONTROL (RBAC/ABAC)**
 
-  
-
-********
 | Thông tin (Data Field) | Role (Access Right) | Ghi chú |
 | --- | --- | --- |
 | Danh sách lỗi/vi phạm | Nhân viên, HR, Quản lý | ABAC: NV xem của mình; Quản lý xem của Team. |

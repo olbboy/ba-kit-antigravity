@@ -96,23 +96,33 @@ Ràng buộc: Cho phép nhân viên tắt/mở thông báo nhắc nhở cá nhâ
 
 ```mermaid
 graph LR
-    NV["👤 Nhân viên"]
-    MGR["👔 Quản lý"]
-    HR["📋 HR Admin"]
-    IT["🔧 IT Admin"]
-    BGD["🏢 Ban Giám đốc"]
+    subgraph Actors
+        NV([Nhan vien])
+        MGR([Quan ly])
+        HR([HR Admin])
+        IT([IT Admin])
+        BGD([Ban Giam doc])
+    end
 
-    M01["Module 01<br/>Chấm công & Nhật ký"]
-    M02["Module 02<br/>Trung tâm Đăng ký"]
-    M03["Module 03<br/>Giải trình công"]
-    M04["Module 04<br/>Báo cáo cá nhân"]
-    M05["Module 05<br/>Quản lý Nhân sự"]
-    M06["Module 06<br/>Ca làm việc & Phân ca"]
-    M07["Module 07<br/>Lịch & Ngày nghỉ"]
-    M08["Module 08<br/>Camera AI"]
-    M09["Module 09<br/>Thông báo"]
-    M10["Module 10<br/>Trung tâm Phê duyệt"]
-    M11["Module 11<br/>Báo cáo tổng & Xuất"]
+    subgraph ESS["Employee Self-Service"]
+        M01[01 - Cham cong & Nhat ky]
+        M02[02 - Trung tam Dang ky]
+        M03[03 - Giai trinh cong]
+        M04[04 - Bao cao ca nhan]
+    end
+
+    subgraph Admin["Admin & Configuration"]
+        M05[05 - Quan ly Nhan su]
+        M06[06 - Ca lam viec & Phan ca]
+        M07[07 - Lich & Ngay nghi]
+        M08[08 - Camera AI]
+        M09[09 - Thong bao]
+    end
+
+    subgraph Workflow["Workflow & Report"]
+        M10[10 - Trung tam Phe duyet]
+        M11[11 - Bao cao tong & Xuat]
+    end
 
     NV --> M01 & M02 & M03 & M04
     MGR --> M01 & M10 & M11
@@ -120,9 +130,13 @@ graph LR
     IT --> M08 & M09
     BGD --> M11
 
-    style NV fill:#4CAF50,color:#fff
-    style MGR fill:#2196F3,color:#fff
-    style HR fill:#FF9800,color:#fff
-    style IT fill:#9C27B0,color:#fff
-    style BGD fill:#F44336,color:#fff
+    classDef actor fill:#37474F,color:#fff,stroke:#263238,stroke-width:2px
+    classDef ess fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    classDef admin fill:#FFF3E0,stroke:#E65100,color:#BF360C
+    classDef wf fill:#E8F5E9,stroke:#2E7D32,color:#1B5E20
+
+    class NV,MGR,HR,IT,BGD actor
+    class M01,M02,M03,M04 ess
+    class M05,M06,M07,M08,M09 admin
+    class M10,M11 wf
 ```

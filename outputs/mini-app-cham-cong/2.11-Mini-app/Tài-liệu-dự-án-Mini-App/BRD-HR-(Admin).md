@@ -2,7 +2,6 @@
 
 ---
 
-****************************
 | Thông tin | Nội dung |
 | --- | --- |
 | Target release | Version 1.0 |
@@ -21,31 +20,44 @@
 
 ```mermaid
 graph TD
-    A["👔 HR Admin đăng nhập<br/>Hệ thống Quản trị"] --> B["📊 Dashboard Admin<br/>On-site / WFH / Vắng"]
-    
-    B --> C["🏢 Cơ cấu tổ chức<br/>Sơ đồ cây + Import NV"]
-    B --> D["⏰ Cấu hình Ca<br/>In/Out/Break + Punch Limit"]
-    B --> E["📅 Lịch & Ngày nghỉ<br/>Lễ tết + Policy"]
-    B --> F["📷 Camera AI<br/>Device + Mapping + Health"]
-    B --> G["🔔 Thông báo<br/>36 events × 3 channels"]
-    B --> H["✅ Phê duyệt<br/>Nghỉ/OT/Giải trình/Đổi ca"]
-    B --> I["📈 Báo cáo & Xuất<br/>Payroll Excel + KPI"]
+    A([HR Admin dang nhap]) --> B[Dashboard Admin<br/>On-site / WFH / Vang]
 
-    C -->|"Import Excel"| J["💾 Master Data NV"]
-    D -->|"Áp dụng"| K["⚙️ Engine tính công"]
-    E -->|"Batch Job"| K
-    F -->|"Webhook"| K
+    subgraph Modules["8 chuc nang quan tri"]
+        C[Co cau to chuc<br/>So do cay + Import NV]
+        D[Cau hinh Ca<br/>In/Out/Break + Punch Limit]
+        E[Lich & Ngay nghi<br/>Le tet + Policy]
+        F[Camera AI<br/>Device + Mapping + Health]
+        G[Thong bao<br/>36 events x 3 channels]
+        H[Phe duyet<br/>Nghi/OT/Giai trinh/Doi ca]
+        I[Bao cao & Xuat<br/>Payroll Excel + KPI]
+    end
+
+    B --> C & D & E & F & G & H & I
+
+    subgraph Engine["Xu ly"]
+        J[(Master Data NV)]
+        K[Engine tinh cong]
+    end
+
+    C -->|Import Excel| J
+    D -->|Ap dung| K
+    E -->|Batch Job| K
+    F -->|Webhook| K
     K --> I
 
-    style A fill:#FF9800,color:#fff
-    style B fill:#1976D2,color:#fff
+    classDef admin fill:#FF9800,color:#fff,stroke-width:2px
+    classDef dashboard fill:#1976D2,color:#fff,stroke-width:2px
+    classDef module fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    classDef engine fill:#FFF3E0,stroke:#E65100,color:#BF360C
+
+    class A admin
+    class B dashboard
+    class C,D,E,F,G,H,I module
+    class J,K engine
 ```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
-  
-
-************
 | Persona | Nhu cầu cụ thể | Tài liệu |
 | --- | --- | --- |
 | HR | Cần quản lý camera điểm danh và cài đặt quy tắc bắn thông báo login fail/muộn sớm. | Cấu hình camera & Notification |
@@ -54,36 +66,38 @@ graph TD
 
 ### **4. USE CASE**
 
- 
 ```mermaid
 graph LR
-    HR["📋 HR Admin"]
-    MGR["👔 Quản lý"]
-    IT["🔧 IT Admin"]
+    subgraph Actors
+        HR([HR Admin])
+        MGR([Quan ly])
+        IT([IT Admin])
+    end
 
-    F01["F01: Dashboard<br/>Quân số + Biểu đồ"]
-    F02["F02: Cơ cấu tổ chức<br/>NV + Phòng ban"]
-    F03["F03: Cấu hình Ca<br/>In/Out/Break"]
-    F04["F04: Lịch & Ngày nghỉ<br/>Lễ + Policy"]
-    F05["F05: Camera AI<br/>Device + Mapping"]
-    F06["F06: Thông báo<br/>36 events + Policy"]
-    F07["F07: Phê duyệt<br/>Nghỉ/OT/Giải trình"]
-    F08["F08: Báo cáo & Xuất<br/>Payroll + KPI"]
+    subgraph Functions["Chuc nang"]
+        F01[F01: Dashboard<br/>Quan so + Bieu do]
+        F02[F02: Co cau to chuc<br/>NV + Phong ban]
+        F03[F03: Cau hinh Ca<br/>In/Out/Break]
+        F04[F04: Lich & Ngay nghi<br/>Le + Policy]
+        F05[F05: Camera AI<br/>Device + Mapping]
+        F06[F06: Thong bao<br/>36 events + Policy]
+        F07[F07: Phe duyet<br/>Nghi/OT/Giai trinh]
+        F08[F08: Bao cao & Xuat<br/>Payroll + KPI]
+    end
 
     HR --> F01 & F02 & F03 & F04 & F07 & F08
     MGR --> F01 & F07 & F08
     IT --> F05 & F06
 
-    style HR fill:#FF9800,color:#fff
-    style MGR fill:#2196F3,color:#fff
-    style IT fill:#9C27B0,color:#fff
+    classDef actor fill:#37474F,color:#fff,stroke-width:2px
+    classDef func fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+
+    class HR,MGR,IT actor
+    class F01,F02,F03,F04,F05,F06,F07,F08 func
 ```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 
-  
-
-************************************
 | Mã | Chức năng | Mô tả | User Story |
 | --- | --- | --- | --- |
 | F01 | Màn hình chính | Số lượng nhân viên (On-site/WFH/Vắng). Biểu đồ chuyên cần hằng ngày. | Là Manager, tôi muốn xem nhanh danh sách nhân viên trong ngày. |

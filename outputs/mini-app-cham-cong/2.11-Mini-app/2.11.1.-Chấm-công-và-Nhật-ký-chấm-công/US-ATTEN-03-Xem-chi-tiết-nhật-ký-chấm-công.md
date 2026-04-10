@@ -23,7 +23,6 @@
 
 ### **2. ACCESS CONTROL (RBAC/ABAC)**
 
-********
 | Thông tin (Data Field) | Role (Access Right) | Ghi chú |
 | --- | --- | --- |
 | Lịch sử mốc quẹt (In/Out) | Nhân viên, HR, Quản lý | ABAC: Chỉ hiển thị lịch sử của chính chủ tài khoản. |

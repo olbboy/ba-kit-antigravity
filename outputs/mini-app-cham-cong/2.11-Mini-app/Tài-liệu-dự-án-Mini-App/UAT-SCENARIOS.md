@@ -4,7 +4,6 @@
 
 Link wireframe: 
 
-****************************************************************
 | Epic | STT | Tên Module Logic | Mô tả Nội dung nghiệp vụ (Kịch bản) | ETA | Sprint | Status | Ghi chú |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | I. THIẾT LẬP | 1 | Module 05: Quản lý Nhân sự & Cơ cấu | Import danh sách NV từ Excel & Sơ đồ tổ chức; Quản lý hiện diện Dashboard Admin. | 1d | Sprint 8 |  |  |

@@ -2,7 +2,6 @@
 
 ---
 
-****************************
 | Thông tin | Nội dung |
 | --- | --- |
 | Target release | Version 1.0 (Sprint 8) |
@@ -10,8 +9,6 @@
 | Document owner | Business Analyst Team |
 | Stakeholder | HR Admin, Toàn bộ Nhân viên |
 | Status | Open |
-
-  
 
 ---
 
@@ -27,33 +24,44 @@
 
 ```mermaid
 graph TD
-    A["📋 HR Admin cấu hình"] --> B["📅 CRUD Danh mục ngày nghỉ<br/>Lễ quốc gia / Nội bộ"]
-    A --> C["⚙️ Cấu hình Policy & Rules<br/>Sinh nhật / WFH / Thiên tai"]
-    
-    B --> D["🔄 Batch Job 00:01 hằng ngày<br/>Quét toàn bộ NV"]
-    C --> D
-    
-    D --> E{"Ngày hôm nay<br/>là ngày nghỉ?"}
-    E -->|"Có"| F["✅ Gán trạng thái<br/>HỢP LỆ / HƯỞNG LƯƠNG"]
-    E -->|"Không"| G{"NV có sinh nhật<br/>trong tháng?"}
-    G -->|"Có + NV chính thức"| H["🎂 Cộng 1 ngày phép<br/>vào quỹ phép cá nhân"]
-    G -->|"Không"| I["➡️ Bỏ qua"]
-    
-    F --> J["📱 App NV hiển thị<br/>Calendar màu sắc + Thông báo"]
-    H --> J
-    
-    C --> K{"Kích hoạt<br/>Nghỉ thiên tai?"}
-    K -->|"Có"| L["🌊 Chọn vùng ảnh hưởng<br/>→ Gán nghỉ khẩn cấp<br/>cho NV thuộc khu vực"]
+    subgraph Config["HR Admin cau hinh"]
+        A([HR Admin]) --> B[CRUD Danh muc ngay nghi<br/>Le quoc gia / Noi bo]
+        A --> C[Cau hinh Policy & Rules<br/>Sinh nhat / WFH / Thien tai]
+    end
 
-    style A fill:#FF9800,color:#fff
-    style F fill:#4CAF50,color:#fff
-    style H fill:#E91E63,color:#fff
-    style L fill:#F44336,color:#fff
+    subgraph BatchJob["Batch Job 00:01 hang ngay"]
+        B & C --> D[Quet toan bo NV]
+        D --> E{Ngay hom nay<br/>la ngay nghi?}
+        E -->|Co| F[Gan trang thai<br/>HOP LE / HUONG LUONG]
+        E -->|Khong| G{NV co sinh nhat<br/>trong thang?}
+        G -->|Co + NV chinh thuc| H[Cong 1 ngay phep<br/>vao quy phep ca nhan]
+        G -->|Khong| I[Bo qua]
+    end
+
+    subgraph Output["Ket qua"]
+        F & H --> J[App NV hien thi<br/>Calendar mau sac + Thong bao]
+    end
+
+    subgraph Emergency["Khan cap"]
+        C --> K{Kich hoat<br/>Nghi thien tai?}
+        K -->|Co| L[Chon vung anh huong<br/>Gan nghi khan cap cho NV]
+    end
+
+    classDef admin fill:#FF9800,color:#fff,stroke-width:2px
+    classDef success fill:#66BB6A,color:#fff,stroke-width:2px
+    classDef special fill:#AB47BC,color:#fff,stroke-width:2px
+    classDef danger fill:#EF5350,color:#fff,stroke-width:2px
+    classDef output fill:#42A5F5,color:#fff,stroke-width:2px
+
+    class A admin
+    class F success
+    class H special
+    class L danger
+    class J output
 ```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
-************
 | Persona | Nhu cầu cụ thể | Tài liệu / Căn cứ |
 | --- | --- | --- |
 | HR Admin | Muốn gán các ngày Lễ quốc gia (Tết, 30/4) để hệ thống tự động tính đủ công cho nhân viên mà họ không cần chấm công. | Holiday Catalog |
@@ -66,34 +74,48 @@ graph TD
 
 ```mermaid
 graph LR
-    HR["📋 HR Admin"]
-    NV["👤 Nhân viên"]
-    BGD["🏢 Ban Lãnh đạo"]
-    SYS["⚙️ Hệ thống"]
+    subgraph Actors
+        HR([HR Admin])
+        NV([Nhan vien])
+        BGD([Ban Lanh dao])
+        SYS([He thong])
+    end
 
-    UC1["CRUD Danh mục ngày nghỉ<br/>Lễ quốc gia / Nội bộ"]
-    UC2["Cấu hình Policy<br/>Sinh nhật / WFH"]
-    UC3["Kích hoạt Nghỉ thiên tai<br/>Chọn vùng ảnh hưởng"]
-    UC4["Clone lịch nghỉ<br/>sang năm mới"]
-    UC5["Xem Calendar cá nhân<br/>Mã màu Đỏ/Xanh"]
-    UC6["Xem chi tiết ngày nghỉ<br/>Loại + Đãi ngộ"]
-    UC7["Batch Job tự động<br/>Gán công 00:01"]
-    UC8["Gửi thông báo<br/>trước 3 ngày nghỉ lễ"]
+    subgraph Admin_UC["Quan tri"]
+        UC1[CRUD Danh muc ngay nghi]
+        UC2[Cau hinh Policy<br/>Sinh nhat / WFH]
+        UC3[Kich hoat Nghi thien tai<br/>Chon vung anh huong]
+        UC4[Clone lich nghi sang nam moi]
+    end
+
+    subgraph Employee_UC["Nhan vien xem"]
+        UC5[Xem Calendar ca nhan<br/>Ma mau Do/Xanh]
+        UC6[Xem chi tiet ngay nghi]
+    end
+
+    subgraph System_UC["Tu dong"]
+        UC7[Batch Job gan cong<br/>00:01 hang ngay]
+        UC8[Gui thong bao<br/>truoc 3 ngay nghi le]
+    end
 
     HR --> UC1 & UC2 & UC4
     BGD --> UC3
     NV --> UC5 & UC6
     SYS --> UC7 & UC8
 
-    style HR fill:#FF9800,color:#fff
-    style NV fill:#4CAF50,color:#fff
-    style BGD fill:#F44336,color:#fff
-    style SYS fill:#607D8B,color:#fff
+    classDef actor fill:#37474F,color:#fff,stroke-width:2px
+    classDef admin fill:#FFF3E0,stroke:#E65100,color:#BF360C
+    classDef emp fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    classDef sys fill:#F3E5F5,stroke:#7B1FA2,color:#4A148C
+
+    class HR,NV,BGD,SYS actor
+    class UC1,UC2,UC3,UC4 admin
+    class UC5,UC6 emp
+    class UC7,UC8 sys
 ```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 
-************************************************
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
 | F07.1 | Quản trị Danh mục ngày nghỉ | Giao diện CRUD quản lý danh sách ngày nghỉ (Lễ quốc gia/Nội bộ). Hỗ trợ chọn ngày trên Calendar và gán loại hình nghỉ hưởng lương/không lương. | Là Admin, tôi muốn tự thiết lập danh mục ngày nghỉ để hệ thống có căn cứ tính công tự động cho toàn công ty. |

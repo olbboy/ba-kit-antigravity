@@ -2,7 +2,6 @@
 
 ---
 
-****************************
 | Thông tin | Nội dung |
 | --- | --- |
 | Target release | Version 1.0 |
@@ -10,8 +9,6 @@
 | Document owner | ndthuy1 |
 | Stakeholder | Toàn bộ Nhân viên |
 | Status | Open |
-
-  
 
 ### **1. MỤC TIÊU**
 
@@ -23,35 +20,46 @@
 
 ```mermaid
 graph TD
-    A["👤 Nhân viên mở Mini App"] --> B["📊 Dashboard Cá nhân<br/>Giờ vào + Progress bar 8h"]
-    
-    B --> C["📒 Nhật ký Chấm công<br/>In/Out + Ảnh Face ID"]
-    B --> D["📝 Trung tâm Đăng ký<br/>Nghỉ phép / Đổi ca / OT"]
-    B --> E["⚠️ Giải trình công<br/>Muộn/Sớm + Minh chứng"]
-    B --> F["📈 Báo cáo cá nhân<br/>KPI + Score chuyên cần"]
-    B --> G["⚙️ Setup Hồ sơ<br/>Thông tin + Face ID"]
+    A([Nhan vien mo Mini App]) --> B[Dashboard Ca nhan<br/>Gio vao + Progress bar 8h]
 
-    D --> H["📤 Gửi đơn → PENDING"]
-    E --> H
-    H --> I["👔 Manager/HR phê duyệt"]
-    I -->|"Duyệt"| J["✅ Cập nhật dữ liệu"]
-    I -->|"Từ chối"| K["❌ Phản hồi lý do"]
-    J --> B
-    K --> B
+    subgraph Features["6 chuc nang ESS"]
+        C[Nhat ky Cham cong<br/>In/Out + Anh Face ID]
+        D[Trung tam Dang ky<br/>Nghi phep / Doi ca / OT]
+        E[Giai trinh cong<br/>Muon/Som + Minh chung]
+        F[Bao cao ca nhan<br/>KPI + Score chuyen can]
+        G[Setup Ho so<br/>Thong tin + Face ID]
+    end
 
-    G -->|"Bước 1"| G1["Thông tin cá nhân"]
-    G1 -->|"Bước 2"| G2["📷 Định danh Face AI"]
-    G2 -->|"Bước 3"| G3["✅ Hoàn tất"]
+    B --> C & D & E & F & G
 
-    style A fill:#4CAF50,color:#fff
-    style B fill:#1976D2,color:#fff
+    subgraph Approval["Luong phe duyet"]
+        D & E --> H[Gui don - PENDING]
+        H --> I{Manager/HR<br/>phe duyet}
+        I -->|Duyet| J[Cap nhat du lieu]
+        I -->|Tu choi| K[/Phan hoi ly do/]
+    end
+
+    subgraph Setup["Dang ky Face ID"]
+        G -->|Buoc 1| G1[Thong tin ca nhan]
+        G1 -->|Buoc 2| G2[Dinh danh Face AI]
+        G2 -->|Buoc 3| G3[Hoan tat]
+    end
+
+    classDef start fill:#4CAF50,color:#fff,stroke-width:2px
+    classDef dashboard fill:#1976D2,color:#fff,stroke-width:2px
+    classDef feature fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    classDef success fill:#66BB6A,color:#fff,stroke-width:2px
+    classDef fail fill:#EF5350,color:#fff,stroke-width:2px
+
+    class A start
+    class B dashboard
+    class C,D,E,F,G feature
+    class J,G3 success
+    class K fail
 ```
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
-  
-
-************
 | Persona | Nhu cầu cụ thể | Tài liệu |
 | --- | --- | --- |
 | Nhân viên | Muốn biết hôm nay mình đã làm được bao nhiêu tiếng (Progress) và bao giờ thì đủ 8 tiếng. | Dashboard Cá nhân |
@@ -62,31 +70,36 @@ graph TD
 
 ```mermaid
 graph LR
-    NV["👤 Nhân viên"]
+    subgraph Actor
+        NV([Nhan vien])
+    end
 
-    F01["F01: Dashboard Cá nhân<br/>Giờ vào + Progress 8h"]
-    F02["F02: Nhật ký Chấm công<br/>In/Out + Tag trạng thái"]
-    F03["F03: Trung tâm Đăng ký<br/>Nghỉ phép / Đổi ca / OT"]
-    F04["F04: Giải trình<br/>Muộn/Sớm + Ảnh"]
-    F05["F05: Báo cáo cá nhân<br/>Score + KPI Highlights"]
-    F06["F06: Setup Hồ sơ<br/>Thông tin + Face ID"]
+    subgraph View["Xem thong tin"]
+        F01[F01: Dashboard Ca nhan<br/>Gio vao + Progress 8h]
+        F02[F02: Nhat ky Cham cong<br/>In/Out + Tag trang thai]
+        F05[F05: Bao cao ca nhan<br/>Score + KPI Highlights]
+    end
 
-    NV --> F01 & F02 & F03 & F04 & F05 & F06
+    subgraph Action["Thao tac"]
+        F03[F03: Trung tam Dang ky<br/>Nghi phep / Doi ca / OT]
+        F04[F04: Giai trinh<br/>Muon/Som + Anh]
+        F06[F06: Setup Ho so<br/>Thong tin + Face ID]
+    end
 
-    style NV fill:#4CAF50,color:#fff
-    style F01 fill:#E3F2FD
-    style F02 fill:#E3F2FD
-    style F03 fill:#FFF3E0
-    style F04 fill:#FFEBEE
-    style F05 fill:#E8F5E9
-    style F06 fill:#F3E5F5
+    NV --> F01 & F02 & F05
+    NV --> F03 & F04 & F06
+
+    classDef actor fill:#37474F,color:#fff,stroke-width:2px
+    classDef view fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    classDef action fill:#FFF3E0,stroke:#E65100,color:#BF360C
+
+    class NV actor
+    class F01,F02,F05 view
+    class F03,F04,F06 action
 ```
 
 ### **5. PHẠM VI CHỨC NĂNG**
 
-  
-
-****************************************
 | Mã | Chức năng | Mô tả | User Story |
 | --- | --- | --- | --- |
 | F01 | Dashboard Cá nhân | Xem giờ vào, Thanh tiến độ 8h (Progress bar) nhảy real-time. % Đúng giờ. | Là NV, tôi muốn xem mình đã làm đủ ca hôm nay chưa. |

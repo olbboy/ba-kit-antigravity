@@ -2,7 +2,6 @@
 
 ---
 
-************************
 | Thông tin | Nội dung |
 | --- | --- |
 | Target release | [Giai đoạn 1 - MVP] |
@@ -23,30 +22,38 @@
 
 ```mermaid
 graph TD
-    A["📷 Camera AI C-Vision<br/>Quét khuôn mặt NV"] -->|Webhook| B["🔐 EAMS Backend<br/>Xác thực HMAC-SHA256"]
-    B -->|Idempotency check| C["⚙️ Queue Processing<br/>BullMQ"]
-    C --> D{"Confidence<br/>≥ 0.85?"}
-    D -->|"Không"| E["❌ Failed<br/>Cần HR Review"]
-    D -->|"Có"| F["🔗 Mapping<br/>personId → employeeId"]
-    F --> G{"Xác định<br/>hướng"}
-    G -->|"IN_ONLY / Xen kẽ"| H["✅ CHECK_IN"]
-    G -->|"OUT_ONLY / Xen kẽ"| I["✅ CHECK_OUT"]
-    H & I --> J["💾 Tạo AttendanceRecord<br/>status: APPROVED"]
-    J --> K["📊 Cập nhật<br/>DailyAttendanceSummary"]
-    K --> L["📱 Mini App<br/>Dashboard + Nhật ký<br/>cập nhật Real-time ≤ 60s"]
+    A([Camera AI C-Vision]) -->|Webhook| B[EAMS Backend<br/>Xac thuc HMAC-SHA256]
+    B -->|Idempotency check| C[Queue Processing<br/>BullMQ]
 
-    style A fill:#7B1FA2,color:#fff
-    style L fill:#4CAF50,color:#fff
-    style E fill:#F44336,color:#fff
+    C --> D{Confidence >= 0.85?}
+    D -->|Khong| E[/Failed - Can HR Review/]
+    D -->|Co| F[Mapping<br/>personId - employeeId]
+
+    F --> G{Xac dinh huong}
+    G -->|IN_ONLY| H[CHECK_IN]
+    G -->|OUT_ONLY| I[CHECK_OUT]
+
+    H & I --> J[(Tao AttendanceRecord<br/>status: APPROVED)]
+    J --> K[Cap nhat<br/>DailyAttendanceSummary]
+    K --> L([Mini App<br/>Dashboard + Nhat ky<br/>Real-time nho hon 60s])
+
+    classDef start fill:#7B1FA2,color:#fff,stroke:#4A148C,stroke-width:2px
+    classDef fail fill:#EF5350,color:#fff,stroke:#C62828,stroke-width:2px
+    classDef success fill:#66BB6A,color:#fff,stroke:#2E7D32,stroke-width:2px
+    classDef process fill:#42A5F5,color:#fff,stroke:#1565C0,stroke-width:1px
+    classDef db fill:#FFA726,color:#fff,stroke:#E65100,stroke-width:2px
+
+    class A start
+    class E fail
+    class H,I,L success
+    class B,C,F,K process
+    class J db
 ```
 
 ---
 
 ### **3. NHU CẦU NGƯỜI DÙNG**
 
-  
-
-************
 | Persona | Nhu cầu cụ thể | Tài liệu / Căn cứ |
 | --- | --- | --- |
 | Nhân viên (Staff) | Muốn biết mình đã chấm công thành công chưa ngay sau khi bước qua cửa sảnh. | Dashboard Trạng thái hôm nay |
@@ -59,37 +66,41 @@ graph TD
 
 ```mermaid
 graph LR
-    NV["👤 Nhân viên"]
-    HRS["📋 HR Admin"]
-    MGR["👔 Quản lý"]
-    SYS["⚙️ Hệ thống"]
+    subgraph Actors
+        NV([Nhan vien])
+        HRS([HR Admin])
+        MGR([Quan ly])
+        SYS([He thong])
+    end
 
-    UC1["Xem Dashboard<br/>Trạng thái hôm nay"]
-    UC2["Xem Thanh tiến độ<br/>% hoàn thành ca"]
-    UC3["Xem Thống kê tháng<br/>Đúng giờ / Nghỉ / OT"]
-    UC4["Tra cứu Nhật ký<br/>Ảnh Face ID + mốc giờ"]
-    UC5["Xem Cảnh báo vi phạm<br/>Muộn / Sớm / Thiếu quẹt"]
-    UC6["Giải trình ngay<br/>Prefill ngày vi phạm"]
+    subgraph Module["Cham cong & Nhat ky"]
+        UC1[Dashboard trang thai hom nay]
+        UC2[Thanh tien do ca lam viec]
+        UC3[Thong ke hieu suat thang]
+        UC4[Tra cuu Nhat ky + Anh Face ID]
+        UC5[Canh bao vi pham]
+        UC6[Giai trinh ngay - Prefill]
+    end
 
     NV --> UC1 & UC2 & UC3 & UC4 & UC5
-    UC5 --> UC6
+    UC5 -.->|lien ket| UC6
     HRS --> UC4
     MGR --> UC3
-    SYS -->|"Real-time ≤ 60s"| UC1
+    SYS -->|"Real-time"| UC1
 
-    style NV fill:#4CAF50,color:#fff
-    style HRS fill:#FF9800,color:#fff
-    style MGR fill:#2196F3,color:#fff
-    style SYS fill:#607D8B,color:#fff
+    classDef actor fill:#37474F,color:#fff,stroke:#263238,stroke-width:2px
+    classDef uc fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
+    classDef alert fill:#FFF3E0,stroke:#E65100,color:#BF360C
+
+    class NV,HRS,MGR,SYS actor
+    class UC1,UC2,UC3,UC4 uc
+    class UC5,UC6 alert
 ```
 
 ---
 
 ### **5. PHẠM VI CHỨC NĂNG**
 
-  
-
-****************
 | Mã | Chức năng | Mô tả | User Story |
 | --- | --- | --- | --- |
 | ATTEN_1 | Dashboard Hôm nay | Hiển thị mốc giờ Vào/Ra, Ngày tháng và Badge trạng thái (Đã chấm công/Chưa chấm công). | Là NV, tôi muốn thấy giờ vào sảnh ngay lập tức để an tâm bắt đầu ca làm việc. |

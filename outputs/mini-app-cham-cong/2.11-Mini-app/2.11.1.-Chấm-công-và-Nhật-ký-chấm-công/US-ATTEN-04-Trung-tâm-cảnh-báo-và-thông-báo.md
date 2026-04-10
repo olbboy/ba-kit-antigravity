@@ -24,7 +24,6 @@
 
 ### **2. ACCESS CONTROL (RBAC/ABAC)**
 
-****``
 | Thông tin (Data Field) | Role (Access Right) | Ghi chú |
 | --- | --- | --- |
 | Danh sách vi phạm cá nhân | Nhân viên , HR, Quản lý | ABAC: Chỉ hiển thị cảnh báo thuộc về User_ID đang đăng nhập. |
