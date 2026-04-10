@@ -305,7 +305,14 @@ FILE_TO_PAGE = {
 }
 
 # Pages with diagram attachments — preserve image refs, don't overwrite with mermaid
-DIAGRAM_PAGES = {'196786907', '196786927', '196786944'}
+DIAGRAM_PAGES = {
+    '196786907',   # 2.11 Mini-app README (1 diagram)
+    '196786908',   # Module 01 README (2 diagrams)
+    '196786927',   # Module 03 README (2 diagrams)
+    '196786944',   # Module 07 README (2 diagrams)
+    '196786958',   # BRD HR Admin (2 diagrams)
+    '196786959',   # BRD Nhân viên (2 diagrams)
+}
 
 
 def main():
