@@ -56,6 +56,7 @@ Hệ thống áp dụng cấu hình mới cho chấm công
 | F02.3 | Giới hạn thời gian chấm công | Thiết lập Punch Limit: số giờ check-in sớm / check-out muộn tối đa. Mốc quẹt ngoài khung bị bỏ qua. | [US-SHIFT-03](./US-SHIFT-03-Giới-hạn-thời-gian-chấm-công-(punch-limit).md) |
 | F02.4 | Cấu hình giờ nghỉ | Thiết lập khung giờ nghỉ (Break) cho ca. Hệ thống tự trừ khi tính giờ làm thực tế. | [US-SHIFT-04](./US-SHIFT-04-Cấu-hình-giờ-nghỉ.md) |
 | F02.5 | Import nhân viên vào ca | Tải file mẫu Excel, nhập Mã NV, upload và validate hàng loạt. Trả kết quả thành công/thất bại. | [US-SHIFT-05](./US-SHIFT-05-Import-nhân-viên-vào-ca.md) |
+| F02.6 | Phân ca theo Pattern | Tạo pattern ca xoay (VD: Sáng→Chiều→Đêm→Nghỉ) tự lặp. Drag-drop builder, preview calendar, conflict resolution. | [US-SHIFT-06](./US-SHIFT-06-Phân-ca-theo-pattern.md) |
 
 ---
 

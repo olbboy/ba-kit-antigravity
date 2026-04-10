@@ -92,6 +92,13 @@ Ràng buộc: Cho phép nhân viên tắt/mở thông báo nhắc nhở cá nhâ
 - Manager Dashboard: Biểu đồ tỷ lệ chuyên cần theo phòng ban; Danh sách NV đi muộn/về sớm nhiều nhất.
 - Excel Export: Xuất bảng công tổng hợp (Attendance Report) có cấu trúc phù hợp để tính lương.
 
+
+**Module 12: Quản trị hệ thống**
+
+- Quản lý chi nhánh: CRUD site (Tên, Mã, Timezone, Ngày chốt công). Deactivate site khi thu hẹp.
+- Audit Log: Xem toàn bộ nhật ký hoạt động hệ thống. Filter theo user, module, action, time range. Export CSV.
+- Employee Offboarding: Quy trình 7 bước tự động khi NV nghỉ việc (cancel đơn, freeze phép, deactivate camera, re-route approval).
+
 ### **3. USE CASE DIAGRAM**
 
 ```mermaid
@@ -102,6 +109,7 @@ graph LR
         HR([HR Admin])
         IT([IT Admin])
         BGD([Ban Giam doc])
+        SYS([System Admin])
     end
 
     subgraph ESS["Employee Self-Service"]
@@ -124,19 +132,27 @@ graph LR
         M11[11 - Bao cao tong & Xuat]
     end
 
+    subgraph System["System Administration"]
+        M12[12 - Quan tri he thong]
+    end
+
     NV --> M01 & M02 & M03 & M04
     MGR --> M01 & M10 & M11
     HR --> M05 & M06 & M07 & M09 & M10 & M11
     IT --> M08 & M09
     BGD --> M11
+    SYS --> M12
+    HR --> M12
 
     classDef actor fill:#37474F,color:#fff,stroke:#263238,stroke-width:2px
     classDef ess fill:#E3F2FD,stroke:#1565C0,color:#0D47A1
     classDef admin fill:#FFF3E0,stroke:#E65100,color:#BF360C
+    classDef sys fill:#F3E5F5,stroke:#6A1B9A,color:#4A148C
     classDef wf fill:#E8F5E9,stroke:#2E7D32,color:#1B5E20
 
-    class NV,MGR,HR,IT,BGD actor
+    class NV,MGR,HR,IT,BGD,SYS actor
     class M01,M02,M03,M04 ess
     class M05,M06,M07,M08,M09 admin
     class M10,M11 wf
+    class M12 sys
 ```
