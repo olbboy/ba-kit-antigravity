@@ -1,41 +1,61 @@
-# BA-Kit Migration Guide: Antigravity to Claude Code
+# BA-Kit Multi-Platform Deployment Guide
 
-## Installation
+## Canonical Source
 
-1. Copy `.claude-output/CLAUDE.md` to project root `CLAUDE.md`
-2. Copy `.claude-output/skills/` to `.claude/skills/`
-3. Copy `.claude-output/.mcp.json` to project root `.mcp.json`
-4. Copy `.claude-output/settings.json` to `.claude/settings.json`
-5. Keep `templates/`, `docs/`, `ebooks/` as-is (no changes needed)
+**`.agent/skills/`** = source of truth (25 BA skills + 2 connectors).
 
-## Verify
+**`.claude-output/`** = pre-built export for Claude Code deployment.
+
+## Platform Targets
+
+| Platform | Skill Location | Activation | Status |
+|----------|---------------|------------|--------|
+| Antigravity | `.agent/skills/ba-xxx/` | `@ba-xxx` | Production |
+| Claude Code | `~/.claude/skills/ba-xxx/` | `/ba-xxx` | Ready (copy .claude-output/) |
+| Claude Cowork | Project `.claude/skills/` | `/ba-xxx` | Same as Claude Code |
+| Codex (OpenAI) | `.codex/agents/` | Agent config | Needs adapter |
+
+## Claude Code Deployment
 
 ```bash
-# Check all skills registered
-ls .claude/skills/ba-*/SKILL.md | wc -l  # expect: 20 (25 agents + 1 search)
+# Copy skills
+cp -r .claude-output/skills/* ~/.claude/skills/
 
-# Test knowledge search
-python3 .claude/skills/ba-kit-search/scripts/ba_search.py --stats
+# Copy CLAUDE.md (squad instructions)
+cp .claude-output/CLAUDE.md .claude/CLAUDE.md
 
-# Test a skill (in Claude Code CLI)
-/ba-writing "Write a user story for login"
+# Verify
+ls ~/.claude/skills/ba-*/SKILL.md | wc -l  # expect: 25+
+python3 ~/.claude/skills/ba-kit-search/scripts/ba_search.py --stats
 ```
 
-## Key Differences: Antigravity vs Claude Code
+## Tool Name Mapping
 
-| Feature | Antigravity | Claude Code |
-|---------|-------------|-------------|
-| Invoke agent | `@ba-writing` | `/ba-writing` |
-| Tool: Python | `run_command(python)` | Bash tool: `python3 -c "..."` |
-| Tool: Search | `grep_search` | Grep tool |
-| Tool: Web | `search_web` | WebSearch tool |
-| Tool: Files | `write_to_file` | Write tool |
-| MCP | SSE bridge (index.js) | Direct stdio (.mcp.json) |
-| Knowledge | `python3 .agent/scripts/ba_search.py` | `python3 .claude/skills/ba-kit-search/scripts/ba_search.py` |
+| Action | Antigravity | Claude Code | Codex |
+|--------|------------|-------------|-------|
+| Run Python | `run_command` | `Bash` tool | `shell` |
+| Search files | `grep_search` | `Grep` tool | `grep` |
+| Write file | `write_to_file` | `Write` tool | `write_file` |
+| Read file | `read_file` | `Read` tool | `read_file` |
+| Web search | `search_web` | `WebSearch` tool | N/A |
+| Ask user | Direct prompt | `AskUserQuestion` | N/A |
 
-## Gotchas
+## Self-Contained Skill Format (Claude Code)
 
-1. Claude Code loads CLAUDE.md automatically — no need for CONTINUITY.md (use CLAUDE.md instead)
-2. Skills are auto-discovered from `.claude/skills/` — no registration needed
-3. MCP bridge is unnecessary — Claude Code connects to MCP servers directly via stdio
-4. Settings.json permissions pre-approve common tools to reduce confirmation prompts
+Each skill folder must be self-contained:
+```
+ba-kit-search/
+├── SKILL.md           ← Skill definition
+├── scripts/           ← Python utilities (bundled)
+│   ├── ba_core.py
+│   └── ba_search.py
+└── data/              ← Knowledge CSVs (bundled)
+    └── *.csv (23 files)
+```
+
+## Sync Workflow
+
+When `.agent/skills/` is updated:
+1. Run export script to regenerate `.claude-output/skills/`
+2. Test on Claude Code
+3. Commit both canonical + export
