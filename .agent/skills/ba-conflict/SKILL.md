@@ -68,6 +68,77 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## Workflow
+
+**Step 1 — Map Positions**: Liệt kê từng bên xung đột, lập bảng Position (điều họ đang yêu cầu) vs Interest (lý do thực sự đằng sau yêu cầu đó). Không bỏ qua bên thứ ba bị ảnh hưởng gián tiếp.
+
+**Step 2 — Identify Interests**: Dùng kỹ thuật "5 Whys lite" — hỏi "Tại sao họ muốn điều này?" ít nhất 2 lần để lộ ra động cơ thực sự (tiết kiệm thời gian, giảm rủi ro, tuân thủ pháp luật, v.v.).
+
+**Step 3 — Generate Options**: Tạo ít nhất 3 phương án giải quyết:
+1. Compromise — chia đôi mỗi bên nhượng một phần.
+2. Innovation — giải pháp mới đáp ứng Interest của cả hai mà không cần nhượng bộ.
+3. BATNA — kịch bản "không đạt được thỏa thuận" và hậu quả cụ thể.
+
+**Step 4 — Draft ADR**: Soạn Architecture Decision Record. Ghi rõ Context, Decision, Consequences. Lưu vào `docs/decisions/ADR-XXX.md`. Handoff sang `@ba-traceability` để gắn vào requirement graph.
+
+---
+
+## Output Format
+
+### ADR Template (Architecture Decision Record)
+
+```markdown
+# ADR-[NNN]: [Tiêu đề ngắn gọn mô tả quyết định]
+
+**Date**: DD/MM/YYYY
+**Status**: Proposed | Accepted | Deprecated | Superseded
+**Deciders**: [Tên các bên tham gia quyết định]
+
+## Context
+[Mô tả xung đột: ai muốn gì, tại sao, constraints nào đang tồn tại]
+
+## Options Considered
+
+| Option          | Pros                        | Cons                        |
+|-----------------|-----------------------------|-----------------------------|
+| [Option A]      | [Lợi ích A]                 | [Nhược điểm A]              |
+| [Option B]      | [Lợi ích B]                 | [Nhược điểm B]              |
+| Do Nothing (BATNA) | Không tốn effort         | [Hậu quả nếu không giải quyết] |
+
+## Decision
+[Phương án được chọn và lý do dựa trên objective criteria]
+
+## Consequences
+- **Positive**: [Ai được lợi gì]
+- **Negative**: [Ai phải chịu trade-off gì]
+- **Mitigation**: [Kế hoạch giảm thiểu tác động tiêu cực]
+
+## Next Actions
+- [ ] [Action 1] — Owner: [Tên] — Due: DD/MM/YYYY
+```
+
+---
+
+## Example
+
+**Xung đột thực tế**: Phòng HR yêu cầu xuất Excel để phân tích offline. Dev Lead từ chối vì muốn giữ API-only, tránh rò rỉ dữ liệu.
+
+**Map Positions vs Interests**:
+
+| Bên     | Position (Yêu cầu)       | Interest (Lý do thực)                         |
+|---------|--------------------------|-----------------------------------------------|
+| HR      | Muốn xuất Excel          | Cần phân tích pivot table, filter ngoài app   |
+| Dev Lead| API-only, không export   | Sợ dữ liệu NV bị lưu trên laptop cá nhân     |
+
+**Options**:
+1. Compromise: Export Excel nhưng chỉ allow role HR_MANAGER, log mọi lần export.
+2. Innovation: Xây In-app Analytics dashboard với pivot/filter — HR không cần Excel.
+3. BATNA: Không giải quyết → HR dùng workaround copy-paste → mất 3h/tuần + dữ liệu lỗi.
+
+**ADR Decision**: Chọn Option 1 (Compromise) vì Option 2 mất 3 sprint, vượt deadline Q2. Export có role-gate + audit log đáp ứng security concern của Dev Lead.
+
+---
+
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
 *   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain conflict`

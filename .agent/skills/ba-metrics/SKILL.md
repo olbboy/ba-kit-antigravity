@@ -65,6 +65,79 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## Workflow
+
+**Step 1 — Collect Data**: Thu thập dữ liệu thô từ Jira/Bugzilla (defect log), danh sách user story, kết quả test execution. Xác định kỳ đo lường (sprint, tháng, release).
+
+**Step 2 — Calculate Metrics**: Tính toán các chỉ số cốt lõi:
+- *Defect Density* = Số lỗi / Số Function Point (hoặc số requirements)
+- *Requirement Volatility* = Số requirements thay đổi / Tổng requirements
+- *Test Pass Rate* = Test cases passed / Tổng test cases
+- Dùng `run_command` Python — KHÔNG tính thủ công.
+
+**Step 3 — Build Control Chart**: Vẽ X-bar/R chart hoặc p-chart. Tính UCL (Upper Control Limit) và LCL (Lower Control Limit) từ dữ liệu lịch sử ≥ 20 điểm. Gắn nhãn các điểm ngoài giới hạn là "Special Cause".
+
+**Step 4 — Interpret**: Phân biệt Common Cause variation (nhiễu bình thường) vs Special Cause variation (tín hiệu bất thường). Đặt câu hỏi ngược: "Defects giảm đột ngột có phải do code tốt hơn, hay do test ít đi?"
+
+**Step 5 — Report**: Xuất Quality Health Card. Đề xuất hành động: Stop / Continue / Investigate. Handoff sang `@ba-root-cause` nếu phát hiện Special Cause.
+
+---
+
+## Output Format
+
+### Quality Health Card — Dashboard Template
+
+```
+=== QUALITY HEALTH CARD ===
+Module / Sprint: [Tên module hoặc Sprint X]
+Period         : [DD/MM/YYYY — DD/MM/YYYY]
+Measured by    : @ba-metrics | Date: [today]
+
+| Metric                  | Value     | UCL   | LCL   | Status      |
+|-------------------------|-----------|-------|-------|-------------|
+| Defect Density          | X.XX /FP  | X.XX  | X.XX  | ✅ / ⚠️ / 🔴 |
+| Requirement Volatility  | XX%       | XX%   | —     | ✅ / ⚠️ / 🔴 |
+| Test Pass Rate          | XX%       | —     | XX%   | ✅ / ⚠️ / 🔴 |
+| Sigma Level (estimated) | X.X σ     | —     | —     | ✅ / ⚠️ / 🔴 |
+
+Process Stability : [STABLE / UNSTABLE]
+Verdict           : [1-sentence judgment]
+Recommended Action: [Continue / Investigate / Stop]
+Next Handoff      : [@ba-root-cause / @ba-innovation / none]
+===========================
+```
+
+---
+
+## Example
+
+**Tình huống**: Module "Chấm Công" của EAMS vừa kết thúc Sprint 5.
+- Tổng user stories: 40
+- Bugs logged: 12
+- Requirements changed: 8
+- Test cases: 60, passed: 48
+
+**Tính toán** (dùng Python):
+```python
+defect_density   = 12 / 40          # = 0.30 bugs/story
+req_volatility   = 8 / 40 * 100     # = 20%
+test_pass_rate   = 48 / 60 * 100    # = 80%
+# UCL benchmark từ 10 sprint trước: Defect Density UCL = 0.25
+status_dd        = "⚠️ NGOÀI GIỚI HẠN" if defect_density > 0.25 else "✅"
+```
+
+**Kết quả**:
+```
+Defect Density: 0.30 /story  | UCL: 0.25 → ⚠️ Special Cause detected
+Req Volatility: 20%          | UCL: 15%  → ⚠️ Quá nhiều scope changes
+Test Pass Rate: 80%          | LCL: 85%  → 🔴 Dưới ngưỡng chấp nhận
+
+Verdict: Process UNSTABLE. Ngừng tính năng mới. Điều tra ngay.
+Next: @ba-root-cause — Why defect density vượt UCL sprint này?
+```
+
+---
+
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
 *   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain metrics`

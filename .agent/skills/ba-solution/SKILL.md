@@ -66,6 +66,93 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## Workflow
+
+**Step 1 — Define Options**: Liệt kê ít nhất 3 phương án giải quyết vấn đề nghiệp vụ, bao gồm cả "Do Nothing" làm baseline. Mỗi option cần mô tả ngắn và các biến chi phí/lợi ích có thể đo được.
+
+**Step 2 — Cost-Benefit Analysis**: Dùng Python tính toán cho từng option. Tuyệt đối không ước tính thủ công. Tính NPV (Net Present Value), ROI (%), và Payback Period. Áp dụng Discount Rate phù hợp (thường 5–10% cho dự án nội bộ).
+
+**Step 3 — Risk Assessment**: Với mỗi option, xác định Top 3 rủi ro. Tính Risk-Adjusted Cost = Base Cost × (1 + Risk Premium). Thực hiện Sensitivity Analysis: điều chỉnh giả định lạc quan nhất xuống 20–40% để kiểm tra độ bền của quyết định.
+
+**Step 4 — Recommendation**: Chọn option có NPV cao nhất sau risk adjustment VÀ phù hợp strategic goal. Nếu NPV âm tất cả → recommend "Do Nothing" hoặc "Redesign Scope". Không bao giờ recommend vì "CEO thích".
+
+**Step 5 — Post-Implementation Review**: Sau khi triển khai, so sánh actual vs projected ROI. Nếu lệch > 20%, trigger `@ba-root-cause` điều tra nguyên nhân.
+
+---
+
+## Output Format
+
+### Business Case Template
+
+```
+=== BUSINESS CASE ===
+Project/Feature  : [Tên dự án hoặc tính năng]
+Problem Statement: [1-2 câu mô tả vấn đề đang gây thiệt hại gì]
+Strategic Goal   : [OKR hoặc KPI liên quan]
+Prepared by      : @ba-solution | Date: [today]
+
+--- OPTIONS ---
+
+| Option            | Capex (VND)  | Opex/yr (VND) | Benefit/yr (VND) | NPV (VND)    | ROI    | Payback  |
+|-------------------|--------------|---------------|------------------|--------------|--------|----------|
+| [Option A]        | X,XXX,XXX    | X,XXX,XXX     | X,XXX,XXX        | X,XXX,XXX    | XX%    | N months |
+| [Option B]        | X,XXX,XXX    | X,XXX,XXX     | X,XXX,XXX        | X,XXX,XXX    | XX%    | N months |
+| Do Nothing        | 0            | 0             | 0                | -X,XXX,XXX   | —      | Never    |
+
+--- RISK-ADJUSTED ANALYSIS ---
+| Option     | Base NPV     | Risk Premium | Adjusted NPV  | Confidence |
+|------------|--------------|--------------|---------------|------------|
+| [Option A] | X,XXX,XXX    | XX%          | X,XXX,XXX     | High/Med/Low|
+
+--- RECOMMENDATION ---
+Recommended Option : [Tên option]
+Rationale          : [1-2 câu lý do dựa trên số liệu]
+Key Assumptions    : [Liệt kê giả định quan trọng]
+Decision Gate      : [Điều kiện tiên quyết trước khi triển khai]
+=====================
+```
+
+---
+
+## Example
+
+**Tình huống**: Chọn giải pháp chấm công cho nhà máy sản xuất — Camera AI vs Máy quét vân tay.
+
+**Python calculation**:
+```python
+discount_rate = 0.08
+years = 3
+
+# Option A: Camera AI
+capex_a      = 500_000_000   # 500M VND
+opex_a       = 50_000_000    # 50M/năm
+benefit_a    = 300_000_000   # tiết kiệm nhân công manual 300M/năm
+npv_a = -capex_a + sum([(benefit_a - opex_a) / (1 + discount_rate)**t for t in range(1, years+1)])
+roi_a = (npv_a / capex_a) * 100
+# NPV_A = 116,468,020 VND | ROI = 23.3%
+
+# Option B: Máy quét vân tay
+capex_b      = 120_000_000
+opex_b       = 20_000_000
+benefit_b    = 150_000_000
+npv_b = -capex_b + sum([(benefit_b - opex_b) / (1 + discount_rate)**t for t in range(1, years+1)])
+roi_b = (npv_b / capex_b) * 100
+# NPV_B = 214,616,360 VND | ROI = 178.8%
+```
+
+**Kết quả**:
+```
+Option A (Camera AI)      : NPV = 116.5M VND | ROI = 23.3%  | Payback = 30 months
+Option B (Vân tay)        : NPV = 214.6M VND | ROI = 178.8% | Payback = 10 months
+Do Nothing (Chấm công tay): NPV = -180M VND  | (chi phí nhân công tích lũy)
+
+RECOMMENDATION: Option B — Máy quét vân tay.
+Lý do: NPV cao hơn 84%, payback nhanh hơn 20 tháng. Camera AI có ROI thấp hơn do capex cao.
+Risk flag: Độ chính xác vân tay < 95% nếu công nhân làm việc với hóa chất → chọn máy chống hóa chất.
+```
+
+---
+
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
 *   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain solution`

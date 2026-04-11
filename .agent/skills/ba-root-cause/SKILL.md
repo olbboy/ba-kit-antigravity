@@ -67,6 +67,80 @@ Don't stop here. Recommend the next step:
 
 ---
 
+## Workflow
+
+**Step 1 — Define Problem**: Phát biểu vấn đề dưới dạng "Effect Statement" rõ ràng: *"[Đối tượng] không thể [hành động] dẫn đến [hậu quả đo được]."* Tránh phát biểu mơ hồ như "hệ thống chậm".
+
+**Step 2 — 5 Whys**: Hỏi "Tại sao?" liên tiếp 5 lần từ triệu chứng bề mặt. Mỗi "Why" phải được xác minh bằng bằng chứng (log, số liệu, phỏng vấn), không được đoán mò. Dừng khi chạm đến Process/System failure, không dừng ở "con người phạm lỗi".
+
+**Step 3 — Fishbone Diagram**: Vẽ sơ đồ Ishikawa với 4–6 nhánh: Man (Con người), Method (Quy trình), Machine (Công nghệ), Material (Dữ liệu/tài nguyên), Measurement (Đo lường), Environment (Môi trường). Điền nguyên nhân tiềm năng vào từng nhánh.
+
+**Step 4 — Action Plan**: Với mỗi root cause được xác nhận, tạo hành động khắc phục (Corrective) và phòng ngừa (Preventive). Assign owner, due date, success metric. Handoff sang `@ba-process` để implement.
+
+---
+
+## Output Format
+
+### Fishbone ASCII Diagram Template
+
+```
+                        EFFECT: [Mô tả vấn đề]
+                                    |
+        __________________________|___________________________
+        |           |             |             |            |
+     [Man]       [Method]     [Machine]    [Material]  [Measurement]
+       |             |             |             |            |
+  - [Nguyên nhân] - [Nguyên nhân] - [Nguyên nhân] - ...      |
+  - [Nguyên nhân] - [Nguyên nhân]                             |
+                                                        - [Nguyên nhân]
+```
+
+### Action Plan Table Template
+
+```
+| #  | Root Cause Confirmed      | Type        | Action                        | Owner     | Due Date   | KPI                  |
+|----|---------------------------|-------------|-------------------------------|-----------|------------|----------------------|
+| 1  | [Nguyên nhân gốc rễ 1]    | Preventive  | [Hành động phòng ngừa]        | [Tên]     | DD/MM/YYYY | [Chỉ số thành công]  |
+| 2  | [Nguyên nhân gốc rễ 2]    | Corrective  | [Hành động khắc phục]         | [Tên]     | DD/MM/YYYY | [Chỉ số thành công]  |
+```
+
+---
+
+## Example
+
+**Vấn đề**: "Nhân viên không thấy dữ liệu chấm công trên app EAMS"
+
+**5 Whys**:
+1. *Tại sao NV không thấy chấm công?* → Màn hình hiển thị "Không có dữ liệu".
+2. *Tại sao không có dữ liệu?* → API `/attendance/today` trả về mảng rỗng.
+3. *Tại sao API trả mảng rỗng?* → Query lọc theo `employee_id` không khớp với dữ liệu máy chấm công.
+4. *Tại sao không khớp?* → Máy chấm công lưu `staff_code`, app dùng `employee_id` (2 trường khác nhau).
+5. *Tại sao 2 hệ thống dùng khác trường?* → **Không có Data Dictionary chung. Tích hợp thiếu contract.**
+
+**Root Cause**: Thiếu Integration Data Contract giữa hệ thống máy chấm công và EAMS API.
+
+**Fishbone**:
+```
+                  EFFECT: NV không thấy chấm công trên app
+                                    |
+        __________________________|___________________________
+        |                         |                          |
+     [Method]                 [Machine]                [Material]
+       |                         |                          |
+  - Không có data contract   - 2 hệ thống dùng        - Thiếu mapping
+  - Không có integration       field ID khác nhau        staff_code
+    test case                - Không có middleware         ↔ employee_id
+```
+
+**Action Plan**:
+| # | Root Cause              | Type        | Action                                | Owner  | Due        |
+|---|-------------------------|-------------|---------------------------------------|--------|------------|
+| 1 | Thiếu data contract     | Preventive  | Tạo Integration Spec trước khi code   | BA     | 15/04/2026 |
+| 2 | Thiếu field mapping     | Corrective  | Thêm mapping layer trong API gateway  | Dev    | 12/04/2026 |
+| 3 | Thiếu integration test  | Preventive  | Bổ sung test case chấm công end-to-end| QA     | 17/04/2026 |
+
+---
+
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
 *   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain systems`
