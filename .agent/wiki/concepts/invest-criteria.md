@@ -29,3 +29,7 @@ Quality gate for User Stories. A story must pass all 6 criteria.
 - data/writing.csv
 - ba-writing skill (drafting mode)
 - ba-validation skill (INVEST check)
+
+## Related Pages
+- [System 2 Reflection](./system-2-reflection.md) — validation loop for INVEST check
+- [EAMS Project](../projects/eams-mini-app.md) — 46 US validated against INVEST

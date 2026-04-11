@@ -36,3 +36,7 @@ Every artifact links to predecessor (backward) AND successor (forward). Break in
 - data/traceability.csv (35 entries)
 - ebook-requirements-memory-jogger.md Ch.6
 - IEEE 29148
+
+## Related Pages
+- [EAMS Project](../projects/eams-mini-app.md) — RTM built for 46 US
+- [2-Tier Knowledge](../decisions/2-tier-knowledge.md) — wiki compounds traceability insights

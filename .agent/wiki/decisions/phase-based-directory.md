@@ -29,3 +29,7 @@ Each phase folder contains: plan.md (roadmap + dependency DAG) + module folders 
 - BA/PO reviews by phase → sprint-aligned
 - Added 30 new files (6 plans + 12 API specs + 12 DB schemas)
 - All old 2.11.x paths broken → migrated with git mv (history preserved)
+
+## Sources
+- plans/reports/brainstorm-260411-0840-eams-directory-restructure.md
+- UAT-SCENARIOS.md (sprint mapping)

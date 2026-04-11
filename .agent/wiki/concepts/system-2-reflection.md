@@ -30,3 +30,7 @@ All 25 agents. Enforced via `_shared/system-prompt.md`.
 - ebook-fundamentals.md (BABOK Validation)
 - Kahneman — Thinking, Fast and Slow (System 1 vs System 2)
 - AGENT.MD cognitive architecture diagram
+
+## Related Pages
+- [INVEST Criteria](./invest-criteria.md) — quality gate that System 2 validates
+- [Traceability Chain](./traceability-chain.md) — verified via System 2 Grep checks

@@ -30,3 +30,7 @@ Split into 4 BRDs by persona grouping:
 - Each persona has dedicated review document for UAT
 - Training materials can be role-specific
 - Maintenance cost: 4 files instead of 2 (acceptable)
+
+## Sources
+- plans/reports/brd-completeness-260411-0149-feature-cross-reference.md
+- EAMS v2.0 §11 Ma trận quyền hạn (6 roles)

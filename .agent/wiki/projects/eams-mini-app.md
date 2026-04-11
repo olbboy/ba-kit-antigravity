@@ -47,3 +47,7 @@ Enterprise Attendance Management System — first project delivered by BA-Kit.
 ## Open Questions
 
 5 items pending PO decision — see outputs/mini-app-cham-cong/README.md "Open Questions" section.
+
+## Sources
+- outputs/mini-app-cham-cong/ (project deliverables)
+- eams-v2-comprehensive.md (EAMS v2.0 architecture)

@@ -40,3 +40,7 @@ Tier 2: .agent/wiki/         — LIVING, COMPOUNDS, LLM-MAINTAINED
 - CSV quality preserved (never auto-modified)
 - Query accuracy improves: project-specific + general knowledge
 - Maintenance: near-zero (LLM maintains wiki)
+
+## Sources
+- Karpathy LLM Wiki (2026): https://gist.github.com/karpathy/442a6bf555914893e9891c11519de94f
+- plans/reports/skill-assessment-260411-1507-ba-kit-agent-skills.md
