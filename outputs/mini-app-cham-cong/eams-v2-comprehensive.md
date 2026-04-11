@@ -1,9 +1,9 @@
 # TÀI LIỆU NGHIỆP VỤ TOÀN DIỆN - EAMS
 # Hệ thống Quản lý Chấm công Doanh nghiệp
 
-**Phiên bản:** 2.0
-**Ngày cập nhật:** 17/03/2026
-**Trạng thái:** Production Ready
+**Phiên bản:** 2.1
+**Ngày cập nhật:** 2026-04-11
+**Trạng thái:** Production Ready (Bao gồm nâng cấp tuân thủ NĐ 13/2023)
 
 ---
 
@@ -272,6 +272,14 @@ Pattern: [CA_SANG, CA_CHIEU, CA_DEM, OFF]
   Thứ 6: CA_SANG  (lặp lại)
   ...
 ```
+
+### 4.4 Xem lịch phân ca team (Manager View)
+
+**Mục tiêu**: Giúp Quản lý trực tiếp (Manager/Dept Head) nắm bắt lịch làm việc của đội ngũ để phân bổ công việc, trong khi vẫn bảo toàn quyền kiểm soát cấu hình ca cho HR.
+
+- **Giao diện**: Lịch (Calendar grid) hiển thị nhân viên theo hàng, ngày/ca theo cột.
+- **Phát hiện thiếu hụt (Gap Detection)**: Hệ thống tự động highlight cảnh báo nếu số lượng nhân sự trong 1 ca (ví dụ Ca Đêm) < ngưỡng tối thiểu.
+- **Đề xuất đổi ca**: Dạng *Read-only* cho Manager. Nếu cần đổi người, Manager dùng tính năng "Đề xuất đổi ca", hệ thống gửi notification cho HR thụ lý xét duyệt. Điều này đảm bảo tính toàn vẹn của workflow HR.
 
 ---
 
@@ -663,6 +671,15 @@ Ngày chốt công là mốc thời gian hàng tháng, sau đó:
 | Schedule | Chỉ gửi trong khung giờ (trừ khẩn cấp) | 07:00-22:00 |
 | Night Shift | NV ca đêm exempt khỏi schedule restriction | ON |
 
+### 11.4 Quản lý Template Email (Branding & Versioning)
+
+EAMS cung cấp công cụ soạn thảo WYSIWYG HTML chuyên dụng để linh hoạt hóa các email hệ thống (VD: Email cấp tài khoản, thông báo duyệt đơn, báo cáo vi phạm):
+
+- **Branding tập trung**: Cấu hình logo, hệ màu chủ đạo, header/footer ở một nơi để tự động đồng bộ trên tất cả hệ thống email.
+- **Dynamic Variables**: Hỗ trợ chèn các thẻ biến tự động (ví dụ: `{{employee_name}}`, `{{violation_date}}`, `{{leave_reason}}`).
+- **Preview & Test**: Tích hợp tính năng xem trước (Preview) trên đa màn hình (Web/Mobile) và gửi thử (`test-send`) mock data để test trước khi áp dụng.
+- **Version Control**: Lưu trữ lịch sử chỉnh sửa template (tối đa 10 versions gần nhất). Cho phép HR *Rollback* về giao diện trước nếu cấu trúc HTML/CSS bị vỡ.
+
 ---
 
 ## 12. ĐĂNG KÝ KHUÔN MẶT (FACE ID ENROLLMENT)
@@ -787,6 +804,9 @@ Bước 3: Đồng bộ C-Vision
 | Xem chấm công cá nhân | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Xem chấm công team | - | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Nhập thủ công | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
+| **Ca làm việc** | | | | | | | | |
+| Cấu hình & Phân ca | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
+| Xem lịch phân ca team | - | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | **Nghỉ phép** | | | | | | | | |
 | Tạo đơn nghỉ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Phê duyệt đơn | - | ✓ | ✓ | ✓ | - | ✓ | ✓ | ✓ |
@@ -804,11 +824,12 @@ Bước 3: Đồng bộ C-Vision
 | Xem báo cáo team/phòng | - | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 | Xuất payroll | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
 | **Quản trị** | | | | | | | | |
-| Quản lý ca | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
 | Quản lý phòng ban | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
 | Quản lý site | - | - | - | - | - | - | ✓ | ✓ |
 | Quản lý ngày lễ | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
+| Mẫu Email (Templates) | - | - | - | ✓ | - | ✓ | ✓ | ✓ |
 | Audit log | - | - | - | - | - | - | ✓ | ✓ |
+| Data Retention Policy | - | - | - | - | - | - | ✓ | ✓ |
 | Circuit breaker | - | - | - | - | - | - | ✓ | ✓ |
 
 ### 16.2 Phạm vi dữ liệu
@@ -826,7 +847,7 @@ Bước 3: Đồng bộ C-Vision
 
 ## 17. CROSS-MODULE EDGE CASES & POLICIES
 
-### 12.1 Employee Offboarding
+### 17.1 Employee Offboarding
 
 Khi nhân viên nghỉ việc (status → TERMINATED):
 
@@ -839,20 +860,26 @@ Khi nhân viên nghỉ việc (status → TERMINATED):
 | Approval Chain | Re-route đơn đang duyệt sang fallback. Remove khỏi approver pool. |
 | Notification | Deactivate Push token. Gửi email cuối cùng: "Tài khoản đã bị vô hiệu hóa". |
 
-### 12.2 Data Retention Policy
+### 17.2 Cấu hình Data Retention Policy (NĐ 13/2023)
 
-| Loại dữ liệu | Thời gian lưu | Cơ sở pháp lý |
-|--------------|---------------|---------------|
-| Attendance Records | 5 năm | Luật Lao động 2019 §12 |
-| Ảnh Face ID (captures) | 90 ngày | NĐ 13/2023 về BVDL cá nhân |
-| Audit Logs | 3 năm | Quy định nội bộ |
-| Payroll Exports | 10 năm | Luật Kế toán |
-| Leave/OT Requests | 3 năm | Quy định nội bộ |
-| C-Vision Mapping | Xóa khi NV nghỉ việc + 90 ngày | NĐ 13/2023 |
+EAMS áp dụng chính sách lưu trữ linh hoạt theo từng nhóm dữ liệu để tuân thủ pháp luật, đặc biệt là **Nghị định 13/2023/NĐ-CP** về bảo vệ dữ liệu cá nhân (PDPA).
 
-Batch job dọn dẹp chạy 00:00 ngày 01 hàng tháng: xóa dữ liệu hết hạn retention.
+| Categories | Thời gian lưu | Cơ sở pháp lý | Hết hạn |
+|--------------|---------------|---------------|------------------------|
+| Ảnh Face ID (captures) | 90 ngày | NĐ 13/2023 về BVDL | Purge (Hard Delete) |
+| Chấm công (Attendance) | 5 năm | Bộ Luật Lao động 2019 | Archive |
+| Đơn từ (Leave/OT) | 3 năm | Quy định nội bộ | Archive |
+| Payroll Exports | 10 năm | Luật Kế toán | Archive |
+| C-Vision Mappings | 90 ngày sau nghỉ việc | NĐ 13/2023 | Purge |
+| Audit Logs hệ thống | 3 năm | Quy chuẩn an toàn TT | Archive |
 
-### 12.3 System Failure & Recovery
+**Cơ chế thực thi**:
+- **Batch Purge/Archive**: Chạy tự động 00:00 ngày 01 hàng tháng.
+- **Safety Window**: Dữ liệu mục tiêu xóa cứng (Purge) sẽ chuyển sang "Soft Delete" trong 7 ngày trước khi purge vĩnh viễn, cho phép admin phục hồi nếu cần thiết.
+- **Right to Erasure (Quyền được xóa)**: Hỗ trợ chức năng kích hoạt Erasure Request nhằm xóa ngay lập tức toàn bộ dữ liệu sinh trắc học của 1 nhân viên khi họ yêu cầu rút lại xác nhận (withdraw consent).
+- **Compliance Dashboard**: Giao diện tổng quan tỷ lệ tuân thủ, dung lượng lưu trữ hiện tại và dự báo tương lai.
+
+### 17.3 System Failure & Recovery
 
 | Scenario | Recovery Procedure |
 |----------|-------------------|
@@ -861,7 +888,7 @@ Batch job dọn dẹp chạy 00:00 ngày 01 hàng tháng: xóa dữ liệu hết
 | Batch Job 00:01 fail | Per-employee transaction. Retry queue cho NV lỗi. Admin alert + manual retry button. |
 | Push Service down | Exponential backoff retry → fallback Email → dead letter queue. |
 
-### 12.4 Concurrent Modification Protection
+### 17.4 Concurrent Modification Protection
 
 | Conflict | Resolution |
 |----------|-----------|
