@@ -277,6 +277,7 @@ FILE_TO_PAGE = {
     '2.11-Mini-app/2.11.7.-Cấu-hình-lịch-nghỉ/US-HOL-04-API-hiển-thị.md': '196786948',
     # 2.11.8 Camera AI
     '2.11-Mini-app/2.11.8.-Cấu-hình-Camera-AI/README.md': '196786949',
+    '2.11-Mini-app/2.11.8.-Cấu-hình-Camera-AI/US-CAM-04-Đăng-ký-khuôn-mặt-nhân-viên.md': '196789739',
     # 2.11.9 Thông báo
     '2.11-Mini-app/2.11.9.-Cấu-hình-thông-báo/README.md': '196786953',
     # 2.11.10 Phê duyệt
