@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png?v=2.7.0" alt="BA-Kit Logo" width="200">
+  <img src="docs/assets/logo.png?v=2.7.0" alt="BA-Kit Logo" width="200">
 </p>
 
 <div align="center">
@@ -154,8 +154,7 @@ ba-kit/
 ├── templates/                    # Templates (PRD, BRD, SRS, FRD, Test Case, ...)
 ├── .agent/scripts/               # Scripts tự động (RTM scanner, export, search)
 │
-├── AGENT.MD                      # Cấu hình Squad
-├── WORKFLOW-COOKBOOK.md           # 23 kịch bản thực tế
+├── docs/                         # Tài liệu hướng dẫn
 └── README.md                     # File này
 ```
 

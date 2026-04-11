@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png?v=2.7.0" alt="BA-Kit Logo" width="200">
+  <img src="docs/assets/logo.png?v=2.7.0" alt="BA-Kit Logo" width="200">
 </p>
 
 <div align="center">
@@ -154,8 +154,8 @@ ba-kit/
 │   ├── junior-start.md           # 4-week onboarding for new BAs
 │   └── knowledge_base/           # Core & specialized BA knowledge
 │
-├── templates/                    # Document Templates
-│   ├── prd-template.md           # Product Requirements Document
+├── .agent/templates/                    # Document Templates
+│   ├── brd-template.md           # Product Requirements Document
 │   ├── brd-template.md           # Business Requirements Document
 │   ├── srs-template.md           # Software Requirements Spec (IEEE 29148)
 │   ├── frd-template.md           # Functional Requirements Document
@@ -166,11 +166,7 @@ ba-kit/
 │   ├── coverage_checker.py       # Automated RTM Scanner & Health Scoring
 │   └── gen_docx.py               # DOCX Export Utility
 │
-├── AGENT.MD                      # Squad configuration (Antigravity runtime)
-├── QUICK-START.md                # 2-minute setup
-├── USAGE-GUIDE.md                # How the squad works
-├── WORKFLOW-COOKBOOK.md           # 23 real-world scenario recipes
-└── README.md                     # This file
+├── ├── ├── ├── └── README.md                     # This file
 ```
 
 ---

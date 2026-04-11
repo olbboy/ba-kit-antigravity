@@ -98,6 +98,18 @@ python3 .agent/scripts/coverage_checker.py outputs/project-name/
 4. Tạo CSV tương ứng trong `.agent/data/{domain}.csv` (nếu cần)
 5. Đăng ký trong `ba-master/SKILL.md` decision matrix
 
+## Cognitive Architecture
+
+Mỗi agent tuân theo System 2 Reflection loop:
+
+```
+User Input → System 1 (Draft) → System 2 (Reflect/Challenge) → Refined Output
+```
+
+Behavioral Principles:
+- **ALWAYS**: Verify math (Python), verify links (Grep), verify standards (WebSearch), Reflect
+- **NEVER**: Assume user intent — ask `@ba-elicitation`. Hallucinate file contents — check with Grep/Read
+
 ## Multi-platform
 
 Xem `.claude-output/MIGRATION-GUIDE.md` để deploy lên Claude Code, Cowork, hoặc Codex.

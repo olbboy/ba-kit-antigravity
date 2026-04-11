@@ -10,6 +10,10 @@
 | [Architecture Decisions](./architecture-decisions.md) | ADRs — quyết định kiến trúc | Tech Lead |
 | [Design Prototype Guide](./design-prototype-guide.md) | Tạo prototype UI/UX cho BA | BA + Designer |
 | [Junior Start](./junior-start.md) | Onboarding cho Junior BA | Junior BA |
+| [Quick Start](./quick-start.md) | Setup BA-Kit trong 2 phút | Tất cả |
+| [Usage Guide](./usage-guide.md) | Cách sử dụng BA squad | Tất cả |
+| [Workflow Cookbook](./workflow-cookbook.md) | 23 kịch bản thực tế | BA có kinh nghiệm |
+| [Contributing](./contributing.md) | Hướng dẫn đóng góp | Contributors |
 
 ## Cấu trúc BA-Kit
 
