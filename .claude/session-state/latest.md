@@ -1,5 +1,5 @@
 # Session State
-<!-- Generated: 2026-04-11T14:34:58.780Z -->
+<!-- Generated: 2026-04-11T15:04:51.706Z -->
 <!-- Branch: unknown -->
 <!-- Plan: none -->
 
@@ -136,5 +136,4 @@
 - Completed at 11:00:23
 
 ## Key Files Modified
-- .agent/skills/ba-questioning/SKILL.md
-- docs/knowledge_base/core/questioning.md
+- .agent/skills/ba-ux/SKILL.md
