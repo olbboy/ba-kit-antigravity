@@ -10,8 +10,10 @@
 ### Tổng quan
 
 - [Tổng quan 12 modules](./overview/modules-overview.md)
-- [BRD HR Admin](./overview/BRD-HR-(Admin).md) — 13 chức năng quản trị
-- [BRD Nhân viên](./overview/BRD-Nhân-viên.md) — 6 chức năng ESS
+- [BRD-01 Nhân viên](./overview/BRD-01-Nhân-viên.md) — 6 chức năng ESS (EMPLOYEE)
+- [BRD-02 Quản lý](./overview/BRD-02-Quản-lý.md) — 7 chức năng (MANAGER, DEPT_HEAD)
+- [BRD-03 HR Admin](./overview/BRD-03-HR-Admin.md) — 13 chức năng quản trị (SITE_HR, GLOBAL_HR)
+- [BRD-04 IT & System Admin](./overview/BRD-04-IT-và-System-Admin.md) — 10 chức năng kỹ thuật (IT_ADMIN, SYS_ADMIN)
 - [Demo Plan Sprint 8](./overview/Demo-Plan-Sprint-8.md)
 - [UAT Scenarios](./overview/UAT-SCENARIOS.md)
 
