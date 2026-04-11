@@ -9,8 +9,8 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-2.9.3-blue?style=for-the-badge" alt="Version 2.9.3">
-  <img src="https://img.shields.io/badge/Agents-21-green?style=for-the-badge" alt="21 Agents">
+  <img src="https://img.shields.io/badge/Version-3.0.0-blue?style=for-the-badge" alt="Version 3.0.0">
+  <img src="https://img.shields.io/badge/Agents-25-green?style=for-the-badge" alt="25 Agents">
   <img src="https://img.shields.io/badge/Platforms-Antigravity%20%7C%20Claude%20Code%20%7C%20CoWork-orange?style=for-the-badge" alt="3 Platforms">
   <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205%20Enabler-purple?style=for-the-badge" alt="CMMI Level 5 Enabler">
   <img src="https://img.shields.io/badge/Knowledge-786%20Entries-teal?style=for-the-badge" alt="786 Knowledge Entries">
@@ -20,7 +20,7 @@
 <h1 align="center">BA-Kit</h1>
 <h3 align="center">Agent Squad for Requirements Engineering</h3>
 
-  <strong>21 Agent Specialists for Requirements Engineering</strong><br>
+  <strong>25 Agent Specialists for Requirements Engineering</strong><br>
   System 2 Reflection • Multi-Platform (Antigravity • Claude Code • Claude CoWork)
 </p>
 
@@ -31,7 +31,7 @@
 
 BA-Kit is not a library of prompts. It is an **agent squad** for **agentic AI platforms**.
 
-It replaces the single-chatbot approach with **21 specialists** running on:
+It replaces the single-chatbot approach with **25 specialists** running on:
 *   **Antigravity IDE** (Google DeepMind) — Agent Skills, MCP, System 2
 *   **Claude Code** (Anthropic) — CLI: project-level reasoning, CI/CD, Git
 *   **Claude CoWork** (Anthropic) — Desktop: non-technical BA, document synthesis
@@ -42,7 +42,7 @@ Each agent uses **System 2 Thinking** (Reflective Loops) — self-critique befor
 
 ---
 
-## 🤖 The Agent Squad (21 Agents)
+## 🤖 The Agent Squad (25 Agents)
 
 ### 🔴 The Orchestrator
 | Agent | Role | Capability |
@@ -89,6 +89,14 @@ Each agent uses **System 2 Thinking** (Reflective Loops) — self-critique befor
 | **`@ba-jira`** | Jira Bridge | Story→Ticket Transport, Sprint Planning, Transport Gate Reflection. |
 | **`@ba-confluence`** | Confluence Bridge | Markdown→XHTML Publishing, Document Import, Version Tracking. |
 
+### 🟠 Quality & Audit Agents (NEW in v3.0)
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`@ba-test-gen`** | QA Architect | AC → 7-category Test Cases (BVA, Decision Tables, State Transitions). |
+| **`@ba-quality-gate`** | Quality Officer | 5-gate dimensional scoring: PASS / CONDITIONAL / REJECT. |
+| **`@ba-consistency`** | Integration Auditor | Cross-artifact alignment check (US↔API↔DB↔BRD). |
+| **`@ba-auditor`** | Chief Auditor | Meta-agent: full project health dashboard + action plan. |
+
 ---
 
 ## 🚀 Quick Start
@@ -130,14 +138,14 @@ All agents now follow a **Reflective Cognitive Loop**:
 ```
 ba-kit/
 │
-├── .agent/skills/                # 21 Agent Skills (ba-master, ba-writing, ba-jira, ...)
+├── .agent/skills/                # 25 Agent Skills (ba-master, ba-writing, ba-jira, ...)
 ├── .agent/scripts/               # BM25+ Knowledge Search Engine
 ├── .agent/data/                  # 786 Indexed Knowledge Entries (23 domains)
 │
 ├── docs/                         # Documentation & Guides
 │   ├── README.md                 # Documentation index
-│   ├── agent-cheat-sheet.md      # All 21 agents at a glance
-│   ├── prompt-library.md         # 28 copy-paste prompts by phase
+│   ├── agent-cheat-sheet.md      # All 25 agents at a glance
+│   ├── prompt-library.md         # 33 copy-paste prompts by phase
 │   ├── ai-foundation-for-ba.md   # AI Foundation primer (bilingual)
 │   ├── ai-tools-guide.md         # Tool selection matrix
 │   ├── design-prototype-guide.md # Stitch MCP, Figma, vibe coding
@@ -151,9 +159,12 @@ ba-kit/
 │   ├── brd-template.md           # Business Requirements Document
 │   ├── srs-template.md           # Software Requirements Spec (IEEE 29148)
 │   ├── frd-template.md           # Functional Requirements Document
-│   └── ...                       # + 6 more templates
+│   └── ...                       # + 8 more templates (incl. test-case, test-suite)
 │
-├── ebooks/                       # Synthesized eBook Knowledge (6 files)
+├── .agent/scripts/               # Automation Scripts
+│   ├── ba_search.py              # BM25+ Knowledge Search Engine
+│   ├── coverage_checker.py       # Automated RTM Scanner & Health Scoring
+│   └── gen_docx.py               # DOCX Export Utility
 │
 ├── AGENT.MD                      # Squad configuration (Antigravity runtime)
 ├── QUICK-START.md                # 2-minute setup

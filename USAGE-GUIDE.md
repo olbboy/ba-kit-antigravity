@@ -26,11 +26,11 @@ Agents are no longer isolated. They form a **Collaborative Network (DAG)**.
 ### 3. 📒 Mission Log (The Memory)
 The Squad shares a "Working Brain" via `CONTINUITY.md` (derived from `templates/continuity-template.md`).
 *   **Problem**: "I told `@ba-elicitation` we are an Agile team, but `@ba-nfr` thinks we are Waterfall."
-*   **Solution**: You define the Context ONCE in the Mission Log. All 19 agents read it before acting.
+*   **Solution**: You define the Context ONCE in the Mission Log. All 25 agents read it before acting.
 
 ---
 
-## 🚦 The Roster: 19 Specialists, One Mission
+## 🚦 The Roster: 25 Specialists, One Mission
 
 | Agent | The Archetype | When to Summon |
 | :--- | :--- | :--- |
@@ -59,6 +59,14 @@ The Squad shares a "Working Brain" via `CONTINUITY.md` (derived from `templates/
 | **`@ba-facilitation`** | *The Facilitator* | "Plan a 2-hour requirements workshop." |
 | **`@ba-systems`** | *Systems Analyst* | "Map the feedback loops causing this issue." |
 | **`@ba-agile`** | *Agile Analyst* | "Create a User Story Map for the MVP." |
+| **INTEGRATION SQUAD (v2.9)** | | |
+| **`@ba-jira`** | *Jira Bridge* | "Create Jira tickets from these validated stories." |
+| **`@ba-confluence`** | *Wiki Publisher* | "Publish this BRD to Confluence." |
+| **QUALITY SQUAD (v3.0)** | | |
+| **`@ba-test-gen`** | *QA Architect* | "Generate test cases from US-ATTEN-01's AC." |
+| **`@ba-quality-gate`** | *Quality Officer* | "Score this BRD — is it sprint-ready?" |
+| **`@ba-consistency`** | *Integration Auditor* | "Check if the API spec matches the US." |
+| **`@ba-auditor`** | *Chief Auditor* | "Run full project health audit. Dashboard please." |
 
 ---
 
@@ -88,6 +96,13 @@ The Squad shares a "Working Brain" via `CONTINUITY.md` (derived from `templates/
 2.  Command: `python3 .agent/scripts/ba_search.py "your question" --domain writing`
 3.  **Result**: Top 3 relevant entries (~460 tokens) instead of entire ebook (~25,000 tokens).
 4.  **23 domains** available. Use `--list-domains` to see all.
+
+### Protocol 5: The "Health Scan" (New in v3.0)
+**Stop assuming your project is complete.**
+1.  Run the automated coverage checker on your project.
+2.  Command: `python3 .agent/scripts/coverage_checker.py outputs/your-project/ --verbose`
+3.  **Result**: Health Score (0-100%), missing happy/edge/error scenarios per US, ambiguous terms detected.
+4.  Command: `@ba-auditor` for a full executive health dashboard.
 
 ---
 

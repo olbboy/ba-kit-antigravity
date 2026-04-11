@@ -12,7 +12,7 @@
 
 ```bash
 # Check all skills registered
-ls .claude/skills/ba-*/SKILL.md | wc -l  # expect: 20 (19 agents + 1 search)
+ls .claude/skills/ba-*/SKILL.md | wc -l  # expect: 20 (25 agents + 1 search)
 
 # Test knowledge search
 python3 .claude/skills/ba-kit-search/scripts/ba_search.py --stats

@@ -54,6 +54,7 @@ Present the Diagram + Waste Analysis Report.
 Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-writing` to draft User Stories for each Process Box."
 *   "Handover: Summon `@ba-metrics` to measure the Cycle Time of this flow."
+*   "Handover: Summon `@ba-test-gen` to generate state transition test cases from the process."
 
 ---
 

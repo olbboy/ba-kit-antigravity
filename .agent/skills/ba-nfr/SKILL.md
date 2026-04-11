@@ -58,6 +58,7 @@ Present the ISO-Compliant NFR Table.
 Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-solution` to calculate the cost of these NFRs."
 *   "Handover: Summon `@ba-validation` to verify if the architecture meets these constraints."
+*   "Handover: Summon `@ba-quality-gate` to include NFRs in the quality gate scoring."
 
 ---
 

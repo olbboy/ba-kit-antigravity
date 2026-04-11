@@ -54,6 +54,8 @@ Execute the export command or confirm readiness.
 Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-traceability` to baseline this version."
 *   "Handover: Summon `@ba-master` to close the project."
+*   "Handover: Summon `@ba-quality-gate` to verify export readiness before publishing."
+*   "Handover: Summon `@ba-confluence` to publish to Confluence wiki."
 
 ---
 

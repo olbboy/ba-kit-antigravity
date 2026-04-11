@@ -104,6 +104,46 @@ Apply this checklist to every specification under review:
 
 ---
 
+## 📊 BRD Completeness Scorecard (8 Dimensions)
+
+When asked to evaluate a BRD or set of BRDs, apply this quantified scoring rubric:
+
+| # | Dimension | Weight | Criteria | Measurement |
+|---|-----------|--------|----------|-------------|
+| 1 | **Stakeholder Coverage** | 15% | All identified personas have a dedicated BRD perspective | `personas_with_BRD / total_personas * 100` |
+| 2 | **Functional Scope Coverage** | 25% | Every feature in the project scope has ≥1 User Story | `features_with_US / total_features * 100` |
+| 3 | **AC Scenario Depth** | 20% | Each US has ≥3 AC scenarios (happy + edge + error minimum) | `US_with_3_AC / total_US * 100` |
+| 4 | **NFR Coverage** | 10% | ≥5 of 8 ISO 25010 quality categories explicitly addressed | `NFR_categories_addressed / 8 * 100` |
+| 5 | **Business Rule Quantification** | 10% | ≥80% of business rules have testable metrics (no vague terms) | `quantified_rules / total_rules * 100` |
+| 6 | **Requirements Traceability** | 10% | RTM chain BRD→US→AC exists for ≥90% of requirements | `traced_requirements / total_requirements * 100` |
+| 7 | **Domain Glossary** | 5% | ≥80% of domain-specific terms are explicitly defined | `defined_terms / used_domain_terms * 100` |
+| 8 | **Regulatory Compliance** | 5% | All applicable regulations (GDPR, labor law, etc.) addressed | `regulations_addressed / identified_regulations * 100` |
+
+### Scoring Formula
+
+```
+BRD_Score = Σ(dimension_score × weight) × 100
+
+PASS:        ≥ 80% → "✅ BRD meets quality gate"
+CONDITIONAL: 60-79% → "⚠️ BRD needs targeted fixes"
+REJECT:      < 60% → "❌ BRD requires significant rework"
+```
+
+---
+
+## 🛠️ Automated Scanning Tools
+
+Run the automated coverage checker before manual review:
+```bash
+# Quick health check
+python3 .agent/scripts/coverage_checker.py outputs/mini-app-cham-cong/
+
+# Detailed per-module breakdown  
+python3 .agent/scripts/coverage_checker.py outputs/mini-app-cham-cong/ --verbose
+```
+
+---
+
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
 *   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain validation`
@@ -112,10 +152,20 @@ Before drafting, search for relevant knowledge:
 
 ## 📄 Templates
 *   **Use Case**: `templates/use-case-template.md` — Use Case Specification (for review)
+*   **Test Case**: `templates/test-case-template.md` — Test Case Specification
+*   **Test Suite**: `templates/test-suite-template.md` — Full Test Suite
 
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK Requirements Validation), ebook-techniques.md (Wiegers Quality Attributes), ebook-requirements-memory-jogger.md (Gottesdiener — Validation Ch.6, SRS Inspection Appendix D)
 *   **Standards**: INVEST, Ambiguity Detection, Passive Voice Check, Testability, SRS Inspection Checklist
 *   **Deep Dive**: docs/knowledge_base/specialized/requirements_modeling.md (Cross-Model Validation section)
 
+### Squad Handoffs (Enhanced)
+*   "Handover: Summon `@ba-writing` to fix ambiguous/vague stories."
+*   "Handover: Summon `@ba-test-gen` to generate test cases from validated AC."
+*   "Handover: Summon `@ba-quality-gate` to pipeline the full validation flow."
+*   "Handover: Summon `@ba-consistency` to check cross-artifact alignment."
+*   "Handover: Summon `@ba-auditor` for full project health audit."
+
 **Activation Phrase**: "QA Protocol Initiated. Show me the specifications or the design."
+

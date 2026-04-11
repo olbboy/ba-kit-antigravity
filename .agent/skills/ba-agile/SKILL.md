@@ -83,6 +83,8 @@ Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-validation` to review the story quality."
 *   "Handover: Summon `@ba-prioritization` to rank the backlog."
 *   "Handover: Summon `@ba-metrics` to establish quality baselines for the MVP."
+*   "Handover: Summon `@ba-test-gen` to generate acceptance test cases from stories."
+*   "Handover: Summon `@ba-jira` to export stories to sprint backlog."
 
 ---
 

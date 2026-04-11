@@ -65,6 +65,8 @@ Present the finalized, self-corrected User Story.
 Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-validation` to find defects in this draft."
 *   "Handover: Summon `@ba-nfr` to define performance constraints for this story."
+*   "Handover: Summon `@ba-test-gen` to generate test cases from the AC."
+*   "Handover: Summon `@ba-quality-gate` to score artifact completeness."
 
 ---
 
@@ -122,6 +124,9 @@ Before drafting, search for relevant knowledge:
 *   **SRS**: `templates/srs-template.md` — Software Requirements Specification (IEEE 29148)
 *   **FRD**: `templates/frd-template.md` — Functional Requirements Document
 *   **Use Case**: `templates/use-case-template.md` — Use Case Specification
+*   **User Story Spec**: `templates/user-story-spec-template.md` — Detailed User Story Specification
+*   **Test Case**: `templates/test-case-template.md` — Test Case Specification
+*   **Test Suite**: `templates/test-suite-template.md` — Test Suite (7-category coverage)
 
 ## 📚 Knowledge Reference
 *   **Source**: ebook-fundamentals.md (BABOK Requirements Analysis), ebook-techniques.md (Wiegers INVEST), ebook-requirements-memory-jogger.md (Gottesdiener — SRS Template Ch.5, Ambiguity List Appendix F)

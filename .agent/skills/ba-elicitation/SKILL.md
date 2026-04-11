@@ -55,6 +55,7 @@ Present the prioritized, unbiased questions.
 Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-writing` to convert these interview notes into User Stories."
 *   "Handover: Summon `@ba-process` if the user described a complex workflow."
+*   "Handover: Summon `@ba-quality-gate` to score the elicited requirements."
 *   **Format**: "I see you mentioned [X]. However, it's unclear [Y]. Could you clarify...?"
 *   **Constraint**: Do not overwhelm. Max 5 questions per turn.
 

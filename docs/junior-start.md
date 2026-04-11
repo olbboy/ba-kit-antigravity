@@ -1,4 +1,4 @@
-# BA-Kit: Hướng Dẫn Cho BA Mới (Junior Quick Start)
+k# BA-Kit: Hướng Dẫn Cho BA Mới (Junior Quick Start)
 
 > Bạn mới vào team? Đừng lo — đây là tất cả những gì bạn cần để bắt đầu ngay hôm nay.
 > BA-Kit chạy trên **3 nền tảng agentic chính / 3 primary agentic platforms**:
@@ -91,6 +91,8 @@ Liệt kê tất cả lỗi, điểm mơ hồ, và thiếu sót.
 | `@ba-strategy` | Cần phân tích business context toàn cảnh | *"SWOT analysis cho cơ hội thị trường này"* |
 | `@ba-conflict` | Stakeholder bất đồng, không ai chịu ai | *"Sales vs Dev đang conflict — tìm win-win cho cả hai"* |
 | `@ba-solution` | PM hỏi tính năng này có đáng làm không | *"Tính ROI 3 năm cho tính năng [X] bằng Python"* |
+| `@ba-test-gen` | Cần tạo test case từ AC | *"Generate test cases cho US-ATTEN-01 — 7 categories"* |
+| `@ba-quality-gate` | Kiểm tra chất lượng BRD/US trước khi bàn giao | *"Chấm điểm BRD này theo 8 dimensions"* |
 
 ---
 
@@ -119,8 +121,12 @@ ADVANCED (Tháng 2+)
   + @ba-strategy + @ba-systems + @ba-solution + @ba-metrics
   Chiến lược → Hệ thống → ROI → Đo lường
 
+QUALITY MASTER (v3.0)
+  + @ba-test-gen + @ba-quality-gate + @ba-consistency + @ba-auditor
+  Test Cases → Quality Gate → Cross-Check → Audit
+
 EXPERT
-  @ba-master → full squad orchestration (điều phối toàn bộ agents)
+  @ba-master → full squad orchestration (điều phối toàn bộ 25 agents)
 ```
 
 ---
@@ -129,9 +135,10 @@ EXPERT
 
 | Tài nguyên | Mô tả |
 |-----------|-------|
-| `docs/agent-cheat-sheet.md` | Toàn bộ 19 agents + Power Combos |
+| `docs/agent-cheat-sheet.md` | Toàn bộ 25 agents + Power Combos |
 | `WORKFLOW-COOKBOOK.md` | 12 kịch bản thực tế từ A-Z |
-| `templates/` | Template sẵn dùng cho mọi deliverable |
+| `templates/` | 13 template sẵn dùng cho mọi deliverable |
 | `python3 .agent/scripts/ba_search.py "keyword"` | Tìm kiếm trong knowledge base |
+| `python3 .agent/scripts/coverage_checker.py outputs/<project>/` | Scan sức khỏe dự án tự động |
 
 > BA giỏi không phải người biết nhiều — mà là người hỏi đúng câu hỏi.

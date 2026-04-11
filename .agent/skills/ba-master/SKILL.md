@@ -1,6 +1,6 @@
 ---
 name: ba-master
-description: [Agentic] Master Dispatcher - The Orchestrator of the BA-Kit Squad (19 Agents)
+description: [Agentic] Master Dispatcher - The Orchestrator of the BA-Kit Squad (25 Agents)
 ---
 
 # 🎯 @ba-master: The Dispatcher
@@ -58,7 +58,11 @@ When activated via `@ba-master` or asked to "coordinate", perform the following 
 | "API", "Integration", "Webhook", "Microservice" | `@ba-writing` | `@ba-nfr` |
 | "GDPR", "Compliance", "PCI-DSS", "HIPAA", "Regulation" | `@ba-nfr` | `@ba-validation` |
 | "Persona", "User journey", "Usability", "UX research" | `@ba-writing` | `@ba-validation` |
-| "Test case", "UAT", "QA", "Acceptance test" | `@ba-validation` | `@ba-writing` |
+| "Test case", "UAT", "QA", "Acceptance test" | `@ba-test-gen` | `@ba-validation` |
+| "Generate tests", "TC from AC", "test coverage" | `@ba-test-gen` | `@ba-quality-gate` |
+| "BRD score", "completeness check", "quality gate" | `@ba-quality-gate` | `@ba-validation` |
+| "Consistency", "cross-reference", "US vs API" | `@ba-consistency` | `@ba-traceability` |
+| "Project health", "full audit", "coverage report" | `@ba-auditor` | `@ba-quality-gate` |
 | "Data dictionary", "ETL", "Data warehouse", "Reporting" | `@ba-writing` | `@ba-nfr` |
 | "Communication plan", "Status report", "Stakeholder update" | `@ba-identity` | `@ba-facilitation` |
 | "Business rule", "Policy", "Constraint", "Authorization" | `@ba-writing` | `@ba-validation` |
@@ -94,7 +98,7 @@ After each agent completes, return to ba-master for the next step:
 
 ---
 
-## 🗺️ Agent Registry (19 Agents)
+## 🗺️ Agent Registry (25 Agents)
 
 ### Core BA Skills
 | Agent | Proficiency |
@@ -131,6 +135,14 @@ After each agent completes, return to ba-master for the next step:
 | :--- | :--- | :--- |
 | **@ba-jira** | BA→Jira Transport, Story→Ticket, Sprint Planning | jira-connector |
 | **@ba-confluence** | BA→Confluence Publishing, Markdown→XHTML, Doc Import | confluence-connector |
+
+### Quality & Audit Skills (NEW in v3.0)
+| Agent | Proficiency | Key Output |
+| :--- | :--- | :--- |
+| **@ba-test-gen** | AC → Test Cases (7-category: Happy/Edge/Error/Security/Concurrency/Data/Perf) | Test suites with coverage score |
+| **@ba-quality-gate** | Dimensional scoring with PASS/CONDITIONAL/REJECT for all artifacts | Quality gate reports |
+| **@ba-consistency** | Cross-artifact alignment check (US↔API↔DB↔BRD) | Consistency mismatch report |
+| **@ba-auditor** | Meta-agent: full project health audit across all dimensions | Executive health dashboard |
 
 ---
 
