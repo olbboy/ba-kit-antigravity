@@ -62,6 +62,7 @@ HR/Manager truy cập "Báo cáo tổng"
 | F11.1 | Dashboard quản lý | Biểu đồ chuyên cần theo phòng ban (donut/bar). Top NV vi phạm. Xu hướng 7/30 ngày. Counter: Tổng NV, Có mặt, Trễ, Vắng, Nghỉ phép, Chờ duyệt. | [US-RPT-01](./US-RPT-01-Dashboard-quản-lý.md) |
 | F11.2 | Xuất báo cáo & Payroll | Xuất Excel/CSV: Báo cáo ngày, bảng công tháng, báo cáo OT, nghỉ phép. File payroll 13 cột chuẩn tính lương. Lọc theo tháng/phòng ban/site. | [US-RPT-02](./US-RPT-02-Xuất-báo-cáo-và-payroll.md) |
 | F11.3 | Báo cáo tuân thủ | Báo cáo vi phạm quy chế theo kỳ. Thống kê giới hạn OT (so với Nghị định 13/2023). Danh sách NV có giải trình quá hạn. | [US-RPT-03](./US-RPT-03-Báo-cáo-tuân-thủ.md) |
+| F11.4 | Khóa kỳ lương (Payroll Lock) | Auto-lock khi xuất payroll. Cảnh báo thay đổi sau lock. Kỳ bổ sung (supplementary). Re-export versioning. | [US-RPT-04](./US-RPT-04-Khóa-kỳ-lương.md) |
 
 ---
 

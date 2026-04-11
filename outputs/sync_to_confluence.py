@@ -303,6 +303,11 @@ FILE_TO_PAGE = {
     '2.11-Mini-app/2.11.12.-Quản-trị-hệ-thống/US-SYS-01-Quản-lý-chi-nhánh.md': '196787049',
     '2.11-Mini-app/2.11.12.-Quản-trị-hệ-thống/US-SYS-02-Audit-log-viewer.md': '196787050',
     '2.11-Mini-app/2.11.12.-Quản-trị-hệ-thống/US-SYS-03-Employee-offboarding.md': '196787051',
+    # NEW: gap closure stories
+    '2.11-Mini-app/2.11.12.-Quản-trị-hệ-thống/US-SYS-04-Chốt-công-tháng.md': '196789774',
+    '2.11-Mini-app/2.11.12.-Quản-trị-hệ-thống/US-SYS-05-Employee-onboarding.md': '196789772',
+    '2.11-Mini-app/2.11.11.-Báo-cáo-tổng/US-RPT-04-Khóa-kỳ-lương.md': '196789773',
+    '2.11-Mini-app/2.11.4.-Trung-tâm-đăng-ký/US-REG-06-Đăng-ký-công-tác-và-WFH.md': '196789775',
 }
 
 # Pages with diagram attachments — preserve image refs, don't overwrite with mermaid

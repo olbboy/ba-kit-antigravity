@@ -64,6 +64,7 @@ NV theo dõi trạng thái đơn tại "Đơn từ của tôi"
 | F04.3 | Đăng ký tăng ca (OT) | Form chọn ngày, mốc giờ bắt đầu/kết thúc OT, lý do. Kiểm tra giới hạn OT theo luật. Hỗ trợ đăng ký trước (PRE) và sau (POST). | [US-REG-03](./US-REG-03-Đăng-ký-tăng-ca.md) |
 | F04.4 | Theo dõi trạng thái đơn & hạn mức | Danh sách đơn đã gửi kèm Badge trạng thái (Pending/Approved/Rejected). Xem hạn mức phép năm, OT lũy kế. Cho phép hủy đơn đang Pending. | [US-REG-04](./US-REG-04-Theo-dõi-đơn-từ-và-hạn-mức.md) |
 | F04.5 | Cấu hình chính sách phép năm | HR cấu hình phép cơ bản, thâm niên, carryover, pro-rata. Batch recalculate balance. | [US-REG-05](./US-REG-05-Cấu-hình-chính-sách-phép-năm.md) |
+| F04.6 | Đăng ký Công tác & WFH | Form đăng ký Business Travel (multi-day, địa điểm) và WFH (hạn mức tuần). Auto-mark PRESENT. Tích hợp Dashboard hiện diện. | [US-REG-06](./US-REG-06-Đăng-ký-công-tác-và-WFH.md) |
 
 ---
 
