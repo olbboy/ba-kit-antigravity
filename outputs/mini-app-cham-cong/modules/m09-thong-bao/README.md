@@ -23,6 +23,27 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([Sự kiện xảy ra]) --> B{Loại sự kiện}
+    B -->|Chấm công| C[Attendance Event]
+    B -->|Phê duyệt| D[Approval Event]
+    B -->|Cảnh báo| E[Alert Event]
+    C & D & E --> F[Notification Engine]
+    F --> G[Kiểm tra Policy]
+    G --> H{Kênh gửi}
+    H -->|Push| I[📱 Mobile Push]
+    H -->|Email| J[📧 Email SMTP]
+    H -->|In-App| K[🔔 Badge + Inbox]
+    I & J & K --> L([NV nhận thông báo])
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    class A start
+    class L ok
+```
+
+
 ```
 Admin truy cập "Cấu hình thông báo"
         ↓

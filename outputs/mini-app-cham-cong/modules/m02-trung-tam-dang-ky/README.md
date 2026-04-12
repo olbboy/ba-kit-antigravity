@@ -23,6 +23,31 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([NV mở Trung tâm Đăng ký]) --> B{Chọn loại đơn}
+    B -->|Nghỉ phép| C[Kiểm tra hạn mức phép]
+    B -->|Đổi ca| D[Chọn ca muốn đổi]
+    B -->|Tăng ca OT| E[Nhập giờ OT]
+    B -->|Công tác/WFH| F[Chọn ngày + địa điểm]
+    C --> G{Đủ phép?}
+    G -->|Không| H[❌ Cảnh báo hạn mức]
+    G -->|Có| I[Tạo đơn + Validation]
+    D & E & F --> I
+    I --> J[Gửi đơn → Module Phê duyệt]
+    J --> K{Kết quả}
+    K -->|Duyệt| L[✅ Cập nhật Attendance]
+    K -->|Từ chối| M[❌ Thông báo NV + lý do]
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    classDef fail fill:#EF5350,color:#fff,stroke-width:0
+    class A start
+    class L ok
+    class H,M fail
+```
+
+
 ```
 NV mở Trung tâm đăng ký trên Mini App
         ↓

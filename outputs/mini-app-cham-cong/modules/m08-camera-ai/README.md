@@ -23,6 +23,31 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([Admin cấu hình Camera]) --> B[CRUD thiết bị Camera]
+    B --> C[Mapping Camera ↔ NV]
+    C --> D[Health Check tự động]
+    D --> E{Camera status}
+    E -->|Online| F[✅ Hoạt động bình thường]
+    E -->|Offline| G[🔔 Alert cho Admin]
+    E -->|Degraded| H[⚠️ Cảnh báo FPS/Quality]
+    A --> I[Đăng ký khuôn mặt NV]
+    I --> J{Chất lượng ảnh}
+    J -->|OK| K[✅ Lưu face embedding]
+    J -->|Kém| L[❌ Yêu cầu chụp lại]
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    classDef fail fill:#EF5350,color:#fff,stroke-width:0
+    classDef warn fill:#FFB74D,color:#000,stroke-width:0
+    class A start
+    class F,K ok
+    class G,L fail
+    class H warn
+```
+
+
 ```
 IT Admin truy cập "Cấu hình Camera AI"
         ↓

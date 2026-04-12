@@ -23,6 +23,24 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([NV truy cập Báo cáo CN]) --> B[Load DailyAttendanceSummary]
+    B --> C[Tính KPI tháng hiện tại]
+    C --> D[Render Dashboard]
+    D --> E{NV chọn action}
+    E -->|Xem KPI| F[Bảng KPI + Highlights]
+    E -->|Xem chi tiết| G[Drill-down theo ngày]
+    E -->|So sánh| H[Chart so sánh tháng]
+    F & G & H --> I([Hiển thị kết quả])
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    class A start
+    class I ok
+```
+
+
 ```
 NV mở mục "Báo cáo cá nhân" trên Mini App
         ↓

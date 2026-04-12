@@ -23,6 +23,26 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([HR cấu hình Ca làm việc]) --> B[Tạo/Sửa Shift Definition]
+    B --> C[Cấu hình giờ làm + giờ nghỉ]
+    C --> D[Set punch limit]
+    D --> E[Gán nhân viên vào ca]
+    E --> F{Phương thức gán}
+    F -->|Thủ công| G[Chọn NV từ danh sách]
+    F -->|Pattern| H[Lặp theo tuần/tháng]
+    F -->|Import| I[Upload CSV]
+    G & H & I --> J[✅ Ca được activate]
+    J --> K([Attendance engine sử dụng ca để tính công])
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    class A start
+    class J,K ok
+```
+
+
 ```
 HR truy cập "Cấu hình ca làm việc"
         ↓

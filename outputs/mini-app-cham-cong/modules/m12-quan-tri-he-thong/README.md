@@ -23,6 +23,29 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([SysAdmin truy cập Quản trị]) --> B{Chọn chức năng}
+    B -->|Chi nhánh| C[CRUD Sites]
+    B -->|Audit log| D[Xem / Export log]
+    B -->|Offboarding| E[Kích hoạt quy trình]
+    B -->|Chốt công| F[Period closing]
+    B -->|Onboarding| G[Wizard 7 bước]
+    B -->|Data retention| H[Cấu hình policy]
+    E --> I[Deactivate biometric]
+    I --> J[Close pending requests]
+    J --> K[Transfer approvals]
+    K --> L[✅ NV offboarded]
+    F --> M{Cron / Manual}
+    M --> N[Lock attendance records]
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    class A start
+    class L ok
+```
+
+
 ```
 System Admin / GLOBAL_HR
 ├── Quản lý chi nhánh (CRUD site)

@@ -23,6 +23,30 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([Đơn mới từ Module 02/03]) --> B[Vào Inbox Phê duyệt]
+    B --> C{Chuỗi phê duyệt}
+    C -->|1 cấp| D[Manager review]
+    C -->|2 cấp| E[Manager → HR review]
+    C -->|Tự động| F[Auto-approve theo rule]
+    D & E --> G{Quyết định}
+    G -->|Approve| H[✅ Cập nhật trạng thái]
+    G -->|Reject| I[❌ Trả về + lý do]
+    G -->|Delegate| J[Chuyển tiếp người khác]
+    F --> H
+    H --> K[🔔 Notify NV]
+    I --> K
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    classDef fail fill:#EF5350,color:#fff,stroke-width:0
+    class A start
+    class H ok
+    class I fail
+```
+
+
 ```
 NV gửi đơn → Hệ thống tạo Approval workflow
         ↓

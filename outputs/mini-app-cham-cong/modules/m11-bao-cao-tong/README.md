@@ -23,6 +23,29 @@
 
 ### **2. MÔ TẢ QUY TRÌNH NGHIỆP VỤ**
 
+```mermaid
+graph TD
+    A([HR/Manager truy cập Báo cáo]) --> B{Chọn loại báo cáo}
+    B -->|Tổng hợp| C[Dashboard quản lý]
+    B -->|Payroll| D[Xuất bảng công]
+    B -->|Tuân thủ| E[Báo cáo compliance]
+    B -->|Khóa kỳ| F[Khóa kỳ lương]
+    C --> G[Filter: site, phòng ban, kỳ]
+    D --> H[Xuất Excel / PDF]
+    E --> I[Check vi phạm lao động]
+    F --> J{Đã đối soát?}
+    J -->|Chưa| K[❌ Cảnh báo chưa chốt]
+    J -->|Rồi| L[✅ Lock kỳ lương]
+
+    classDef start fill:#455A64,color:#fff,stroke-width:0
+    classDef ok fill:#66BB6A,color:#fff,stroke-width:0
+    classDef fail fill:#EF5350,color:#fff,stroke-width:0
+    class A start
+    class L ok
+    class K fail
+```
+
+
 ```
 HR/Manager truy cập "Báo cáo tổng"
         ↓
