@@ -105,7 +105,25 @@ Always provide BOTH formats:
 
 **Format 2 — Confluence Embedding (choose based on platform):**
 
-**Option A: Confluence Cloud (Mermaid macro — native support or App):**
+**Option A (RECOMMENDED): Confluence Data Center — Stratus `mermaid-macro` Plugin:**
+> Plugin: [Mermaid Diagrams for Confluence](https://marketplace.atlassian.com/apps/1226567/mermaid-diagrams-for-confluence) by Stratus Add-ons
+> Macro name: `mermaid-macro` (NOT `mermaid`!)
+> Verified: CTS Knowledge Hub (kms.cmcts.com.vn)
+
+```xml
+<ac:structured-macro ac:name="mermaid-macro">
+  <ac:plain-text-body><![CDATA[
+    [diagram code]
+  ]]></ac:plain-text-body>
+</ac:structured-macro>
+```
+
+⚠️ **Common pitfalls:**
+- `ac:name="mermaid"` → renders as "Unknown macro" on DC (this is NOT the plugin macro name)
+- `ac:name="html"` → blocked on most DC instances ("Unknown macro: html")
+- `language="mermaid"` in code block → shows raw text, NOT rendered
+
+**Option B: Confluence Cloud (Mermaid Chart macro — native or App):**
 ```xml
 <ac:structured-macro ac:name="mermaid">
   <ac:plain-text-body><![CDATA[
@@ -114,9 +132,9 @@ Always provide BOTH formats:
 </ac:structured-macro>
 ```
 
-**Option B: Confluence Server (pre-render to SVG, upload as attachment):**
+**Option C: Confluence Server/DC Fallback (pre-render to SVG):**
 ```bash
-# Render locally
+# Render locally (requires @mermaid-js/mermaid-cli)
 mmdc -i diagram.mmd -o diagram.svg -t neutral -b white
 
 # Upload via Confluence API
@@ -124,7 +142,7 @@ python3 .agent/skills/confluence-connector/scripts/confluence_crud.py \
   attach --page-id <ID> --file diagram.svg
 ```
 
-**Option C: Draw.io macro (if Draw.io plugin installed):**
+**Option D: Draw.io macro (if Draw.io plugin installed):**
 ```xml
 <ac:structured-macro ac:name="drawio">
   <ac:parameter ac:name="diagramName">process-flow</ac:parameter>
@@ -322,18 +340,32 @@ sankey-beta
 
 ## 🔗 Confluence Integration Guide
 
+### Confluence Data Center (VERIFIED — CTS KMS)
+- **Plugin**: [Mermaid Diagrams for Confluence](https://marketplace.atlassian.com/apps/1226567) by Stratus Add-ons (v3.0.1+)
+- **Macro name**: `mermaid-macro` (⚠️ NOT `mermaid`, NOT `mermaid-cloud`)
+- **XHTML**: `<ac:structured-macro ac:name="mermaid-macro"><ac:plain-text-body><![CDATA[ ... ]]></ac:plain-text-body></ac:structured-macro>`
+- **Features**: Client-side rendering, PDF export, version history, Confluence search
+- **⚠️ DO NOT USE**: `ac:name="html"` (blocked on DC), `ac:name="mermaid"` (wrong name), `language="mermaid"` code block (raw text)
+
 ### Confluence Cloud
 - **Native**: Sử dụng `Mermaid Chart` macro (marketplace app) hoặc `Code Block` macro với language `mermaid`
 - **Workaround**: Paste vào code block → screenshot → embed as image
 
-### Confluence Server / Data Center
-- **App**: Install "Mermaid for Confluence" từ Atlassian Marketplace
-- **CLI**: Pre-render via `mmdc -i diagram.mmd -o diagram.svg -t neutral`
-- **Upload**: `confluence_crud.py attach --page-id <ID> --file diagram.svg`
-
 ### Draw.io Integration
 - Nếu instance có Draw.io plugin: Extras → Edit Diagram → Mermaid tab → paste code
 - Export as PNG/SVG embedded trong page
+
+### Programmatic Sync (md → Confluence)
+Khi sync markdown files chứa ` ```mermaid ` blocks lên Confluence DC:
+```python
+def mermaid_to_confluence(mermaid_code):
+    """Convert mermaid code block to Stratus plugin macro."""
+    return (
+        '<ac:structured-macro ac:name="mermaid-macro">'
+        f'<ac:plain-text-body><![CDATA[{mermaid_code}]]></ac:plain-text-body>'
+        '</ac:structured-macro>'
+    )
+```
 
 ### Best Practices cho Confluence
 - Theme `neutral` hoặc `default` cho readability trên nền trắng Confluence
@@ -341,6 +373,7 @@ sankey-beta
 - Font: keep default (Confluence overrides custom fonts)
 - Max width: ~800px cho readability trên standard page layout
 - Always include text description bên cạnh diagram (accessibility + search)
+- Verify macro name với test page trước khi bulk sync (mỗi plugin có macro name riêng)
 
 ---
 
