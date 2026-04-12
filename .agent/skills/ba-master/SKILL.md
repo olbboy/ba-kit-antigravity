@@ -1,6 +1,6 @@
 ---
 name: ba-master
-description: [Agentic] Master Dispatcher - The Orchestrator of the BA-Kit Squad (32 Agents)
+description: [Agentic] Master Dispatcher - The Orchestrator of the BA-Kit Squad (33 Agents)
 version: 1.0.0
 ---
 
@@ -88,6 +88,9 @@ When activated via `@ba-master` or asked to "coordinate", perform the following 
 | "rule conflict", "rule validation", "policy constraint" | `@ba-business-rules` | `@ba-validation` |
 | "glossary", "ubiquitous language", "domain terminology" | `@ba-wiki` (Glossary) | `@ba-business-rules` |
 | "estimation", "story points", "t-shirt sizing", "planning poker" | `@ba-agile` (Estimation) | `@ba-prioritization` |
+| "diagram", "flowchart", "Mermaid", "visualize", "draw" | `@ba-diagram` | `@ba-process` |
+| "sequence diagram", "state diagram", "mindmap", "gantt chart" | `@ba-diagram` | `@ba-confluence` |
+| "stakeholder map diagram", "journey diagram", "architecture diagram" | `@ba-diagram` | `@ba-ux` |
 | (Unrecognized intent) | `@ba-elicitation` | `@ba-master` |
 
 ### 2. Reflection Mode (System 2: The Strategist)
@@ -114,7 +117,7 @@ After each agent completes, return to ba-master for the next step:
 
 ---
 
-## 🗺️ Agent Registry (32 Agents)
+## 🗺️ Agent Registry (33 Agents)
 
 ### Core BA Skills
 | Agent | Proficiency |
@@ -169,6 +172,11 @@ After each agent completes, return to ba-master for the next step:
 | **@ba-data** | ERD, Data Dictionary, DFD, Data Mapping, Migration Planning | Data models, dictionaries, migration plans |
 | **@ba-change** | ADKAR, Readiness Assessment, Training Plans, Go-Live | Change plans, training materials, checklists |
 | **@ba-business-rules** | Decision Tables, Decision Trees, Rule Catalog, Conflict Detection | Rule catalogs, decision tables, conflict reports |
+
+### Visualization Agent (NEW in v3.1)
+| Agent | Proficiency | Key Output |
+| :--- | :--- | :--- |
+| **@ba-diagram** | Mermaid v11 (24+ diagram types), BA artifact → diagram mapping, Confluence export | Mermaid diagrams, Confluence-ready XHTML, SVG exports |
 
 ### Knowledge Agent (NEW in v3.0)
 | Agent | Proficiency | Key Output |

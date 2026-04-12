@@ -49,11 +49,11 @@ System Admin / GLOBAL_HR
 
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
-| F12.1 | Quản lý chi nhánh | CRUD site: Tên, mã, địa chỉ, timezone, trạng thái. Deactivate site (soft-delete). | [US-SYS-01](./US-SYS-01-Quản-lý-chi-nhánh.md) |
-| F12.2 | Audit Log Viewer | Xem log hoạt động: filter theo user, module, action, time range. Export CSV. | [US-SYS-02](./US-SYS-02-Audit-log-viewer.md) |
-| F12.3 | Employee Offboarding | Workflow tự động khi NV nghỉ việc: cancel đơn, freeze phép, deactivate mapping, re-route approval. | [US-SYS-03](./US-SYS-03-Employee-offboarding.md) |
-| F12.4 | Chốt công tháng (Period Closing) | Cấu hình closingDay, graceDays, weekendRule per-site. Auto-lock kỳ. Exception unlock với audit trail. | [US-SYS-04](./US-SYS-04-Chốt-công-tháng.md) |
-| F12.5 | Employee Onboarding Wizard | Quy trình 7 bước: profile → site → shift → Face ID → phép → approval chain → welcome. Hỗ trợ bulk. | [US-SYS-05](./US-SYS-05-Employee-onboarding.md) |
+| F12.1 | Quản lý chi nhánh | CRUD site: Tên, mã, địa chỉ, timezone, trạng thái. Deactivate site (soft-delete). | [US-SYS-01](./us-sys-01-quan-ly-chi-nhanh.md) |
+| F12.2 | Audit Log Viewer | Xem log hoạt động: filter theo user, module, action, time range. Export CSV. | [US-SYS-02](./us-sys-02-audit-log-viewer.md) |
+| F12.3 | Employee Offboarding | Workflow tự động khi NV nghỉ việc: cancel đơn, freeze phép, deactivate mapping, re-route approval. | [US-SYS-03](./us-sys-03-employee-offboarding.md) |
+| F12.4 | Chốt công tháng (Period Closing) | Cấu hình closingDay, graceDays, weekendRule per-site. Auto-lock kỳ. Exception unlock với audit trail. | [US-SYS-04](./us-sys-04-chot-cong-thang.md) |
+| F12.5 | Employee Onboarding Wizard | Quy trình 7 bước: profile → site → shift → Face ID → phép → approval chain → welcome. Hỗ trợ bulk. | [US-SYS-05](./us-sys-05-employee-onboarding.md) |
 
 ---
 

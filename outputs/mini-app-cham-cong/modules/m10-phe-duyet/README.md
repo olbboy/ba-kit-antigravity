@@ -58,9 +58,9 @@ Approver xem chi tiết → Duyệt / Từ chối (kèm lý do)
 
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
-| F10.1 | Inbox phê duyệt | Danh sách đơn chờ duyệt, lọc theo loại (Leave/OT/Correction). Xem chi tiết đơn, file đính kèm. Nút Duyệt/Từ chối kèm lý do. Badge số đơn chưa duyệt. | [US-APPR-01](./US-APPR-01-Inbox-phê-duyệt.md) |
-| F10.2 | Cấu hình chuỗi phê duyệt | Thiết lập approval chain theo loại đơn × site. Thêm/bớt level. Điều kiện kích hoạt level (> N ngày, > N giờ). Cấu hình fallback. | [US-APPR-02](./US-APPR-02-Cấu-hình-chuỗi-phê-duyệt.md) |
-| F10.3 | Phê duyệt hàng loạt | Chọn nhiều đơn cùng loại → Duyệt/Từ chối batch. Hiển thị kết quả xử lý cho từng đơn. Hỗ trợ cấu hình ngày chốt công. | [US-APPR-03](./US-APPR-03-Phê-duyệt-hàng-loạt.md) |
+| F10.1 | Inbox phê duyệt | Danh sách đơn chờ duyệt, lọc theo loại (Leave/OT/Correction). Xem chi tiết đơn, file đính kèm. Nút Duyệt/Từ chối kèm lý do. Badge số đơn chưa duyệt. | [US-APPR-01](./us-appr-01-inbox-phe-duyet.md) |
+| F10.2 | Cấu hình chuỗi phê duyệt | Thiết lập approval chain theo loại đơn × site. Thêm/bớt level. Điều kiện kích hoạt level (> N ngày, > N giờ). Cấu hình fallback. | [US-APPR-02](./us-appr-02-cau-hinh-chuoi-phe-duyet.md) |
+| F10.3 | Phê duyệt hàng loạt | Chọn nhiều đơn cùng loại → Duyệt/Từ chối batch. Hiển thị kết quả xử lý cho từng đơn. Hỗ trợ cấu hình ngày chốt công. | [US-APPR-03](./us-appr-03-phe-duyet-hang-loat.md) |
 
 ---
 

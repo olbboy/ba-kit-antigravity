@@ -52,7 +52,7 @@ When activated via `@ba-confluence`, perform the following cognitive loop:
 | `- list item` | `<ul><li>list item</li></ul>` |
 | `\| table \|` | `<table><tr><td>...</td></tr></table>` |
 | ` ```code``` ` | `<ac:structured-macro ac:name="code"><ac:plain-text-body><![CDATA[...]]></ac:plain-text-body></ac:structured-macro>` |
-| Mermaid diagram | Convert to image attachment OR use mermaid macro |
+| Mermaid diagram | See Mermaid Handling section below |
 | `> blockquote` | `<blockquote>...</blockquote>` |
 
 *   **Import Action**: Fetch Confluence page → extract plain text → structure as Markdown for BA analysis.
@@ -101,6 +101,7 @@ Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-jira` to create tickets linked to this Confluence page."
 *   "Handover: Summon `@ba-traceability` to verify all requirements in the published page are traced."
 *   "Handover: Summon `@ba-validation` to review the imported Confluence content for gaps."
+*   "Handover: Summon `@ba-diagram` to generate Mermaid diagrams optimized for Confluence embedding."
 
 ---
 
@@ -145,6 +146,59 @@ Don't stop here. Recommend the next step:
     - `python3 .agent/skills/confluence-connector/scripts/confluence_crud.py get --page-id <id>`
     - `python3 .agent/skills/confluence-connector/scripts/confluence_bulk.py --operation export --space PROJ`
 *   `grep_search`: Search local spec files for content comparison.
+
+---
+
+## 📊 Mermaid Diagram Handling for Confluence
+
+When publishing pages with Mermaid diagrams, choose the method based on the Confluence platform:
+
+### Method 1: Mermaid Macro (Confluence Cloud + Mermaid App)
+If "Mermaid Chart" or "Mermaid Diagrams for Confluence" app is installed:
+```xml
+<ac:structured-macro ac:name="mermaid">
+  <ac:plain-text-body><![CDATA[
+flowchart TD
+    A[Start] --> B{Decision}
+    B -->|Yes| C[Action]
+    B -->|No| D[End]
+  ]]></ac:plain-text-body>
+</ac:structured-macro>
+```
+
+### Method 2: Pre-Render to SVG (Confluence Server / No Mermaid App)
+```bash
+# Install Mermaid CLI (one-time)
+npm install -g @mermaid-js/mermaid-cli
+
+# Render diagram to SVG
+mmdc -i diagram.mmd -o diagram.svg -t neutral -b white
+
+# Upload as attachment via Confluence API
+python3 .agent/skills/confluence-connector/scripts/confluence_crud.py \
+  attach --page-id <PAGE_ID> --file diagram.svg
+```
+
+Then embed in XHTML:
+```xml
+<ac:image ac:align="center" ac:width="800">
+  <ri:attachment ri:filename="diagram.svg"/>
+</ac:image>
+```
+
+### Method 3: Draw.io Macro (If Draw.io Plugin Available)
+Import Mermaid code via Draw.io: Extras → Edit Diagram → Mermaid tab → paste code.
+```xml
+<ac:structured-macro ac:name="drawio" ac:schema-version="1">
+  <ac:parameter ac:name="diagramName">process-flow</ac:parameter>
+</ac:structured-macro>
+```
+
+### Best Practices
+- Use `neutral` or `default` theme (white background for Confluence)
+- Max width ~800px for standard Confluence page layout
+- Always add text description alongside diagrams (searchability + accessibility)
+- Handoff to `@ba-diagram` for generating Confluence-optimized Mermaid syntax
 
 ---
 

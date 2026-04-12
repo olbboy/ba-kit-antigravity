@@ -1,6 +1,6 @@
 # BA-Kit Prompt Library
 
-> 45 copy-paste prompts tổ chức theo vòng đời BA. Mỗi prompt được thiết kế để kích hoạt đúng agent, đúng lúc.
+> 48 copy-paste prompts tổ chức theo vòng đời BA. Mỗi prompt được thiết kế để kích hoạt đúng agent, đúng lúc.
 
 **Cách dùng:** Copy prompt, thay nội dung trong `[...]`, dán vào chat.
 
@@ -258,6 +258,24 @@ Mục tiêu: Đảm bảo người dùng ADOPT hệ thống và business rules r
 
 ---
 
+## Phase 13: Diagramming & Visualization (NEW in v3.1)
+
+Mục tiêu: Visualize mọi BA artifact bằng Mermaid v11, sẵn sàng publish Confluence.
+
+```
+46. @ba-diagram Vẽ flowchart BPMN với swimlanes cho quy trình [mô tả quy trình]. Actors: [danh sách vai trò]. Output cả Mermaid source và Confluence embedding.
+```
+
+```
+47. @ba-diagram Vẽ ERD (Mermaid erDiagram) cho module [tên module]. Entities: [danh sách entities]. Include PK/FK, cardinality, và data types chính.
+```
+
+```
+48. @ba-diagram Vẽ sequence diagram cho luồng [mô tả interaction]. Actors: [danh sách]. Gồm happy path và error handling. Confluence-ready.
+```
+
+---
+
 ## Pro Tips: Power-User Combinations
 
 ### Combo 1: Zero-to-BRD trong 4 bước
@@ -303,7 +321,15 @@ Dùng khi bắt đầu module mới cần cả user research và data design.
 @ba-questioning [meeting prep] → @ba-ux [persona + journey] → @ba-elicitation [deep-dive] → @ba-writing [US + AC] → @ba-data [ERD + data dictionary] → @ba-business-rules [decision tables]
 ```
 
-### Combo 6: Go-Live Readiness Pipeline (v3.1)
+### Combo 6: Requirements → Diagrams → Confluence (v3.1)
+
+Dùng khi cần publish documentation đầy đủ với diagrams lên Confluence.
+
+```
+@ba-writing [US + AC] → @ba-data [ERD] → @ba-process [BPMN] → @ba-diagram [render all diagrams] → @ba-confluence [publish with embedded diagrams]
+```
+
+### Combo 7: Go-Live Readiness Pipeline (v3.1)
 
 Dùng trước deployment để đảm bảo cả hệ thống VÀ con người sẵn sàng.
 

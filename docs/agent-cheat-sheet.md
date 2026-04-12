@@ -1,6 +1,6 @@
 # BA-Kit Agent Cheat Sheet
 
-Tham chiếu nhanh 32 agents — phân loại, khi nào dùng, output chính.
+Tham chiếu nhanh 33 agents — phân loại, khi nào dùng, output chính.
 
 ---
 
@@ -74,6 +74,7 @@ Tham chiếu nhanh 32 agents — phân loại, khi nào dùng, output chính.
 | **@ba-data** | Kiến trúc dữ liệu | Cần ERD, data dictionary, DFD, data mapping, migration plan | ERD (Mermaid), data dictionary, mapping tables |
 | **@ba-change** | Quản lý thay đổi | Triển khai hệ thống mới, cần training plan, go-live checklist | ADKAR assessment, training plan, go-live checklist |
 | **@ba-business-rules** | Quản lý quy tắc nghiệp vụ | Cần decision table, rule catalog, kiểm tra conflict | Decision tables, rule catalogs, conflict reports |
+| **@ba-diagram** | Vẽ diagram | Cần Mermaid diagram cho bất kỳ BA artifact nào, đặc biệt publish Confluence | Mermaid v11 diagrams, Confluence-ready output |
 
 ---
 
@@ -168,6 +169,8 @@ Tham chiếu nhanh 32 agents — phân loại, khi nào dùng, output chính.
 | Cần ERD / data dictionary | `@ba-data` | `@ba-writing` |
 | Cần plan go-live / training | `@ba-change` | `@ba-communication` |
 | Cần decision table / rule catalog | `@ba-business-rules` | `@ba-validation` |
+| Cần vẽ diagram cho Confluence | `@ba-diagram` | `@ba-confluence` |
+| Cần flowchart / sequence / ERD | `@ba-diagram` | `@ba-process` |
 
 ---
 

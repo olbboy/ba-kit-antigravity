@@ -58,9 +58,9 @@ Admin truy cập "Cấu hình thông báo"
 
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
-| F09.1 | Cấu hình kênh thông báo | Quản lý kênh: Push/Email/Popup. Bật/tắt từng kênh theo loại sự kiện. Thiết lập kênh ưu tiên (fallback). | [US-NOTIF-01](./US-NOTIF-01-Cấu-hình-kênh-thông-báo.md) |
-| F09.2 | Cấu hình sự kiện kích hoạt | Danh sách 36 loại sự kiện. Bật/tắt trigger cho từng event. Thiết lập template nội dung thông báo. | [US-NOTIF-02](./US-NOTIF-02-Cấu-hình-sự-kiện-kích-hoạt.md) |
-| F09.3 | Quản lý policy gửi thông báo | Cấu hình Batching, Throttle, Schedule. Cho phép NV tắt/mở thông báo cá nhân (trừ thông báo bắt buộc). | [US-NOTIF-03](./US-NOTIF-03-Quản-lý-policy-thông-báo.md) |
+| F09.1 | Cấu hình kênh thông báo | Quản lý kênh: Push/Email/Popup. Bật/tắt từng kênh theo loại sự kiện. Thiết lập kênh ưu tiên (fallback). | [US-NOTIF-01](./us-notif-01-cau-hinh-kenh-thong-bao.md) |
+| F09.2 | Cấu hình sự kiện kích hoạt | Danh sách 36 loại sự kiện. Bật/tắt trigger cho từng event. Thiết lập template nội dung thông báo. | [US-NOTIF-02](./us-notif-02-cau-hinh-su-kien-kich-hoat.md) |
+| F09.3 | Quản lý policy gửi thông báo | Cấu hình Batching, Throttle, Schedule. Cho phép NV tắt/mở thông báo cá nhân (trừ thông báo bắt buộc). | [US-NOTIF-03](./us-notif-03-quan-ly-policy-thong-bao.md) |
 
 ---
 

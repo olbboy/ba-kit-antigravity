@@ -56,10 +56,10 @@ IT Admin truy cập "Cấu hình Camera AI"
 
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
-| F08.1 | Quản lý danh sách thiết bị | CRUD thiết bị camera: deviceId, tên, siteId, directionType (IN_ONLY/OUT_ONLY/BIDIRECTIONAL), confidenceThreshold, status (Active/Inactive). Lọc theo site. | [US-CAM-01](./US-CAM-01-Quản-lý-danh-sách-thiết-bị.md) |
-| F08.2 | Mapping nhân viên - Camera | Quản lý bảng CVisionPersonMapping: cvisionPersonId ↔ employeeId. Hỗ trợ bulk-create từ danh sách NV. Xử lý mapping lỗi. | [US-CAM-02](./US-CAM-02-Mapping-nhân-viên.md) |
-| F08.3 | Health check & Monitoring | Dashboard trạng thái camera real-time. Heartbeat mỗi 5 phút. Cảnh báo IT/Admin khi mất tín hiệu. Lịch sử uptime. | [US-CAM-03](./US-CAM-03-Health-check-và-monitoring.md) |
-| F08.4 | Đăng ký khuôn mặt NV (Face ID Enrollment) | Quy trình 3 bước: Xác nhận thông tin → Chụp ảnh khuôn mặt → Đồng bộ C-Vision. NV tự đăng ký trên Mini App. Kiểm tra chất lượng ảnh tự động. | [US-CAM-04](./US-CAM-04-Đăng-ký-khuôn-mặt-nhân-viên.md) |
+| F08.1 | Quản lý danh sách thiết bị | CRUD thiết bị camera: deviceId, tên, siteId, directionType (IN_ONLY/OUT_ONLY/BIDIRECTIONAL), confidenceThreshold, status (Active/Inactive). Lọc theo site. | [US-CAM-01](./us-cam-01-quan-ly-danh-sach-thiet-bi.md) |
+| F08.2 | Mapping nhân viên - Camera | Quản lý bảng CVisionPersonMapping: cvisionPersonId ↔ employeeId. Hỗ trợ bulk-create từ danh sách NV. Xử lý mapping lỗi. | [US-CAM-02](./us-cam-02-mapping-nhan-vien.md) |
+| F08.3 | Health check & Monitoring | Dashboard trạng thái camera real-time. Heartbeat mỗi 5 phút. Cảnh báo IT/Admin khi mất tín hiệu. Lịch sử uptime. | [US-CAM-03](./us-cam-03-health-check-va-monitoring.md) |
+| F08.4 | Đăng ký khuôn mặt NV (Face ID Enrollment) | Quy trình 3 bước: Xác nhận thông tin → Chụp ảnh khuôn mặt → Đồng bộ C-Vision. NV tự đăng ký trên Mini App. Kiểm tra chất lượng ảnh tự động. | [US-CAM-04](./us-cam-04-dang-ky-khuon-mat-nhan-vien.md) |
 
 ---
 

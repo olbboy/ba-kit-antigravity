@@ -59,12 +59,12 @@ NV theo dõi trạng thái đơn tại "Đơn từ của tôi"
 
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
-| F04.1 | Đăng ký nghỉ phép | Form chọn loại phép (8 loại), ngày bắt đầu/kết thúc, nửa ngày AM/PM, lý do, đính kèm. Hiển thị hạn mức phép còn lại. Chặn trùng ngày. | [US-REG-01](./US-REG-01-Đăng-ký-nghỉ-phép.md) |
-| F04.2 | Đăng ký đổi ca | Form chọn ngày cần đổi, ca hiện tại (tự điền), ca mong muốn. Kiểm tra xung đột lịch. | [US-REG-02](./US-REG-02-Đăng-ký-đổi-ca.md) |
-| F04.3 | Đăng ký tăng ca (OT) | Form chọn ngày, mốc giờ bắt đầu/kết thúc OT, lý do. Kiểm tra giới hạn OT theo luật. Hỗ trợ đăng ký trước (PRE) và sau (POST). | [US-REG-03](./US-REG-03-Đăng-ký-tăng-ca.md) |
-| F04.4 | Theo dõi trạng thái đơn & hạn mức | Danh sách đơn đã gửi kèm Badge trạng thái (Pending/Approved/Rejected). Xem hạn mức phép năm, OT lũy kế. Cho phép hủy đơn đang Pending. | [US-REG-04](./US-REG-04-Theo-dõi-đơn-từ-và-hạn-mức.md) |
-| F04.5 | Cấu hình chính sách phép năm | HR cấu hình phép cơ bản, thâm niên, carryover, pro-rata. Batch recalculate balance. | [US-REG-05](./US-REG-05-Cấu-hình-chính-sách-phép-năm.md) |
-| F04.6 | Đăng ký Công tác & WFH | Form đăng ký Business Travel (multi-day, địa điểm) và WFH (hạn mức tuần). Auto-mark PRESENT. Tích hợp Dashboard hiện diện. | [US-REG-06](./US-REG-06-Đăng-ký-công-tác-và-WFH.md) |
+| F04.1 | Đăng ký nghỉ phép | Form chọn loại phép (8 loại), ngày bắt đầu/kết thúc, nửa ngày AM/PM, lý do, đính kèm. Hiển thị hạn mức phép còn lại. Chặn trùng ngày. | [US-REG-01](./us-reg-01-dang-ky-nghe-phep.md) |
+| F04.2 | Đăng ký đổi ca | Form chọn ngày cần đổi, ca hiện tại (tự điền), ca mong muốn. Kiểm tra xung đột lịch. | [US-REG-02](./us-reg-02-dang-ky-doi-ca.md) |
+| F04.3 | Đăng ký tăng ca (OT) | Form chọn ngày, mốc giờ bắt đầu/kết thúc OT, lý do. Kiểm tra giới hạn OT theo luật. Hỗ trợ đăng ký trước (PRE) và sau (POST). | [US-REG-03](./us-reg-03-dang-ky-tang-ca.md) |
+| F04.4 | Theo dõi trạng thái đơn & hạn mức | Danh sách đơn đã gửi kèm Badge trạng thái (Pending/Approved/Rejected). Xem hạn mức phép năm, OT lũy kế. Cho phép hủy đơn đang Pending. | [US-REG-04](./us-reg-04-theo-doi-don-tu-va-han-muc.md) |
+| F04.5 | Cấu hình chính sách phép năm | HR cấu hình phép cơ bản, thâm niên, carryover, pro-rata. Batch recalculate balance. | [US-REG-05](./us-reg-05-cau-hinh-chinh-sach-phep-nam.md) |
+| F04.6 | Đăng ký Công tác & WFH | Form đăng ký Business Travel (multi-day, địa điểm) và WFH (hạn mức tuần). Auto-mark PRESENT. Tích hợp Dashboard hiện diện. | [US-REG-06](./us-reg-06-dang-ky-cong-tac-va-wfh.md) |
 
 ---
 

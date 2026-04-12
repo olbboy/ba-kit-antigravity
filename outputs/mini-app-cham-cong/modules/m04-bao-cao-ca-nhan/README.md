@@ -56,8 +56,8 @@ NV chọn kỳ báo cáo (tháng/quý) để xem chi tiết
 
 | Mã | Chức năng | Mô tả chi tiết | User Story |
 | --- | --- | --- | --- |
-| F05.1 | Dashboard hiệu suất cá nhân | Score chuyên cần (0-100), tổng giờ làm tháng, tổng ngày nghỉ, tổng giờ OT. Biểu đồ trend 4 tuần. Cập nhật real-time khi có dữ liệu mới. | [US-RPTPRS-01](./US-RPTPRS-01-Dashboard-hiệu-suất-cá-nhân.md) |
-| F05.2 | Bảng KPI & Highlights | Bảng tổng hợp KPI theo quý: % đúng giờ, số lần trễ, số ngày vắng, giờ OT lũy kế. Performance highlights so sánh kỳ trước. | [US-RPTPRS-02](./US-RPTPRS-02-Bảng-KPI-và-highlights.md) |
+| F05.1 | Dashboard hiệu suất cá nhân | Score chuyên cần (0-100), tổng giờ làm tháng, tổng ngày nghỉ, tổng giờ OT. Biểu đồ trend 4 tuần. Cập nhật real-time khi có dữ liệu mới. | [US-RPTPRS-01](./us-rptprs-01-dashboard-hieu-suat-ca-nhan.md) |
+| F05.2 | Bảng KPI & Highlights | Bảng tổng hợp KPI theo quý: % đúng giờ, số lần trễ, số ngày vắng, giờ OT lũy kế. Performance highlights so sánh kỳ trước. | [US-RPTPRS-02](./us-rptprs-02-bang-kpi-va-highlights.md) |
 
 ---
 

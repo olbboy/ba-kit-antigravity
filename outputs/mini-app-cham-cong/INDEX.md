@@ -5,7 +5,7 @@
 ## Cấu trúc dự án
 
 - [README — Tổng quan dự án](./README.md)
-- [EAMS v2.0 — Tài liệu nghiệp vụ toàn diện](./eams-v2-comprehensive.md)
+- [EAMS v2.1 — Tài liệu nghiệp vụ toàn diện](./eams-v2-comprehensive.md)
 - [📊 AUDIT-REPORT — Báo cáo sức khỏe dự án](./AUDIT-REPORT.md)
 - [🔗 RTM — Ma trận truy vết yêu cầu (482 TCs)](./RTM.md)
 
@@ -16,56 +16,55 @@
 - [BRD-02 Quản lý](./overview/BRD-02-Quản-lý.md) — 7 chức năng (MANAGER, DEPT_HEAD)
 - [BRD-03 HR Admin](./overview/BRD-03-HR-Admin.md) — 13 chức năng quản trị (SITE_HR, GLOBAL_HR)
 - [BRD-04 IT & System Admin](./overview/BRD-04-IT-và-System-Admin.md) — 10 chức năng kỹ thuật (IT_ADMIN, SYS_ADMIN)
-- [Demo Plan Sprint 8](./overview/Demo-Plan-Sprint-8.md)
-- [UAT Scenarios](./overview/UAT-SCENARIOS.md)
+- [Demo Plan Sprint 8](./overview/demo-plan-sprint-8.md)
 
 ---
 
 ### Phase 01: Thiết lập hệ thống — Sprint 8
 
-- [Plan](./phase-01-thiet-lap/plan.md) — Roadmap + Dependency DAG
-- **m05 Quản lý Nhân sự** — [BRD](./phase-01-thiet-lap/m05-quan-ly-nhan-su/README.md) · [API](./phase-01-thiet-lap/m05-quan-ly-nhan-su/api-spec.md) · [DB](./phase-01-thiet-lap/m05-quan-ly-nhan-su/db-schema.md)
-  - [US-EMP-01](./phase-01-thiet-lap/m05-quan-ly-nhan-su/US-EMP-01-Sơ-đồ-cơ-cấu-tổ-chức.md) · [US-EMP-02](./phase-01-thiet-lap/m05-quan-ly-nhan-su/US-EMP-02-Quản-lý-phòng-ban.md) · [US-EMP-03](./phase-01-thiet-lap/m05-quan-ly-nhan-su/US-EMP-03-Danh-sách-nhân-sự.md) · [US-EMP-04](./phase-01-thiet-lap/m05-quan-ly-nhan-su/US-EMP-04-Bulk-import-nhân-viên.md) · [US-EMP-05](./phase-01-thiet-lap/m05-quan-ly-nhan-su/US-EMP-05-Dashboard-hiện-diện.md) · [US-EMP-06](./phase-01-thiet-lap/m05-quan-ly-nhan-su/US-EMP-06-Danh-mục-cấp-bậc.md)
-- **m06 Ca làm việc** — [BRD](./phase-01-thiet-lap/m06-ca-lam-viec/README.md) · [API](./phase-01-thiet-lap/m06-ca-lam-viec/api-spec.md) · [DB](./phase-01-thiet-lap/m06-ca-lam-viec/db-schema.md)
-  - [US-SHIFT-01](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-01-Danh-sách-ca-làm-việc.md) · [US-SHIFT-02](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-02-Cấu-hình-giờ-và-ngày-làm-việc.md) · [US-SHIFT-03](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-03-Giới-hạn-thời-gian-chấm-công-(punch-limit).md) · [US-SHIFT-04](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-04-Cấu-hình-giờ-nghỉ.md) · [US-SHIFT-05](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-05-Import-nhân-viên-vào-ca.md) · [US-SHIFT-06](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-06-Phân-ca-theo-pattern.md) · [US-SHIFT-07](./phase-01-thiet-lap/m06-ca-lam-viec/US-SHIFT-07-Xem-lịch-phân-ca-team.md)
-- **m07 Lịch nghỉ** — [BRD](./phase-01-thiet-lap/m07-lich-nghi/README.md) · [API](./phase-01-thiet-lap/m07-lich-nghi/api-spec.md) · [DB](./phase-01-thiet-lap/m07-lich-nghi/db-schema.md)
-  - [US-HOL-01](./phase-01-thiet-lap/m07-lich-nghi/US-HOL-01-Quản-lý-danh-sách-ngày-nghỉ.md) · [US-HOL-02](./phase-01-thiet-lap/m07-lich-nghi/US-HOL-02-Cấu-hình-policy-nghỉ-và-rule-nghỉ.md) · [US-HOL-03](./phase-01-thiet-lap/m07-lich-nghi/US-HOL-03-Logic-sync-&-batch-job.md) · [US-HOL-04](./phase-01-thiet-lap/m07-lich-nghi/US-HOL-04-API-hiển-thị.md)
-- **m09 Thông báo** — [BRD](./phase-01-thiet-lap/m09-thong-bao/README.md) · [API](./phase-01-thiet-lap/m09-thong-bao/api-spec.md) · [DB](./phase-01-thiet-lap/m09-thong-bao/db-schema.md)
-  - [US-NOTIF-01](./phase-01-thiet-lap/m09-thong-bao/US-NOTIF-01-Cấu-hình-kênh-thông-báo.md) · [US-NOTIF-02](./phase-01-thiet-lap/m09-thong-bao/US-NOTIF-02-Cấu-hình-sự-kiện-kích-hoạt.md) · [US-NOTIF-03](./phase-01-thiet-lap/m09-thong-bao/US-NOTIF-03-Quản-lý-policy-thông-báo.md) · [US-NOTIF-04](./phase-01-thiet-lap/m09-thong-bao/US-NOTIF-04-Quản-lý-template-email.md)
+
+- **m05 Quản lý Nhân sự** — [BRD](./modules/m05-quan-ly-nhan-su/README.md) · [API](./modules/m05-quan-ly-nhan-su/api-spec.md) · [DB](./modules/m05-quan-ly-nhan-su/db-schema.md)
+  - [US-EMP-01](./modules/m05-quan-ly-nhan-su/us-emp-01-so-do-co-cau-to-chuc.md) · [US-EMP-02](./modules/m05-quan-ly-nhan-su/us-emp-02-quan-ly-phong-ban.md) · [US-EMP-03](./modules/m05-quan-ly-nhan-su/us-emp-03-danh-sach-nhan-su.md) · [US-EMP-04](./modules/m05-quan-ly-nhan-su/us-emp-04-bulk-import-nhan-vien.md) · [US-EMP-05](./modules/m05-quan-ly-nhan-su/us-emp-05-dashboard-hien-dien.md) · [US-EMP-06](./modules/m05-quan-ly-nhan-su/us-emp-06-danh-muc-cap-bac.md)
+- **m06 Ca làm việc** — [BRD](./modules/m06-ca-lam-viec/README.md) · [API](./modules/m06-ca-lam-viec/api-spec.md) · [DB](./modules/m06-ca-lam-viec/db-schema.md)
+  - [US-SHIFT-01](./modules/m06-ca-lam-viec/us-shift-01-danh-sach-ca-lam-viec.md) · [US-SHIFT-02](./modules/m06-ca-lam-viec/us-shift-02-cau-hinh-gio-va-ngay-lam-viec.md) · [US-SHIFT-03](./modules/m06-ca-lam-viec/us-shift-03-gioi-han-thoi-gian-cham-cong-punch-limit.md) · [US-SHIFT-04](./modules/m06-ca-lam-viec/us-shift-04-cau-hinh-gio-nghi.md) · [US-SHIFT-05](./modules/m06-ca-lam-viec/us-shift-05-import-nhan-vien-vao-ca.md) · [US-SHIFT-06](./modules/m06-ca-lam-viec/us-shift-06-phan-ca-theo-pattern.md) · [US-SHIFT-07](./modules/m06-ca-lam-viec/us-shift-07-xem-lich-phan-ca-team.md)
+- **m07 Lịch nghỉ** — [BRD](./modules/m07-lich-nghi/README.md) · [API](./modules/m07-lich-nghi/api-spec.md) · [DB](./modules/m07-lich-nghi/db-schema.md)
+  - [US-HOL-01](./modules/m07-lich-nghi/us-hol-01-quan-ly-danh-sach-ngay-nghi.md) · [US-HOL-02](./modules/m07-lich-nghi/us-hol-02-cau-hinh-policy-nghi-va-rule-nghi.md) · [US-HOL-03](./modules/m07-lich-nghi/us-hol-03-logic-sync-batch-job.md) · [US-HOL-04](./modules/m07-lich-nghi/us-hol-04-api-hien-thi.md)
+- **m09 Thông báo** — [BRD](./modules/m09-thong-bao/README.md) · [API](./modules/m09-thong-bao/api-spec.md) · [DB](./modules/m09-thong-bao/db-schema.md)
+  - [US-NOTIF-01](./modules/m09-thong-bao/us-notif-01-cau-hinh-kenh-thong-bao.md) · [US-NOTIF-02](./modules/m09-thong-bao/us-notif-02-cau-hinh-su-kien-kich-hoat.md) · [US-NOTIF-03](./modules/m09-thong-bao/us-notif-03-quan-ly-policy-thong-bao.md) · [US-NOTIF-04](./modules/m09-thong-bao/us-notif-04-quan-ly-template-email.md)
 
 ### Phase 02: Định danh Camera AI — Sprint 8
 
-- [Plan](./phase-02-dinh-danh/plan.md)
-- **m08 Camera AI** — [BRD](./phase-02-dinh-danh/m08-camera-ai/README.md) · [API](./phase-02-dinh-danh/m08-camera-ai/api-spec.md) · [DB](./phase-02-dinh-danh/m08-camera-ai/db-schema.md)
-  - [US-CAM-01](./phase-02-dinh-danh/m08-camera-ai/US-CAM-01-Quản-lý-danh-sách-thiết-bị.md) · [US-CAM-02](./phase-02-dinh-danh/m08-camera-ai/US-CAM-02-Mapping-nhân-viên.md) · [US-CAM-03](./phase-02-dinh-danh/m08-camera-ai/US-CAM-03-Health-check-và-monitoring.md) · [US-CAM-04](./phase-02-dinh-danh/m08-camera-ai/US-CAM-04-Đăng-ký-khuôn-mặt-nhân-viên.md)
+
+- **m08 Camera AI** — [BRD](./modules/m08-camera-ai/README.md) · [API](./modules/m08-camera-ai/api-spec.md) · [DB](./modules/m08-camera-ai/db-schema.md)
+  - [US-CAM-01](./modules/m08-camera-ai/us-cam-01-quan-ly-danh-sach-thiet-bi.md) · [US-CAM-02](./modules/m08-camera-ai/us-cam-02-mapping-nhan-vien.md) · [US-CAM-03](./modules/m08-camera-ai/us-cam-03-health-check-va-monitoring.md) · [US-CAM-04](./modules/m08-camera-ai/us-cam-04-dang-ky-khuon-mat-nhan-vien.md)
 
 ### Phase 03: Vận hành chấm công — Sprint 8
 
-- [Plan](./phase-03-van-hanh/plan.md)
-- **m01 Chấm công** — [BRD](./phase-03-van-hanh/m01-cham-cong/README.md) · [API](./phase-03-van-hanh/m01-cham-cong/api-spec.md) · [DB](./phase-03-van-hanh/m01-cham-cong/db-schema.md)
-  - [US-ATTEN-01](./phase-03-van-hanh/m01-cham-cong/US-ATTEN-01-Hub-chấm-công.md) · [US-ATTEN-02](./phase-03-van-hanh/m01-cham-cong/US-ATTEN-02-Thống-kê-hiệu-suất-tháng.md) · [US-ATTEN-03](./phase-03-van-hanh/m01-cham-cong/US-ATTEN-03-Xem-chi-tiết-nhật-ký-chấm-công.md) · [US-ATTEN-04](./phase-03-van-hanh/m01-cham-cong/US-ATTEN-04-Trung-tâm-cảnh-báo-và-thông-báo.md) · [US-ATTEN-05](./phase-03-van-hanh/m01-cham-cong/US-ATTEN-05-Nhập-chấm-công-thủ-công.md)
+
+- **m01 Chấm công** — [BRD](./modules/m01-cham-cong/README.md) · [API](./modules/m01-cham-cong/api-spec.md) · [DB](./modules/m01-cham-cong/db-schema.md)
+  - [US-ATTEN-01](./modules/m01-cham-cong/us-atten-01-hub-cham-cong.md) · [US-ATTEN-02](./modules/m01-cham-cong/us-atten-02-thong-ke-hieu-suat-thang.md) · [US-ATTEN-03](./modules/m01-cham-cong/us-atten-03-xem-chi-tiet-nhat-ky-cham-cong.md) · [US-ATTEN-04](./modules/m01-cham-cong/us-atten-04-trung-tam-canh-bao-va-thong-bao.md) · [US-ATTEN-05](./modules/m01-cham-cong/us-atten-05-nhap-cham-cong-thu-cong.md)
 
 ### Phase 04: Xử lý đơn từ — Sprint 9
 
-- [Plan](./phase-04-xu-ly/plan.md)
-- **m04 Trung tâm Đăng ký** — [BRD](./phase-04-xu-ly/m04-trung-tam-dang-ky/README.md) · [API](./phase-04-xu-ly/m04-trung-tam-dang-ky/api-spec.md) · [DB](./phase-04-xu-ly/m04-trung-tam-dang-ky/db-schema.md)
-  - [US-REG-01](./phase-04-xu-ly/m04-trung-tam-dang-ky/US-REG-01-Đăng-ký-nghỉ-phép.md) · [US-REG-02](./phase-04-xu-ly/m04-trung-tam-dang-ky/US-REG-02-Đăng-ký-đổi-ca.md) · [US-REG-03](./phase-04-xu-ly/m04-trung-tam-dang-ky/US-REG-03-Đăng-ký-tăng-ca.md) · [US-REG-04](./phase-04-xu-ly/m04-trung-tam-dang-ky/US-REG-04-Theo-dõi-đơn-từ-và-hạn-mức.md) · [US-REG-05](./phase-04-xu-ly/m04-trung-tam-dang-ky/US-REG-05-Cấu-hình-chính-sách-phép-năm.md) · [US-REG-06](./phase-04-xu-ly/m04-trung-tam-dang-ky/US-REG-06-Đăng-ký-công-tác-và-WFH.md)
-- **m03 Giải trình** — [BRD](./phase-04-xu-ly/m03-giai-trinh/README.md) · [API](./phase-04-xu-ly/m03-giai-trinh/api-spec.md) · [DB](./phase-04-xu-ly/m03-giai-trinh/db-schema.md)
-  - [US-EXPL-01](./phase-04-xu-ly/m03-giai-trinh/US-EXPL-01-Danh-sách-lỗi-cần-giải-trình.md) · [US-EXPL-02](./phase-04-xu-ly/m03-giai-trinh/US-EXPL-02-Yêu-cầu-sửa-chấm-công.md)
-- **m10 Phê duyệt** — [BRD](./phase-04-xu-ly/m10-phe-duyet/README.md) · [API](./phase-04-xu-ly/m10-phe-duyet/api-spec.md) · [DB](./phase-04-xu-ly/m10-phe-duyet/db-schema.md)
-  - [US-APPR-01](./phase-04-xu-ly/m10-phe-duyet/US-APPR-01-Inbox-phê-duyệt.md) · [US-APPR-02](./phase-04-xu-ly/m10-phe-duyet/US-APPR-02-Cấu-hình-chuỗi-phê-duyệt.md) · [US-APPR-03](./phase-04-xu-ly/m10-phe-duyet/US-APPR-03-Phê-duyệt-hàng-loạt.md)
+
+- **m04 Trung tâm Đăng ký** — [BRD](./modules/m02-trung-tam-dang-ky/README.md) · [API](./modules/m02-trung-tam-dang-ky/api-spec.md) · [DB](./modules/m02-trung-tam-dang-ky/db-schema.md)
+  - [US-REG-01](./modules/m02-trung-tam-dang-ky/us-reg-01-dang-ky-nghe-phep.md) · [US-REG-02](./modules/m02-trung-tam-dang-ky/us-reg-02-dang-ky-doi-ca.md) · [US-REG-03](./modules/m02-trung-tam-dang-ky/us-reg-03-dang-ky-tang-ca.md) · [US-REG-04](./modules/m02-trung-tam-dang-ky/us-reg-04-theo-doi-don-tu-va-han-muc.md) · [US-REG-05](./modules/m02-trung-tam-dang-ky/us-reg-05-cau-hinh-chinh-sach-phep-nam.md) · [US-REG-06](./modules/m02-trung-tam-dang-ky/us-reg-06-dang-ky-cong-tac-va-wfh.md)
+- **m03 Giải trình** — [BRD](./modules/m03-giai-trinh/README.md) · [API](./modules/m03-giai-trinh/api-spec.md) · [DB](./modules/m03-giai-trinh/db-schema.md)
+  - [US-EXPL-01](./modules/m03-giai-trinh/us-expl-01-danh-sach-loi-can-giai-trinh.md) · [US-EXPL-02](./modules/m03-giai-trinh/us-expl-02-yeu-cau-sua-cham-cong.md)
+- **m10 Phê duyệt** — [BRD](./modules/m10-phe-duyet/README.md) · [API](./modules/m10-phe-duyet/api-spec.md) · [DB](./modules/m10-phe-duyet/db-schema.md)
+  - [US-APPR-01](./modules/m10-phe-duyet/us-appr-01-inbox-phe-duyet.md) · [US-APPR-02](./modules/m10-phe-duyet/us-appr-02-cau-hinh-chuoi-phe-duyet.md) · [US-APPR-03](./modules/m10-phe-duyet/us-appr-03-phe-duyet-hang-loat.md)
 
 ### Phase 05: Báo cáo & Hoàn thiện — Sprint 10
 
-- [Plan](./phase-05-ket-thuc/plan.md)
-- **m05 Báo cáo cá nhân** — [BRD](./phase-05-ket-thuc/m05-bao-cao-ca-nhan/README.md) · [API](./phase-05-ket-thuc/m05-bao-cao-ca-nhan/api-spec.md) · [DB](./phase-05-ket-thuc/m05-bao-cao-ca-nhan/db-schema.md)
-  - [US-RPTPRS-01](./phase-05-ket-thuc/m05-bao-cao-ca-nhan/US-RPTPRS-01-Dashboard-hiệu-suất-cá-nhân.md) · [US-RPTPRS-02](./phase-05-ket-thuc/m05-bao-cao-ca-nhan/US-RPTPRS-02-Bảng-KPI-và-highlights.md)
-- **m11 Báo cáo tổng** — [BRD](./phase-05-ket-thuc/m11-bao-cao-tong/README.md) · [API](./phase-05-ket-thuc/m11-bao-cao-tong/api-spec.md) · [DB](./phase-05-ket-thuc/m11-bao-cao-tong/db-schema.md)
-  - [US-RPT-01](./phase-05-ket-thuc/m11-bao-cao-tong/US-RPT-01-Dashboard-quản-lý.md) · [US-RPT-02](./phase-05-ket-thuc/m11-bao-cao-tong/US-RPT-02-Xuất-báo-cáo-và-payroll.md) · [US-RPT-03](./phase-05-ket-thuc/m11-bao-cao-tong/US-RPT-03-Báo-cáo-tuân-thủ.md) · [US-RPT-04](./phase-05-ket-thuc/m11-bao-cao-tong/US-RPT-04-Khóa-kỳ-lương.md)
+
+- **m05 Báo cáo cá nhân** — [BRD](./modules/m04-bao-cao-ca-nhan/README.md) · [API](./modules/m04-bao-cao-ca-nhan/api-spec.md) · [DB](./modules/m04-bao-cao-ca-nhan/db-schema.md)
+  - [US-RPTPRS-01](./modules/m04-bao-cao-ca-nhan/us-rptprs-01-dashboard-hieu-suat-ca-nhan.md) · [US-RPTPRS-02](./modules/m04-bao-cao-ca-nhan/us-rptprs-02-bang-kpi-va-highlights.md)
+- **m11 Báo cáo tổng** — [BRD](./modules/m11-bao-cao-tong/README.md) · [API](./modules/m11-bao-cao-tong/api-spec.md) · [DB](./modules/m11-bao-cao-tong/db-schema.md)
+  - [US-RPT-01](./modules/m11-bao-cao-tong/us-rpt-01-dashboard-quan-ly.md) · [US-RPT-02](./modules/m11-bao-cao-tong/us-rpt-02-xuat-bao-cao-va-payroll.md) · [US-RPT-03](./modules/m11-bao-cao-tong/us-rpt-03-bao-cao-tuan-thu.md) · [US-RPT-04](./modules/m11-bao-cao-tong/us-rpt-04-khoa-ky-luong.md)
 
 ### Cross-cutting — Sprint 8-10
 
-- [Plan](./cross-cutting/plan.md)
-- **m12 Quản trị hệ thống** — [BRD](./cross-cutting/m12-quan-tri-he-thong/README.md) · [API](./cross-cutting/m12-quan-tri-he-thong/api-spec.md) · [DB](./cross-cutting/m12-quan-tri-he-thong/db-schema.md)
-  - [US-SYS-01](./cross-cutting/m12-quan-tri-he-thong/US-SYS-01-Quản-lý-chi-nhánh.md) · [US-SYS-02](./cross-cutting/m12-quan-tri-he-thong/US-SYS-02-Audit-log-viewer.md) · [US-SYS-03](./cross-cutting/m12-quan-tri-he-thong/US-SYS-03-Employee-offboarding.md) · [US-SYS-04](./cross-cutting/m12-quan-tri-he-thong/US-SYS-04-Chốt-công-tháng.md) · [US-SYS-05](./cross-cutting/m12-quan-tri-he-thong/US-SYS-05-Employee-onboarding.md) · [US-SYS-06](./cross-cutting/m12-quan-tri-he-thong/US-SYS-06-Cấu-hình-data-retention-policy.md)
+
+- **m12 Quản trị hệ thống** — [BRD](./modules/m12-quan-tri-he-thong/README.md) · [API](./modules/m12-quan-tri-he-thong/api-spec.md) · [DB](./modules/m12-quan-tri-he-thong/db-schema.md)
+  - [US-SYS-01](./modules/m12-quan-tri-he-thong/us-sys-01-quan-ly-chi-nhanh.md) · [US-SYS-02](./modules/m12-quan-tri-he-thong/us-sys-02-audit-log-viewer.md) · [US-SYS-03](./modules/m12-quan-tri-he-thong/us-sys-03-employee-offboarding.md) · [US-SYS-04](./modules/m12-quan-tri-he-thong/us-sys-04-chot-cong-thang.md) · [US-SYS-05](./modules/m12-quan-tri-he-thong/us-sys-05-employee-onboarding.md) · [US-SYS-06](./modules/m12-quan-tri-he-thong/us-sys-06-cau-hinh-data-retention-policy.md)
 
