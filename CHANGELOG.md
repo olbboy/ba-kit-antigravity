@@ -2,6 +2,27 @@
 
 All notable changes to BA-Kit Antigravity.
 
+## v3.1.1 — 2026-04-13
+
+### Changed
+- **License**: MIT → CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0 International)
+- **docs/README.md**: Rewritten as onboarding navigation guide with ASCII flowchart reading path
+- **All 11 docs files**: Complete rewrite for consistency, accuracy, and new-user clarity
+  - prompt-library.md: 48 prompts across 10 lifecycle phases
+  - workflow-cookbook.md: 15 scenarios (consolidated from 23, removed duplicates)
+  - quick-start.md, usage-guide.md, junior-start.md, contributing.md: restructured
+  - architecture-decisions.md: 3 new ADRs for v3.1 decisions
+  - antigravity-protocol.md: 33 agents roster + diagram tool mandate
+  - ai-foundation-for-ba.md, ai-tools-guide.md, design-prototype-guide.md: updated counts
+
+### Fixed
+- All stale agent counts (19/21/26) eliminated across docs
+- All broken links in docs/README.md resolved
+- Scenario count inconsistency (23→15) fixed in cheat sheet and ai-foundation
+- Prompt count inconsistency (28/33/45→48) fixed across all files
+
+---
+
 ## v3.1.0 — 2026-04-12
 
 ### Added — 7 New Lifecycle Agents

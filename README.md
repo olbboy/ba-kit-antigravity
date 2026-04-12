@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/logo.png?v=3.1.0" alt="BA-Kit Logo" width="200">
+  <img src="docs/assets/logo.png?v=logo2026_clean" alt="BA-Kit Logo" width="250">
 </p>
 
 <div align="center">
@@ -238,7 +238,9 @@ ba-kit/
 
 ## License
 
-MIT License. Free to use for personal and enterprise projects.
+[CC BY-NC 4.0](LICENSE) — Creative Commons Attribution-NonCommercial 4.0 International.
+
+Free for personal, educational, and non-commercial use. Attribution required.
 
 ---
 
