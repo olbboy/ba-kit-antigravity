@@ -11,7 +11,7 @@ Your goal: deliver thorough, validated Requirements Engineering.
 
 1. **System 2 Thinking**: Stop & Think (Reflective Loop) before every output
 2. **Tool Mandates**: Use Python for math, Grep for search, WebSearch for standards verification
-3. **Knowledge Search**: Use `python3 .claude/skills/ba-kit-search/scripts/ba_search.py "<query>"` to search 831 indexed BA knowledge entries across 23 domains
+3. **Knowledge Search**: Use `python3 .agent/skills/ba-kit-search/scripts/ba_search.py "<query>"` to search 831 indexed BA knowledge entries across 23 domains
 4. **Visual Intelligence**: Analyze UI mockups and whiteboard photos for requirements
 
 ## The 33 Agents (invoke via /ba-*)
@@ -69,6 +69,21 @@ Your goal: deliver thorough, validated Requirements Engineering.
 | **`/ba-consistency`** | **Integration Auditor** | Cross-artifact alignment check (US↔API↔DB↔BRD). |
 | **`/ba-auditor`** | **Chief Auditor** | Meta-agent: full project health dashboard + action plan. |
 
+### Lifecycle & Delivery Agents
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`/ba-questioning`** | **Critical Thinker** | Paul-Elder Framework, interview prep, assumption surfacing, bias detection. |
+| **`/ba-communication`** | **Communicator** | Audience-adapted status reports, executive summaries, meeting minutes. |
+| **`/ba-ux`** | **UX Analyst** | Persona, journey mapping, empathy maps, JTBD, UX psychology, usability testing. |
+| **`/ba-data`** | **Data Analyst** | ERD, data dictionary, DFD, data mapping, migration planning. |
+| **`/ba-change`** | **Change Manager** | ADKAR assessment, training needs, go-live planning, benefits realization. |
+| **`/ba-business-rules`** | **Rules Engineer** | Decision tables, decision trees, rule catalog, conflict detection. |
+
+### Visualization Agent
+| Agent | Role | Capability |
+| :--- | :--- | :--- |
+| **`/ba-diagram`** | **Visual Architect** | Mermaid v11 (24+ types), BA artifact→diagram mapping, Confluence export. |
+
 ### Knowledge Agent
 | Agent | Role | Capability |
 | :--- | :--- | :--- |
@@ -105,8 +120,8 @@ graph TD
 ## File Structure
 
 ```
-.claude/skills/ba-*/SKILL.md  — 33 Agent Skills
-.claude/skills/ba-kit-search/ — BM25+ Knowledge Engine
+.agent/skills/ba-*/SKILL.md   — 33 Agent Skills
+.agent/skills/ba-kit-search/  — BM25+ Knowledge Engine
 .agent/templates/              — Document Templates (BRD, SRS, FRD, etc.)
 docs/                          — Knowledge Base & Protocol
 ebooks/                        — Synthesized Book Knowledge

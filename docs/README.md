@@ -1,52 +1,78 @@
 # BA-Kit Documentation
 
-## Tài liệu hướng dẫn
+Tài liệu hướng dẫn cho BA-Kit v3.1.0 — 33 agents, 831 knowledge entries, 3 platforms.
+
+---
+
+## Getting Started
+
+| Tài liệu | Mô tả | Đối tượng |
+|-----------|-------|-----------|
+| [Quick Start](./quick-start.md) | Setup BA-Kit trong 2 phút | Tất cả |
+| [Junior Start](./junior-start.md) | Onboarding cho Junior BA | Junior BA |
+| [Usage Guide](./usage-guide.md) | Cách sử dụng BA squad đầy đủ | Tất cả |
+
+## Core References
+
+| Tài liệu | Mô tả | Đối tượng |
+|-----------|-------|-----------|
+| [Agent Cheat Sheet](./agent-cheat-sheet.md) | Bảng tham chiếu nhanh 33 agents | Tất cả |
+| [Prompt Library](./prompt-library.md) | 45+ prompts copy-paste sẵn | BA thực hành |
+| [Workflow Cookbook](./workflow-cookbook.md) | 23 kịch bản thực tế theo ngành | BA có kinh nghiệm |
+
+## Guides
 
 | Tài liệu | Mô tả | Đối tượng |
 |-----------|-------|-----------|
 | [AI Foundation for BA](./ai-foundation-for-ba.md) | Nền tảng AI cho Business Analysis | BA mới bắt đầu với AI |
-| [AI Tools Guide](./ai-tools-guide.md) | Hướng dẫn sử dụng AI tools trong BA workflow | BA muốn tích hợp AI |
-| [Antigravity Protocol](./antigravity-protocol.md) | Protocol giao tiếp giữa 33 agents | Developers |
-| [Architecture Decisions](./architecture-decisions.md) | ADRs — quyết định kiến trúc | Tech Lead |
+| [AI Tools Guide](./ai-tools-guide.md) | Tích hợp AI tools vào BA workflow | BA muốn dùng AI |
 | [Design Prototype Guide](./design-prototype-guide.md) | Tạo prototype UI/UX cho BA | BA + Designer |
-| [Junior Start](./junior-start.md) | Onboarding cho Junior BA | Junior BA |
-| [Quick Start](./quick-start.md) | Setup BA-Kit trong 2 phút | Tất cả |
-| [Usage Guide](./usage-guide.md) | Cách sử dụng BA squad | Tất cả |
-| [Workflow Cookbook](./workflow-cookbook.md) | 23 kịch bản thực tế | BA có kinh nghiệm |
-| [Contributing](./contributing.md) | Hướng dẫn đóng góp | Contributors |
+
+## Architecture
+
+| Tài liệu | Mô tả | Đối tượng |
+|-----------|-------|-----------|
+| [Architecture Decisions](./architecture-decisions.md) | ADRs — quyết định kiến trúc hệ thống | Tech Lead |
+| [Antigravity Protocol](./antigravity-protocol.md) | Protocol giao tiếp giữa 33 agents | Developers |
+| [Contributing](./contributing.md) | Hướng dẫn đóng góp cho dự án | Contributors |
+
+## Knowledge Base
+
+| Resource | Mô tả |
+|----------|-------|
+| [`../.agent/data/`](../.agent/data/) | 23 CSV files, 831 knowledge entries |
+| [`../.agent/wiki/`](../.agent/wiki/) | Living wiki 2-tier (concepts + decisions) |
+
+## Templates
+
+| Resource | Mô tả |
+|----------|-------|
+| [`../.agent/templates/`](../.agent/templates/) | 14 BA document templates (BRD, SRS, FRD, etc.) |
+
+---
 
 ## Cấu trúc BA-Kit
 
 ```
 ba-kit-antigravity/
 ├── .agent/
-│   ├── skills/         26 BA agents + 2 connectors (.../SKILL.md)
+│   ├── skills/         33 BA agents + connectors (.../SKILL.md)
 │   ├── scripts/        Python utilities (search, coverage, docx)
 │   ├── data/           23 CSV knowledge base files (831 entries)
-│   └── templates/      14 BA document templates
+│   ├── templates/      14 BA document templates
+│   └── wiki/           Living knowledge wiki (2-tier)
 ├── docs/               Tài liệu hướng dẫn (folder này)
-├── ebooks/             7 BA reference ebooks
-└── outputs/            Project outputs (e.g., EAMS)
+├── ebooks/             BA reference ebooks
+└── outputs/            Project outputs
 ```
 
-## Agent Activation
-
-```
-@ba-master       → Dispatcher (route requests)
-@ba-elicitation  → Interview stakeholders
-@ba-writing      → Write US/BRD/SRS
-@ba-validation   → Validate quality (INVEST)
-@ba-test-gen     → Generate test cases from AC
-@ba-traceability → Build/audit RTM
-@ba-quality-gate → Score artifacts (PASS/FAIL)
-@ba-consistency  → Cross-artifact alignment
-@ba-auditor      → Full project health report
-```
-
-## Knowledge Search
+## Quick Commands
 
 ```bash
+# Knowledge search
 python3 .agent/scripts/ba_search.py "topic" --domain elicitation
 python3 .agent/scripts/ba_search.py "query" --multi-domain
+
+# Coverage checker
 python3 .agent/scripts/coverage_checker.py outputs/project-name/
 ```

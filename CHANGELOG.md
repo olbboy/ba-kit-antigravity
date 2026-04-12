@@ -2,6 +2,42 @@
 
 All notable changes to BA-Kit Antigravity.
 
+## v3.1.0 — 2026-04-12
+
+### Added — 7 New Lifecycle Agents
+- `@ba-questioning` — Paul-Elder Critical Thinking Framework, interview prep, assumption surfacing
+- `@ba-communication` — Audience-adapted status reports, executive summaries, meeting minutes
+- `@ba-ux` — Persona, journey mapping, empathy maps, JTBD, UX psychology, usability testing
+- `@ba-data` — ERD, data dictionary, DFD, data mapping, migration planning
+- `@ba-change` — ADKAR assessment, training needs, go-live planning, benefits realization
+- `@ba-business-rules` — Decision tables, decision trees, rule catalog, conflict detection
+- `@ba-diagram` — Mermaid v11 (24+ types), BA artifact→diagram mapping, Confluence export
+
+### Enhanced
+- `@ba-questioning` v2.1 — 8 Elements of Reasoning, Intellectual Standards, Wilson Method, Socratic Protocol, bias detection
+- `@ba-ux` v2.0 — UX Psychology (Cognitive Load, Decision Architecture, Key Laws), heuristic evaluation, usability test protocol
+- `@ba-agile` — Estimation facilitation (Planning Poker, T-shirt sizing, story splitting)
+- `@ba-wiki` — Glossary management (ubiquitous language, synonym detection)
+- `@ba-confluence` — Mermaid diagram handling (Stratus mermaid-macro for DC, pre-render SVG)
+- `@ba-master` — Routing table expanded with 15+ new entries for all new agents
+
+### Knowledge Base
+- 3 new knowledge base files: questioning.md, communication.md, change_management.md
+- 831 entries across 23 domains (unchanged from v3.0)
+
+### Documentation
+- 48 copy-paste prompts (was 33)
+- Agent cheat sheet updated for 33 agents
+- Prompt library expanded with 5 new phases
+- .gitignore reorganized: Python artifacts, Claude session state, outputs/, diagrams
+
+### Infrastructure
+- outputs/ removed from git tracking (project deliverables are per-instance)
+- .claude/session-state/ removed from git tracking (local per-machine)
+- __pycache__/*.pyc cleaned from tracking
+
+---
+
 ## [1.3.1] - 2026-04-11
 
 ### Fixed
