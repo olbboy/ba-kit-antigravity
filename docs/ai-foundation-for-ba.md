@@ -498,7 +498,7 @@ WEEK 3-4: Chọn nền tảng & cài BA-Kit / Choose platform & install BA-Kit
    @ba-elicitation → @ba-writing → @ba-validation
    ↓
 MONTH 2: BA-Kit full squad orchestration
-   Workflow Cookbook (23 scenarios)
+   Workflow Cookbook (15 scenarios)
    Kết nối Jira/Confluence (MCP/Plugins/API)
    ↓
 MONTH 3+: Advanced

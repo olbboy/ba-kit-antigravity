@@ -153,4 +153,4 @@ Tuần 4: @ba-prioritization → @ba-agile → @ba-facilitation
 
 ---
 
-*Xem thêm: `workflow-cookbook.md` (23 scenarios) | `prompt-library.md` (45+ prompts) | `usage-guide.md`*
+*Xem thêm: `workflow-cookbook.md` (15 scenarios) | `prompt-library.md` (48 prompts) | `usage-guide.md`*
