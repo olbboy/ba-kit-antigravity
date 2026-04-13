@@ -62,6 +62,14 @@ build/
 out/
 
 # ============================================
+# BA Project outputs (deliverables, per-project)
+# ============================================
+outputs/*
+# Exception: mini-app-cham-cong is the BA-Kit reference showcase — tracked
+!outputs/mini-app-cham-cong/
+!outputs/mini-app-cham-cong/**
+
+# ============================================
 # Environment files (NEVER commit secrets)
 # ============================================
 .env

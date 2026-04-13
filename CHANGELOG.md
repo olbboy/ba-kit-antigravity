@@ -2,7 +2,9 @@
 
 All notable changes to BA-Kit Antigravity.
 
-## [1.5.0] - 2026-04-14 — E2E Quality Gate + Mini-App Chấm Công Showcase (Marketing v3.5.0)
+## [1.5.0] - 2026-04-14 — E2E Quality Gate + Mini-App Chấm Công Showcase + Anti-Rationalization Reconciliation (Marketing v3.5.0)
+
+> **Reconciliation note:** This release also merges the parallel `v3.2.0` + `v3.3.0` anti-rationalization work that shipped on the main branch while this feature branch was developing the Sprint Spine. Both tracks are now unified. Agent count: **44** (33 original with anti-rationalization pattern + 11 new sprint spine agents). The 11 new sprint spine agents inherit the anti-rationalization convention as follow-up work.
 
 ### Added
 - **Phase 08 — CI-integrated E2E quality gate**:
@@ -83,6 +85,129 @@ All notable changes to BA-Kit Antigravity.
   - **NEW helper `ba_setup.py`** (zero-dep stdlib): credential validation, atomic .env write (chmod 0600), placeholder rejection, masked token display, connectivity test via urllib
   - Closes the last identified BA-fit gap — BA never types `.env` files or CLI flags
 - Cumulative: **15/46 skills spot-checked (33%)**, 0 hard issues, 4 minor surface edits applied. Confidence HIGH that remaining 31 are BA-appropriate.
+
+---
+
+> **Historical entries below** — these `v3.x.y` entries reflect the parallel main-branch track (Anti-Rationalization Framework v3.2/v3.3 + license/doc work v3.1.x) that was reconciled into v3.5.0 above. They are preserved unchanged for provenance.
+
+## v3.3.0 — 2026-04-13
+
+### Added — Full Anti-Rationalization Pattern Coverage
+
+Complete rollout of anti-rationalization pattern to all remaining 28 BA agents. All 33 agents now have the 4 anti-slack sections.
+
+**28 agents updated** (organized by thematic batches):
+
+- **Batch A — Core Workflow** (7): ba-identity, ba-nfr, ba-process, ba-prioritization, ba-solution, ba-conflict, ba-export
+- **Batch B — Advanced Analysis** (7): ba-metrics, ba-root-cause, ba-innovation, ba-strategy, ba-facilitation, ba-systems, ba-agile
+- **Batch C — Quality & Modeling** (7): ba-test-gen, ba-quality-gate, ba-consistency, ba-auditor, ba-traceability, ba-data, ba-business-rules
+- **Batch D — UX/Delivery/Integration** (7): ba-ux, ba-communication, ba-change, ba-diagram, ba-jira, ba-confluence, ba-wiki
+
+Each updated SKILL.md now includes:
+- `## When to Use` — explicit triggers + exclusions
+- `## Common Rationalizations` — ≥4 domain-specific excuses with factual rebuttals
+- `## Red Flags` — ≥4 observable signs the skill is being violated
+- `## Verification` — ≥4 evidence-based exit criteria with handoff reference
+
+### Stats
+- **Pattern coverage:** 5/33 → **33/33** (100%)
+- **New rationalizations:** 140+ (28 × 5 average)
+- **New red flags:** 140+
+- **New verification items:** 140+
+- **All rationalizations pass specificity test** (no copy-pasteable generic filler)
+
+### Methodology
+Delivered via 4 parallel subagents working on 7 files each, with domain seeds packed into prompts (realistic BA anti-patterns per agent). Quality review: automated section count check + manual specificity/observability/evidence checks on sample files.
+
+---
+
+## v3.2.0 — 2026-04-13
+
+### Added — Anti-Rationalization Framework
+- **docs/skill-anatomy.md** — Formal spec for BA-Kit skill format (required sections, design principles)
+- **`.agent/skills/using-ba-kit/`** — Meta skill: intent-to-skill mapping, lifecycle navigation, anti-slack enforcement
+- **`.claude/commands/ba-*.md`** — 6 lifecycle slash commands for Claude Code users:
+  - `/ba-discover` — identity → strategy → questioning → elicitation → ux
+  - `/ba-analyze` — process / data / systems / business-rules
+  - `/ba-specify` — writing → nfr → traceability → diagram
+  - `/ba-validate` — validation → quality-gate → consistency → test-gen → auditor
+  - `/ba-deliver` — export → jira → confluence → communication → change
+  - `/ba-audit` — auditor → traceability → consistency → metrics
+
+### Enhanced — Anti-Rationalization Pattern Applied to Key Agents
+5 flagship agents updated with new sections (pattern from addyosmani/agent-skills):
+- `@ba-master`, `@ba-elicitation`, `@ba-writing`, `@ba-validation`, `@ba-questioning`
+- Each gets:
+  - **When to Use / When NOT to Use** — explicit triggers and exclusions
+  - **Common Rationalizations** — table of excuses + factual rebuttals (prevents skill-skipping)
+  - **Red Flags** — observable signs the skill is being violated
+  - **Verification** — exit criteria checklist with evidence requirements
+
+### Changed
+- `@ba-master` routing table: added `@using-ba-kit` as fallback for ambiguous intent
+- `docs/README.md`: added Lifecycle Commands section + Skill Anatomy link
+
+### Philosophy
+> "Skills are processes, not prose. Every skill encodes hard-won engineering judgment as step-by-step workflows with anti-slack mechanisms." — pattern inspired by production-grade engineering skills
+
+---
+
+## v3.1.1 — 2026-04-13
+
+### Changed
+- **License**: MIT → CC BY-NC 4.0 (Creative Commons Attribution-NonCommercial 4.0 International)
+- **docs/README.md**: Rewritten as onboarding navigation guide with ASCII flowchart reading path
+- **All 11 docs files**: Complete rewrite for consistency, accuracy, and new-user clarity
+  - prompt-library.md: 48 prompts across 10 lifecycle phases
+  - workflow-cookbook.md: 15 scenarios (consolidated from 23, removed duplicates)
+  - quick-start.md, usage-guide.md, junior-start.md, contributing.md: restructured
+  - architecture-decisions.md: 3 new ADRs for v3.1 decisions
+  - antigravity-protocol.md: 33 agents roster + diagram tool mandate
+  - ai-foundation-for-ba.md, ai-tools-guide.md, design-prototype-guide.md: updated counts
+
+### Fixed
+- All stale agent counts (19/21/26) eliminated across docs
+- All broken links in docs/README.md resolved
+- Scenario count inconsistency (23→15) fixed in cheat sheet and ai-foundation
+- Prompt count inconsistency (28/33/45→48) fixed across all files
+
+---
+
+## v3.1.0 — 2026-04-12
+
+### Added — 7 New Lifecycle Agents
+- `@ba-questioning` — Paul-Elder Critical Thinking Framework, interview prep, assumption surfacing
+- `@ba-communication` — Audience-adapted status reports, executive summaries, meeting minutes
+- `@ba-ux` — Persona, journey mapping, empathy maps, JTBD, UX psychology, usability testing
+- `@ba-data` — ERD, data dictionary, DFD, data mapping, migration planning
+- `@ba-change` — ADKAR assessment, training needs, go-live planning, benefits realization
+- `@ba-business-rules` — Decision tables, decision trees, rule catalog, conflict detection
+- `@ba-diagram` — Mermaid v11 (24+ types), BA artifact→diagram mapping, Confluence export
+
+### Enhanced
+- `@ba-questioning` v2.1 — 8 Elements of Reasoning, Intellectual Standards, Wilson Method, Socratic Protocol, bias detection
+- `@ba-ux` v2.0 — UX Psychology (Cognitive Load, Decision Architecture, Key Laws), heuristic evaluation, usability test protocol
+- `@ba-agile` — Estimation facilitation (Planning Poker, T-shirt sizing, story splitting)
+- `@ba-wiki` — Glossary management (ubiquitous language, synonym detection)
+- `@ba-confluence` — Mermaid diagram handling (Stratus mermaid-macro for DC, pre-render SVG)
+- `@ba-master` — Routing table expanded with 15+ new entries for all new agents
+
+### Knowledge Base
+- 3 new knowledge base files: questioning.md, communication.md, change_management.md
+- 831 entries across 23 domains (unchanged from v3.0)
+
+### Documentation
+- 48 copy-paste prompts (was 33)
+- Agent cheat sheet updated for 33 agents
+- Prompt library expanded with 5 new phases
+- .gitignore reorganized: Python artifacts, Claude session state, outputs/, diagrams
+
+### Infrastructure
+- outputs/ removed from git tracking (project deliverables are per-instance)
+- .claude/session-state/ removed from git tracking (local per-machine)
+- __pycache__/*.pyc cleaned from tracking
+
+---
 
 ## [1.3.1] - 2026-04-11
 

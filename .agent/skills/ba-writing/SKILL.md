@@ -30,6 +30,18 @@ If input is unclear, incomplete, or out-of-scope:
 1.  **Ask for clarification** before proceeding. Do NOT guess.
 2.  If input belongs to another agent's domain, recommend a handoff.
 
+## When to Use
+
+- Have raw requirements or interview notes, need formal specs
+- Drafting User Stories, BRD, SRS, FRD, API spec
+- Converting screenshots/mockups to Field Specs
+- Creating test-ready acceptance criteria
+
+**When NOT to use:**
+- Requirements unclear (go back to @ba-elicitation)
+- Just need visual diagram (use @ba-diagram)
+- Writing communication/reports (use @ba-communication)
+
 ## System Instructions
 
 When activated via `@ba-writing`, perform the following cognitive loop:
@@ -92,6 +104,37 @@ Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-nfr` to define performance constraints for this story."
 *   "Handover: Summon `@ba-test-gen` to generate test cases from the AC."
 *   "Handover: Summon `@ba-quality-gate` to score artifact completeness."
+
+---
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|-----------------|---------|
+| "Acceptance criteria are obvious from the story" | Obvious to you. Dev will ship without them. Write 3 minimum: Happy + Edge + Error. |
+| "I'll skip Gherkin, prose is fine" | Prose ACs fail automation. Gherkin forces precision. |
+| "This story is too small for INVEST" | Smaller stories need MORE INVEST rigor, not less. |
+| "Use cases are enough, no need for User Stories" | Use cases describe flows. Stories describe value. You need both for agile. |
+| "Skip RBAC matrix, it's just one role" | Today's one role is tomorrow's four. Document now or regret later. |
+
+## Red Flags
+
+- User Story without Acceptance Criteria
+- Ambiguous terms ("fast", "user-friendly", "easy") in specs
+- No role specified in "As a [role]" field
+- AC without measurable threshold
+- Business rule referenced but not documented
+
+## Verification
+
+After completing this skill's process, confirm:
+
+- [ ] Every User Story has ≥3 Acceptance Criteria (happy/edge/error)
+- [ ] INVEST criteria met for all stories
+- [ ] No ambiguous terms (run mental scan)
+- [ ] Business value clearly stated in "So that..." clause
+- [ ] RBAC matrix defined for each role in the story
+- [ ] Handoff to @ba-validation
 
 ---
 

@@ -34,6 +34,18 @@ If input is unclear, incomplete, or out-of-scope:
 1.  **Ask for clarification** before proceeding. Do NOT guess.
 2.  If input belongs to another agent's domain, recommend a handoff.
 
+## When to Use
+
+- Preparing for a stakeholder meeting or interview
+- Reviewing a document, need probing questions
+- Stuck on an ambiguous requirement
+- Need to challenge assumptions
+
+**When NOT to use:**
+- Already have clear requirements (go to @ba-writing)
+- Need execution of interview (use @ba-elicitation)
+- Conflict mediation (use @ba-conflict)
+
 ## System Instructions
 
 When activated via `@ba-questioning`, perform the following cognitive loop:
@@ -384,6 +396,36 @@ Present a structured question kit:
 *   "Handover: Summon `@ba-facilitation` if this needs a workshop instead of an interview."
 *   "Handover: Summon `@ba-conflict` if stakeholder bias or power dynamics are detected."
 *   "Handover: Summon `@ba-root-cause` if the situation requires deeper causal analysis."
+
+---
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|-----------------|---------|
+| "I already know what to ask" | Bias. Context-free questions from Gause & Weinberg catch your blind spots. |
+| "The meeting is short, skip prep" | 5 minutes of prep saves 30 minutes of circular conversation. |
+| "I'll ask clarifying questions on the fly" | On-the-fly = leading questions. Prepare tiered set first. |
+| "It's a routine follow-up, no prep needed" | Routine = stale. Always audit for fresh context-free questions. |
+
+## Red Flags
+
+- No tiered question set (Must/Should/Could)
+- Leading questions ("Don't you think...?")
+- Compound questions (split into separate)
+- No listening triggers prepared
+- Missing meta-question ("What haven't I asked?")
+
+## Verification
+
+After completing this skill's process, confirm:
+
+- [ ] 3 tiers prepared (Must-Ask, Should-Ask, Could-Ask)
+- [ ] Each question audited against 8 Intellectual Standards
+- [ ] Bias check completed (ego/socio/stakeholder)
+- [ ] ≥1 meta-question included
+- [ ] Listening triggers ready for red flags
+- [ ] Handoff to @ba-elicitation for execution
 
 ---
 

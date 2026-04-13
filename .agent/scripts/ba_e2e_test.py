@@ -59,7 +59,7 @@ MASTER_SKILL = SKILL_ROOT / "ba-master" / "SKILL.md"
 SETUP_SH = SCRIPT_ROOT / "setup.sh"
 
 # Skills that are infrastructure, not BA-facing — exempt from structural/routing checks
-CONNECTOR_EXEMPT = {"jira-connector", "confluence-connector"}
+CONNECTOR_EXEMPT = {"jira-connector", "confluence-connector", "using-ba-kit"}
 NON_SKILL_DIRS = {"_shared"}  # Holds system-prompt.md, not SKILL.md
 
 

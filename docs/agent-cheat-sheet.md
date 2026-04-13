@@ -1,6 +1,6 @@
 # BA-Kit Agent Cheat Sheet
 
-Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
+Tham chiếu nhanh **44 agents** — phân loại, khi nào dùng, output chính.
 
 ---
 
@@ -8,7 +8,7 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 | Agent | Vai trò | Khi nào dùng | Output chính |
 |-------|---------|--------------|--------------|
-| **@ba-master** | Dispatcher trung tâm | Bắt đầu bất kỳ yêu cầu nào — master sẽ route tới đúng agent | Workflow chain có thứ tự |
+| **@ba-master** | Dispatcher trung tâm | Bắt đầu bất kỳ yêu cầu nào — master route tới đúng agent | Workflow chain có thứ tự |
 
 ---
 
@@ -16,16 +16,16 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 | Agent | Vai trò | Khi nào dùng | Output chính |
 |-------|---------|--------------|--------------|
-| **@ba-identity** | Stakeholder mapping | Dự án mới, cần xác định ai là bên liên quan | RACI, Power/Interest Grid |
+| **@ba-identity** | Stakeholder mapping | Dự án mới, cần xác định bên liên quan | RACI, Power/Interest Grid |
 | **@ba-elicitation** | Khai thác yêu cầu | Chưa rõ requirements, cần phỏng vấn, làm rõ | Câu hỏi Funnel, 5W1H, danh sách yêu cầu thô |
 | **@ba-writing** | Viết requirements | Có đủ thông tin, cần US/BRD/SRS/API spec | User Story, Gherkin AC, BRD draft |
-| **@ba-validation** | Kiểm tra chất lượng | Sau khi viết xong, cần review | INVEST check, danh sách lỗi, yêu cầu cần làm rõ |
-| **@ba-test-gen** | Sinh test cases từ AC | Có AC, cần test coverage | Test suite (Happy/Edge/Error/Security/Perf) |
-| **@ba-traceability** | RTM và impact analysis | Cần truy vết, phân tích ảnh hưởng thay đổi | RTM, dependency graph, health report |
-| **@ba-quality-gate** | Chấm điểm chất lượng | Trước khi giao handoff/release | Báo cáo PASS/CONDITIONAL/REJECT (8 chiều) |
+| **@ba-validation** | Kiểm tra chất lượng | Sau khi viết xong, cần review | INVEST check, danh sách lỗi, điểm mơ hồ |
+| **@ba-traceability** | RTM & impact analysis | Cần truy vết, phân tích ảnh hưởng thay đổi | RTM, dependency graph, health report |
+| **@ba-quality-gate** | Chấm điểm chất lượng | Trước handoff/release | PASS/CONDITIONAL/REJECT (8 chiều) |
 | **@ba-consistency** | Kiểm tra đồng nhất | US mâu thuẫn với API spec hoặc DB schema | Mismatch report (US↔API↔DB↔BRD) |
 | **@ba-auditor** | Audit toàn dự án | Cần báo cáo sức khỏe tổng thể | Executive health dashboard |
-| **@ba-export** | Xuất tài liệu cuối | Cần DOCX/PDF chuyên nghiệp để giao KH | Enterprise DOCX (Pandoc) |
+| **@ba-export** | Xuất tài liệu cuối | Cần DOCX/PDF chuyên nghiệp giao khách hàng | Enterprise DOCX (Pandoc) |
+| **@ba-test-gen** | Sinh test cases từ AC | Có AC, cần test coverage | Test suite (Happy/Edge/Error/Security/Perf) |
 
 ---
 
@@ -55,6 +55,20 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 ---
 
+## Lifecycle (Vòng đời BA)
+
+| Agent | Vai trò | Khi nào dùng | Output chính |
+|-------|---------|--------------|--------------|
+| **@ba-questioning** | Chuẩn bị câu hỏi | Trước meeting, review, phỏng vấn | Question set 3-tier (Must/Should/Could) |
+| **@ba-communication** | Truyền thông BA | Cần status report, executive summary, email draft | Reports, summaries, meeting minutes |
+| **@ba-ux** | Nghiên cứu UX | Cần persona, user journey, empathy map | Persona cards, journey maps, test protocols |
+| **@ba-data** | Kiến trúc dữ liệu | Cần ERD, data dictionary, DFD, migration plan | ERD (Mermaid), data dictionary, mapping tables |
+| **@ba-change** | Quản lý thay đổi | Triển khai hệ thống mới, cần training plan | ADKAR assessment, training plan, go-live checklist |
+| **@ba-business-rules** | Quy tắc nghiệp vụ | Cần decision table, rule catalog, kiểm tra conflict | Decision tables, rule catalogs, conflict reports |
+| **@ba-diagram** | Vẽ diagram | Cần Mermaid diagram cho bất kỳ BA artifact nào | Mermaid v11 diagrams, Confluence-ready output |
+
+---
+
 ## Integration (Tích hợp công cụ)
 
 | Agent | Vai trò | Khi nào dùng | Output chính |
@@ -64,25 +78,11 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 ---
 
-## Lifecycle (Vòng đời BA — NEW in v3.1)
-
-| Agent | Vai trò | Khi nào dùng | Output chính |
-|-------|---------|--------------|--------------|
-| **@ba-questioning** | Chuẩn bị câu hỏi | Trước meeting, review, phỏng vấn, khi cần challenge assumptions | Question set 3-tier (Must/Should/Could), listening triggers |
-| **@ba-communication** | Truyền thông BA | Cần status report, executive summary, meeting minutes, email draft | Reports, summaries, minutes theo audience |
-| **@ba-ux** | Nghiên cứu UX | Cần persona, user journey, empathy map, usability test | Persona cards, journey maps, test protocols |
-| **@ba-data** | Kiến trúc dữ liệu | Cần ERD, data dictionary, DFD, data mapping, migration plan | ERD (Mermaid), data dictionary, mapping tables |
-| **@ba-change** | Quản lý thay đổi | Triển khai hệ thống mới, cần training plan, go-live checklist | ADKAR assessment, training plan, go-live checklist |
-| **@ba-business-rules** | Quản lý quy tắc nghiệp vụ | Cần decision table, rule catalog, kiểm tra conflict | Decision tables, rule catalogs, conflict reports |
-| **@ba-diagram** | Vẽ diagram | Cần Mermaid diagram cho bất kỳ BA artifact nào, đặc biệt publish Confluence | Mermaid v11 diagrams, Confluence-ready output |
-
----
-
 ## Knowledge (Quản lý tri thức)
 
 | Agent | Vai trò | Khi nào dùng | Output chính |
 |-------|---------|--------------|--------------|
-| **@ba-wiki** | Quản lý tri thức | Nạp kiến thức mới, truy vấn context dự án, kiểm tra wiki | Wiki pages, knowledge synthesis |
+| **@ba-wiki** | Quản lý tri thức | Nạp kiến thức mới, truy vấn context dự án | Wiki pages, knowledge synthesis |
 
 ---
 
@@ -105,70 +105,36 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 ---
 
-## Common Workflow Chains (Luồng phổ biến)
+## Common Workflow Chains (Power Combos — Luồng phổ biến)
 
-### 1. Tính năng mới (New Feature — full cycle)
+### 1. Tính năng mới — full cycle
 ```
-@ba-strategy       → Xác định business context, tại sao cần tính năng này
-@ba-elicitation    → Khai thác chi tiết yêu cầu từ stakeholder
-@ba-writing        → Viết User Stories + Gherkin AC
-@ba-validation     → INVEST check, phát hiện mơ hồ
-@ba-test-gen       → Sinh test cases từ AC
-@ba-export         → Xuất BRD/SRS final
+@ba-strategy → @ba-elicitation → @ba-writing → @ba-validation → @ba-test-gen → @ba-export
 ```
 
 ### 2. Sprint Planning nhanh
 ```
-@ba-writing        → Chuyển raw requirements → User Stories có AC
-@ba-validation     → Review INVEST, flag ambiguous stories
-@ba-elicitation    → Sinh clarifying questions cho PO
-@ba-prioritization → MoSCoW ranking, cắt scope phù hợp sprint
-@ba-jira           → Tạo tickets lên Jira
+@ba-writing → @ba-validation → @ba-elicitation → @ba-prioritization → @ba-jira
 ```
 
 ### 3. Kiểm soát chất lượng tài liệu
 ```
-@ba-consistency    → Cross-check US↔API↔DB↔BRD
-@ba-quality-gate   → Chấm điểm 8 chiều, PASS/FAIL
-@ba-traceability   → Kiểm tra RTM coverage
-@ba-auditor        → Executive health dashboard tổng thể
+@ba-consistency → @ba-quality-gate → @ba-traceability → @ba-auditor
 ```
 
 ### 4. Giải quyết xung đột stakeholder
 ```
-@ba-identity       → Map stakeholders (Power/Interest Grid)
-@ba-conflict       → Tìm win-win, viết ADR
-@ba-solution       → Tính ROI để hỗ trợ quyết định
-@ba-facilitation   → Thiết kế workshop alignment session
+@ba-identity → @ba-conflict → @ba-solution → @ba-facilitation
+```
+
+### 5. Phân tích dữ liệu & diagram
+```
+@ba-data → @ba-diagram → @ba-confluence
 ```
 
 ---
 
-## Quick Activation Examples (Copy-paste sẵn)
-
-```
-# Bắt đầu dự án mới
-@ba-master "Dự án mới: [tên dự án]. Tôi cần bắt đầu từ đâu?"
-
-# Viết User Story từ mô tả thô
-@ba-writing "Viết User Story cho tính năng: [mô tả ngắn]. Định dạng: INVEST + Gherkin AC."
-
-# Review tài liệu hiện có
-@ba-validation "Review User Stories sau đây theo INVEST criteria và phát hiện điểm mơ hồ: [dán US vào đây]"
-
-# Sinh test cases
-@ba-test-gen "Sinh test cases cho AC sau: [dán AC vào đây]. Cần cover: Happy, Edge, Error, Security."
-
-# Phân tích ảnh hưởng thay đổi
-@ba-traceability "Thay đổi [tên tính năng] ảnh hưởng tới những US/component nào? Đây là RTM hiện tại: [link/nội dung]"
-
-# Xuất tài liệu cuối
-@ba-export "Xuất BRD thành DOCX. Template chuẩn, logo công ty ở header. Nội dung: [dán markdown vào đây]"
-```
-
----
-
-## Decision Matrix nhanh
+## Decision Matrix
 
 | Tình huống | Agent đầu tiên | Agent tiếp theo |
 |------------|----------------|-----------------|
@@ -180,7 +146,7 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 | Cần ưu tiên backlog | `@ba-prioritization` | `@ba-agile` |
 | Cần phân tích NFR/Security | `@ba-nfr` | `@ba-validation` |
 | Cần tạo ticket Jira | `@ba-jira` | `@ba-writing` |
-| Cần publish lên Confluence | `@ba-confluence` | `@ba-export` |
+| Cần publish lên Confluence | `@ba-confluence` | `@ba-diagram` |
 | Cần audit toàn bộ dự án | `@ba-auditor` | `@ba-quality-gate` |
 | Chuẩn bị câu hỏi cho meeting | `@ba-questioning` | `@ba-elicitation` |
 | Cần viết status report / email | `@ba-communication` | `@ba-identity` |
@@ -190,6 +156,9 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 | Cần decision table / rule catalog | `@ba-business-rules` | `@ba-validation` |
 | Cần vẽ diagram cho Confluence | `@ba-diagram` | `@ba-confluence` |
 | Cần flowchart / sequence / ERD | `@ba-diagram` | `@ba-process` |
+| Cần phân tích business case | `@ba-solution` | `@ba-strategy` |
+| Cần workshop alignment | `@ba-facilitation` | `@ba-conflict` |
+| Cần tìm nguyên nhân sự cố | `@ba-root-cause` | `@ba-metrics` |
 | Phát hiện code không khớp spec | `@ba-as-built` | `@ba-traceability` |
 | Chạy full review 1 lệnh | `@ba-autoreview` | `@ba-auditor` |
 | Sprint retro / churn / velocity | `@ba-retro` | `@ba-metrics` |
@@ -203,4 +172,15 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 ---
 
-*Xem thêm: `docs/workflow-cookbook.md` (23 scenarios chi tiết) | `docs/prompt-library.md` (45 prompts) | `.agent/README.md`*
+## Learning Path — Junior BA
+
+```
+Tuần 1: @ba-master → @ba-elicitation → @ba-writing
+Tuần 2: @ba-validation → @ba-test-gen → @ba-quality-gate
+Tuần 3: @ba-traceability → @ba-consistency → @ba-auditor
+Tuần 4: @ba-prioritization → @ba-agile → @ba-facilitation
+```
+
+---
+
+*Xem thêm: `workflow-cookbook.md` (15 scenarios) | `prompt-library.md` (48 prompts) | `usage-guide.md`*
