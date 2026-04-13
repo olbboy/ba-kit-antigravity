@@ -82,12 +82,17 @@ def _render_table(rows):
     return html
 
 
+# Confluence DC language mapping (CRITICAL — DC breaks on unsupported languages)
+DC_LANG_MAP = {'json': 'javascript', 'gherkin': 'text', 'typescript': 'javascript', 'go': 'text', 'rust': 'text'}
+DC_TITLE_MAP = {'json': 'JSON', 'gherkin': 'Gherkin Scenarios', 'typescript': 'TypeScript', 'go': 'Go', 'rust': 'Rust'}
+
 def md_to_xhtml(md_content):
     lines = md_content.split('\n')
     xhtml_parts = []
     in_table = False
     in_code = False
     code_lang = ''
+    code_orig_lang = ''
     code_lines = []
     in_list = False
     list_type = None  # 'ul' or 'ol'
@@ -98,12 +103,22 @@ def md_to_xhtml(md_content):
         if line.startswith('```'):
             if in_code:
                 code_content = '\n'.join(code_lines)
-                xhtml_parts.append(
-                    f'<ac:structured-macro ac:name="code">'
-                    f'<ac:parameter ac:name="language">{code_lang}</ac:parameter>'
-                    f'<ac:plain-text-body><![CDATA[{code_content}]]></ac:plain-text-body>'
-                    f'</ac:structured-macro>'
-                )
+                if code_orig_lang == 'mermaid':
+                    # Use Stratus mermaid-macro plugin (NOT code block)
+                    xhtml_parts.append(
+                        f'<ac:structured-macro ac:name="mermaid-macro">'
+                        f'<ac:plain-text-body><![CDATA[{code_content}]]></ac:plain-text-body>'
+                        f'</ac:structured-macro>'
+                    )
+                else:
+                    title_param = f'<ac:parameter ac:name="title">{DC_TITLE_MAP[code_orig_lang]}</ac:parameter>' if code_orig_lang in DC_TITLE_MAP else ''
+                    xhtml_parts.append(
+                        f'<ac:structured-macro ac:name="code">'
+                        f'<ac:parameter ac:name="language">{code_lang}</ac:parameter>'
+                        f'{title_param}'
+                        f'<ac:plain-text-body><![CDATA[{code_content}]]></ac:plain-text-body>'
+                        f'</ac:structured-macro>'
+                    )
                 in_code = False
                 code_lines = []
             else:
@@ -111,7 +126,8 @@ def md_to_xhtml(md_content):
                     xhtml_parts.append(f'</{list_type}>')
                     in_list = False
                 in_code = True
-                code_lang = line[3:].strip() or 'text'
+                code_orig_lang = line[3:].strip() or 'text'
+                code_lang = DC_LANG_MAP.get(code_orig_lang, code_orig_lang)
             continue
 
         if in_code:
@@ -203,12 +219,21 @@ def md_to_xhtml(md_content):
         xhtml_parts.append(f'</{list_type}>')
     if in_code:
         code_content = '\n'.join(code_lines)
-        xhtml_parts.append(
-            f'<ac:structured-macro ac:name="code">'
-            f'<ac:parameter ac:name="language">{code_lang}</ac:parameter>'
-            f'<ac:plain-text-body><![CDATA[{code_content}]]></ac:plain-text-body>'
-            f'</ac:structured-macro>'
-        )
+        if code_orig_lang == 'mermaid':
+            xhtml_parts.append(
+                f'<ac:structured-macro ac:name="mermaid-macro">'
+                f'<ac:plain-text-body><![CDATA[{code_content}]]></ac:plain-text-body>'
+                f'</ac:structured-macro>'
+            )
+        else:
+            title_param = f'<ac:parameter ac:name="title">{DC_TITLE_MAP[code_orig_lang]}</ac:parameter>' if code_orig_lang in DC_TITLE_MAP else ''
+            xhtml_parts.append(
+                f'<ac:structured-macro ac:name="code">'
+                f'<ac:parameter ac:name="language">{code_lang}</ac:parameter>'
+                f'{title_param}'
+                f'<ac:plain-text-body><![CDATA[{code_content}]]></ac:plain-text-body>'
+                f'</ac:structured-macro>'
+            )
 
     return '\n'.join(xhtml_parts)
 
