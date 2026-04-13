@@ -144,7 +144,7 @@ After completing this skill's process, confirm:
 - [ ] TOC macro present at top of page
 - [ ] Placeholder scan complete — 0 results (`{{`, `[TBD]`, `[INSERT]`)
 - [ ] Mermaid macro name verified for the target Confluence instance type
-- [ ] Code block languages mapped to safe whitelist (json→javascript, gherkin→text, typescript→javascript)
+- [ ] Code block language mapping verified upstream (responsibility: `@ba-diagram` — json→javascript, gherkin→text, typescript→javascript). Confluence only checks the output, does not own the remap.
 - [ ] Handoff to @ba-jira to cross-link Jira tickets to the published Confluence page
 
 ---

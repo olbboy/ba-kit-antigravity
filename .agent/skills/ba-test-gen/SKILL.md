@@ -238,7 +238,7 @@ Coverage: 7 TCs / 1 AC = 7 scenarios. Types: 2 Happy + 2 Edge + 2 Error + 1 Secu
 
 ## 🔍 Knowledge Search
 Before generating, search for relevant context:
-*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain validation`
+*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain testing`
 *   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
 
 ## 📄 Templates

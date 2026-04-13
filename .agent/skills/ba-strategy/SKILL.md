@@ -241,8 +241,8 @@ thay thế hoàn toàn quy trình thủ công bằng Camera AI + digital workflo
 
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
-*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain identity`
-*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   `run_command`: `python3 .agent/scripts/ba_search.py "SWOT PESTLE BMC Vision strategy" --multi-domain`
+*   Note: strategy knowledge is scattered (identity/elicitation/writing CSVs) — always use `--multi-domain` for this agent.
 *   Use search results to ground your output in verified frameworks and templates.
 
 ## 📄 Templates

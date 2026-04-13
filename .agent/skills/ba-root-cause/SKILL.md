@@ -184,8 +184,8 @@ After completing this skill's process, confirm:
 
 ## 🔍 Knowledge Search
 Before drafting, search for relevant knowledge:
-*   `run_command`: `python3 .agent/scripts/ba_search.py "<topic keywords>" --domain systems`
-*   For cross-cutting concerns: `python3 .agent/scripts/ba_search.py "<query>" --multi-domain`
+*   `run_command`: `python3 .agent/scripts/ba_search.py "root cause Fishbone 5 Whys Pareto" --multi-domain`
+*   Note: RCA knowledge is distributed (metrics SPC, conflict resolution, elicitation five-whys) — prefer `--multi-domain` to avoid 0-result queries.
 *   Use search results to ground your output in verified frameworks and templates.
 
 ## 📚 Knowledge Reference
