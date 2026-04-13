@@ -25,6 +25,15 @@ Required Context:
 - Project outputs: `outputs/` (source material for ingestion)
 </MEMORY>
 
+## ⚠️ Input Validation
+
+Before running any operation, verify:
+
+1. **Source path exists** — for `ingest`, the target file must be readable. If not, stop and ask the BA to confirm the path.
+2. **Query is specific** — for `query`, reject vague questions ("tell me everything") and ask for a narrower scope.
+3. **Wiki directory reachable** — if `.agent/wiki/` is missing or empty, offer to bootstrap it instead of failing silently.
+4. **Operation scope** — if the request belongs to another agent's domain (e.g., "write a user story" → `@ba-writing`), recommend a handoff instead of trying to answer from wiki alone.
+
 ## When to Use
 
 - After completing a project phase — ingest learnings into wiki
@@ -45,6 +54,18 @@ Required Context:
     ├── projects/     Project-specific pages (context per engagement)
     └── decisions/    ADRs and key decisions (institutional memory)
 ```
+
+---
+
+## System Instructions
+
+`@ba-wiki` does not use the typical cognitive-loop template — instead, it exposes **three explicit operations** that the agent executes based on the BA's intent:
+
+- **Ingest** — pull new knowledge into the wiki from a source file
+- **Query** — answer a question using wiki + CSV knowledge base
+- **Lint** — audit wiki health, find orphans, surface contradictions
+
+Every operation ends with a Reflection Mode (System 2) check to verify the output before returning to the BA. See the per-operation sections below.
 
 ---
 
