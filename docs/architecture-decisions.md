@@ -98,17 +98,17 @@ A true Level 5 system involves **recursive self-optimization** — agents rewrit
 | :--- | :--- |
 | **Problem** | Multiple agents (writing, process, traceability) each partially generated diagrams — inconsistent Mermaid syntax, mixed styles, no standard. |
 | **Decision** | Centralize all diagram generation into `@ba-diagram`. Other agents describe WHAT diagram is needed; `@ba-diagram` generates the Mermaid/BPMN artifact. |
-| **Rationale** | DRY principle. One agent owns diagram syntax knowledge, versioning, and Mermaid v11 compliance. Eliminates syntax drift across 33 agents. |
+| **Rationale** | DRY principle. One agent owns diagram syntax knowledge, versioning, and Mermaid v11 compliance. Eliminates syntax drift across 44 agents. |
 | **Mandatory Tool** | `@ba-diagram` MUST use Mermaid syntax (not ASCII) for all flowcharts, sequence diagrams, ERDs, and BPMNs. |
 
-### ADR-003: outputs/ Excluded from Git
+### ADR-003: outputs/ Excluded from Git (with mini-app showcase exception)
 
 | Factor | Decision |
 | :--- | :--- |
 | **Problem** | Generated artifacts (BRDs, SRS, specs) were being committed, causing bloat and false "code changes" in PRs. |
-| **Decision** | `outputs/` directory is listed in `.gitignore`. All generated documents live outside version control. |
-| **Rationale** | Generated output is ephemeral. Source of truth = agent skills + knowledge base + templates. Regenerate on demand. Keeps git history clean (structural changes only). |
-| **Exception** | Templates in `.agent/templates/` ARE committed — they are source, not output. |
+| **Decision** | `outputs/*` is listed in `.gitignore`. All generated documents live outside version control — **except** `outputs/mini-app-cham-cong/**` which is force-tracked via negation pattern as the canonical BA showcase reference. |
+| **Rationale** | Generated output is ephemeral. Source of truth = agent skills + knowledge base + templates. Regenerate on demand. Keeps git history clean (structural changes only). The mini-app-cham-cong exception exists because it's not a per-project deliverable — it's a curated dogfooding reference shipped with the kit (12 modules, 53 US files, EAMS v2.1, RTM). |
+| **Exception** | Templates in `.agent/templates/` ARE committed — they are source, not output. Mini-app-cham-cong showcase in `outputs/mini-app-cham-cong/` IS committed — reference material, not output. |
 
 ---
 
@@ -116,7 +116,7 @@ A true Level 5 system involves **recursive self-optimization** — agents rewrit
 
 | Category | Score | Notes |
 | :--- | :--- | :--- |
-| **Core Logic** | 10/10 | System 2, Tool Mandates, 43 Agents (21 core + 4 quality/audit + 7 lifecycle + ba-wiki + 10 sprint spine v3.2) |
+| **Core Logic** | 10/10 | System 2, Tool Mandates, Anti-Rationalization guardrails, 44 Agents (21 core + 4 quality/audit + 7 lifecycle + ba-wiki + 11 sprint spine v3.4) |
 | **Documentation** | 9/10 | Comprehensive with bilingual support |
 | **Terminology** | 10/10 | "Squad" is professional and consistent |
 | **Extensibility** | 8/10 | MCP integration, skill-based architecture |

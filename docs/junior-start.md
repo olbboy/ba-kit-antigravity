@@ -135,7 +135,7 @@ EXPERT — FULL SQUAD ORCHESTRATION
 | Tài nguyên | Nội dung |
 |-----------|---------|
 | `docs/agent-cheat-sheet.md` | Toàn bộ 44 agents + Power Combos |
-| `docs/workflow-cookbook.md` | 23 kịch bản thực tế từ A-Z |
+| `docs/workflow-cookbook.md` | 15 kịch bản thực tế từ A-Z |
 | `docs/prompt-library.md` | 48 copy-paste prompts theo tình huống |
 | `docs/sprint-spine.md` | 7-phase BA sprint loop reference (v3.4 Sprint Spine) |
 | `docs/skill-anatomy.md` | Format spec cho mọi BA-Kit skill — required sections, anti-rationalization |

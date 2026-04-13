@@ -23,7 +23,7 @@ LLMs are System 1 machines — fast pattern matching. System 2 reflection forces
 
 ## Agents Using This
 
-All 33 agents. Enforced via `_shared/system-prompt.md`.
+All 44 agents. Enforced via `_shared/system-prompt.md`. The 33 original agents also carry anti-rationalization guardrails (When to Use / Common Rationalizations / Red Flags / Verification) as a second-layer defense against skill-skipping.
 
 ## Sources
 

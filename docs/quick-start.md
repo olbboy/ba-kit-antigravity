@@ -1,6 +1,6 @@
-# Quick Start — BA-Kit v3.1.0
+# Quick Start — BA-Kit v3.5.0
 
-Bắt đầu trong 5 phút. 33 agents, 831 knowledge entries, 14 templates.
+Bắt đầu trong 5 phút. 44 agents, 831 knowledge entries, 14 templates.
 
 ---
 
@@ -80,8 +80,9 @@ python3 .agent/scripts/ba_search.py --list-domains
 
 | Tài liệu | Nội dung |
 |----------|---------|
-| `docs/usage-guide.md` | Cách squad 33 agents hoạt động, workflow chains |
-| `docs/agent-cheat-sheet.md` | Toàn bộ 33 agents + power combos |
+| `docs/usage-guide.md` | Cách squad 44 agents hoạt động, workflow chains |
+| `docs/agent-cheat-sheet.md` | Toàn bộ 44 agents + power combos |
+| `docs/sprint-spine.md` | 7-phase sprint loop (Discover→Elicit→Define→Validate→Prioritize→Publish→Reflect) |
 | `docs/prompt-library.md` | 48 copy-paste prompts theo tình huống |
 | `docs/junior-start.md` | Lộ trình 4 tuần cho BA mới |
 

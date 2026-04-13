@@ -1,6 +1,6 @@
 # Contributing to BA-Kit
 
-BA-Kit v3.1.0: 33 agents, 831 knowledge entries, 23 domains, 14 templates, 48 prompts.
+BA-Kit v3.5.0: 44 agents, 831 knowledge entries, 23 domains, 14 templates, 48 prompts. Includes CI E2E quality gate + anti-rationalization framework.
 
 ---
 

@@ -1,13 +1,13 @@
 # BA-Kit Sprint Spine
 
-> **The unified 7-phase loop that all 43 BA-Kit agents feed into.**
+> **The unified 7-phase loop that all 44 BA-Kit agents feed into.**
 > Think→Plan→Build→Review→Test→Ship→Reflect — adapted for Requirements Engineering.
 
 ---
 
 ## Why a spine?
 
-BA-Kit v3.1 had 33 agents + 17 cookbook scenarios. v3.2 grows to 43 (10 new from gstack distillation). That's powerful, but the user faces **paralysis of choice**: "Which agent first? Which scenario fits?"
+BA-Kit v3.1 had 33 agents + 17 cookbook scenarios. v3.4 added 11 gstack-distilled sprint spine agents, and v3.5 ships **44 total** (33 original with anti-rationalization pattern + 11 sprint spine). That's powerful, but the user faces **paralysis of choice**: "Which agent first? Which scenario fits?"
 
 Gstack (the reference for this design) solves this with a **single sprint loop** that every skill feeds into. One loop, many nodes.
 
@@ -137,6 +137,7 @@ Future work: `ba-autodiscover`, `ba-autoelicit` (names reserved, not yet impleme
 
 ## Versioning
 
-- **v1.0** (this doc, 2026-04-13): Define 7 phases + initial agent mapping.
-- **v1.1** (target v3.4): Add frontmatter `phase:` to all 33 existing skills.
-- **v2.0** (target v3.5): Runtime enforcement — ba-master blocks out-of-phase handoffs.
+- **v1.0** (2026-04-13): Define 7 phases + initial agent mapping.
+- **v1.1** (v3.4, 2026-04-13): Added 11 sprint spine agents via gstack distillation.
+- **v1.2** (v3.5, 2026-04-14): Reconciled with v3.2/v3.3 anti-rationalization rollout — 44 total agents, 33 with anti-rationalization pattern + 11 sprint spine (anti-rat inheritance TBD).
+- **v2.0** (future): Runtime enforcement — ba-master blocks out-of-phase handoffs + frontmatter `phase:` on all 44 skills.

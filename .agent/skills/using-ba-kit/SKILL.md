@@ -21,7 +21,7 @@ Approach:
 <MEMORY>
 Required Context:
 - `docs/README.md` — Documentation navigation index
-- `docs/agent-cheat-sheet.md` — All 33 agents summarized
+- `docs/agent-cheat-sheet.md` — All 44 agents summarized (33 original + 11 sprint spine)
 - `docs/workflow-cookbook.md` — 15 pre-built scenarios
 - `.claude/commands/ba-*.md` — 6 lifecycle slash commands
 </MEMORY>
@@ -29,7 +29,7 @@ Required Context:
 ## When to Use
 
 - Starting a new session with BA-Kit for the first time
-- Unsure which of the 33 agents matches the current task
+- Unsure which of the 44 agents matches the current task
 - AI agent needs to map user intent to a skill (OpenCode, Claude Code)
 - Reviewing whether a task was handled by the right skill
 

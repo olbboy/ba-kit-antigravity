@@ -7,7 +7,7 @@
 
 | Page | Summary | Sources | Updated |
 |------|---------|---------|---------|
-| [System 2 Reflection](./concepts/system-2-reflection.md) | Cognitive loop all 33 agents follow — draft then challenge before output | ebook-fundamentals, AGENT.MD | 2026-04-11 |
+| [System 2 Reflection](./concepts/system-2-reflection.md) | Cognitive loop all 44 agents follow — draft then challenge before output | ebook-fundamentals, AGENT.MD | 2026-04-14 |
 | [Traceability Chain](./concepts/traceability-chain.md) | Full chain: Business Goal → BRD → US → AC → TC → API → DB | data/traceability.csv (35 entries) | 2026-04-11 |
 | [INVEST Criteria](./concepts/invest-criteria.md) | User Story quality gate — Independent, Negotiable, Valuable, Estimable, Small, Testable | ebook-techniques, ba-validation | 2026-04-11 |
 

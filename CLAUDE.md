@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-BA-Kit is an **agent squad of 33 specialists** for Requirements Engineering.
+BA-Kit v3.5.0 is an **agent squad of 44 specialists** for Requirements Engineering.
 Multi-platform: **Antigravity IDE**, **Claude Code**, **Claude CoWork**.
 
 Standards: BABOK v3, IEEE 29148, ISO 25010, INVEST.
@@ -10,13 +10,15 @@ Standards: BABOK v3, IEEE 29148, ISO 25010, INVEST.
 ## Architecture
 
 ```
-.agent/skills/ba-*/SKILL.md   — 33 Agent Skill definitions
+.agent/skills/ba-*/SKILL.md   — 44 Agent Skill definitions + 2 connectors + 1 meta
 .agent/skills/_shared/         — Shared utilities & knowledge search skill
-.agent/scripts/                — BM25+ Knowledge Search Engine (Python)
+.agent/scripts/                — BM25+ search, ba_e2e_test orchestrator, Python helpers
 .agent/data/*.csv              — 831 indexed knowledge entries (23 domains)
 .agent/templates/              — 14 BA document templates (BRD, SRS, FRD, etc.)
 .agent/wiki/                   — Living knowledge wiki (2-tier: concepts/decisions)
-docs/                          — Documentation and guides
+.github/workflows/             — CI: e2e-skills.yml (Phase 08 quality gate)
+docs/                          — Documentation and guides (incl. sprint-spine.md)
+outputs/mini-app-cham-cong/    — BA showcase reference (12 modules, 53 US)
 ebooks/                        — Synthesized book knowledge
 ```
 
