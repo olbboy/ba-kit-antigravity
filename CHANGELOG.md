@@ -2,6 +2,37 @@
 
 All notable changes to BA-Kit Antigravity.
 
+## v3.2.0 — 2026-04-13
+
+### Added — Anti-Rationalization Framework
+- **docs/skill-anatomy.md** — Formal spec for BA-Kit skill format (required sections, design principles)
+- **`.agent/skills/using-ba-kit/`** — Meta skill: intent-to-skill mapping, lifecycle navigation, anti-slack enforcement
+- **`.claude/commands/ba-*.md`** — 6 lifecycle slash commands for Claude Code users:
+  - `/ba-discover` — identity → strategy → questioning → elicitation → ux
+  - `/ba-analyze` — process / data / systems / business-rules
+  - `/ba-specify` — writing → nfr → traceability → diagram
+  - `/ba-validate` — validation → quality-gate → consistency → test-gen → auditor
+  - `/ba-deliver` — export → jira → confluence → communication → change
+  - `/ba-audit` — auditor → traceability → consistency → metrics
+
+### Enhanced — Anti-Rationalization Pattern Applied to Key Agents
+5 flagship agents updated with new sections (pattern from addyosmani/agent-skills):
+- `@ba-master`, `@ba-elicitation`, `@ba-writing`, `@ba-validation`, `@ba-questioning`
+- Each gets:
+  - **When to Use / When NOT to Use** — explicit triggers and exclusions
+  - **Common Rationalizations** — table of excuses + factual rebuttals (prevents skill-skipping)
+  - **Red Flags** — observable signs the skill is being violated
+  - **Verification** — exit criteria checklist with evidence requirements
+
+### Changed
+- `@ba-master` routing table: added `@using-ba-kit` as fallback for ambiguous intent
+- `docs/README.md`: added Lifecycle Commands section + Skill Anatomy link
+
+### Philosophy
+> "Skills are processes, not prose. Every skill encodes hard-won engineering judgment as step-by-step workflows with anti-slack mechanisms." — pattern inspired by production-grade engineering skills
+
+---
+
 ## v3.1.1 — 2026-04-13
 
 ### Changed

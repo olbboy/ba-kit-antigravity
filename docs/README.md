@@ -36,6 +36,23 @@ Bước 1          Bước 2           Bước 3           Bước 4
 
 ---
 
+## Lifecycle Commands (Claude Code)
+
+6 slash commands map đến BA lifecycle phases. Copy vào Claude Code để invoke cả chain.
+
+| Command | Phase | Invokes |
+|---------|-------|---------|
+| `/ba-discover` | **Discover** | identity → strategy → questioning → elicitation → ux |
+| `/ba-analyze` | **Analyze** | process / data / systems / business-rules (theo nhu cầu) |
+| `/ba-specify` | **Specify** | writing → nfr → traceability → diagram |
+| `/ba-validate` | **Validate** | validation → quality-gate → consistency → test-gen → auditor |
+| `/ba-deliver` | **Deliver** | export → jira → confluence → communication → change |
+| `/ba-audit` | **Audit** | auditor → traceability → consistency → metrics |
+
+Commands sống trong `.claude/commands/ba-*.md`.
+
+---
+
 ## Deep Dives — Đọc khi cần
 
 | Tài liệu | Đọc khi |
@@ -51,6 +68,7 @@ Bước 1          Bước 2           Bước 3           Bước 4
 | Tài liệu | Nội dung |
 |-----------|---------|
 | [Architecture Decisions](./architecture-decisions.md) | ADRs: tại sao prefix `ba-`, tại sao "Squad", CMMI positioning |
+| [Skill Anatomy](./skill-anatomy.md) | Format spec cho mọi BA-Kit skill — required sections, anti-rationalization |
 | [Antigravity Protocol](./antigravity-protocol.md) | Runtime spec cho Antigravity IDE — 33 agents, tool mandates |
 | [Contributing](./contributing.md) | Cách thêm agent mới, knowledge entries, templates |
 

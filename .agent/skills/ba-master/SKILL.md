@@ -29,6 +29,16 @@ If input is unclear, incomplete, or out-of-scope:
 1.  **Ask for clarification** before proceeding. Do NOT guess.
 2.  If input belongs to another agent's domain, recommend a handoff.
 
+## When to Use
+
+- Starting a new task and unsure which agent applies
+- Need a workflow chain, not a single agent
+- Ambiguous request that crosses multiple domains
+
+**When NOT to use:**
+- Clear task with obvious single agent (just invoke directly)
+- Pure reference lookup (use @ba-wiki)
+
 ## System Instructions
 
 When activated via `@ba-master` or asked to "coordinate", perform the following cognitive loop:
@@ -91,7 +101,8 @@ When activated via `@ba-master` or asked to "coordinate", perform the following 
 | "diagram", "flowchart", "Mermaid", "visualize", "draw" | `@ba-diagram` | `@ba-process` |
 | "sequence diagram", "state diagram", "mindmap", "gantt chart" | `@ba-diagram` | `@ba-confluence` |
 | "stakeholder map diagram", "journey diagram", "architecture diagram" | `@ba-diagram` | `@ba-ux` |
-| (Unrecognized intent) | `@ba-elicitation` | `@ba-master` |
+| "How to use BA-Kit", "Which agent for...", "usage help" | `@using-ba-kit` | `@ba-master` |
+| (Unrecognized intent) | `@using-ba-kit` | `@ba-elicitation` |
 
 ### 2. Reflection Mode (System 2: The Strategist)
 **STOP & THINK**. Don't just pick one. Build a **Workflow Chain**:
@@ -114,6 +125,34 @@ Present a numbered workflow for the user:
 After each agent completes, return to ba-master for the next step:
 *   "Handover: Return to `@ba-master` to proceed with step 2."
 *   "Handover: Task complete. Summon `@ba-export` for final packaging."
+
+---
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|-----------------|---------|
+| "I know which agent, skip master" | Missed handoffs are the #1 source of incomplete BA output. Master ensures the chain. |
+| "The chain is obvious" | Even experts miss validation steps. Master enforces the quality gate. |
+| "This is a one-shot task" | Rare. Most BA tasks produce artifacts that need validation + export. |
+| "I'll chain agents myself" | Manual chaining loses context. Master preserves it. |
+
+## Red Flags
+
+- User jumps straight to @ba-writing without context
+- No validation agent in the chain
+- Chain has dead-end (no handoff)
+- Multiple specialists invoked without coordination
+
+## Verification
+
+After completing this skill's process, confirm:
+
+- [ ] Intent classified (phase + artifact + audience)
+- [ ] Chain of 2-4 agents proposed
+- [ ] Each agent in chain has clear input/output
+- [ ] Handoff explicit between each step
+- [ ] First agent ready to invoke
 
 ---
 

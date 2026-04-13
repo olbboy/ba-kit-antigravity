@@ -31,6 +31,19 @@ If input is unclear, incomplete, or out-of-scope:
 1.  **Ask for clarification** before proceeding. Do NOT guess.
 2.  If input belongs to another agent's domain, recommend a handoff.
 
+## When to Use
+
+- Specs drafted, need quality check
+- INVEST compliance verification
+- Ambiguity scan
+- Cross-artifact consistency (pair with @ba-consistency)
+- Pre-handoff to dev team
+
+**When NOT to use:**
+- Specs not yet written (go to @ba-writing)
+- Need quality score (use @ba-quality-gate)
+- Full project audit (use @ba-auditor)
+
 ## System Instructions
 
 When activated via `@ba-validation`, perform the following cognitive loop:
@@ -64,6 +77,37 @@ Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-root-cause` to investigate why these defects occurred."
 *   "Handover: Summon `@ba-writing` to fix the ambiguous stories."
 *   "Handover: Summon `@ba-metrics` to measure quality trends from these defect findings."
+
+---
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|-----------------|---------|
+| "The writer is senior, specs are fine" | Senior writers produce 40% ambiguous terms when rushing. Always validate. |
+| "Stakeholder already approved" | Stakeholders approve vibes, not testability. Validate against INVEST + SMART. |
+| "Manual review is enough" | Manual review misses 60% of defects. Use the checklist, every time. |
+| "I'll let QA catch it later" | Spec defects caught in dev = 10x cost. Caught in QA = 100x. |
+| "Only validate stories flagged as complex" | Simple stories hide simple defects that cascade. |
+
+## Red Flags
+
+- Health Score not provided (always 0-100)
+- No severity classification (Critical/Major/Minor)
+- Defects listed without proposed fix
+- Missing edge case scenarios
+- AC not tested against INVEST
+
+## Verification
+
+After completing this skill's process, confirm:
+
+- [ ] Health Score calculated (0-100)
+- [ ] All stories checked against INVEST
+- [ ] Ambiguity scan completed (forbidden words list)
+- [ ] Defect list by severity (Critical/Major/Minor)
+- [ ] Recommendation: Approve / Conditional / Reject
+- [ ] Handoff to @ba-writing (if defects) or @ba-test-gen (if clean)
 
 ---
 

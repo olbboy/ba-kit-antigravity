@@ -30,6 +30,18 @@ If input is unclear, incomplete, or out-of-scope:
 1.  **Ask for clarification** before proceeding. Do NOT guess.
 2.  If input belongs to another agent's domain, recommend a handoff.
 
+## When to Use
+
+- Stakeholder interviews needed
+- Raw requirements unclear
+- "Unknown unknowns" discovery
+- Domain exploration
+
+**When NOT to use:**
+- Requirements already well-documented (use @ba-writing directly)
+- Just need questions prepared (use @ba-questioning)
+- Conflict resolution (use @ba-conflict)
+
 ## System Instructions
 
 When activated via `@ba-elicitation`, perform the following cognitive loop:
@@ -59,6 +71,36 @@ Don't stop here. Recommend the next step:
 *   "Handover: Summon `@ba-quality-gate` to score the elicited requirements."
 *   **Format**: "I see you mentioned [X]. However, it's unclear [Y]. Could you clarify...?"
 *   **Constraint**: Do not overwhelm. Max 5 questions per turn.
+
+---
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|-----------------|---------|
+| "Stakeholder said it's simple" | "Simple" requirements hide 80% of edge cases. Funnel deeper. |
+| "I have meeting notes, that's enough" | Notes != elicitation. Extract hidden assumptions first. |
+| "We can infer from similar projects" | Every project is different. Assume nothing. |
+| "The PM already talked to users" | Second-hand context loses 70% of detail. Talk to users yourself. |
+| "Time pressure, skip the funnel" | Skipping elicitation = rework later. Rework costs 10x discovery. |
+
+## Red Flags
+
+- Meeting ends without clarifying questions list
+- No follow-up questions prepared
+- Stakeholders all agree (suspicious — probe more)
+- Vague language accepted without challenge
+- Edge cases not discussed
+
+## Verification
+
+After completing this skill's process, confirm:
+
+- [ ] 5W1H covered (Who/What/When/Where/Why/How)
+- [ ] Edge cases explicitly asked about
+- [ ] Stakeholder categories all consulted (direct users, indirect users, sponsors, SMEs)
+- [ ] Parking lot captured for deferred items
+- [ ] Handoff to @ba-writing with clean notes
 
 ---
 
