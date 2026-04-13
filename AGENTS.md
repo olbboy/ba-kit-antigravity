@@ -102,20 +102,20 @@ After every bulk upload:
 | ba-guard | Shares `ba_baseline.py` script (guard-* sub-commands), 3 modes (off/warn/strict), optional git pre-commit hook |
 | ba-shotgun | Pure prompt (no script), 4 modes (stories/ac/priority/emails), ≤ 5 variants, preference capture |
 
-## 5. Sprint Spine (v3.2)
+## 5. Sprint Spine (v3.4)
 
-BA-Kit v3.2 introduces a unified 7-phase sprint loop that all agents map into:
+BA-Kit v3.4 introduces a unified 7-phase sprint loop that all agents map into:
 
 **Discover → Elicit → Define → Validate → Prioritize → Publish → Reflect**
 
 - Full spec: `docs/sprint-spine.md`
 - Phase mapping per agent lives in the agent registry inside `ba-master/SKILL.md`
-- 5 new skills (`ba-as-built`, `ba-autoreview`, `ba-retro`, `ba-learn`, `ba-checkpoint`) added in v3.2 from the gstack distillation analysis
+- 5 new skills (`ba-as-built`, `ba-autoreview`, `ba-retro`, `ba-learn`, `ba-checkpoint`) added in v3.4 from the gstack distillation analysis
 - See `plans/260413-1532-gstack-distillation-implementation/plan.md` for rollout status
 
 ## 6. Metrics & State Directories
 
-BA-Kit v3.2 writes runtime state and metrics to the following locations:
+BA-Kit v3.4 writes runtime state and metrics to the following locations:
 
 | Path | Owner | Purpose |
 |------|-------|---------|

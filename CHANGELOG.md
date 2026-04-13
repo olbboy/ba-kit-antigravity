@@ -2,7 +2,7 @@
 
 All notable changes to BA-Kit Antigravity.
 
-## [1.4.0] - 2026-04-13 — Gstack Distillation (Marketing v3.2.0)
+## [1.4.0] - 2026-04-13 — Gstack Distillation (Marketing v3.4.0)
 
 ### Added
 - **10 new agents** distilled from `garrytan/gstack` analysis:
@@ -32,7 +32,7 @@ All notable changes to BA-Kit Antigravity.
 - **YAML frontmatter**: 23 SKILL.md files had unquoted `description: [Agentic] foo` causing strict parser failures. All quoted (`"[...]"`) — 45/45 now parse cleanly.
 - `docs/sprint-spine.md` self-correction: "v3.1 has 33 agents" → "v3.1 had 33, v3.2 has 43"
 - `docs/architecture-decisions.md` Production Readiness Score: agent count breakdown updated
-- **BA-fit reframing** (4 v3.2 skills bumped 1.0.0 → 1.1.0): catch where gstack-imported mechanisms leaked engineer vocabulary into BA-facing skills.
+- **BA-fit reframing** (4 v3.4 skills bumped 1.0.0 → 1.1.0): catch where gstack-imported mechanisms leaked engineer vocabulary into BA-facing skills.
   - `ba-as-built` — primary mode now reads delivered evidence pack (UAT reports, release notes, demo notes); git mode demoted to opt-in advanced for hybrid BA+dev teams
   - `ba-retro` — primary input now BA-Kit JSONL metric streams + file mtime; git log demoted to tertiary opt-in; output reframed from "commits/authors/sessions" to "gate pass rate / churn / stakeholder responsiveness"
   - `ba-baseline` — agent now uses natural-language conversation ("which doc / version / signer / rationale"); sha256 hidden entirely from BA output; integrity check runs silently

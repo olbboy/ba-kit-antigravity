@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/logo.png?v=3.2.0" alt="BA-Kit Logo" width="200">
+  <img src="docs/assets/logo.png?v=3.4.0" alt="BA-Kit Logo" width="200">
 </p>
 
 <div align="center">
@@ -9,7 +9,7 @@
 </div>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Version-3.2.0-blue?style=for-the-badge" alt="Version 3.2.0">
+  <img src="https://img.shields.io/badge/Version-3.4.0-blue?style=for-the-badge" alt="Version 3.4.0">
   <img src="https://img.shields.io/badge/Agents-43-green?style=for-the-badge" alt="43 Agents">
   <img src="https://img.shields.io/badge/Platforms-Antigravity%20%7C%20Claude%20Code%20%7C%20CoWork-orange?style=for-the-badge" alt="3 Platforms">
   <img src="https://img.shields.io/badge/Capability-CMMI%20Level%205%20Enabler-purple?style=for-the-badge" alt="CMMI Level 5 Enabler">
@@ -113,7 +113,7 @@ Each agent uses **System 2 Thinking** (Reflective Loops) — self-critique befor
 | :--- | :--- | :--- |
 | **`@ba-wiki`** | Knowledge Curator | 2-tier knowledge ingest, wiki query, living documentation, **glossary management**. |
 
-### 🌀 Sprint Spine Agents (NEW in v3.2 — Gstack Distillation)
+### 🌀 Sprint Spine Agents (NEW in v3.4 — Gstack Distillation)
 | Agent | Phase | Capability |
 | :--- | :--- | :--- |
 | **`@ba-as-built`** | Reflect | **Spec drift detector** — compares BRD/SRS/RTM against delivered evidence (UAT reports, release notes, demo notes) to find what was built ≠ what was specified. |

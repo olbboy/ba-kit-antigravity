@@ -86,7 +86,7 @@ Tham chiếu nhanh 43 agents — phân loại, khi nào dùng, output chính.
 
 ---
 
-## Sprint Spine (MỚI trong v3.2 — Gstack Distillation)
+## Sprint Spine (MỚI trong v3.4 — Gstack Distillation)
 
 10 agents mới đóng vòng lặp Sprint 7-phase: **Discover → Elicit → Define → Validate → Prioritize → Publish → Reflect**. Xem `docs/sprint-spine.md` để biết mapping đầy đủ.
 

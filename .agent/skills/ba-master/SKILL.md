@@ -201,7 +201,7 @@ After each agent completes, return to ba-master for the next step:
 | :--- | :--- | :--- |
 | **@ba-wiki** | 2-tier knowledge ingest (CSV curated + wiki living), query, lint, glossary | Wiki pages, knowledge synthesis, domain glossary |
 
-### Sprint Spine Agents (NEW in v3.2 — Gstack Distillation)
+### Sprint Spine Agents (NEW in v3.4 — Gstack Distillation)
 | Agent | Phase | Proficiency | Key Output |
 | :--- | :--- | :--- | :--- |
 | **@ba-as-built** | Reflect | Spec drift detector — git diff vs BRD/SRS/RTM | Drift report, proposed spec updates |
@@ -217,7 +217,7 @@ After each agent completes, return to ba-master for the next step:
 | **@ba-setup** | any | One-time setup wizard for Jira/Confluence/second-opinion — BA-friendly natural-language flow, hides .env/CLI/PAT details | Configured `.env` files (chmod 0600) + connectivity test + plain-language confirmation |
 
 **Spine reference**: `docs/sprint-spine.md` — 7-phase loop (Discover→Elicit→Define→Validate→Prioritize→Publish→Reflect)
-**Total agents in v3.2**: 44 (33 existing + 10 new from gstack distillation + 1 BA-fit setup wizard)
+**Total agents in v3.4**: 44 (33 existing + 10 new from gstack distillation + 1 BA-fit setup wizard)
 
 ---
 

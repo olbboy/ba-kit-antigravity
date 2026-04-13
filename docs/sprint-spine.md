@@ -73,7 +73,7 @@ Each phase has an **exit criterion**. Don't advance without satisfying it.
 
 ## Hand-off contract (SKILL.md frontmatter v2)
 
-Starting v3.2, every SKILL.md should declare its phase + data contract:
+Starting v3.4, every SKILL.md should declare its phase + data contract:
 
 ```yaml
 ---
@@ -138,5 +138,5 @@ Future work: `@ba-autodiscover`, `@ba-autoelicit` etc. for other phases.
 ## Versioning
 
 - **v1.0** (this doc, 2026-04-13): Define 7 phases + initial agent mapping.
-- **v1.1** (target v3.2): Add frontmatter `phase:` to all 33 existing skills.
-- **v2.0** (target v3.3): Runtime enforcement — ba-master blocks out-of-phase handoffs.
+- **v1.1** (target v3.4): Add frontmatter `phase:` to all 33 existing skills.
+- **v2.0** (target v3.5): Runtime enforcement — ba-master blocks out-of-phase handoffs.
