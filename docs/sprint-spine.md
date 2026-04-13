@@ -131,7 +131,7 @@ The new `@ba-autoreview` skill runs Phase 4 (Validate) end-to-end:
   → Single verdict: PASS / CONDITIONAL / REJECT
 ```
 
-Future work: `@ba-autodiscover`, `@ba-autoelicit` etc. for other phases.
+Future work: `ba-autodiscover`, `ba-autoelicit` (names reserved, not yet implemented) for other phases.
 
 ---
 
